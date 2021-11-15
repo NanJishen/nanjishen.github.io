@@ -51,9 +51,21 @@ slmgr /ipk x-x-x-x-x ：设置密钥，5×5的序列号
 <a href="https://dotnet.microsoft.com/download/dotnet-framework">NET Framework</a> | 
 <a href="https://pan.baidu.com/s/1qb8EJDaIgEFN_UO0JycIOQ">Visual C++（提取码: 7yyd）</a>
 <a href="https://www.free-codecs.com/download/hevc_video_extension.htm">HEVC_H265</a><br><br>
-→ <a href="https://www.amd.com/zh-hans">AMD芯片组&显卡</a> | <a href="https://www.nvidia.com">NVIDIA显卡</a> | <a href="https://cn.msi.com">微星</a> | <a href="https://www.asus.com/CN/">华硕</a> | <a href="https://www.gigabyte.cn">技嘉</a>
-<h3>重装系统之前</h3>
-<p>下载驱动、备份：OBS+QQ表情+Mempad+桌面+输入法短语与自学习词库</p><p>备份：家目录（.config .gridea .ssh）、git push 现有项目</p>
+→ <a href="https://www.amd.com/zh-hans">AMD芯片组&显卡</a> | <a href="https://www.nvidia.com">NVIDIA显卡</a> | <a href="https://cn.msi.com">微星</a> | <a href="https://www.asus.com/CN/">华硕</a> | <a href="https://www.gigabyte.cn">技嘉</a> | <a href="https://www.asrock.com">华擎</a>
+<h3>重装系统之前</h3><p>下载驱动、备份：OBS+QQ表情+Mempad+桌面+输入法短语与自学习词库</p><p>备份：家目录（.config .gridea .ssh）、git push 现有项目</p>
+<h3>新装系统设置</h3>
+<p>关闭系统还原：右键开始 - 系统 - 系统保护 - 配置 - 删除并禁用</p>
+<p>更新系统：右键开始 - 设置 - Windows 更新 - 检查更新</p>
+<p>关闭 UAC：开始 - UAC - 更改用户账户控制设置 - 拉到最底“从不通知”</p>
+<p>关闭索引：运行 - services.msc - 找到并双击 Windows Search - 停止并禁用</p>
+<p>关闭碎片整理：开始 - 碎片整理和优化驱动器 - 关闭 </p>
+<p>关闭网卡和蓝牙节约电源：右键开始 - 设备管理器 - 右键网络适配器中的网卡和蓝牙属性 - 电源管理 - 去掉节约电源</p>
+<p>设置睡眠：右键开始 - 屏幕和睡眠 - 都改成从不</p>
+<p>取消快速启动：开始 - 控制面板 - 系统和安全 - 电源选项 - 选择电源按钮功能 - 更改不可用设置</p>
+<p>关闭通信时降低音量：右键托盘声音 - 声音设置 - 更多声音设置 - 通信 - 不执行任何操作</p>
+<p>麦克风增强：右键托盘声音 - 声音设置 - 麦克风 - 增强音频“高级” - 级别</p>
+<p>登录微软账户和 OneDrive ，更改文档/图片默认位置到 OneDrive 的 PCdoc/PCpic</p>
+<p>安装基础软件：QQ+微信，VS Code，Terminal，Scoop（git，sudo，Chrome，KeePassXC</p>
 <h2>进入 WinRE 的几个方式</h2>
 <li>设置 - 更新和安全 - 高级启动（立即重新启动）</li>
 <li>按住 Shift 点重启（开始菜单）</li>
@@ -83,7 +95,7 @@ Windows Registry Editor Version 5.00
 <p><b>右键添加移动到文件夹</b>：HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers，新建“项”，命名为“MoveTo”，双击其“默认值”，写入：{C2FBB631-2971-11d1-A18C-00C04FD75D13} </p>
 <p><b>右键添加移动到指定文件夹</b>：HKEY_LOCAL_MACHINE/SOFTWARE/Classes/*/shell 下 新建 [项] 为：move to foldername，在其上新建 [项] 为：command，修改其默认值为："powershell.exe" "mi %1 C:\foldername"</p>
 <p><b>清除任务栏图标记录</b>：HEEY_CLASSES_ROOT\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify 删除PastIconsStream和IconStreams</p>
-<p><b>重命名网络连接名</b>：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles Profiles里会发现你的连接都在这里显示（长字符串名称文件夹），双击你要修改的里的ProfileName值，输入你要的名字</p>
+<p><b>重命名网络连接名</b>：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles Profiles里会发现你的连接都在这里显示（长字符串名称文件夹），双击你要修改的里的ProfileName值，输入你要的名字</p><p><b>任务栏设为顶部</b>：进入 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3 ，双击 Settings ，选中第2行，第5个字段的 03，改为 01，重启资源管理器</p><p><b>设置任务栏大小</b>：进入 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced ，右键右侧空白处新建“DWORO 32位值”，命名为 TaskbarSi，双击修改其值，0为最小</p>
 <h1>主板引导菜单快捷键</h1>
 <table><thead><tr><th>品牌</th><th>台式</th><th>笔记本</th><th>品牌</th><th>台式</th><th>笔记本</th></tr></thead><tbody><tr><td>华硕</td><td>F8</td><td>F8</td><td>惠普</td><td>F12</td><td>F9</td></tr><tr><td>技嘉</td><td>F12</td><td></td><td>戴尔</td><td>ESC</td><td>F12</td></tr><tr><td>微星</td><td>F11</td><td></td><td>神州</td><td>F12</td><td>12</td></tr><tr><td>华擎</td><td>F11</td><td></td><td>东芝</td><td>F12</td><td></td></tr><tr><td>七彩虹</td><td>F11</td><td></td><td>IBM</td><td>F12</td><td></td></tr><tr><td>联想</td><td>F12</td><td>F12</td><td>三星</td><td>F12</td><td></td></tr></tbody></table>
 <h1>Shortcuts Key<a name="tips2"></a></h1>
