@@ -168,6 +168,12 @@ function saveAsMarkdown() {
     save(editor.getValue(), document.title.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/\s]/gi, '') + ".md");
 }
 
+// Copy the markdown on the clipboard
+function copyMarkdown() {
+    const code = editor.getValue();
+    navigator.clipboard.writeText(code);
+}
+
 //Print the document named as the document title encoded to avoid strange chars and spaces
 function saveAsHtml() {
     save(document.getElementById('out').innerHTML, document.title.replace(/[`~!@#$%^&*()_|+\-=?;:'",.<>\{\}\[\]\\\/\s]/gi, '') + ".html");

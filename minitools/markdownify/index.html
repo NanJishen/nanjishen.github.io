@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="lib/spell-checker.min.css">
     <link rel="stylesheet" href="lib/sweetalert.css">
     <link rel="stylesheet" href="index.css">
+    <script async src="https://cdn.splitbee.io/sb.js"></script>
   </head>
   <body id="toplevel">
     <div id="in"><form><textarea id="code"># New Document</textarea></form></div>
@@ -44,6 +45,7 @@
         <p id="openbutton" title="Open from Disk" class="navbutton left" onclick="document.getElementById('fileInput').click();"><i class="material-icons">file_upload</i></p>
         <input id="fileInput" type="file" class="hidden" accept=".md,.mdown,.txt,.markdown"/>
         <p id="savebutton" title="Download" class="navbutton left" onclick="showMenu()"><i class="material-icons">file_download</i></p>
+        <p id="copybutton" title="Copy" class="navbutton left" onclick="copyMarkdown()"><i class="material-icons">content_copy</i></p>
         <p id="browsersavebutton" title="Browser Save (Experimental)" class="navbutton left" onclick="saveInBrowser()"><i class="material-icons">save</i></p>
         <p id="sharebutton" title="Generate Shareable Link" class="navbutton left" onclick="updateHash()"><i class="material-icons">share</i></p>
         <p id="nightbutton" title="Night Mode" class="navbutton left" onclick="toggleNightMode(this)"><i class="material-icons">invert_colors</i></p>
