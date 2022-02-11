@@ -20,7 +20,8 @@ slmgr /xpr
 <pre>Office：必须进入对应的目录执行命令：
 
 cd C:\Program Files\Microsoft Office\Office16
-cscript ospp.vbs /sethst:kms.cangshui.net
+cscript ospp.vbs /inpkey:NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP（可跳过）
+cscript ospp.vbs /sethst:vvvtworay.nanjis.top
 cscript ospp.vbs /act
 cscript ospp.vbs /dstatus
 </pre>
@@ -248,7 +249,6 @@ iptables -t nat -l POSTROUTING -o 虚拟网卡 -j MASQUERADE
 <p>获取 Web 管理地址：右键一个应用（例如：FileStation）- 在新浏览器分页中打开</p>
 <p>自动开关机：控制台 - 电源 - 电源计划，勾选启动计划，设定一个关机时间和一个开机时间</p>
 <h4>开启 WebDAV</h4>控制台 - 应用程序 - Web 服务器 - 勾选“启用 Web 服务器”，然后就可以在上方看到 WebDAV 标签，点击该标签 - 启用 WebDAV（如果你发现连接不上，你应该也勾选下面的启用专用端口）<p>控制台 - 共享文件夹 - 编辑指定用户共享文件夹权限 - 选择权限类型“WebDAV访问”，访问权限选“无限制”，勾选指定的用户允许即可；Potplayer 播放，打开 - 远程连接，输入名称，协议选WebDAV、端口、用户名和密码，点连接</p>
-
 <h4>开启 NFS</h4>控制台 - 网络＆文件服务 - Win/Mac/NFS/WebDAV - Linux NFS 服务 - 勾选 “激活 NFS v2/v3 和 v4 服务”<p>控制台 - 共享文件夹 - 编辑你要共享的文件夹权限）- 选择权限类别“NFS主机访问”，勾选下面的“访问权限”即可，其它不需要勾选</p>
 <h3>命令的使用</h3>管理员 SSH 登录：控制台 - Telnet / SSH - 勾选“允许SSH连接...”，然后使用终端访问：<pre><code>ssh 用户名@NAS-IP # 默认已禁用了管理员账号，所以这里用你的用户名登陆
 sudo -i # 然后切换为 root 账户，这里用你的账户的密码
@@ -262,8 +262,25 @@ hdparm -C /dev/sda # 查看硬盘状态（active/idle（唤醒状态） 或 stan
 <h3>HBS 套件</h3>创建单向镜像同步：同步 - 创建-单向同步作业 - 选择源和目标目录 - 指定计划 - 规则在策略里勾选“移除目标文件夹中的其他文件”
 <h3>挂载阿里云盘</h3>获取 Token：登陆阿里云盘 - F12（开发者工具）- 控制台 - 执行：<code>JSON.parse(localStorage.getItem('token')).refresh_token</code><p>下载并安装阿里云插件：<a href="https://github.com/iranee/qnap-aliyunpan-webdav">qnap_aliyunpan</a>，启动并填写内容后保存</p>
 <p>浏览器访问：<code>http://NAS-IP:端口号</code>，测试是否成功（<a href="https://mp.weixin.qq.com/s/0tF_fjF-6egFTRNbr3aToQ">教程</a>）</p>
-<h3>Docker 部署</h3><h4>镜像加速</h4>顶部导航 - 产品 - 容器与中间件 - 容器镜像服务ACR - 管理控制台 - 镜像工具 - 镜像加速器 - 复制地址；NAS - ContainerStation - 属性 - Registry 服务器 - 新增 - 粘贴之前复制的镜像加速器地址，并勾选信任SSL签署和设为默认
+<h3>Docker 部署</h3><h4>Portainer</h4>先登陆 NAS 开启 admin 账户，并用其使用 SSH 登陆 NAS ，然后执行安装命令：<pre><code>docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /share/CACHEDEV1_DATA/Container/Docker/portainer_data:/data portainer/portainer-ce</code></pre>
+安装完成后浏览器访问 NAS-IP:9000 并创建管理员账号，接着选择 Local 进行连接
+<p>注意：威联通 NAS 的文件路径要添加格式：/share<!-- /CACHEDEV硬盘序号_DATA -->/共享文件夹</（例如：/share/Downloads ）；端口指定（hsot）可以写成 ：0.0.0.0:9091</p>
+<h4>镜像加速</h4>访问<a href="https://www.aliyun.com">阿里云</a> - 顶部导航 - 产品 - 容器与中间件 - 容器镜像服务ACR - 管理控制台 - 镜像工具 - 镜像加速器 - 复制地址；NAS - ContainerStation - 属性 - Registry 服务器 - 新增 - 粘贴之前复制的镜像加速器地址，并勾选信任SSL签署和设为默认
 <h4>DDNS-GO</h4>ContainerStation - 创建 <a href="https://hub.docker.com/r/jeessy/ddns-go">jeessy/ddns-go</a> - 安装 - 运行后点击 URL 跳转到配置页面：先点选你的 DNS 服务商，例如 Cloudflare，并填写 Token（获取方法：登陆 Cloudflare - 右上角头像 - 我的个人资料 - API 令牌 - 创建令牌 - 点击“编辑区域 DNS”右侧的“使用模板”，在“区域资源”中选择你的域名，或者选择所有区域 - 拉到最底下点击继续以显示摘要 - 复制令牌）- DDNS-GO 配置完成后点击底部 Save
+<h4>Jellyfin</h4>通过 Portainer 来部署以开启硬解，打开 Portainer - Containers - Add container：
+<pre><code>Image：nyanmisaka/Jellyfin
+Manual network port publishin：
+  host（0.0.0.0:8096）→ container（8096）
+Volumes：
+  container（/config）→ host（/share/Container/Jellyfin/config）- Bind，Writable
+  container（/cache）→ host（/share/Container/Jellyfin/cache）- Bind，Read-only
+  container（/media）→ host（/share/Media）- Bind，Writable
+Advanced container settings：
+  Restart policy：Always
+  Runtime & Resources：Devices - add device：
+    host（/dev/dri/renderD128）container（/dev/dri/renderD128）
+</code></pre>
+部署完成后访问 jellyfin - 菜单 - 控制台 - 播放 - 转码（硬件加速：选 VAAPI，下面勾选所有格式）- 硬件编码选项：勾选启用硬件编码
 <h4>Transmission</h4>Container Station - 创建 - transmission - 选择 linuxserver/transmission - 安装：名称自定义，点高级设置：<br>
 环境 - 新增：
 <pre><code>PGID:1000
@@ -287,6 +304,33 @@ bash install-tr-control-cn.sh # 执行脚本
 选择1（安装最新的发布版本（release）），安装完成，使用浏览器访问即可看到新的 WebUI
 </code></pre>
 <storng><a href="https://mp.weixin.qq.com/s/sZNsUR20apfknAgFexQE_A">Aria2 参考</a></storng>
+<h4>qbittorrent（荒野无灯版）的安装</h4>
+<p>先用 File Station 在 Container 中创建一个 qbit 目录，并在其下在创建 config 和 data 两个目录
+Container Station - 创建- 80x86/qbittorrent（不要选 latest，x86的选amd64，arm的选arm64）- 安装 - 高级设置：<br>
+环境：</p>
+<pre><code><code><div>PUID=1000 # 名称+值
+PGID=100
+WEB_PORT=8089
+BT_PORT=8999
+</div></code></code></pre>
+<p>网络：</p>
+<pre><code><code><div>8089:8089 - TCP
+8999:8999 - TCP
+8999:8999 - UDP
+</div></code></code></pre>
+<p>共享文件夹：</p>
+<pre><code><code><div>/Container/qbit/config:/config
+/Container/qbit/data:/data
+/Media:/downloads
+</div></code></code></pre>
+<p>全部设置完成后点击创建并确认下是否正确，安装完成后浏览器访问 NAS-IP:8089 管理页面，默认账户名 admin 密码 adminadmin</p>
+<p>登陆成功后在设置 - Web UI 标签中更改语言 ；在 BitTorrent 标签中如果是下载PT，就将所有对勾都去掉</p>
+<p>在下载标签中的默认路径 /downloads 是挂载的路径因此不要删除，如果你要分类下载可以设置为 /downloads/Movie（如果下载时路径错了，其实可以右键下载条目点更改保存位置）</p>
+<h4>bookbrowser</h4>
+在线图书阅读系统，和上面一样操作，搜索 dezhao/bookbrowser_cn 镜像
+<pre><code>18097:8090 - TCP
+/Media/Books:/books
+</code></pre>
 <!-- 以下是Office内容 -->
 <h3><a name="tips7"> </a>Bullet Journal 符号</h3><table><tr><td>□ 代办事项</td><td>☆ 星标/重要</td><td>? 疑惑/问题</td><td> ! 关键/紧急</td></tr><tr><td># 备注/想法</td><td>+ 存档/收藏</td><td>> 可延迟的</td><td>& 突发奇想</td></tr></table>
 <h1>OneNote</h1><h3>要知道的几件事</h3><ul><li>目录结构：笔记本&gt;分区&gt;分页&gt;子页</li><li>文字中间按 Tab键 建立表格</li><li>项目列表光标在最前按 Tab键 建立子列表</li><li>数学公式后按空格可以自动计算（如5+5=空格）</li><li>边录音可以边输入文字进行段落记录</li><li>打印页面可以把PDF等发送至OneNote</li><li>再第二行按TAB缩进后点第一行左侧箭头可折叠</li></ul>
