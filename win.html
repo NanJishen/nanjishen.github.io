@@ -49,7 +49,8 @@ slmgr /ipk x-x-x-x-x ：设置密钥，5×5的序列号
 <h3>驱动与运行库</h3> → <a href="https://www.intel.cn">Intel</a> | <a href="https://www.amd.com/zh-hans">AMD</a>（<a href="https://www.amd.com/zh-hans/support/chipsets/amd-socket-am4/b550">B550</a>，<a href="https://www.amd.com/zh-hans/support/graphics/amd-radeon-6000-series/amd-radeon-6800-series/amd-radeon-rx-6800-xt">6800XT</a>）| <a href="https://www.nvidia.com">NVIDIA</a> | <a href="https://cn.msi.com">微星</a> | <a href="https://www.asus.com/CN/">华硕</a>（<a href="https://www.asus.com.cn/Motherboards-Components/Motherboards/TUF-Gaming/TUF-GAMING-B550M-PLUS-WI-FI/HelpDesk_Download/">B550M</a>）| <a href="https://www.gigabyte.cn">技嘉</a> | <a href="https://www.asrock.com">华擎</a> <br><br>
 → <a href="http://cn.razerzone.com">雷蛇</a>（<a href="https://mysupport.razer.com/app/answers/detail/a_id/3750">毒蝰终极版</a>）| <a href="https://www.durgod.com/drive">杜伽</a> | <a href="http://www.asrockchina.com.cn/Graphics-Card/AMD/Radeon%20RX%206800%20XT%20Taichi%20X%2016G%20OC/index.cn.asp#Download">华擎太极</a> | <br><br>
 → <a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=35">DirectX</a> | <a href="https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads">Visual C++</a> |  
-<a href="https://dotnet.microsoft.com/download/dotnet-framework">NET Framework</a> | <a href="https://dotnet.microsoft.com/download/dotnet/5.0/runtime">.NET Runtime</a> | <a href="https://www.free-codecs.com/download/hevc_video_extension.htm">HEVC_H265</a> / <a href="https://www.microsoft.com/zh-cn/p/hevc-video-extensions-from-device-manufacturer/9n4wgh0z6vhq#activetab=pivot:overviewtab">Store</a>
+<a href="https://dotnet.microsoft.com/download/dotnet-framework">NET Framework</a> | <a href="https://dotnet.microsoft.com/download/dotnet/5.0/runtime">.NET Runtime</a> | <a href="https://www.free-codecs.com/download/hevc_video_extension.htm">HEVC_H265</a> / <a href="https://www.microsoft.com/zh-cn/p/hevc-video-extensions-from-device-manufacturer/9n4wgh0z6vhq#activetab=pivot:overviewtab">Store</a><br><br>
+→ <a href="https://www.dll-files.com">dll-Down</a> | <a href="https://www.microsoft.com/zh-cn/p/dts-sound-unbound/9pj0nkl8mcsj?activetab=pivot:overviewtab#">DTS</a>
 <h3>重装系统之前</h3>下载驱动、git push 现有项目、备份：OBS+Mempad+Epic+输入法短语与自学习词库
 <p>备份家目录（.config .gridea .ssh 、VirtualBox VMs）</p>
 <h3>新装系统设置</h3>
@@ -79,6 +80,7 @@ slmgr /ipk x-x-x-x-x ：设置密钥，5×5的序列号
 <p><b>UWP文件管理快捷方式</b>：explorer shell:AppsFolder\c5e2524a-ea46-4f67-841f-6a9465d9d515_cw5n1h2txyewy!App</p>
 <p><b>滑动关机快捷方式</b>：%windir%\System32\SlideToShutDown.exe</p>
 <p><b>重建图标缓存</b>：运行 ie4uinit -show</p>
+<p><b>清除开始菜单图标缓存</b>：Win+R - 输入 %localappdata% - 删除隐藏文件 Iconcache.db - 注销</p>
 <p><b>右键添加记事本打开</b>：HKEY_LOCAL_MACHINE\SOFTWARE\Classes\*\shell（没有就建立），新建 [项]，名为 NotePad，在右侧把默认项的值改成：用记事本打开，再在右侧建立 [字符串值] 命名为 Icon，值C:\windows\system32\notepad.exe，再在 notepad 主键下新建 [项] 命名为 command，把默认项的值改成：notepad&nbsp;%1</p>
 导入注册表快速添加：以 Notepad++ 为例，将以下的内容保存为 .reg 文件后双击后导入
 <pre>Windows Registry Editor Version 5.00
@@ -151,8 +153,14 @@ v2ex.com
 tucahuand.com
 sehuatang.net
 dmm.co.jp
+98tuch.net
 img.bakufu.jp
 www.rysuanaaser.com
+raindrop.io
+alternativeto.net
+op.gg
+luckydesigner.space
+bloghub.fun
 
 # 走直连列表：
 
@@ -250,6 +258,12 @@ iptables -t nat -l POSTROUTING -o 虚拟网卡 -j MASQUERADE
 <p>自动开关机：控制台 - 电源 - 电源计划，勾选启动计划，设定一个关机时间和一个开机时间</p>
 <h4>开启 WebDAV</h4>控制台 - 应用程序 - Web 服务器 - 勾选“启用 Web 服务器”，然后就可以在上方看到 WebDAV 标签，点击该标签 - 启用 WebDAV（如果你发现连接不上，你应该也勾选下面的启用专用端口）<p>控制台 - 共享文件夹 - 编辑指定用户共享文件夹权限 - 选择权限类型“WebDAV访问”，访问权限选“无限制”，勾选指定的用户允许即可；Potplayer 播放，打开 - 远程连接，输入名称，协议选WebDAV、端口、用户名和密码，点连接</p>
 <h4>开启 NFS</h4>控制台 - 网络＆文件服务 - Win/Mac/NFS/WebDAV - Linux NFS 服务 - 勾选 “激活 NFS v2/v3 和 v4 服务”<p>控制台 - 共享文件夹 - 编辑你要共享的文件夹权限）- 选择权限类别“NFS主机访问”，勾选下面的“访问权限”即可，其它不需要勾选</p>
+
+<h4>开始 SMB3 加速</h4>SSH 登陆 NAS - 编辑 /etc/smb.conf 文件，加入如下内容：
+<pre><code>server multi channel support = yes
+aio read size = 1
+aio write size = 1
+</code></pre>设置链路聚合：网络与虚拟交换机 - 网络适配器 - Port Trunking - 选择一般交换机
 <h3>命令的使用</h3>管理员 SSH 登录：控制台 - Telnet / SSH - 勾选“允许SSH连接...”，然后使用终端访问：<pre><code>ssh 用户名@NAS-IP # 默认已禁用了管理员账号，所以这里用你的用户名登陆
 sudo -i # 然后切换为 root 账户，这里用你的账户的密码
 # 会提示你是否使用Shell界面，按 q 再按 y 即可进入命令行环境
@@ -262,10 +276,16 @@ hdparm -C /dev/sda # 查看硬盘状态（active/idle（唤醒状态） 或 stan
 <h3>HBS 套件</h3>创建单向镜像同步：同步 - 创建-单向同步作业 - 选择源和目标目录 - 指定计划 - 规则在策略里勾选“移除目标文件夹中的其他文件”
 <h3>挂载阿里云盘</h3>获取 Token：登陆阿里云盘 - F12（开发者工具）- 控制台 - 执行：<code>JSON.parse(localStorage.getItem('token')).refresh_token</code><p>下载并安装阿里云插件：<a href="https://github.com/iranee/qnap-aliyunpan-webdav">qnap_aliyunpan</a>，启动并填写内容后保存</p>
 <p>浏览器访问：<code>http://NAS-IP:端口号</code>，测试是否成功（<a href="https://mp.weixin.qq.com/s/0tF_fjF-6egFTRNbr3aToQ">教程</a>）</p>
-<h3>Docker 部署</h3><h4>Portainer</h4>先登陆 NAS 开启 admin 账户，并用其使用 SSH 登陆 NAS ，然后执行安装命令：<pre><code>docker run -d -p 9000:9000 --name portainer --restart always -v /var/run/docker.sock:/var/run/docker.sock -v /share/CACHEDEV1_DATA/Container/Docker/portainer_data:/data portainer/portainer-ce</code></pre>
+<h3>Docker 部署</h3>
+<h4>镜像加速</h4>访问<a href="https://www.aliyun.com">阿里云</a> - 顶部导航 - 产品 - 容器与中间件 - 容器镜像服务ACR - 管理控制台 - 镜像工具 - 镜像加速器 - 复制地址；NAS - ContainerStation - 属性 - Registry 服务器 - 新增 - 粘贴之前复制的镜像加速器地址，并勾选信任SSL签署和设为默认
+<h4>Portainer</h4>先登陆 NAS 开启 admin 账户，并用其 SSH 登陆 NAS ，执行安装命令：<pre><code>docker volume create portainer_data
+docker run -d -p 8000:8000 -p 9443:9443 -p 9000:9000 --name portainer \
+--restart=always \
+-v /var/run/docker.sock:/var/run/docker.sock \
+-v portainer_data:/data \
+portainer/portainer-ce:latest</code></pre>
 安装完成后浏览器访问 NAS-IP:9000 并创建管理员账号，接着选择 Local 进行连接
 <p>注意：威联通 NAS 的文件路径要添加格式：/share<!-- /CACHEDEV硬盘序号_DATA -->/共享文件夹</（例如：/share/Downloads ）；端口指定（hsot）可以写成 ：0.0.0.0:9091</p>
-<h4>镜像加速</h4>访问<a href="https://www.aliyun.com">阿里云</a> - 顶部导航 - 产品 - 容器与中间件 - 容器镜像服务ACR - 管理控制台 - 镜像工具 - 镜像加速器 - 复制地址；NAS - ContainerStation - 属性 - Registry 服务器 - 新增 - 粘贴之前复制的镜像加速器地址，并勾选信任SSL签署和设为默认
 <h4>DDNS-GO</h4>ContainerStation - 创建 <a href="https://hub.docker.com/r/jeessy/ddns-go">jeessy/ddns-go</a> - 安装 - 运行后点击 URL 跳转到配置页面：先点选你的 DNS 服务商，例如 Cloudflare，并填写 Token（获取方法：登陆 Cloudflare - 右上角头像 - 我的个人资料 - API 令牌 - 创建令牌 - 点击“编辑区域 DNS”右侧的“使用模板”，在“区域资源”中选择你的域名，或者选择所有区域 - 拉到最底下点击继续以显示摘要 - 复制令牌）- DDNS-GO 配置完成后点击底部 Save
 <h4>Jellyfin</h4>通过 Portainer 来部署以开启硬解，打开 Portainer - Containers - Add container：
 <pre><code>Image：nyanmisaka/Jellyfin
@@ -281,6 +301,15 @@ Advanced container settings：
     host（/dev/dri/renderD128）container（/dev/dri/renderD128）
 </code></pre>
 部署完成后访问 jellyfin - 菜单 - 控制台 - 播放 - 转码（硬件加速：选 VAAPI，下面勾选所有格式）- 硬件编码选项：勾选启用硬件编码
+<h4>Flare</h4>Portainer - Containers - Add container：
+<pre><code>Name：Flare
+Image：soulteary/flare:latest
+Manual network port publishing：5005:5005
+Command & logging
+  Command：'flare' '--nologin=0' # 关闭免登陆，即登陆时需要账户密码
+  Volumes：/share/Container/flaredate/:/app
+  Env：FLARE_USER=用户名；FLARE_PASS=自定密码
+</code></pre>
 <h4>Transmission</h4>Container Station - 创建 - transmission - 选择 linuxserver/transmission - 安装：名称自定义，点高级设置：<br>
 环境 - 新增：
 <pre><code>PGID:1000
