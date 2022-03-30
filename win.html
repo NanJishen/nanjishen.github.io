@@ -310,20 +310,29 @@ Command & logging
   Volumes：/share/Container/flaredate/:/app
   Env：FLARE_USER=用户名；FLARE_PASS=自定密码
 </code></pre>
+<h4>Wallabag</h4>Container Station - 创建 - transmission - 选择 wallabag/wallabag - 安装：名称自定义，点高级设置：
+<pre><code># 环境 - 新增：
+SYMFONY__ENV__DOMAIN_NAME:http://nanjis.top:182
+# 网络 - 网络模式（NAT）- 端口转发 - 新增：
+182:80-TCP
+# 共享文件夹 - 挂载本机共享文件夹 - 新增：
+/share/Container/wallabag/data:/var/www/wallabag/data
+/share/Container/wallabag/images:/var/www/wallabag/web/assets/images
+</code></pre>
 <h4>Transmission</h4>Container Station - 创建 - transmission - 选择 linuxserver/transmission - 安装：名称自定义，点高级设置：<br>
-环境 - 新增：
-<pre><code>PGID:1000
+<pre><code># 环境 - 新增：
+PGID:1000
 PUID:1000
 TZ:Asia/Chita
-</code></pre>
-网络 - 网络模式（NAT）- 端口转发 - 新增：
-<pre><code>51413:51413-TCP
+# 网络 - 网络模式（NAT）- 端口转发 - 新增：
+51413:51413-TCP
 51413:51413-UDP
-9091:9091-TCP</code></pre>
-共享文件夹 - 挂载本机共享文件夹 - 新增：
-<pre><code>/share/Downloads:/downloads
+9091:9091-TCP
+# 共享文件夹 - 挂载本机共享文件夹 - 新增：
+/share/Downloads:/downloads
 /share/Downloads/torrent:/watch
-/share/Container/transmission:/config</code></pre>
+/share/Container/transmission:/config
+</code></pre>
 安装中文 WebUI ：ContainerStation - 点击 transmission-1 运行中的镜像 - 输入 bin/sh - 然后执行命令：
 <pre><code>
 find / -name web # 查找 web 目录，结果为 /usr/share/transmission/web
