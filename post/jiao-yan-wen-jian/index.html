@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>给Win10右键菜单加上校验文件功能 - 极限玩家</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="南极神" /><meta name="description" content="有时候，我们需要校验文件的哈希值，以确保该文件是否有损坏，或者被篡改。比如 Win10 或 Ubuntu 系统的安装镜像。若哈希值错误，则表示不适合重装系统，否则重装" /><meta name="keywords" content="极限玩家博客, 极限博客, 极限玩家, 南极神" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.96.0 with theme even" />
+
+
+<link rel="canonical" href="https://ttti.cc/post/jiao-yan-wen-jian/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="给Win10右键菜单加上校验文件功能" />
+<meta property="og:description" content="有时候，我们需要校验文件的哈希值，以确保该文件是否有损坏，或者被篡改。比如 Win10 或 Ubuntu 系统的安装镜像。若哈希值错误，则表示不适合重装系统，否则重装" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ttti.cc/post/jiao-yan-wen-jian/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-03-14T16:50:37+08:00" />
+<meta property="article:modified_time" content="2021-03-14T16:50:37+08:00" />
+
+<meta itemprop="name" content="给Win10右键菜单加上校验文件功能">
+<meta itemprop="description" content="有时候，我们需要校验文件的哈希值，以确保该文件是否有损坏，或者被篡改。比如 Win10 或 Ubuntu 系统的安装镜像。若哈希值错误，则表示不适合重装系统，否则重装"><meta itemprop="datePublished" content="2021-03-14T16:50:37+08:00" />
+<meta itemprop="dateModified" content="2021-03-14T16:50:37+08:00" />
+<meta itemprop="wordCount" content="830">
+<meta itemprop="keywords" content="校验哈希值," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="给Win10右键菜单加上校验文件功能"/>
+<meta name="twitter:description" content="有时候，我们需要校验文件的哈希值，以确保该文件是否有损坏，或者被篡改。比如 Win10 或 Ubuntu 系统的安装镜像。若哈希值错误，则表示不适合重装系统，否则重装"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">极限玩家</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">存档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/so.html">
+        <li class="mobile-menu-item">极限搜索</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">极限玩家</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">存档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/so.html">极限搜索</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">给Win10右键菜单加上校验文件功能</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-03-14 </span>
+        <div class="post-category">
+            <a href="/categories/%E6%96%B9%E6%B3%95/"> 方法 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#第一步">第一步</a></li>
+        <li><a href="#第二步">第二步</a></li>
+        <li><a href="#最后">最后</a></li>
+        <li><a href="#还有一件事">还有一件事</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>有时候，我们需要校验文件的哈希值，以确保该文件是否有损坏，或者被篡改。比如 Win10 或 Ubuntu 系统的安装镜像。若哈希值错误，则表示不适合重装系统，否则重装失败的话，原来的系统也进不去了。</p>
+<p>哈希值就好像是文件的身份证号码，基本是无法伪造的。日常中主要使用两种哈希值校验码：<strong>MD5</strong>和<strong>SHA1</strong>。</p>
+<p>很多人会选择安装第三方软件来校验下载回来的文件的哈希值是否和站长提供的匹配。不过我今天要说的是，不用任何软件，给 Win10 右键添加“文件校验”（哈希值）的功能。这样以后校验某个文件的时候，直接右键该文件即可。</p>
+<h2 id="第一步">第一步</h2>
+<p>首先，右键<strong>桌面</strong> - <strong>新建</strong> - <strong>文本文件</strong>，接着重命名该文件名为“校验Hash.reg”（这里要注意，必须包括扩展名，因为我们需要建立的是一个注册表文件）。</p>
+<h2 id="第二步">第二步</h2>
+<p><strong>右键刚刚建立好的“校验Hash.reg”文件</strong> - 点<strong>编辑</strong>，这时候便会用记事本打开该文件，然后将如下内容复制并粘贴到该文件里，保存退出：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Windows Registry Editor Version 5.00
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[HKEY_CLASSES_ROOT\*\shell\hash]
+</span></span><span class="line"><span class="cl">&#34;MUIVerb&#34;=&#34;校验 Hash&#34;
+</span></span><span class="line"><span class="cl">&#34;SubCommands&#34;=&#34;&#34;
+</span></span><span class="line"><span class="cl">&#34;Icon&#34;=&#34;PowerShell.exe&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">; SHA1
+</span></span><span class="line"><span class="cl">[HKEY_CLASSES_ROOT\*\shell\hash\shell\01menu]
+</span></span><span class="line"><span class="cl">&#34;MUIVerb&#34;=&#34;SHA1&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[HKEY_CLASSES_ROOT\*\shell\hash\shell\01menu\command]
+</span></span><span class="line"><span class="cl">@=&#34;powershell -noexit get-filehash -literalpath &#39;%1&#39; -algorithm SHA1 | format-list&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">; SHA256
+</span></span><span class="line"><span class="cl">[HKEY_CLASSES_ROOT\*\shell\hash\shell\02menu]
+</span></span><span class="line"><span class="cl">&#34;MUIVerb&#34;=&#34;SHA256&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[HKEY_CLASSES_ROOT\*\shell\hash\shell\02menu\command]
+</span></span><span class="line"><span class="cl">@=&#34;powershell -noexit get-filehash -literalpath &#39;%1&#39; -algorithm SHA256 | format-list&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">; MD5
+</span></span><span class="line"><span class="cl">[HKEY_CLASSES_ROOT\*\shell\hash\shell\03menu]
+</span></span><span class="line"><span class="cl">&#34;MUIVerb&#34;=&#34;MD5&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[HKEY_CLASSES_ROOT\*\shell\hash\shell\03menu\command]
+</span></span><span class="line"><span class="cl">@=&#34;powershell -noexit get-filehash -literalpath &#39;%1&#39; -algorithm MD5 | format-list&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">; Allget-filehash -literalpath &#39;%1&#39; -algorithm RIPEMD160 | format-list
+</span></span><span class="line"><span class="cl">[HKEY_CLASSES_ROOT\*\shell\hash\shell\04menu]
+</span></span><span class="line"><span class="cl">&#34;CommandFlags&#34;=dword:00000020
+</span></span><span class="line"><span class="cl">&#34;MUIVerb&#34;=&#34;ALL&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[HKEY_CLASSES_ROOT\*\shell\hash\shell\04menu\command]
+</span></span><span class="line"><span class="cl">@=&#34;powershell -noexit get-filehash -literalpath &#39;%1&#39; -algorithm SHA1 | format-list;get-filehash -literalpath &#39;%1&#39; -algorithm SHA256 | format-list;get-filehash -literalpath &#39;%1&#39; -algorithm MD5 | format-list&#34;
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>只是这样还不行，我们还需要将该文件保存为 UTF-16LE 编码：点击左上角的<strong>文件</strong> - <strong>另存为</strong> - <strong>编码选 UTF-16LE</strong> - <strong>保存</strong>。</p>
+<h2 id="最后">最后</h2>
+<p>最后一步了，你只要<strong>双击校验 Hash.reg 文件</strong> 即可，这时就会将文件的内容导入到你系统的注册表相应的键值。那么也就生成了右键菜单条目。接着你只要右键你需要校验的文件就能看到“校验 Hash ”的选项了。</p>
+<p>原理实际上很简单，通过调用系统自带的 Powershell 命令，来对选中的文件进行校验，因此该方法也不适合 Win7 系统。</p>
+<h2 id="还有一件事">还有一件事</h2>
+<p>没错，这个时候你或许会问，要如何取消这个菜单呢？很简单了，只要和刚才一样，再建立一个“删除校验.reg”的文件，然后将内容如下写入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Windows Registry Editor Version 5.00
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">[-HKEY_CLASSES_ROOT\*\shell\hash]
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>保存退出并双击执行，系统就会删除掉对应的注册表键值，那么“校验 Hash”条目就不复存在了。</p>
+<p><img src="https://gitee.com/nanjishen/Npic/raw/master/img/gzh-end.png" alt=""></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">南极神</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-03-14
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/%E6%A0%A1%E9%AA%8C%E5%93%88%E5%B8%8C%E5%80%BC/">校验哈希值</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/ji-xiao-kuozan-xiaolv/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">5款极致小巧的扩展让你的浏览器更高效</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/pic-mirror-img/">
+            <span class="next-text nav-default">图片防盗链解决方案</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'extreme-1';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:njx.xyz@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://weibo.com/nanjishen" class="iconfont icon-weibo" title="weibo"></a>
+  <a href="https://ttti.cc/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>极限玩家</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-XK6SLX411H', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>

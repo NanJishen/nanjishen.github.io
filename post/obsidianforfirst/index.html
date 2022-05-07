@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title>更换到更现代的双向链笔记软件 Obsidian - 极限玩家</title>
+  <meta name="renderer" content="webkit" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+<meta name="theme-color" content="#f8f5ec" />
+<meta name="msapplication-navbutton-color" content="#f8f5ec">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="#f8f5ec">
+
+
+<meta name="author" content="南极神" /><meta name="description" content="先说一下个人使用笔记本软件的经过：从 OneNote → Joplin → Obsidian（现在开始），我一直认为，笔记软件是组织和管理知识的最好方式，尤其对于现代人来说" /><meta name="keywords" content="极限玩家博客, 极限博客, 极限玩家, 南极神" />
+
+
+
+
+
+
+<meta name="generator" content="Hugo 0.96.0 with theme even" />
+
+
+<link rel="canonical" href="https://ttti.cc/post/obsidianforfirst/" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/manifest.json">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+<link href="/sass/main.min.f92fd13721ddf72129410fd8250e73152cc6f2438082b6c0208dc24ee7c13fc4.css" rel="stylesheet">
+<link href="/lib/fancybox/jquery.fancybox-3.1.20.min.css" rel="stylesheet">
+
+
+<meta property="og:title" content="更换到更现代的双向链笔记软件 Obsidian" />
+<meta property="og:description" content="先说一下个人使用笔记本软件的经过：从 OneNote → Joplin → Obsidian（现在开始），我一直认为，笔记软件是组织和管理知识的最好方式，尤其对于现代人来说" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ttti.cc/post/obsidianforfirst/" /><meta property="article:section" content="post" />
+<meta property="article:published_time" content="2021-03-21T15:21:50+08:00" />
+<meta property="article:modified_time" content="2021-03-21T15:21:50+08:00" />
+
+<meta itemprop="name" content="更换到更现代的双向链笔记软件 Obsidian">
+<meta itemprop="description" content="先说一下个人使用笔记本软件的经过：从 OneNote → Joplin → Obsidian（现在开始），我一直认为，笔记软件是组织和管理知识的最好方式，尤其对于现代人来说"><meta itemprop="datePublished" content="2021-03-21T15:21:50+08:00" />
+<meta itemprop="dateModified" content="2021-03-21T15:21:50+08:00" />
+<meta itemprop="wordCount" content="1833">
+<meta itemprop="keywords" content="Obsidian," /><meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="更换到更现代的双向链笔记软件 Obsidian"/>
+<meta name="twitter:description" content="先说一下个人使用笔记本软件的经过：从 OneNote → Joplin → Obsidian（现在开始），我一直认为，笔记软件是组织和管理知识的最好方式，尤其对于现代人来说"/>
+
+<!--[if lte IE 9]>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
+<![endif]-->
+
+<!--[if lt IE 9]>
+  <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+<![endif]-->
+
+</head>
+<body>
+  <div id="mobile-navbar" class="mobile-navbar">
+  <div class="mobile-header-logo">
+    <a href="/" class="logo">极限玩家</a>
+  </div>
+  <div class="mobile-navbar-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</div>
+<nav id="mobile-menu" class="mobile-menu slideout-menu">
+  <ul class="mobile-menu-list">
+    <a href="/">
+        <li class="mobile-menu-item">首页</li>
+      </a><a href="/post/">
+        <li class="mobile-menu-item">存档</li>
+      </a><a href="/tags/">
+        <li class="mobile-menu-item">标签</li>
+      </a><a href="/categories/">
+        <li class="mobile-menu-item">分类</li>
+      </a><a href="/so.html">
+        <li class="mobile-menu-item">极限搜索</li>
+      </a>
+  </ul>
+
+  
+
+
+</nav>
+
+  <div class="container" id="mobile-panel">
+    <header id="header" class="header">
+        <div class="logo-wrapper">
+  <a href="/" class="logo">极限玩家</a>
+</div>
+
+
+
+
+
+<nav class="site-navbar">
+  <ul id="menu" class="menu">
+    <li class="menu-item">
+        <a class="menu-item-link" href="/">首页</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/post/">存档</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/tags/">标签</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/categories/">分类</a>
+      </li><li class="menu-item">
+        <a class="menu-item-link" href="/so.html">极限搜索</a>
+      </li>
+  </ul>
+</nav>
+
+    </header>
+
+    <main id="main" class="main">
+      <div class="content-wrapper">
+        <div id="content" class="content">
+          <article class="post">
+    
+    <header class="post-header">
+      <h1 class="post-title">更换到更现代的双向链笔记软件 Obsidian</h1>
+
+      <div class="post-meta">
+        <span class="post-time"> 2021-03-21 </span>
+        <div class="post-category">
+            <a href="/categories/%E8%BD%AF%E4%BB%B6/"> 软件 </a>
+            </div>
+        
+      </div>
+    </header>
+
+    <div class="post-toc" id="post-toc">
+  <h2 class="post-toc-title">文章目录</h2>
+  <div class="post-toc-content always-active">
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#初始安装">初始安装</a></li>
+        <li><a href="#初始体验">初始体验</a></li>
+        <li><a href="#最后">最后</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+</div>
+    <div class="post-content">
+      <p>先说一下个人使用笔记本软件的经过：从 OneNote →  Joplin → Obsidian（现在开始），我一直认为，笔记软件是组织和管理知识的最好方式，尤其对于现代人来说，电子笔记是必不可少的（纸张笔记不够效率）。因为现代是一个知识内容的工作时代。人脑是绝对不够用的。</p>
+<p>尽管在今天笔记软件有很多，但是对更高效率的追求和渴望依然存在。说到新一代的笔记软件，那就要提到 Roam Research 了，其订阅价格高达165美元/年。当时官方在推特上表示：</p>
+<blockquote>
+<p>如果你觉得这个价格太贵了，请你立刻导出你的数据换另一个工具&hellip; ”</p>
+</blockquote>
+<p>你也可以理解为：“如果你是穷鬼，那请走得远一点，Roam 不稀罕你，如果你愿意向我们证明你很穷，我们会考虑给你半价”</p>
+<p>而我今天说的 <em>Obsidian</em> 正是 Roam Research 的免费代替品。它是一个基于卡片盒笔记法（Zettelkasten）的笔记本软件。据说，德国社会学者卢曼，用卡片盒笔记法写了70多本书和400多篇学术文章。</p>
+<p>传统的用文件夹来管理和组织笔记的结构非常僵硬，而双向链笔记软件则赋予了其灵活性，它可以实现双向的跳转。这不仅仅提高了灵活性，还提高了效率。（你想啊，切换分类，再搜索，或找到文件再打开，一步又一步，哪有点一下跳转来的快呢？）</p>
+<h2 id="初始安装">初始安装</h2>
+<p>打开浏览器访问 <code>obsidian.md</code>，然后点击中间的“Get Obsidian for Windows”，即可下载安装包，接着和安装其他软件一样安装即可。如果你使用包管理工具 Scoop ，那么可以直接用命令行来安装，执行命令 <code>scoop install obsidian</code> 即可。</p>
+<p>安装完成后就是启动软件了，首次启动会看到如下画面：</p>
+<p><img src="https://z3.ax1x.com/2021/03/21/659M24.png" alt=""></p>
+<p>它会提示你，是打开现有的目录作为库，还是说创建一个新的目录作为库。我们这篇文章主要讲的是初始安装，那么当然是选择<em>创建新库</em>了。下方可以选择你要用的语言。接着就是创建页面，如下图：</p>
+<p><img src="https://z3.ax1x.com/2021/03/21/659QxJ.png" alt=""></p>
+<p>在库的名字中输入你要定义的名字，例如 MyNotes 。然后浏览你电脑上的一个文件夹，那么之后 Obsidian 就会在该文件夹下创建，以你上面库的名字为命名的文件夹。</p>
+<p>可以看到我这里选择了 OneDrive 的 Docs 目录。这个目录会跟随 OneDrive 同步的，也就是说即便我重装了系统，格式化了C盘，重新登录 OneDrive 后它也会同步回来，这样便实现了数据云同步。</p>
+<p>现在，我们的第一个文档库便创建完成了，接着便可以看到软件的主界面窗口了：</p>
+<p><img src="https://z3.ax1x.com/2021/03/21/659KGF.png" alt=""></p>
+<p>如你所见，Obsidian 会创建名为 Notes 的文件夹作为库的根目录，之后你创建的文件都会在这个目录中。让我们来创建自己的笔记吧：</p>
+<p><img src="https://z3.ax1x.com/2021/03/21/6598q1.png" alt=""></p>
+<p>先随便创建了3个文档，因为是 md 格式的文档，所以我便轻松将我原来的 Joplin 中的文档放进去。</p>
+<p>Obsidian 默认的是深色主题，如果你喜欢亮色，只需点击左下角的设置图标 - 外观 - 更改配色方案为亮色即可。再看看文件夹中生成的对应的文件：</p>
+<p><img src="https://z3.ax1x.com/2021/03/21/659uPU.png" alt=""></p>
+<p>可以看到生成的对应的文档，这便是我喜欢的笔记数据保存形式。这些数据本地化，以文件形式存在，且每个文档都可以单独迁移和保存，为日后提供了极大的方便。</p>
+<h2 id="初始体验">初始体验</h2>
+<p>我也是刚刚换到并开始使用 Obsidian 。不过我之前用的是 Joplin，文档也是 Markdown 语法的，所以对编辑来说很顺手了。随着社区和开发者的不断努力，我相信它会成为非常好的笔记软件。</p>
+<p>初步体验几点：</p>
+<ul>
+<li>在笔记中，使用 <code>![[filename]]</code> 语法格式来链接到其他页面</li>
+<li>在 设置 - 快捷键 中，可以方便的查看所有快捷键，并可以自定义</li>
+<li>按住 ctrl + 点预览按钮，则可以开启分栏模式</li>
+<li>Obsidian 原生支持了半透明效果，可以在设置 - 外观中开启</li>
+</ul>
+<p>我认为 Obsidian 的优点：</p>
+<ul>
+<li>双向链接，这样的跳转能极大的提高知识调用和查阅的效率；</li>
+<li>本地化文档，数据安全可靠，易于管理，也可以放到网盘中同步；</li>
+<li>Markdown 语法笔记，这个语法不用介绍了吧，非常通用；</li>
+<li>有插件可选，对于有更多需求的用户，提供更多可能。</li>
+</ul>
+<h2 id="最后">最后</h2>
+<p>比起管理知识，更重要的是掌握一个领域的知识体系的能力。很多人将知识管理与效率工具混在一起，这是一种偏误。世界知识管理运动之父野中郁次郎表示：</p>
+<blockquote>
+<p>人类的知识分为两部分，一部分是形式知识，它可以用正式的语言表述，包括语法陈述、数学表达式、技术规范、手册等。因此，这类知识可以在个体之间正式地且方便地进行传播。然而，除此之外，还有另外一类难以用正式语言表述的知识——暗默知识——更为重要。它属于植根于个体经验的个人知识，涉及像个人信念、视角及价值体系之类的无形要素。</p>
+</blockquote>
+<p>效率工具是为了我们节省管理的时间而存在的。但是知识的组合，再创造，甄别等，确是要你通过不断的摸索去了解并掌握的。幸运的是，今天我们有非常效率的记录工具，不幸的是，没有任何一款工具能够代替你自己去发挥创造/创意的。但效率工具仍然是重要的，因为它能帮助我们解决痛点 —— 高效的记录和管理以及检索（这里是提醒你不要沉迷于工具的使用，而是要思考记录后的知识如何重组后使用，让其发挥创造性）。</p>
+<p><img src="https://gitee.com/nanjishen/Npic/raw/master/img/gzh-end.png" alt=""></p>
+
+    </div>
+
+    <div class="post-copyright">
+  <p class="copyright-item">
+    <span class="item-title">文章作者</span>
+    <span class="item-content">南极神</span>
+  </p>
+  <p class="copyright-item">
+    <span class="item-title">上次更新</span>
+    <span class="item-content">
+        2021-03-21
+        
+    </span>
+  </p>
+  
+  
+</div>
+<footer class="post-footer">
+      <div class="post-tags">
+          <a href="/tags/obsidian/">Obsidian</a>
+          </div>
+      <nav class="post-nav">
+        <a class="prev" href="/post/ventoy/">
+            <i class="iconfont icon-left"></i>
+            <span class="prev-text nav-default">新一代多系统启动U盘 Ventoy 使用指南</span>
+            <span class="prev-text nav-mobile">上一篇</span>
+          </a>
+        <a class="next" href="/post/lanvideoplay/">
+            <span class="next-text nav-default">解锁家庭局域网内手机和电视观看电脑里的影片</span>
+            <span class="next-text nav-mobile">下一篇</span>
+            <i class="iconfont icon-right"></i>
+          </a>
+      </nav>
+    </footer>
+  </article>
+        </div>
+        <div id="disqus_thread"></div>
+    <script type="text/javascript">
+    (function() {
+      
+      
+      if (window.location.hostname === 'localhost') return;
+
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      var disqus_shortname = 'extreme-1';
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+  
+
+  
+
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="social-links">
+      <a href="mailto:njx.xyz@email.com" class="iconfont icon-email" title="email"></a>
+      <a href="https://weibo.com/nanjishen" class="iconfont icon-weibo" title="weibo"></a>
+  <a href="https://ttti.cc/index.xml" type="application/rss+xml" class="iconfont icon-rss" title="rss"></a>
+</div>
+
+<div class="copyright">
+  <span class="power-by">
+    由 <a class="hexo-link" href="https://gohugo.io">Hugo</a> 强力驱动
+  </span>
+  <span class="division">|</span>
+  <span class="theme-info">
+    主题 - 
+    <a class="theme-link" href="https://github.com/olOwOlo/hugo-theme-even">Even</a>
+  </span>
+
+  
+
+  <span class="copyright-year">
+    &copy; 
+    2018 - 
+    2022<span class="heart"><i class="iconfont icon-heart"></i></span><span>极限玩家</span>
+  </span>
+</div>
+
+    </footer>
+
+    <div class="back-to-top" id="back-to-top">
+      <i class="iconfont icon-up"></i>
+    </div>
+  </div>
+  <script type="text/javascript" src="/lib/jquery/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="/lib/slideout/slideout-1.0.1.min.js"></script>
+  <script type="text/javascript" src="/lib/fancybox/jquery.fancybox-3.1.20.min.js"></script>
+
+
+
+<script type="text/javascript" src="/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js"></script>
+
+
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'G-XK6SLX411H', 'auto');
+	ga('set', 'anonymizeIp', true);
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+
+
+
+
+
+
+</body>
+</html>
