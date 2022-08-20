@@ -23,7 +23,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.96.0 with theme even" />
+<meta name="generator" content="Hugo 0.101.0 with theme even" />
 
 
 <link rel="canonical" href="https://ttti.cc/post/ffmpeg/" />
@@ -49,7 +49,7 @@
 <meta itemprop="name" content="开源免费音视频处理神器 FFmpeg">
 <meta itemprop="description" content="FFmpeg 是一款免费开源（LGPL、GPL 许可证），且领先的全能型多媒体处理软件，可以处理视频、音乐及图片，它采用了非常先进的音频/视频编解码库 li"><meta itemprop="datePublished" content="2020-09-26T16:04:00+08:00" />
 <meta itemprop="dateModified" content="2020-09-26T16:04:00+08:00" />
-<meta itemprop="wordCount" content="2650">
+<meta itemprop="wordCount" content="2841">
 <meta itemprop="keywords" content="ffmpeg," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="开源免费音视频处理神器 FFmpeg"/>
 <meta name="twitter:description" content="FFmpeg 是一款免费开源（LGPL、GPL 许可证），且领先的全能型多媒体处理软件，可以处理视频、音乐及图片，它采用了非常先进的音频/视频编解码库 li"/>
@@ -166,6 +166,7 @@
             <li><a href="#视频添加水印">视频添加水印</a></li>
           </ul>
         </li>
+        <li><a href="#更多参考">更多参考</a></li>
       </ul>
     </li>
   </ul>
@@ -180,33 +181,51 @@
 <p>首先就是去<a href="http://ffmpeg.org">官网下载</a>了，在下面选择 Windows 已经构建好的版本，下载后将压缩包解压，其中 bin 文件夹中的程序就是我们要的。</p>
 <p>我个人通常会将 bin 文件夹重命名为 FFmpeg，然后将其移动到个人的软件目录中，我的个人软件目录<code>C:\Users\nanji\OneDrive\Apps\FFmpeg</code>，当然你也可以放到任意目录。</p>
 <p>将上面的路径添加到添加环境变量，以便可以在命令行中直接调用：按 [Win]键，输入 env ，点击“编辑系统环境变量”，在下方点击“环境变量”，之后在系统变量中双击 Path ，添加上面的路径即可，如图所示：</p>
-<p>加入环境变量后就算完成了，在终端中执行下 <code>ffmpeg</code> 看看是否安装成功，如下图所示就表示成功</p>
+<p>加入环境变量后就算完成了，在终端中执行下 <code>ffmpeg</code> 或 <code>ffmpeg -version</code> 看看是否安装成功，如下图所示就表示成功。</p>
 <h2 id="ffmpeg-的使用">FFmpeg 的使用</h2>
 <p>这里说说简单的日常使用，如果你是更专业的用户，可以参考官方帮助，了解更高级的用法，不过一般来说，这些对普通用户就足够了~</p>
 <h3 id="格式转换">格式转换</h3>
 <p>最常用的就是一个文件的格式转换成另一个：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ffmpeg -i filename.flv filename.mp4
-</span></span><span class="line"><span class="cl"># 反之
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i filename.flv filename.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 反之</span>
 </span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 filename.flv
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 拷贝转换，即保持原样的编码进行格式转换
+</span></span><span class="line"><span class="cl"><span class="c1"># 拷贝转换，即保持原样的编码进行格式转换</span>
 </span></span><span class="line"><span class="cl">ffmpeg -i filename.flv -vcodec copy -acodec copy filename.mp4
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 中文名音乐转换
-</span></span><span class="line"><span class="cl">ffmpeg -i &#39;.\下辈子不一定遇见.m4a&#39; -f mp3 &#39;.\下辈子不一定遇见.mp3&#39;
+</span></span><span class="line"><span class="cl"><span class="c1"># 中文名音乐转换</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i <span class="s1">&#39;.\下辈子不一定遇见.m4a&#39;</span> -f mp3 <span class="s1">&#39;.\下辈子不一定遇见.mp3&#39;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># WAV 转换到 MP3</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i a.wav -vn -ar <span class="m">48000</span> -ac <span class="m">2</span> -b:a <span class="m">256</span> output-b.mp3
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 选项说明：</span>
+</span></span><span class="line"><span class="cl">-vn <span class="c1"># 有时音频文件有图片，指定不在输出中出现图像</span>
+</span></span><span class="line"><span class="cl">-ar <span class="c1"># 设置要转换的音频文件的音频频率，可以使用 8kHz、44.1kHz 或 48kHz 等值调整音质和频率</span>
+</span></span><span class="line"><span class="cl">-ac <span class="c1"># 设置音频通道的数量</span>
+</span></span><span class="line"><span class="cl">-b:a：设置每秒的音频比特率，千位越高，音质越高
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="压缩视频">压缩视频</h3>
@@ -468,23 +487,29 @@
 </div><h3 id="音频视频分离与合并">音频视频分离与合并</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 从视频中去除音频，使用 -an 参数去掉音频，使用 -vcodec copy 表示拷贝视频原样
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vn output.mp3 <span class="c1"># 从视频分离出音频</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -an output-mute.mp4 <span class="c1"># 从视频分离出视频</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 从视频中去除音频，使用 -an 参数去掉音频，使用 -vcodec copy 表示拷贝视频原样</span>
 </span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vcodec copy -an filename.mp4
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 提取视频中的音频，使用 -vn 参数去掉视频，-acodec copy 表示拷贝音频原样
+</span></span><span class="line"><span class="cl"><span class="c1"># 提取视频中的音频，使用 -vn 参数去掉视频，-acodec copy 表示拷贝音频原样</span>
 </span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -acodec copy -vn filename.mp3
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 音频与视频合成，使用 -y 参数表示覆盖输出文件
+</span></span><span class="line"><span class="cl"><span class="c1"># 音频与视频合成，使用 -y 参数表示覆盖输出文件</span>
 </span></span><span class="line"><span class="cl">ffmpeg -y –i filename.mp4 –i filename.mp3 –vcodec copy –acodec copy filename.mp4
 </span></span></code></pre></td></tr></table>
 </div>
@@ -579,6 +604,8 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>FFmpeg</strong> 这个神器非常值得学习，因为视频在今天来说是很主流的内容载体，虽然对小白来来说，看起来很复杂，但其实只要掌握几个基本命令就足够了，同时它在 Windows 和 Linux 上都可以使用。</p>
+<h2 id="更多参考">更多参考</h2>
+<p><a href="https://www.linuxmi.com/linux-ffmpeg.html">在 Linux 上用 FFmpeg 命令进行音频和视频处理</a></p>
 <p><img src="https://gitee.com/nanjishen/Npic/raw/master/img/gzh-end.png" alt=""></p>
 
     </div>
@@ -677,7 +704,7 @@
 
 
 
-<script type="text/javascript" src="/js/main.min.64437849d125a2d603b3e71d6de5225d641a32d17168a58106e0b61852079683.js"></script>
+<script type="text/javascript" src="/js/main.min.4ae89da218555efa0e7093a20b92017d2e1202b66fff9fc2edf4cb8d44b44c6e.js"></script>
 
 
 <script type="application/javascript">

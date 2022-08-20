@@ -5,15 +5,15 @@ magnet:?xt=urn:btih:5B3F3DA450784FB27609212721562869AF226263</textarea>
 <!-- key：VK7JG-NPHTM-C97JM-9MPGT-3V66T ；https://next.itellyou.cn、https://hellowindows.cn、https://uupdump.net、https://uup.rg-adguard.net -->
 <p>现在推荐在<a href="https://www.microsoft.com/zh-cn/software-download/windows11"> 微软官方 </a> 或使用 <a href="https://github.com/AveYo/MediaCreationTool.bat">MCT.bat</a> 下载并制作镜像<br><br>
 引导启动工具推荐：<a href="http://www.wepe.com.cn">WePE</a> | <a href="https://www.hirensbootcd.org">HBCD_PE</a> | <a href="https://www.ventoy.net">Ventoy</a><a href="https://mp.weixin.qq.com/s/AKXk4xzyjKUKeiOtBeZskw">（使用指南）</a> 
-<p>Office 推荐使用 <a href="https://otp.landian.vip/zh-cn/">Office Tool</a> 进行安装 | 正版用：<a href="https://account.microsoft.com/services/microsoft365/install">Office365</a></p>
+<p>Office 安装推荐使用 <a href="https://otp.landian.vip/zh-cn/">Office Tool</a> | <a href="https://account.microsoft.com/services/microsoft365/install">正版 Office365</a> | <a href="https://support.microsoft.com/zh-cn/office/%E4%BB%8E-pc-%E5%8D%B8%E8%BD%BD-office-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8">卸载用</a></p>
 </p><h3>安装方法</h3>设U盘为第一引导设备，跟着向导完成安装（选盘符时可以点 [高级]-[格式化]，进行格式化）
 <h3>全自动激活</h3>
-直接<a href="https://nanji.lanzoui.com/iFRmHn2qicb">下载该文件</a>，并以管理员身份运行即可激活
+直接<a href="https://nanji.lanzouu.com/itL7E05q2aod">下载该文件</a>，并以管理员身份运行即可激活，或者你也可以使用 <a href="https://winaero.com/download-universal-watermark-disabler">UWD</a> 工具仅去水印
 <h4>手动激活命令</h4>
 <pre>Windows：管理员运行 CMD，依次执行命令：
 
 slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
-slmgr /skms vvvtworay.nanjis.top
+slmgr /skms nanjis.top
 slmgr /ato
 slmgr /xpr
 </pre>
@@ -51,6 +51,14 @@ slmgr /ipk x-x-x-x-x ：设置密钥，5×5的序列号
 → <a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=35">DirectX</a> | <a href="https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads">Visual C++</a> |  
 <a href="https://dotnet.microsoft.com/download/dotnet-framework">NET Framework</a> | <a href="https://dotnet.microsoft.com/download/dotnet/5.0/runtime">.NET Runtime</a> | <a href="https://www.free-codecs.com/download/hevc_video_extension.htm">HEVC_H265</a> / <a href="https://www.microsoft.com/zh-cn/p/hevc-video-extensions-from-device-manufacturer/9n4wgh0z6vhq#activetab=pivot:overviewtab">Store</a><br><br>
 → <a href="https://www.dll-files.com">dll-Down</a> | <a href="https://www.microsoft.com/zh-cn/p/dts-sound-unbound/9pj0nkl8mcsj?activetab=pivot:overviewtab#">DTS</a>
+
+<pre><code># 通过 WinGet 安装
+winget install Microsoft.DirectX
+winget install Microsoft.VC++2015-2022Redist-x64
+winget install Microsoft.DotNet.DesktopRuntime.6
+</code></pre>
+
+
 <h3>重装系统之前</h3>下载驱动、git push 现有项目、备份：OBS+Mempad+Epic+输入法短语与自学习词库
 <p>备份家目录（.config .gridea .ssh 、VirtualBox VMs）</p>
 <h3>新装系统设置</h3>
@@ -94,6 +102,7 @@ slmgr /ipk x-x-x-x-x ：设置密钥，5×5的序列号
 </pre>
 <p><b>文件管理器中隐藏 OneDrive</b>：HKEY_CLASSES_ROOT\CLSID{018D5C66-4533-4307-9B53-224DE2ED1FE6}，双击其 System.IsPinnedToNameSpaceTree 修改值为 0 即可 </p>
 <p><b>删除右键菜单的管理 OneDrive 备份</b>：注册表 - 计算机\HKEY_CLASSES_ROOT\Directory\Background\shellex\ContextMenuHandlers - 删除 FileSyncEx</p>
+<p><b>开启IE浏览器</b>：新建文本文件，写入：CreateObject("InternetExplorer.Application").Visible=true 保存为 .vbs 后缀名，双击打开</p>
 <p><b>右键添加移动到文件夹</b>：HKEY_CLASSES_ROOT\AllFilesystemObjects\shellex\ContextMenuHandlers，新建“项”，命名为“MoveTo”，双击其“默认值”，写入：{C2FBB631-2971-11d1-A18C-00C04FD75D13} </p>
 <p><b>右键添加移动到指定文件夹</b>：HKEY_LOCAL_MACHINE/SOFTWARE/Classes/*/shell 下 新建 [项] 为：move to foldername，在其上新建 [项] 为：command，修改其默认值为："powershell.exe" "mi %1 C:\foldername"</p>
 <p><b>清除任务栏图标记录</b>：HEEY_CLASSES_ROOT\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify 删除PastIconsStream和IconStreams</p>
@@ -114,7 +123,9 @@ slmgr /ipk x-x-x-x-x ：设置密钥，5×5的序列号
 <p><a href="https://wiki.archlinux.org">Arch Wiki</a> | <a href="https://mirrorz.org">Mirrorz</a> | <a href="https://archlinuxgui.in">ArchLinux GUI</a></p>
 <p><a href="https://www.yuque.com/nanjishen/smr0zt/dqbuul">Install</a> | <a href="https://www.yuque.com/nanjishen/smr0zt/ag3sqh">Docs</a> </p>
 <!-- 以下是OpenWrt内容 -->
-<h1>OpenWrt<a name="tips5"></a></h1><h3>Nanopi R2S</h3>
+<h1>OpenWrt<a name="tips5"></a></h1>
+<h3>X86 Router</h3><a href="https://fw.koolcenter.com/iStoreOS/">小宝</a>固件、<a href="https://supes.top">在线自定义编译</a>
+<h3>Nanopi R2S</h3>
 <li>下载<a href='https://github.com/klever1988/nanopi-openwrt/releases'>悟空</a>或<a href='https://bigdongdong.gitbook.io/nanopi-r2s/'>东东</a>的固件，解压并得到 img 或 img.gz 镜像文件</li>
 <li>TF卡放入读卡器并接入电脑（无需格式化，可直接写盘），用 Etcher 将上面的镜像文件写入TF卡</li>
 <li>TF卡插到R2S，并将R2S的LAN口连接电脑、WAN口连接到光猫后通电</li>
@@ -335,7 +346,39 @@ Advanced container settings：
   Runtime & Resources：Devices - add device：
     host（/dev/dri/renderD128）container（/dev/dri/renderD128）
 </code></pre>
-部署完成后访问 jellyfin - 菜单 - 控制台 - 播放 - 转码（硬件加速：选 VAAPI，下面勾选所有格式）- 硬件编码选项：勾选启用硬件编码
+部署完成后访问 jellyfin - 菜单 - 控制台 - 播放 - 转码（硬件加速：选 Intel QuickSync ，下面勾选所有格式）- 硬件编码选项：勾选启用硬件编码
+<p>通过 Container Station 部署：创建镜像 nyanmisaka/jellyfin</p>
+<pre><code># 名称自定义，点高级设置
+# 网络 - 网络模式（NAT）- 端口转发 - 新增：
+8096:8096-TCP
+# 设备 - 新增
+Direct Rendering lnfrastructure(226)
+# 共享文件夹 - 挂载本机共享文件夹 - 新增：
+/share/Container/jellyfin/config:/config
+/share/Container/jellyfin/cache:/cache
+/share/media:/media
+</code></pre>
+通过 Container Station 部署：创建 - 创建应用程序 - 编辑如下
+<pre><code>version: "2.1"
+services:
+  jellyfin:
+    image: nyanmisaka/jellyfin:latest
+    container_name: jellyfin
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Asia/Shanghai
+    volumes:
+      - /share/Container/jellyfin:/config # 无需变动，文件夹会自动创建
+      - /share/media:/media # 自定义媒体库路径
+    ports:
+      - 8096:8096
+      - 8096:8920
+    devices:
+      - /dev/dri:/dev/dri</code></pre>
+
+
+
 <h4>Flare</h4>Portainer - Containers - Add container：
 <pre><code>Name：Flare
 Image：soulteary/flare:latest
