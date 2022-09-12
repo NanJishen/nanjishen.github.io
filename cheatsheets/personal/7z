@@ -1,0 +1,7 @@
+---
+tags: [ compression ]
+---
+7-zip 用于压缩/解压缩文档
+
+# 将指定路径的目录压缩为指定路径的名为 dokuwiki.zip 的压缩包
+7z a T:\Downloads\dokuwiki.zip W:\dokuwiki\data\pages
