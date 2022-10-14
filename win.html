@@ -1,18 +1,19 @@
 <!DOCTYPE html><html><head><meta charset="UTF-8"><title>Windows-极限玩家</title><meta name="Author" content="南极神"><meta name="Keywords" content="Windows,极限玩家"><meta name="Description" content="Windows,极限玩家"><link rel="shortcut icon" href="favicon.ico"><style>a{text-decoration:none;color:#000}body{font-family:'Microsoft YaHei',Tahoma,Helvetica,Arial,sans-serif;background:#f0f2f7}textarea{width:59%;height:1.8rem;text-indent:2em;line-height:2em;resize:none;outline:none}pre{width:80%;padding:.8rem;border:1px solid #ccc}main{margin:1em auto;width:1010px;height:800px;background:#f7f7f7;box-shadow:0 0 25px #eee}nav{float:left;width:20%;height:100%;box-shadow:.1px 0px .5px #000}nav ul{list-style:none;line-height:2.5em}nav a{display:block;}nav a:hover{font-weight:bold}.right{float:right;width:80%;height:100%;overflow:hidden;word-wrap:break-word;background:#fff}.right a{color:#2cb1e6}.content{margin:15px 0;padding:0 12px;width:99%;height:97%;overflow:auto}li{list-style:none}table{border-collapse:collapse}td,th{padding:6px;border:.1px solid #ccc}.sha1{font-size:.7em;font-weight:normal}.dialog-box{position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;visibility:hidden;overflow:auto} .dialog-con{position:relative;margin:0 auto;padding:2.5rem;width:70%;height:auto;background:#fff;font-size:18px;} .dialog-box:target{visibility:visible}.dialog-close{position:fixed;right:20%;top:20px}</style><script>function copyText(){let link = document.getElementById("dllink");link.select();document.execCommand("copy");alert('已成功复制，打开迅雷 - 新建，粘贴链接即可下载')}</script></head><body><main><nav><ul><h2><a href="so.html">Home</a></h2><li><a href="#tips0">下载安装</a></li><li><a href="#tips1">设置细节</a></li><li><a href="#tips2">快捷按键</a></li><li><a href="#tips3">运行命令</a></li></ul><ul><li><a href="#tips4">ArchLinux</a></li><li><a href="#tips5">OpenWrt</a></li><li><a href="#tips6">QNAP</a></li><li><a href="#tips7">Office</a></li></ul></nav><div class="right"><div class="content"><a name="tips0"></a>
-<h3>Win11_21H2 _ 2021-10-19 <i class="sha1">
-SHA1：C31528C5DFD85A0884A216ED665A21BD2E2CE452</i></h3><textarea id="dllink" onclick="copyText()">magnet:?xt=urn:btih:ca159db2b1e78f6e95fd972be72251f967f639d4</textarea>
+<h3>Win11_22H2 _ 2022-09-28 <i class="sha1">
+SHA1：E376935B413A004F785C707B86405EB313ACBCE3</i></h3><textarea id="dllink" onclick="copyText()">magnet:?xt=urn:btih:e3784ee17e8be49a97cf0bfc51b1626e62148f51</textarea>
 <!-- key：VK7JG-NPHTM-C97JM-9MPGT-3V66T ；https://next.itellyou.cn、https://hellowindows.cn、https://uupdump.net、https://uup.rg-adguard.net -->
 <p>推荐在<a href="https://www.microsoft.com/zh-cn/software-download/windows11"> 微软官方 </a> 或使用 <a href="https://github.com/AveYo/MediaCreationTool.bat">MCT.bat</a> 下载并制作镜像<br><br>
 引导启动工具推荐：<a href="http://www.wepe.com.cn">WePE</a> | <a href="https://www.hirensbootcd.org">HBCD_PE</a> | <a href="https://www.ventoy.net">Ventoy</a><a href="https://mp.weixin.qq.com/s/AKXk4xzyjKUKeiOtBeZskw">（使用指南）</a> 
 <p>Office 安装推荐使用 <a href="https://otp.landian.vip/zh-cn/">Office Tool</a> | <a href="https://account.microsoft.com/services/microsoft365/install">正版 Office365</a> | <a href="https://support.microsoft.com/zh-cn/office/%E4%BB%8E-pc-%E5%8D%B8%E8%BD%BD-office-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8">卸载用</a></p>
 </p><h3>安装方法</h3>设U盘为第一引导设备，跟着向导完成安装（选盘符时点 [高级]-[格式化]，进行格式化）
 <h3>全自动激活</h3><!-- KMS列表：https://www.coolhub.top/tech-articles/kms_list.html -->
-<a href="https://nanji.lanzouu.com/itL7E05q2aod">下载该文件</a>，并以管理员身份运行激活向导，或者也可以使用 <a href="https://winaero.com/download-universal-watermark-disabler">UWD</a> 工具仅去水印
+<a href="https://nanji.lanzouy.com/id16a0duygji">下载该文件</a>，并以管理员身份运行激活向导，或者也可以使用 <a href="https://winaero.com/download-universal-watermark-disabler">UWD</a> 工具仅去水印
 <h4>手动激活命令</h4>Windows：管理员运行 CMD，依次执行命令：
 <pre>slmgr /ipk W269N-WFGWX-YVC9B-4J6C9-T83GX
 slmgr /skms nanjis.top
 slmgr /ato
-slmgr /xpr
+slmgr /xpr # 显示授权剩余日期
+slmgr /dli # 显示当前授权信息
 </pre>
 Office：必须进入对应的目录执行命令：
 <pre>cd C:\Program Files\Microsoft Office\Office16
@@ -41,7 +42,7 @@ slmgr /ipk x-x-x-x-x ：设置密钥，5×5的序列号
 <br>slmgr.vbs -cpky ：从注册表中清除产品密钥
 <br>slmgr.vbs -ilc ：导入OEM证书，后面为OEM证书的路径 -->
 <h3>驱动与运行库</h3> → <a href="https://www.intel.cn">Intel</a> | <a href="https://www.amd.com/zh-hans">AMD</a>（<a href="https://www.amd.com/zh-hans/support/chipsets/amd-socket-am4/b550">B550</a>，<a href="https://www.amd.com/zh-hans/support/graphics/amd-radeon-6000-series/amd-radeon-6800-series/amd-radeon-rx-6800-xt">6800XT</a>）| <a href="https://www.nvidia.com">NVIDIA</a> | <a href="https://cn.msi.com">微星</a> | <a href="https://www.asus.com/CN/">华硕</a>（<a href="https://www.asus.com.cn/Motherboards-Components/Motherboards/TUF-Gaming/TUF-GAMING-B550M-PLUS-WI-FI/HelpDesk_Download/">B550M</a>）| <a href="https://www.gigabyte.cn">技嘉</a> | <a href="https://www.asrock.com">华擎</a> <br><br>
-→ <a href="http://cn.razerzone.com">雷蛇</a>（<a href="https://mysupport.razer.com/app/answers/detail/a_id/3750">毒蝰终极版</a>）| <a href="https://www.durgod.com/drive">杜伽</a> | <a href="http://www.asrockchina.com.cn/Graphics-Card/AMD/Radeon%20RX%206800%20XT%20Taichi%20X%2016G%20OC/index.cn.asp#Download">华擎太极</a> | <br><br>
+→ <a href="http://cn.razerzone.com">雷蛇</a>（<a href="https://mysupport.razer.com/app/answers/detail/a_id/3750">毒蝰终极版</a>）| <a href="https://www.durgod.com/Zeus">杜伽键盘</a> | <a href="https://www.zanmson.cn/Drivers/MouseDriver/172.html">GM3323D</a> | <a href="http://www.asrockchina.com.cn/Graphics-Card/AMD/Radeon%20RX%206800%20XT%20Taichi%20X%2016G%20OC/index.cn.asp#Download">华擎太极</a> | <br><br>
 → <a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=35">DirectX</a> | <a href="https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads">Visual C++</a> |  
 <a href="https://dotnet.microsoft.com/download/dotnet-framework">NET Framework</a> | <a href="https://dotnet.microsoft.com/download/dotnet/5.0/runtime">.NET Runtime</a> | <a href="https://www.free-codecs.com/download/hevc_video_extension.htm">HEVC_H265</a> / <a href="https://www.microsoft.com/zh-cn/p/hevc-video-extensions-from-device-manufacturer/9n4wgh0z6vhq#activetab=pivot:overviewtab">Store</a><br><br>
 → <a href="https://www.dll-files.com">dll-Down</a> | <a href="https://www.microsoft.com/zh-cn/p/dts-sound-unbound/9pj0nkl8mcsj?activetab=pivot:overviewtab#">DTS</a>
@@ -111,6 +112,10 @@ winget install Python.Python.3
 <p><b>右键添加移动到指定文件夹</b>：HKEY_LOCAL_MACHINE/SOFTWARE/Classes/*/shell 下 新建 [项] 为：move to foldername，在其上新建 [项] 为：command，修改其默认值为："powershell.exe" "mi %1 C:\foldername"</p>
 <p><b>清除任务栏图标记录</b>：HEEY_CLASSES_ROOT\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify 删除PastIconsStream和IconStreams</p>
 <p><b>重命名网络连接名</b>：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles Profiles里会发现你的连接都在这里显示（长字符串名称文件夹），双击你要修改的里的ProfileName值，输入你要的名字</p><p><b>任务栏设为顶部</b>：进入 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3 ，双击 Settings ，选中第2行，第5个字段的 03，改为 01，重启资源管理器</p><p><b>设置任务栏大小</b>：进入 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced ，右键右侧空白处新建“DWORO 32位值”，命名为 TaskbarSi，双击修改其值，0为最小</p>
+
+<h2>为游戏优化</h2>关闭虚拟化功能提高游戏性能：<br>关闭内存完整性：开始 - 输入 Core Isolation - 关闭后重启<br>关闭虚拟机平台：开始 - 输入 Windows features - 去勾“虚拟机平台” - 确认后重启
+
+<h2>浏览器设置</h2><b>解决浏览器 http 跳转至 https 问题</b>：浏览器打开 chrome://net-internals/#hsts ，在 Delete domain 项中输入要删除记录的域名，然后可以在 Query domain 项中测试是否删除成功
 <h1>主板引导菜单快捷键</h1>
 <table><thead><tr><th>品牌</th><th>台式</th><th>笔记本</th><th>品牌</th><th>台式</th><th>笔记本</th></tr></thead><tbody><tr><td>华硕</td><td>F8</td><td>F8</td><td>惠普</td><td>F12</td><td>F9</td></tr><tr><td>技嘉</td><td>F12</td><td></td><td>戴尔</td><td>ESC</td><td>F12</td></tr><tr><td>微星</td><td>F11</td><td></td><td>神州</td><td>F12</td><td>12</td></tr><tr><td>华擎</td><td>F11</td><td></td><td>东芝</td><td>F12</td><td></td></tr><tr><td>七彩虹</td><td>F11</td><td></td><td>IBM</td><td>F12</td><td></td></tr><tr><td>联想</td><td>F12</td><td>F12</td><td>三星</td><td>F12</td><td></td></tr></tbody></table>
 <h1>Shortcuts Key<a name="tips2"></a></h1>
@@ -128,7 +133,7 @@ winget install Python.Python.3
 <p><a href="https://www.yuque.com/nanjishen/smr0zt/dqbuul">Install</a> | <a href="https://www.yuque.com/nanjishen/smr0zt/ag3sqh">Docs</a> </p>
 <!-- 以下是OpenWrt内容 -->
 <h1>OpenWrt<a name="tips5"></a></h1>
-<h3>X86 Router</h3><a href="https://fw.koolcenter.com/iStoreOS/">小宝</a>固件、<a href="https://supes.top">在线自定义编译</a>
+<h3>X86 Router</h3><a href="https://fw.koolcenter.com/iStoreOS/">小宝</a>固件，<a href="https://github.com/AUK9527/Are-u-ok">插件</a>、<a href="https://supes.top">在线自定义编译</a>
 <h3>Nanopi R2S</h3>
 <li>下载<a href='https://github.com/klever1988/nanopi-openwrt/releases'>悟空</a>或<a href='https://bigdongdong.gitbook.io/nanopi-r2s/'>东东</a>的固件，解压并得到 img 或 img.gz 镜像文件</li>
 <li>TF卡放入读卡器并接入电脑（无需格式化，可直接写盘），用 Etcher 将上面的镜像文件写入TF卡</li>
@@ -137,33 +142,39 @@ winget install Python.Python.3
 <li>访问 <a href="http://immortalwrt">R2S</a>（192.168.2.1），用户名：root 密码：password 或 空</li>
 <li>网络 - 接口：<ol>
 <li>修改WAN口为：PPPOE 拨号</li>
-<li>修改LAN口IP为 192.168.10.1（可自定）</li>
-<li>如果没有 IPv6 可以删除 WAN6</li></ol></li>
+<li>修改LAN口IP为 192.168.10.1（可自定）</li><br>
+<li>如果使用 IPv6 如下设置：</li>
+<li>网络 - 接口 - 将下方“IPv6 ULA 前缀”删除掉</li>
+<li>网络 - DHCP/DNS - 高级设置 - 取勾“禁止解析 IPv6 DNS 记录”</li>
+<li>LAN口 - 下方“IPv6 设置” - “路由通告”和“DHCPv6”，设为服务器模式 </li>
+<!-- <li>将WAN口和LAN口 - 高级设置 - 取勾“使用内置的 IPv6 管理”</li> -->
+<li>浏览器访问方法：<code>http://[ipv6]:8000</code></li></ol></li>
 <li>系统 - 管理权 - 修改密码、添加SSH密钥</li>
 <li>网络 - DHCP/DNS - 添加静态地址分配（infinite 为永久）（/etc/config/dhcp）</li>
-<li>网络 - 防火墙 - 设置端口转发&nbsp;<a href="#dkzf">&nbsp;&nbsp;</a></li>
-<div class="dialog-box" id="dkzf"><div class="dialog-con"><a href="" class="dialog-close">❌</a><b>端口转发：Router : RProxy : NAS</b><hr>
-Router：16810---192.168.10.1:80<br>
-Router：7681---192.168.10.1:7681<br>
-NAS：3333---192.168.10.111:5000<br>
-NAS-web：16811---80<br>
-NAS-web（https）16111---8081<br><hr>
-NAS-flare：1111 --- 5005<br>
-TTRSS-NAS：181 --- 181<br>
-Wallabag：182 --- 182<br>
-Linkding：183 --- 183<br><hr>
-Aria2-UDP：6888 --- 6888<br>
-Aria2-RPC：6800 --- 6800<br>
-Transmission：51413 --- 51413<br><hr>
-Filebrowser 1110 --- 1110<br>
-FileRun：18090 - 58090 - 18090<br>
-PhotoPrism：18095 --- 18095<br>
-Jellyfin：18096 --- 18096<br>
-Bookbrowser：18097 --- 18097<br>
-Alist：19212 --- 5244<br><hr>
-Aria2-PC-UDP：51411 --- 51411（bt-udp）<br>
-qbittorrent-PC：51400 --- 51400<br>
-Webd-PC：9212 --- 9212<br><hr>
+<li>网络 - 防火墙 - 设置端口转发（/etc/config/firewall）&nbsp;<a href="#dkzf">&nbsp;&nbsp;</a></li>
+<div class="dialog-box" id="dkzf"><div class="dialog-con"><a href="" class="dialog-close">❌</a>
+<table><thead><tr><th>Services</th><th>Router</th><th>NAS</th></tr></thead><tbody>
+<tr><td>Router</td><td>6000</td><td>443（rt）</td></tr>
+<tr><td>Router-tty</td><td>7681</td><td>7681（rt）</td></tr>
+<tr><td>NAS-ssl</td><td>6001</td><td>5001</td></tr>
+<tr><td>NAS-Web</td><td>16800</td><td>80</td></tr>
+<tr><td>NAS-Web（ssl）</td><td>180</td><td>8081</td></tr>
+<tr><td>NAS-DL</td><td>16881-16889</td><td>16881-16889</td></tr>
+<tr><td>Freshrss</td><td>181</td><td>1810</td></tr>
+<tr><td>Wallabag</td><td>182</td><td>1820</td></tr>
+<tr><td>Linkding</td><td>183</td><td>1830</td></tr>
+<tr><td>Filebrowser</td><td>1110</td><td>11100</td></tr>
+<tr><td>Flare</td><td>1111</td><td>5005</td></tr>
+<tr><td>Alist</td><td>1112</td><td>11112</td></tr>
+<tr><td>PhotoPrism</td><td>1113</td><td>11113</td></tr>
+<tr><td>Jellyseerr</td><td>18090</td><td>18090</td></tr>
+<tr><td>Jellyfin</td><td>18096</td><td>18096</td></tr>
+<tr><td>Bookbrowser</td><td>18097</td><td>18097</td></tr>
+<tr><td>Aria2-udp</td><td>6888</td><td>6888</td></tr>
+<tr><td>Aria2-rpc</td><td>6800</td><td>6800</td></tr>
+<tr><td>Transmission-udp</td><td>51413</td><td>51413</td></tr>
+</tbody></table>
+<hr>
 </div></div>
 <p><a href="https://mlapp.cn/1011.html">SD卡分区扩容</a></p>
 <h3>更多设置</h3>系统 - 常规设置 - 时间同步，可以设置主机名和时区；时间同步，可以设置 NTP 服务器：
@@ -217,10 +228,10 @@ jmsooo.com
 <strong>配置文件管理：</strong>选择文件 - 你的配置文件，上传即可（如果你是机场，有订阅链接，往下看）<br><strong>配置文件订阅</strong>：添加 - 配置文件名随意、插入机场订阅链接、勾选在线订阅转换，在订阅转换模板中选择“ALC4SSR 规则 Online Full”、Emoji 和 UDP 支持选启用 - 保存，点应用配置
 <br>回到<strong>运行状态</strong>：打开 Dashboard 控制面板，设置 - 输入你的路由器IP地址</p><a href="https://www.youtube.com/watch?v=FViAqOYNCDw">参考视频</a>
 <h3>AdGuardHome</h3>1. 勾选启用、更新核心版本、重定向选“作为dnsmasq的上游服务器”<br>2. 点击 AdGuardHome Web 进入管理页进行配置：<br>&nbsp&nbsp1. 网页管理页面监听端口：3000、DNS 服务器监听端口：5635<br>&nbsp&nbsp2. 建立管理员用户和密码、打开仪表盘登录即可<br><br>设置 - DNS 设置：<br>
-填写上游 DNS 服务器后勾选负载均衡：<br><pre><code> 
-119.29.29.29<!-- 阿里 -->
+填写上游 DNS 服务器后勾选负载均衡：<br><pre><code>119.29.29.29<!-- 阿里 -->
 223.5.5.5<!-- 腾讯 -->
 114.114.114.114<!-- 114 -->
+2408:8000:6001:7000::8888
 8.8.8.8<!-- 谷歌 -->
 8.8.4.4
 9.9.9.9<!-- Quad9 -->
@@ -231,14 +242,15 @@ jmsooo.com
 https://dns.google/dns-query
 https://doh.opendns.com/dns-query
 https://dns.quad9.net/dns-query
+https://1.1.1.1/dns-query
 tls://dns.google
 tls://dns.quad9.net
 https://dns.cloudflare.com/dns-query
 https://dns.adguard.com/dns-query
 </code></pre>填写 Bootstrap DNS 服务器（可删空不填，或用你运营商的 DNS）：
-<pre><code>
-202.96.64.68<!-- 本地运营商 -->
+<pre><code>202.96.64.68<!-- 本地运营商 -->
 202.96.69.38
+2408:8000:6001:7000::8888
 119.29.29.29
 119.28.28.28
 223.5.5.5
@@ -251,15 +263,15 @@ tls://dns.pub
 https://dns.pub/dns-query
 tls://dns.alidns.com
 https://dns.alidns.com/dns-query
-</code></pre>
-点应用，点测试上游 DNS，在下面的速度限制 - 每个客户端查询次数改为 0（不限制）<br><br>
-过滤器 - DNS 封锁清单 - 添加阻止列表 - 添加自定义列表：
+</code></pre>点应用，点测试上游 DNS，在下面的速度限制 - 每个客户端查询次数改为 0（不限制）
+<p>过滤器 - DNS 拦截列表 - 添加阻止列表 - 从列表中选择：这里官方提供了规则，选择其中的“区域-CHN：anti-AD”（该规则包含了国内的大部分规则）</p>
+过滤器 - DNS 拦截列表 - 添加阻止列表 - 添加自定义列表：
 <p><a href="https://raw.githubusercontent.com/o0HalfLife0o/list/master/ad.txt">HalfLife 合并规则</a>（EasylistChina、EasylistLite、CJX’sAnnoyance）（主用）</p>
 <p><a href='https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt'>CJX&#39;s Annoyance</a> | <a href='https://gitee.com/xinggsf/Adblock-Rule/raw/master/mv.txt'>乘风视频</a> | <a href='https://easylist-downloads.adblockplus.org/easylistchina.txt'>EasyList China</a> | <a href='https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt'>anti-AD</a> | <a href='https://fanboy.co.nz/r/fanboy-ultimate.txt # Fanboy+Easylist'>Fanboy+Easylist</a> |</p>
 <p>检测过滤是否开启：<a href="https://blockads.fivefilters.org">①</a> <a href="https://www.detectadblock.com">②</a></p>
 <p>过滤器 - 自定义过滤规则：</p><pre><code>@@||pstatp.com^ # 放行该域名，即不过滤</code></pre>
 调用 DNS 配置：先到，网络 - DHCP/DNS - DNS 转发，查看是否为上面设的 127.0.0.1#5635<br>
-PassWall - DNS：将“域名过滤服务”自定义为：路由器IP:端口（即上面的5635）（其它同类软件以此类推）<br>
+PassWall - DNS - 远程 DNS - 设为“路由器IP:端口”（即上面的5635）<br>
 <a href="https://wxf2088.xyz/477.html">配置参考</a> | <a href="https://sspai.com/post/63088">少数派</a> | <a href="https://www.v2rayssr.com/adguardhome.html">其它博主推荐</a>
 <h3>创建新分区</h3>系统 - 磁盘管理 - 可见磁盘（/dev/mmcblk0）右边点修改 - 下方 Free Space 即空余空间，在中止扇区输入 +50M 或 +10g - 点右侧创建，接着再点右侧的 EXT4 进行格式化<h3>挂载磁盘</h3>系统 - 挂载点 - 生成配置 - 拉到下方挂载点分类中可以看到新建的分区，点右侧修改 - 勾选启用此挂载点、挂载点选 /mnt/mmcblk0p3，保存应用
 
@@ -311,6 +323,12 @@ iptables -t nat -l POSTROUTING -o 虚拟网卡 -j MASQUERADE
 <p>关闭语言自动侦测：右上角 ... - 语言 - 简体中文</p>
 <p>获取 Web 管理地址：右键一个应用（例如：FileStation）- 在新浏览器分页中打开</p>
 <p>自动开关机：控制台 - 电源 - 电源计划，勾选启动计划，设定一个关机时间和一个开机时间</p>
+<h4>DDNS 识别为梯子IP怎么办？</h4>
+<pre><code>cat /etc/init.d/get_external_ip.sh # 查看该文件可以看到：
+  WAN_IP=`/usr/local/bin/qcloud_cli -x 13 -e` # 即通过该文件实现的获取外网IP
+tail | /usr/local/bin/qcloud_cli -x 13 -e # 因此，追踪该文件并查看输出
+  https://edge.api.myqnapcloud.com # 输出中可以看到类似这样
+</code></pre>因此，只要在软路由中将 edge.api.myqnapcloud.com 加入不走代理列表即可
 <h4>开启 WebDAV</h4>控制台 - 应用程序 - Web 服务器 - 勾选“启用 Web 服务器”，然后就可以在上方看到 WebDAV 标签，点击该标签 - 启用 WebDAV（如果你发现连接不上，你应该也勾选下面的启用专用端口）<p>控制台 - 共享文件夹 - 编辑指定用户共享文件夹权限 - 选择权限类型“WebDAV访问”，访问权限选“无限制”，勾选指定的用户允许即可；Potplayer 播放，打开 - 远程连接，输入名称，协议选WebDAV、端口、用户名和密码，点连接</p>
 <h4>开启 NFS</h4>控制台 - 网络＆文件服务 - Win/Mac/NFS/WebDAV - Linux NFS 服务 - 勾选 “激活 NFS v2/v3 和 v4 服务”<p>控制台 - 共享文件夹 - 编辑你要共享的文件夹权限）- 选择权限类别“NFS主机访问”，勾选下面的“访问权限”即可，其它不需要勾选</p>
 
@@ -346,8 +364,37 @@ docker run -d -p 8000:8000 -p 9443:9443 -p 9000:9000 --name portainer \
 -v portainer_data:/data \
 portainer/portainer-ce:latest</code></pre>
 安装完成后浏览器访问 NAS-IP:9000 并创建管理员账号，接着选择 Local 进行连接
-<p>注意：威联通 NAS 的文件路径要添加格式：/share<!-- /CACHEDEV硬盘序号_DATA -->/共享文件夹</（例如：/share/Downloads ）；端口指定（hsot）可以写成 ：0.0.0.0:9091</p>
-<h4>DDNS-GO</h4>创建镜像 <a href="https://hub.docker.com/r/jeessy/ddns-go">jeessy/ddns-go</a> ，完成后点击 URL 跳转到配置页面：先点选你的 DNS 服务商，例如 Cloudflare，并填写 Token（获取方法：登陆 Cloudflare - 右上角头像 - 我的个人资料 - API 令牌 - 创建令牌 - 点击“编辑区域 DNS”右侧的“使用模板”，在“区域资源”中选择你的域名，或者选择所有区域 - 拉到最底下点击继续以显示摘要 - 复制令牌）- DDNS-GO 配置完成后点击底部 Save
+<p>注意：威联通 NAS 的文件路径要添加格式：/share/CACHEDEV硬盘序号_DATA/共享文件夹/（例如：/share/Downloads ）；端口指定（hsot）可以写成 ：0.0.0.0:9091</p>
+<h4>DDNS-GO</h4>创建镜像 <a href="https://hub.docker.com/r/jeessy/ddns-go">jeessy/ddns-go</a> ，网络选 host 才支持 IPv6，完成后浏览器访问 NAS-IP:9876 ，先点选你的 DNS 服务商，如 Cloudflare，并填写 Token（获取方法：登陆 Cloudflare - 右上角头像 - 我的个人资料 - API 令牌 - 创建令牌 - 点击“编辑区域 DNS”右侧的“使用模板”，在“区域资源”中选择你的域名，或者选择所有区域 - 拉到最底下点击继续以显示摘要 - 复制令牌）- DDNS-GO 配置完成后点击底部 Save
+<h4>Adguard home</h4>通过 Portainer 部署
+<pre><code>Image：adguard/adguardhome
+Manual network port publishin：
+  host（53）→ container（53）
+  host（53）→ container（53）udp
+  host（3000）→ container（80）
+Volumes：
+  /share/Container/adguard/work:/opt/adguardhome/work
+  /share/Container/adguard/conf:/opt/adguardhome/conf
+Advanced container settings：
+  Restart policy：Always
+</code></pre>
+<h4>Freshrss</h4>创建镜像 linuxserver/freshrss：
+<pre><code># 名称自定义，点高级设置
+# 环境 - 新增：
+PGID:100
+PUID:1000
+TZ:Asia/Shanghai
+CRON_MIN=*/30 # 每30分钟刷新一次
+# 网络 - 网络模式（NAT）- 端口转发 - 新增：
+184:80-TCP
+# 共享文件夹 - 挂载本机共享文件夹 - 新增：
+/share/Container/freshrss:/config
+</code></pre>
+浏览器访问 NAS-IP 开始安装向导 http://192.168.10.111:184
+<p>安装插件，下载后放入：NAS\Container\freshrss\www\freshrss\extensions 中</p>
+<p>修改基础URL：修改 NAS\Container\freshrss\www\freshrss\data\config.php 文件中的 base_url 字段</p>
+<p>配置移动端访问：右上角设置 - 用户账户 - 认证中勾选：“允许 API 访问”，返回用户账户 - 在下方 API 管理点击链接可以看到你的 Fever API 地址，密码可以设置也可以不设置</p>
+<p>设置 - 阅读：文章显示“只显示未读”；展开的分类“无分类”，勾选“默认显示收藏的所有文章”；去掉“点击文章区域外以关闭”</p>
 <h4>Radarr</h4>创建镜像 linuxserver/radarr：
 <pre><code># 名称自定义，点高级设置
 # 环境 - 新增：
@@ -369,6 +416,25 @@ TZ:Asia/Shanghai
 <p>设置 - 元数据 - 将 EMBY 和 Kodi/Emby 都开启</p>
 <p>电影 - 添加电影 - 搜索电影后点击它，目录位置选择 movies 目录存放（这表示将下载完成的电影硬链接创建的位置），返回电影，点击下面的搜索选项卡，选择你要的点下载按钮，即会发送到下载客户端</p>
 <p>电影 - 媒体库导入 - 选择 movies 目录，然后它会自动扫描导入即可（你应该先给 movies 目录里面的电影命名好）</p>
+<h4>Radarr</h4>创建镜像 linuxserver/sonarr：
+<pre><code># 名称自定义，点高级设置
+# 环境 - 新增：
+PUID=1000
+PGID=1000 # 每个人不一样，登陆 NAS 用 id 命令获取
+TZ:Asia/Shanghai
+# 网络 - 网络模式（NAT）- 端口转发 - 新增：
+8989:8989-TCP
+# 共享文件夹 - 挂载本机共享文件夹 - 新增：
+/share/Container/sonarr:/config
+/share/Media/Downloads:/downloads # 与下载软件同目录
+/share/Media:/mymedia # 影视媒体根目录
+</code></pre>
+浏览器访问 NAS-IP:7878，开始设置（左侧 Settings 分类）：<br>
+设置根目录格式：Media Management - Season Folder Format：{Series Title:ZH} ({Series Year}) {season:0}<br>
+添加根目录：Media Management - Add Root Folder - mymedia/TV<br>
+设置清晰度：Profiles - Any - 取消勾选你不要的清晰度；在 Language Profiles  修改 English 添加中文并调整顺序<br>
+添加索引器：Indexers - +号 -（参考 Radarr）<br>
+添加下载客户端：Download Clients - +号 - 选择你对应的客户端，记得填写 Category 即标签 tv；在下面 Remote Path Mappings 添加远程路径 Media/Downloads/complete/tv/ 到本地路径 /mymedia/Downloads/complete/tv/
 <h4>Jellyfin</h4>通过 Portainer 部署以开启硬解，打开 Portainer - Containers - Add container：
 <pre><code>Image：nyanmisaka/Jellyfin
 Manual network port publishin：
@@ -382,7 +448,7 @@ Advanced container settings：
   Runtime & Resources：Devices - add device：
     host（/dev/dri/renderD128）container（/dev/dri/renderD128）
 </code></pre>
-部署完成后访问 jellyfin - 菜单 - 控制台 - 播放 - 转码（硬件加速：选 Intel QuickSync ，下面勾选所有格式）- 硬件编码选项：勾选启用硬件编码，勾选允许以 HEVC 格式编码（即支持H265）
+部署完成后访问 jellyfin - 菜单 - 控制台 - 播放 - 转码（硬件加速：选 Intel QuickSync ，下面勾选所有格式）- 硬件编码选项：勾选启用硬件编码，勾选允许以 HEVC 格式编码（即支持H265）；启用色调映射 - 算法选 BT.2390
 <p>设置 - 字幕：偏好 Chinese，模式智能模式，所有复杂格式</p>
 <p>设置备用字体：在 home 目录下创建一个 font 目录，将中文字体复制到该目录并给予所有人读取写入权限；控制台 - 播放 - 填写上面的 font 目录路径并勾选启用备用字体</p>
 <p>字体插件：控制台 - 插件 - 目录，在元数据分类中找到 Open Subtitles 插件并安装，完成后重启容器，再回到插件页面，点击 Open Subtitles，输入账号密码，没有则点击 Register 进行注册；之后在你要下载字幕的电影上点击 ··· 点修改字幕，点搜索图标，然后点下载图标</p>
@@ -415,6 +481,19 @@ services:
       - 8096:8920
     devices:
       - /dev/dri:/dev/dri</code></pre>
+
+<h4>jellyseerr</h4>jellyseerr 是一个协同选片系统
+<pre><code>image: fallenbagel/jellyseerr:latest
+environment:
+  - LOG_LEVEL=debug
+  - TZ=Asia/Shanghai
+ports:
+  - 18090:5055
+volumes:
+  - /path/to/appdata/config:/app/config
+      restart: unless-stopped
+</code></pre>浏览器访问 NAS-IP:18090，先点右上角更改语言，下方点击 Use your Jellyfin account ，输入你的 Jellyfin 账户并登陆，点 Sync Libraries ，选择你要同步的媒体库并继续
+<p>添加 Radarr 或 Sonarr：勾选默认服务器，填写网址和端口号，在 Radarr - 设置 - 通用中复制 Key 并填入，点击测试，继续填写信息，质量 any，根目录 /movies 并保存</p><p>左侧点击用户可以为家人创建用户，也可以用 jellyfin 中导入账户</p>
 <h4>Flare</h4>Portainer - Containers - Add container：
 <pre><code>Name：Flare
 Image：soulteary/flare:latest
@@ -505,7 +584,9 @@ BT_PORT=8999
 /share/Container/alist:/opt/alist/data
 /share/Downloads/alist:/nasdl # 用于日后挂载本地目录用
 </code></pre>
-挂载本机目录的方法：访问 IP-5244，拉到最下面点管理 - 账号 - 添加 - 本机，虚拟路径输入 / 根（表示显示在 Alias 列表第一层，你也可以加一层目录，例如 /NAS ），根目录路径输入 /nasdl（即上面挂载的 /share/Downloads/alist，之后在 NAS 的 Downloads 的 alist 添加文件即可）
+浏览器访问 NAS-IP ，登陆后点击底部管理 - 用户，修改账号和密码（备注：控制台执行 ./alist admin 可以查询管理员账号密码）
+<p></p>
+挂载本机目录的方法：管理 - 存储 - 添加 - 本机，虚拟路径输入 / 根（表示显示在 Alias 列表第一层，你也可以加一层目录，例如 /NAS ），根目录路径输入 /nasdl（即上面挂载的 /share/Downloads/alist）
 <h4>Bookbrowser</h4>在线图书阅读系统，和上面一样操作，搜索 dezhao/bookbrowser_cn 镜像
 <pre><code>18097:8090 - TCP
 /Media/Books:/books

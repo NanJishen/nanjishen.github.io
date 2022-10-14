@@ -17,5 +17,8 @@ magick a.png -resize 70% b.png
 # 调整分辨率宽为500宽（高跟随调整）
 magick a.png -resize 500x b.png 
 
+# 修改尺寸并进行压缩（覆盖原图）
+magick 拼接截图.jpg -resize 70% 拼接截图.jpg && magick 拼接截图.jpg -quality 70 拼接截图.jpg
+
 # 移除图片内嵌的所有配置文件
 magick convert -strip a.jpg
