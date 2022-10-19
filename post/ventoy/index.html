@@ -164,23 +164,23 @@
 <p>有了 Ventoy ，日后便无需反复地格式化U盘。只需将 ISO 系统镜像文件直接拷贝到U盘中，便可从它的多系统引导菜单中直接选择并引导启动。同时 Ventoy 支持常见的操作系统（Windows/WinPE/Linux/VMware 等）。</p>
 <h2 id="下载并运行">下载并运行</h2>
 <p>浏览器访问官网：<code>ventoy.net/cn/download.html</code>，然后点击页面中的 <code>ventoy-1.x.xx-windows.zip</code> 后会跳转到 GitHub 页面（实际上点任何版本都会跳转到 GitHub 下载页面）。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/nassets/imgp/posts/d2103/3101.png" alt=""></p>
+<p><img src="https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2103/3101.png" alt=""></p>
 <p>接着在 GitHub 下载页面，点击 Windows 版本的：<code>ventoy-1.0.39-windows.zip</code> 即可弹出下载（注：这个指的是当前你制作U盘的系统，不是安装的系统，我当前使用 Win10 来制作U盘，那么选择 Windows 系统），如下图所示：</p>
-<p><img src="https://cdn.jsdelivr.net/gh/nassets/imgp/posts/d2103/3102.png" alt=""></p>
+<p><img src="https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2103/3102.png" alt=""></p>
 <p>Ventoy 是一个绿色免安装工具，因此将其解压后便可直接使用了。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/nassets/imgp/posts/d2103/3103.png" alt=""></p>
+<p><img src="https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2103/3103.png" alt=""></p>
 <h2 id="制作启动u盘">制作启动U盘</h2>
 <p>双击 Ventoy2Disk.exe 运行，可以看到如下画面。其中<em>1.0.39</em>代表当前 Ventoy 的版本。设备处是空的，表示当前还没有插入U盘。我们可以先插入U盘再双击运行 Ventoy，也可以先运行，再插入U盘后点击下绿色的刷新按钮检测U盘。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/nassets/imgp/posts/d2103/3104.png" alt=""></p>
+<p><img src="https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2103/3104.png" alt=""></p>
 <p>现在将U盘插入电脑，接着点击下绿色的刷新按钮。如你所见，现在看到了U盘，并且显示了U盘中的 Ventoy 版本（这是我之前安装的版本）。然后我们来配置选项，如下图所示 ↓</p>
-<p><img src="https://cdn.jsdelivr.net/gh/nassets/imgp/posts/d2103/3105.png" alt=""></p>
+<p><img src="https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2103/3105.png" alt=""></p>
 <p>配置选项 - 分区类型 - GPT，这个分区格式选择指的是U盘所使用的格式，它默认的是 MBR ，因为我个人不在使用老设备，所以选择了 GPT 。</p>
 <p>如果你是首次安装，那么点击安装即可开始安装，这是会格式化这个U盘的。所以你要提前备份好U盘里面的数据。而如果你是升级U盘的 Ventoy 版本。则是不会影响到其中的 ISO 镜像文件的。</p>
 <p>点击安装或升级后会弹出如下所示的提示，表示安装成功。</p>
-<p><img src="https://cdn.jsdelivr.net/gh/nassets/imgp/posts/d2103/3106.png" alt=""></p>
+<p><img src="https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2103/3106.png" alt=""></p>
 <h2 id="放入镜像">放入镜像</h2>
 <p>经过以上步骤 Ventoy 已成功安装到U盘。也就是说，该U盘现在已经可以引导启动系统了。但是它还不包含操作系统安装镜像。现在我们来将 ISO 镜像文件放入其中吧 ↓</p>
-<p><img src="https://cdn.jsdelivr.net/gh/nassets/imgp/posts/d2103/3107.png" alt=""></p>
+<p><img src="https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2103/3107.png" alt=""></p>
 <p>如你所见，我放了3个镜像，分别是：<em>Windows10</em>、<em>ArchLinux</em>、<em>WePE64</em>。</p>
 <p>现在，当我用这个U盘引导系统启动后便可以选择这3个其中的一个系统镜像来安装系统了。日后更新系统只需替换这些镜像即可。你说方便不方便？简单不简单？</p>
 <p>以上内容高手看起来可能觉得略长，但是对新手却是非常友好的，毕竟安装系统最好别出错。对新手来说，需要细节完善。</p>
@@ -243,7 +243,7 @@
 <p>以上就是安装和使用 Ventoy 的指南。安装完成后，我们通过观察可以发现，U盘中包含一个小的引导分区和一个大的默认使用 exFAT 格式的分区。</p>
 <p>而我们上面所说的直接将 ISO 镜像文件放进U盘的就是 exFAT 格式的分区。Ventoy 的方便之处在于它让你不必像以往那样，次次都要重新格式化U盘，这样一来既节省了时间，也减少了麻烦。</p>
 <p>哦对了，由于 Ventoy 的特性，你可以在该分区下放入 mp3、mp4、电子书、绿色版软件等，升级也不会干扰到其中的内容，也就是说它还可以当作普通U盘一样日用。</p>
-<p><img src="https://gitee.com/nanjishen/Npic/raw/master/img/gzh-end.png" alt=""></p>
+<p><img src="https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png" alt=""></p>
 
     </div>
 

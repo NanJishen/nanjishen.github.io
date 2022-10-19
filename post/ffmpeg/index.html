@@ -49,7 +49,7 @@
 <meta itemprop="name" content="开源免费音视频处理神器 FFmpeg">
 <meta itemprop="description" content="FFmpeg 是一款免费开源（LGPL、GPL 许可证），且领先的全能型多媒体处理软件，可以处理视频、音乐及图片，它采用了非常先进的音频/视频编解码库 li"><meta itemprop="datePublished" content="2020-09-26T16:04:00+08:00" />
 <meta itemprop="dateModified" content="2020-09-26T16:04:00+08:00" />
-<meta itemprop="wordCount" content="2841">
+<meta itemprop="wordCount" content="3497">
 <meta itemprop="keywords" content="ffmpeg," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="开源免费音视频处理神器 FFmpeg"/>
 <meta name="twitter:description" content="FFmpeg 是一款免费开源（LGPL、GPL 许可证），且领先的全能型多媒体处理软件，可以处理视频、音乐及图片，它采用了非常先进的音频/视频编解码库 li"/>
@@ -150,17 +150,20 @@
         <li><a href="#ffmpeg-的安装">FFmpeg 的安装</a></li>
         <li><a href="#ffmpeg-的使用">FFmpeg 的使用</a>
           <ul>
+            <li><a href="#视频信息">视频信息</a></li>
             <li><a href="#格式转换">格式转换</a></li>
+            <li><a href="#编码并转换格式">编码并转换格式</a></li>
             <li><a href="#压缩视频">压缩视频</a></li>
             <li><a href="#转成-gif-动图">转成 GIF 动图</a></li>
             <li><a href="#选项与参数">选项与参数</a></li>
-            <li><a href="#指定转换格式">指定转换格式</a></li>
             <li><a href="#合并-mp4-视频">合并 MP4 视频</a></li>
             <li><a href="#更改分辨率大小">更改分辨率大小</a></li>
             <li><a href="#转换视频码率">转换视频码率</a></li>
             <li><a href="#剪辑视频">剪辑视频</a></li>
+            <li><a href="#视频旋转">视频旋转</a></li>
+            <li><a href="#加减速与倒放">加减速与倒放</a></li>
             <li><a href="#图片与视频转换">图片与视频转换</a></li>
-            <li><a href="#音频视频分离与合并">音频视频分离与合并</a></li>
+            <li><a href="#分离与合并音视频">分离与合并音视频</a></li>
             <li><a href="#对视频进行操作">对视频进行操作</a></li>
             <li><a href="#合并图片为视频">合并图片为视频</a></li>
             <li><a href="#视频添加水印">视频添加水印</a></li>
@@ -179,12 +182,30 @@
 <p>可以说 FFmpeg 是音视频处理界的神器，然而对于小白来说看起来非常难，导致上手困难，但其实操作并没有那么复杂，为了帮助小白打开这扇门，于是就有了这篇文章&hellip; 不点个赞吗？</p>
 <h2 id="ffmpeg-的安装">FFmpeg 的安装</h2>
 <p>首先就是去<a href="http://ffmpeg.org">官网下载</a>了，在下面选择 Windows 已经构建好的版本，下载后将压缩包解压，其中 bin 文件夹中的程序就是我们要的。</p>
-<p>我个人通常会将 bin 文件夹重命名为 FFmpeg，然后将其移动到个人的软件目录中，我的个人软件目录<code>C:\Users\nanji\OneDrive\Apps\FFmpeg</code>，当然你也可以放到任意目录。</p>
-<p>将上面的路径添加到添加环境变量，以便可以在命令行中直接调用：按 [Win]键，输入 env ，点击“编辑系统环境变量”，在下方点击“环境变量”，之后在系统变量中双击 Path ，添加上面的路径即可，如图所示：</p>
-<p>加入环境变量后就算完成了，在终端中执行下 <code>ffmpeg</code> 或 <code>ffmpeg -version</code> 看看是否安装成功，如下图所示就表示成功。</p>
-<h2 id="ffmpeg-的使用">FFmpeg 的使用</h2>
+<p>我个人通常会将 bin 文件夹重命名为 FFmpeg，然后将其移动到个人的软件目录中，我的个人软件目录 <code>C:\Users\nanji\OneDrive\Apps\FFmpeg</code>，当然你也可以放到任意目录。</p>
+<p>将上面的路径添加到添加环境变量，以便可以在命令行中直接调用：按 [Win]键，输入 env ，点击“编辑系统环境变量”，在下方点击“环境变量”，之后在系统变量中双击 Path ，添加上面的路径即可。加入环境变量后就算完成了，在终端中执行：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg 或 ffmpeg -version <span class="c1"># 查看版本，以确认否安装成功</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="ffmpeg-的使用">FFmpeg 的使用</h2>
 <p>这里说说简单的日常使用，如果你是更专业的用户，可以参考官方帮助，了解更高级的用法，不过一般来说，这些对普通用户就足够了~</p>
-<h3 id="格式转换">格式转换</h3>
+<h3 id="视频信息">视频信息</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i video.avi <span class="c1"># 查看本地视频信息</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i http://..file1.mp4 <span class="c1"># 查看远程 Web 网络视频信息</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="格式转换">格式转换</h3>
 <p>最常用的就是一个文件的格式转换成另一个：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -206,14 +227,16 @@
 </span><span class="lnt">16
 </span><span class="lnt">17
 </span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i filename.flv filename.mp4
 </span></span><span class="line"><span class="cl"><span class="c1"># 反之</span>
 </span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 filename.flv
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 拷贝转换，即保持原样的编码进行格式转换</span>
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.flv -vcodec copy -acodec copy filename.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 拷贝转换，即保持原样的编码不变，只转换格式</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.ts -vcodec copy -acodec copy filename.mp4
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 中文名音乐转换</span>
 </span></span><span class="line"><span class="cl">ffmpeg -i <span class="s1">&#39;.\下辈子不一定遇见.m4a&#39;</span> -f mp3 <span class="s1">&#39;.\下辈子不一定遇见.mp3&#39;</span>
@@ -221,14 +244,49 @@
 </span></span><span class="line"><span class="cl"><span class="c1"># WAV 转换到 MP3</span>
 </span></span><span class="line"><span class="cl">ffmpeg -i a.wav -vn -ar <span class="m">48000</span> -ac <span class="m">2</span> -b:a <span class="m">256</span> output-b.mp3
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1"># 选项说明：</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># 选项：</span>
+</span></span><span class="line"><span class="cl">-i <span class="c1"># 输入的视频</span>
+</span></span><span class="line"><span class="cl">-f <span class="c1"># 输出的视频（格式）</span>
 </span></span><span class="line"><span class="cl">-vn <span class="c1"># 有时音频文件有图片，指定不在输出中出现图像</span>
 </span></span><span class="line"><span class="cl">-ar <span class="c1"># 设置要转换的音频文件的音频频率，可以使用 8kHz、44.1kHz 或 48kHz 等值调整音质和频率</span>
 </span></span><span class="line"><span class="cl">-ac <span class="c1"># 设置音频通道的数量</span>
-</span></span><span class="line"><span class="cl">-b:a：设置每秒的音频比特率，千位越高，音质越高
+</span></span><span class="line"><span class="cl">-b:a <span class="c1"># 设置每秒的音频比特率，千位越高，音质越高</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="压缩视频">压缩视频</h3>
+</div><h3 id="编码并转换格式">编码并转换格式</h3>
+<p>用 <code>-vcodec</code> 参数来手动指定格式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i filename.wmv -vcodec h264 filename.mp4
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vcodec wmv1 filename.wmv
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.wmv -s 640x480 -b 500k -vcodec h264 -r <span class="m">30</span> -acodec libfaac -ab 48k -ac <span class="m">2</span> filename.mp4 <span class="c1"># 设定更多选项，说明如下</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 选项</span>
+</span></span><span class="line"><span class="cl">-r ：指定帧率
+</span></span><span class="line"><span class="cl">-s ：指定分辨率
+</span></span><span class="line"><span class="cl">-b ：指定比特率；于此同时可以对声道进行转码
+</span></span><span class="line"><span class="cl">-acodec ：指定音频编码
+</span></span><span class="line"><span class="cl">-ab ：指定音频比特率
+</span></span><span class="line"><span class="cl">-ac ：指定声道数
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>H264 为最佳，当然你还可以指定 mpeg4 、libxvid ，不过呢 FFmpeg 默认会根据文件格式选择最合适的容器格式与编码格式，一般不用指定的。</p>
+<h3 id="压缩视频">压缩视频</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -242,14 +300,14 @@
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 降低fps和音频码率以减少大小，同时视频清晰度不变
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -r 10 -b:a 32k filename.mp4
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 降低fps和音频码率以减少大小，同时视频清晰度不变</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -r <span class="m">10</span> -b:a 32k filename.mp4
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 采用H.264算法压缩视频，并指定10fps，以AAC算法压缩音频，码率32k
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vcodec libx264 -crf 20 filename.mp4 #
+</span></span><span class="line"><span class="cl"><span class="c1"># 采用H.264算法压缩视频，并指定10fps，以AAC算法压缩音频，码率32k</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vcodec libx264 -crf <span class="m">20</span> filename.mp4 <span class="c1">#</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 再比如
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -crf 30 filename.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 再比如</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -crf <span class="m">30</span> filename.mp4
 </span></span><span class="line"><span class="cl">ffmpeg -i 480p.mp4 480p.webm
 </span></span></code></pre></td></tr></table>
 </div>
@@ -272,19 +330,19 @@
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 将视频前 30 帧转成 Gif 动图
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vframes 30 -y -f gif filename.gif
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 将视频前 30 帧转成 Gif 动图</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vframes <span class="m">30</span> -y -f gif filename.gif
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 将视频转成 Gif 并指定时间和帧率
-</span></span><span class="line"><span class="cl">ffmpeg -ss 00:00:00.000 -i filename.mp4 -pix_fmt rgb24 -r 10 -s 320x240 -t 00:00:10.000 filename.gif
-</span></span><span class="line"><span class="cl"># 上面的参数说明：
+</span></span><span class="line"><span class="cl"><span class="c1"># 将视频转成 Gif 并指定时间和帧率</span>
+</span></span><span class="line"><span class="cl">ffmpeg -ss 00:00:00.000 -i filename.mp4 -pix_fmt rgb24 -r <span class="m">10</span> -s 320x240 -t 00:00:10.000 filename.gif
+</span></span><span class="line"><span class="cl"><span class="c1"># 上面的参数说明：</span>
 </span></span><span class="line"><span class="cl">-ss 指定了开始时间
-</span></span><span class="line"><span class="cl">-r 指定了以 10 帧频率
+</span></span><span class="line"><span class="cl">-r 指定了以 <span class="m">10</span> 帧频率
 </span></span><span class="line"><span class="cl">-s 指定了输出 320x240 大小
 </span></span><span class="line"><span class="cl">-t 指定了时间长度
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 将视频转为 gif，用 -pix_fmt 指定编码
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -ss 0:0:30 -t 10 -s 320x240 -pix_fmt rgb24 filename.gif
+</span></span><span class="line"><span class="cl"><span class="c1"># 将视频转为 gif，用 -pix_fmt 指定编码</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -ss 0:0:30 -t <span class="m">10</span> -s 320x240 -pix_fmt rgb24 filename.gif
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="选项与参数">选项与参数</h3>
@@ -300,7 +358,7 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-i ：输入的文件，即文件的全面（filename）
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">-i ：输入的文件，即文件的全面（filename）
 </span></span><span class="line"><span class="cl">-vcodec ：编码格式，支持主流的 H.264和H.265（默认值：xvid）
 </span></span><span class="line"><span class="cl">-preset ：编码速率控制，编码越快，信息丢失越多，即视频质量变差
 </span></span><span class="line"><span class="cl">-crt ：输出质量的（0-51）0 为最高质量，默认值 23，建议值 18-28
@@ -311,45 +369,7 @@
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>注：-crt 会直接影响到输出视频的码率，之后再设置－b 指定码率将不会生效；-preset 例如 x264 编码的预设值可以通过该参数指定。它主要影响编码的速度，并不会很大的影响编码出来的结果的质量。</p>
-<h3 id="指定转换格式">指定转换格式</h3>
-<p>用 -vcodec 参数来手动指定格式：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ffmpeg -i filename.wmv -vcodec h264 filename.mp4
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vcodec wmv1 filename.wmv
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>H264为最佳，当然你还可以指定 mpeg4、libxvid，不过呢 FFmpeg 默认会根据文件格式选择最合适的容器格式与编码格式，一般不用指定的。</p>
-<p><strong>其它的附加选项：</strong></p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">-r ：指定帧率
-</span></span><span class="line"><span class="cl">-s ：指定分辨率
-</span></span><span class="line"><span class="cl">-b ：指定比特率；于此同时可以对声道进行转码
-</span></span><span class="line"><span class="cl">-acodec ：指定音频编码
-</span></span><span class="line"><span class="cl">-ab ：指定音频比特率
-</span></span><span class="line"><span class="cl">-ac ：指定声道数
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">示例：
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.wmv -s 640x480 -b 500k -vcodec h264 -r 30 -acodec libfaac -ab 48k -ac 2 filename.mp4
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="合并-mp4-视频">合并 MP4 视频</h3>
+<h3 id="合并-mp4-视频">合并 MP4 视频</h3>
 <p>将多个视频合并：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -359,10 +379,10 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># mp4 最好是先转成无损的 ts 后再进行合并
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># mp4 最好是先转成无损的 ts 后再进行合并</span>
 </span></span><span class="line"><span class="cl">ffmpeg -i file1.mp4 -vcodec copy -acodec copy -vbsf h264_mp4toannexb file1.ts
 </span></span><span class="line"><span class="cl">ffmpeg -i file2.mp4 -vcodec copy -acodec copy -vbsf h264_mp4toannexb file2.ts
-</span></span><span class="line"><span class="cl">ffmpeg -i &#34;concat:file1.ts|file2.ts&#34; -acodec copy -vcodec copy -absf aac_adtstoasc filename.mp4
+</span></span><span class="line"><span class="cl">ffmpeg -i <span class="s2">&#34;concat:file1.ts|file2.ts&#34;</span> -acodec copy -vcodec copy -absf aac_adtstoasc filename.mp4
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="更改分辨率大小">更改分辨率大小</h3>
@@ -373,18 +393,18 @@
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter:v scale=1280:720 -c:a copy filename.mp4
-</span></span><span class="line"><span class="cl"># 又或者
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter:v <span class="nv">scale</span><span class="o">=</span>1280:720 -c:a copy filename.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 又或者</span>
 </span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -s 1280x720 -c:a copy filename.mp4
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>也可以调整视频的宽高比，：</p>
+</div><p>也可以调整视频的宽高比：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ffmpeg -i filename.mp4 -aspect 16:9 filename.mp4
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i filename.mp4 -aspect 16:9 filename.mp4
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="转换视频码率">转换视频码率</h3>
@@ -400,13 +420,13 @@
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 将视频转换成 3 Mbps 码率的视频
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 将视频转换成 3 Mbps 码率的视频</span>
 </span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -b:v 3000k filename.mp4
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 官方建议用 -b:v 时，应同时加上 -bufsize 用于设置码率控制缓冲器大小
+</span></span><span class="line"><span class="cl"><span class="c1"># 官方建议用 -b:v 时，应同时加上 -bufsize 用于设置码率控制缓冲器大小</span>
 </span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -b:v 3000k -bufsize 3000k filename.mp4
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 指定码率阈值，-minrate（别低于）和 -maxrate（别高于）
+</span></span><span class="line"><span class="cl"><span class="c1"># 指定码率阈值，-minrate（别低于）和 -maxrate（别高于）</span>
 </span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -b:v 3000k -bufsize 3000k -maxrate 3500k filename.mp4
 </span></span></code></pre></td></tr></table>
 </div>
@@ -434,57 +454,46 @@
 </span><span class="lnt">19
 </span><span class="lnt">20
 </span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 从 00:00:21 开始剪辑，时间为 10 秒钟
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 从 00:00:21 开始剪辑，时间为 10 秒钟</span>
 </span></span><span class="line"><span class="cl">ffmpeg -i filename.mov -ss 00:00:21 -t 00:00:10 -acodec aac -vcodec h264 -strict -2 filename.mp4
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 裁剪参数 crop=width:height:x:y 说明：
-</span></span><span class="line"><span class="cl"># width 和 height 表示剪裁后的宽和高的尺寸，
-</span></span><span class="line"><span class="cl"># x:y 表示裁剪区域的左上角坐标
+</span></span><span class="line"><span class="cl"><span class="c1"># 从 00:01:30 开始剪辑，持续时间为 20秒，编码原样不变</span>
+</span></span><span class="line"><span class="cl">ffmpeg -ss 0:1:30 -t 0:0:20 -i filename.avi -vcodec copy -acodec copy filename.avi
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 截取视频局部
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter:v &#34;crop=width:height:x:y&#34; filename.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 从 10秒 开始剪辑，持续15秒（比上面更简洁）</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -ss <span class="m">10</span> -t <span class="m">15</span> -codec copy filename.mp4
+</span></span><span class="line"><span class="cl">ffmpeg -ss <span class="m">10</span> -t <span class="m">15</span> -i filename.mp4 -codec copy filename.mp4 <span class="c1">#（相比上面解决第一帧黑屏问题）</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 将竖向的视频 1080 x 1920，保留中间 1080×1080 部分
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -strict -2 -vf crop=1080:1080:0:420 filename.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 裁剪参数 crop=width:height:x:y 说明：</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># width 和 height 表示剪裁后的宽和高的尺寸，</span>
+</span></span><span class="line"><span class="cl"><span class="c1"># x:y 表示裁剪区域的左上角坐标</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 截取部分视频，从[80,60]的位置开始，截取宽200，高100的视频
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter:v &#34;crop=80:60:200:100&#34; -c:a copy filename.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 截取视频局部</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter:v <span class="s2">&#34;crop=width:height:x:y&#34;</span> filename.mp4
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 截取右下角的四分之一
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter:v &#34;crop=in_w/2:in_h/2:in_w/2:in_h/2&#34; -c:a copy filename.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 将竖向的视频 1080 x 1920，保留中间 1080×1080 部分</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -strict -2 -vf <span class="nv">crop</span><span class="o">=</span>1080:1080:0:420 filename.mp4
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 截去底部40像素高度
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter:v &#34;crop=in_w:in_h-40&#34; -c:a copy filename.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 截取部分视频，从[80,60]的位置开始，截取宽200，高100的视频</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter:v <span class="s2">&#34;crop=80:60:200:100&#34;</span> -c:a copy filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 截取右下角的四分之一</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter:v <span class="s2">&#34;crop=in_w/2:in_h/2:in_w/2:in_h/2&#34;</span> -c:a copy filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 截去底部40像素高度</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter:v <span class="s2">&#34;crop=in_w:in_h-40&#34;</span> -c:a copy filename.mp4
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="图片与视频转换">图片与视频转换</h3>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 将图片序列合成视频
-</span></span><span class="line"><span class="cl">ffmpeg -f image2 -i image%d.jpg filename.mp4
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 将视频分解成图片序列
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 image%d.jpg
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 将视频的 8.01 秒处截取 800*600 的缩略图
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -y -f image2 -ss 08.010 -t 0.001 -s 800x600 jt.jpg
-</span></span><span class="line"><span class="cl">ffmpeg -r 0.5 -i c:/tmp/image%04d.jpg -i c:/time.mp3 -vcodec mpeg4 c:/filename.mp4
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="音频视频分离与合并">音频视频分离与合并</h3>
+</div><h3 id="视频旋转">视频旋转</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt"> 1
@@ -498,9 +507,141 @@
 </span><span class="lnt"> 9
 </span><span class="lnt">10
 </span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vn output.mp3 <span class="c1"># 从视频分离出音频</span>
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 旋转 90 度</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -metadata:s:v <span class="nv">rotate</span><span class="o">=</span><span class="s2">&#34;90&#34;</span> -codec copy filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 顺时针旋转 90 度</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vf <span class="s2">&#34;transpose=1&#34;</span> filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 逆时针旋转 90 度</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vf <span class="s2">&#34;transpose=2&#34;</span> filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 顺时针旋转 90 度后再水平翻转</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vf <span class="s2">&#34;transpose=3&#34;</span> filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 逆时针旋转 90 度后再水平翻转</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vf <span class="s2">&#34;transpose=0&#34;</span> filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 水平翻转视频</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vf hflip filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 垂直翻转视频</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vf vflip filename.mp4
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="加减速与倒放">加减速与倒放</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 视频倒放：无音频</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter_complex <span class="o">[</span>0:v<span class="o">]</span>reverse<span class="o">[</span>v<span class="o">]</span> -map <span class="o">[</span>v<span class="o">]</span> -preset superfast filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 视频倒放：音频不变</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vf reverse filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 音频倒放：视频不变</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -map <span class="m">0</span> -c:v copy -af <span class="s2">&#34;areverse&#34;</span> reversed_audio.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 音视频同时倒放</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vf reverse -af areverse -preset superfast filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 视频加速：帧速率变为 2 倍，调整倍速范围（0.25，4）</span>
+</span></span><span class="line"><span class="cl">1ffmpeg -i filename.mp4 -vf <span class="nv">setpts</span><span class="o">=</span>PTS/2 -af <span class="nv">atempo</span><span class="o">=</span><span class="m">2</span> filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 视频减速播放</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mkv -an -filter:v <span class="s2">&#34;setpts=0.5*PTS&#34;</span> filename.mkv
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="图片与视频转换">图片与视频转换</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 将图片序列合成视频</span>
+</span></span><span class="line"><span class="cl">ffmpeg -f image2 -i image%d.jpg filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 将视频分解成图片序列</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 image%d.jpg
+</span></span><span class="line"><span class="cl">ffmpeg –i test.avi –r <span class="m">1</span> –f image2 image-%3d.jpeg <span class="c1"># -r 表示频率，-ss 开始时间，-t 持续时间</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 将视频的 8.01 秒处截取 800*600 的缩略图</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -y -f image2 -ss 08.010 -t 0.001 -s 800x600 jt.jpg
+</span></span><span class="line"><span class="cl">ffmpeg -r 0.5 -i c:/tmp/image%04d.jpg -i c:/time.mp3 -vcodec mpeg4 c:/filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加图片水印</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -i logo.png -filter_complex overlay filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加 GIF 文件</span>
+</span></span><span class="line"><span class="cl">ffmpeg -y -i filename.mp4 -ignore_loop <span class="m">0</span> -i filename.gif -filter_complex <span class="nv">overlay</span><span class="o">=</span>0:H-h filename.mp4
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="分离与合并音视频">分离与合并音视频</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vn filename.mp3 <span class="c1"># 从视频分离出音频</span>
 </span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -an output-mute.mp4 <span class="c1"># 从视频分离出视频</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 从视频中去除音频，使用 -an 参数去掉音频，使用 -vcodec copy 表示拷贝视频原样</span>
@@ -511,6 +652,11 @@
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># 音频与视频合成，使用 -y 参数表示覆盖输出文件</span>
 </span></span><span class="line"><span class="cl">ffmpeg -y –i filename.mp4 –i filename.mp3 –vcodec copy –acodec copy filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 选项</span>
+</span></span><span class="line"><span class="cl">-ar <span class="c1"># 设置采样率</span>
+</span></span><span class="line"><span class="cl">-ac <span class="c1"># 设置声音的声道数</span>
+</span></span><span class="line"><span class="cl">-acodec <span class="c1"># 设置声音编解码器，未设定则采用输入流相同的编解码器，一般后面加 copy 表示拷贝，-an 不处理音频</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="对视频进行操作">对视频进行操作</h3>
@@ -544,36 +690,36 @@
 </span><span class="lnt">26
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 剪切视频，-ss 表示开始时间; -t 表示持续时间
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 剪切视频，-ss 表示开始时间; -t 表示持续时间</span>
 </span></span><span class="line"><span class="cl">ffmpeg -ss 0:2:50 -t 0:0:20 -i filename.mp4 -vcodec copy -acodec copy filename.mp4
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 视频截图，-s 设置分辨率; -f 强迫采用格式 fmt
+</span></span><span class="line"><span class="cl"><span class="c1"># 视频截图，-s 设置分辨率; -f 强迫采用格式 fmt</span>
 </span></span><span class="line"><span class="cl">ffmpeg –i filename.mp4 –f image2 -t 0.001 -s 320x240 image-%3d.jpg
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 视频分解为图片，-r 指定截屏频率
-</span></span><span class="line"><span class="cl">ffmpeg –i filename.mp4 –r 1 –f image2 image-%3d.jpg
+</span></span><span class="line"><span class="cl"><span class="c1"># 视频分解为图片，-r 指定截屏频率</span>
+</span></span><span class="line"><span class="cl">ffmpeg –i filename.mp4 –r <span class="m">1</span> –f image2 image-%3d.jpg
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 视频拼接
-</span></span><span class="line"><span class="cl">ffmpeg -f concat -i filelist.txt -c copy output.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 视频拼接</span>
+</span></span><span class="line"><span class="cl">ffmpeg -f concat -i filelist.txt -c copy filename.mp4
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 旋转视频
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vf rotate=PI/2 filename.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 旋转视频</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vf <span class="nv">rotate</span><span class="o">=</span>PI/2 filename.mp4
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 缩放视频，iw 表示输入的宽度，iw/2 就是一半; -1 为保持宽高比
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vf scale=iw/2:-1 filename.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 缩放视频，iw 表示输入的宽度，iw/2 就是一半; -1 为保持宽高比</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -vf <span class="nv">scale</span><span class="o">=</span>iw/2:-1 filename.mp4
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 视频变速
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter:v setpts=0.5*PTS filename.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 视频变速</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter:v <span class="nv">setpts</span><span class="o">=</span>0.5*PTS filename.mp4
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 音频变速
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp3 -filter:a atempo=2.0 filename.mp3
+</span></span><span class="line"><span class="cl"><span class="c1"># 音频变速</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp3 -filter:a <span class="nv">atempo</span><span class="o">=</span>2.0 filename.mp3
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 音视频同时变速，但音视频为互倒关系
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter_complex &#34;[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]&#34; -map &#34;[v]&#34; -map &#34;[a]&#34; filename.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 音视频同时变速，但音视频为互倒关系</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -filter_complex <span class="s2">&#34;[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]&#34;</span> -map <span class="s2">&#34;[v]&#34;</span> -map <span class="s2">&#34;[a]&#34;</span> filename.mp4
 </span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="合并图片为视频">合并图片为视频</h3>
-<p>将要合并的图片放在同一个文件夹中，然后重命名为：img001.png, img002.png, img003.png</p>
+<p>将要合并的图片放在同一个文件夹中，并重命名为：<code>img001.png</code> , <code>img002.png</code> , <code>img003.png</code>：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -584,11 +730,11 @@
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ffmpeg -framerate 24 -i img%03d.png filename.mp4
-</span></span><span class="line"><span class="cl"># 或者
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl">ffmpeg -framerate <span class="m">24</span> -i img%03d.png filename.mp4
+</span></span><span class="line"><span class="cl"><span class="c1"># 或者</span>
 </span></span><span class="line"><span class="cl">ffmpeg -r 0.5 -i img%03d.jpg filename.mp4
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"># 将图片合成视频
+</span></span><span class="line"><span class="cl"><span class="c1"># 将图片合成视频</span>
 </span></span><span class="line"><span class="cl">ffmpeg -f image2 -i img%d.jpg filename.mp4
 </span></span></code></pre></td></tr></table>
 </div>
@@ -597,16 +743,22 @@
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 视频添加水印，main_w-overlay_w-10 表示视频的宽度-水印的宽度-水印边距
-</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -i logo.jpg -filter_complex [0:v][1:v]overlay=main_w-overlay_w-10:main_h-overlay_h-10[out] -map [out] -map 0:a -codec:a copy filename.mp4
+<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="line"><span class="cl"><span class="c1"># 视频添加水印，main_w-overlay_w-10 表示视频的宽度-水印的宽度-水印边距</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.mp4 -i logo.jpg -filter_complex <span class="o">[</span>0:v<span class="o">][</span>1:v<span class="o">]</span><span class="nv">overlay</span><span class="o">=</span>main_w-overlay_w-10:main_h-overlay_h-10<span class="o">[</span>out<span class="o">]</span> -map <span class="o">[</span>out<span class="o">]</span> -map 0:a -codec:a copy filename.mp4
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1"># 添加文本水印</span>
+</span></span><span class="line"><span class="cl">ffmpeg -i filename.flv -vf <span class="s2">&#34;drawtext=fontfile=simhei.ttf: text=&#39;文本&#39;:x=100:y=10:fontsize=24:fontcolor=yellow:shadowy=2&#34;</span> filename.mp4
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>FFmpeg</strong> 这个神器非常值得学习，因为视频在今天来说是很主流的内容载体，虽然对小白来来说，看起来很复杂，但其实只要掌握几个基本命令就足够了，同时它在 Windows 和 Linux 上都可以使用。</p>
 <h2 id="更多参考">更多参考</h2>
 <p><a href="https://www.linuxmi.com/linux-ffmpeg.html">在 Linux 上用 FFmpeg 命令进行音频和视频处理</a></p>
-<p><img src="https://gitee.com/nanjishen/Npic/raw/master/img/gzh-end.png" alt=""></p>
+<p><img src="https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png" alt=""></p>
 
     </div>
 

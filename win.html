@@ -2,7 +2,7 @@
 <h3>Win11_22H2 _ 2022-09-28 <i class="sha1">
 SHA1：E376935B413A004F785C707B86405EB313ACBCE3</i></h3><textarea id="dllink" onclick="copyText()">magnet:?xt=urn:btih:e3784ee17e8be49a97cf0bfc51b1626e62148f51</textarea>
 <!-- key：VK7JG-NPHTM-C97JM-9MPGT-3V66T ；https://next.itellyou.cn、https://hellowindows.cn、https://uupdump.net、https://uup.rg-adguard.net -->
-<p>推荐在<a href="https://www.microsoft.com/zh-cn/software-download/windows11"> 微软官方 </a> 或使用 <a href="https://github.com/AveYo/MediaCreationTool.bat">MCT.bat</a> 下载并制作镜像<br><br>
+<p>推荐在<a href="https://www.microsoft.com/zh-cn/software-download/windows11"> 微软官方 </a> 或使用 <a href="https://github.com/AveYo/MediaCreationTool.bat">MCT.bat</a>、<a href="https://www.easyuefi.com/windows-iso-downloader/windows-iso-downloader.html">Hasleo</a> 下载并制作镜像<br><br>
 引导启动工具推荐：<a href="http://www.wepe.com.cn">WePE</a> | <a href="https://www.hirensbootcd.org">HBCD_PE</a> | <a href="https://www.ventoy.net">Ventoy</a><a href="https://mp.weixin.qq.com/s/AKXk4xzyjKUKeiOtBeZskw">（使用指南）</a> 
 <p>Office 安装推荐使用 <a href="https://otp.landian.vip/zh-cn/">Office Tool</a> | <a href="https://account.microsoft.com/services/microsoft365/install">正版 Office365</a> | <a href="https://support.microsoft.com/zh-cn/office/%E4%BB%8E-pc-%E5%8D%B8%E8%BD%BD-office-9dd49b83-264a-477a-8fcc-2fdf5dbf61d8">卸载用</a></p>
 </p><h3>安装方法</h3>设U盘为第一引导设备，跟着向导完成安装（选盘符时点 [高级]-[格式化]，进行格式化）
@@ -18,7 +18,7 @@ slmgr /dli # 显示当前授权信息
 Office：必须进入对应的目录执行命令：
 <pre>cd C:\Program Files\Microsoft Office\Office16
 cscript ospp.vbs /inpkey:NMMKJ-6RK4F-KMJVX-8D9MJ-6MWKP（可跳过）
-cscript ospp.vbs /sethst:vvvtworay.nanjis.top
+cscript ospp.vbs /sethst:nanjis.top
 cscript ospp.vbs /act
 cscript ospp.vbs /dstatus
 </pre>
@@ -133,7 +133,7 @@ winget install Python.Python.3
 <p><a href="https://www.yuque.com/nanjishen/smr0zt/dqbuul">Install</a> | <a href="https://www.yuque.com/nanjishen/smr0zt/ag3sqh">Docs</a> </p>
 <!-- 以下是OpenWrt内容 -->
 <h1>OpenWrt<a name="tips5"></a></h1>
-<h3>X86 Router</h3><a href="https://fw.koolcenter.com/iStoreOS/">小宝</a>固件，<a href="https://github.com/AUK9527/Are-u-ok">插件</a>、<a href="https://supes.top">在线自定义编译</a>
+<a href="https://fw.koolcenter.com/iStoreOS/r2s/">IStoreOS</a>固件，<a href="https://github.com/AUK9527/Are-u-ok">插件</a>、<a href="https://supes.top">在线自定义编译</a>
 <h3>Nanopi R2S</h3>
 <li>下载<a href='https://github.com/klever1988/nanopi-openwrt/releases'>悟空</a>或<a href='https://bigdongdong.gitbook.io/nanopi-r2s/'>东东</a>的固件，解压并得到 img 或 img.gz 镜像文件</li>
 <li>TF卡放入读卡器并接入电脑（无需格式化，可直接写盘），用 Etcher 将上面的镜像文件写入TF卡</li>
@@ -200,8 +200,10 @@ reboot # 重启路由器</code></pre>
 <pre><code>opkg install /tmp/tmp/xxx.ipk
 opkg remove 包名 # 卸载软件
 </code></pre>
-<h3>PassWall</h3><strong>基本设置：</strong>主要：TCP节点选梯子节点；UDP节点不代理游戏可以关闭<br>Socks5 配置：选择你要的节点，端口 18111（192.168.10.1:18111）<br>DNS：过滤模式选 pdnsd；远程 DNS 选 8.8.4.4，8.8.8.8<br>模式：TCP代理选中国列表以外；UDP代理可以选游戏或不代理；路由器自身选默认或GFW列表<br><strong>节点订阅：</strong>拉到下方点击“添加”，将你的订阅加进去，日后可以点击上方的“手动订阅”更新节点<br><strong>组件更新：</strong>可以更新内核；<strong>规则管理：</strong>点手动更新来更新规则列表<h4>直连/代理列表</h4><pre><code># 走代理列表：
-
+<h3>PassWall</h3><strong>基本设置：</strong>主要：TCP节点选梯子节点；UDP节点不代理游戏可以关闭<br>Socks5 配置：选择你要的节点，端口 18111（192.168.10.1:18111）<br>DNS：过滤模式选 pdnsd；远程 DNS 选 8.8.4.4，8.8.8.8<br>模式：TCP代理选中国列表以外；UDP代理可以选游戏或不代理；路由器自身选默认或GFW列表<br><strong>节点订阅：</strong>拉到下方点击“添加”，将你的订阅加进去，日后可以点击上方的“手动订阅”更新节点<br><strong>组件更新：</strong>可以更新内核；<strong>规则管理：</strong>点手动更新来更新规则列表<br><strong>规则列表：</strong>填写<a href="#v2zllb">直连列表</a> | <a href="#v2dllb">代理列表</a>
+<div class="dialog-box" id="v2dllb"><div class="dialog-con"><a href="" class="dialog-close">❌</a>
+<h3>走代理的域名</h3><pre><code>bing.com
+sspanel.net
 github.com
 v2ex.com
 tucahuand.com
@@ -209,34 +211,88 @@ sehuatang.net
 dmm.co.jp
 98tuch.net
 img.bakufu.jp
-www.rysuanaaser.com
+rysuanaaser.com
 raindrop.io
 alternativeto.net
 op.gg
 luckydesigner.space
 bloghub.fun
+twimg.com
 
-# 走直连列表：
-
-apple.com
+#google
+googleapis.cn
+googleapis.com
+google.com.tw
+google.com.hk
+gstatic.com
+xn--ngstr-lra8j.com</code></pre>
+<h3>走代理的IP</h3><pre><code>149.154.160.0/20
+91.108.4.0/22
+91.108.56.0/24
+109.239.140.0/24
+67.198.55.0/24
+8.8.4.4
+8.8.8.8
+208.67.222.222
+208.67.220.220
+1.1.1.1
+1.1.1.2
+1.0.0.1
+9.9.9.9
+149.112.112.112
+2001:67c:4e8::/48
+2001:b28:f23c::/48
+2001:b28:f23d::/48
+2001:b28:f23f::/48
+2001:b28:f242::/48
+</code></pre></div></div>
+<div class="dialog-box" id="v2zllb"><div class="dialog-con"><a href="" class="dialog-close">❌</a>
+<h3>走直连的域名</h3>
+<pre><code>apple.com
 microsoft.com
 dyndns.com
 douyucdn.cn
 douyucdn2.cn
+dyndns.com
+douyucdn.cn
+douyucdn2.cn
 jmsooo.com
-</code></pre><h3>OpenClash</h3><strong>全局配置：</strong><br>模式设置：运行模式选混合模式、代理模式选Rule、勾选绕过大陆IP，保存配置<br>常规设置：选择内核编译版本 Linux armv8、绑定网络接口选 br-lan，保存配置<br>DNS 设置：勾选DNS本地劫持+自定义上游服务器+禁止 Dnsmasq 缓存 DNS（这就会使用下方的那些自定义的DNS），保存配置<br>版本更新 - 一键更新<br>
+edge.api.myqnapcloud.com
+
+#steam
+steamcontent.com
+dl.steam.clngaa.com
+dl.steam.ksyna.com
+st.dl.bscstorage.net
+st.dl.eccdnx.com
+st.dl.pinyuncloud.com
+cdn.mileweb.cs.steampowered.com.8686c.com
+cdn-ws.content.steamchina.com
+cdn-qc.content.steamchina.com
+cdn-ali.content.steamchina.com
+epicgames-download1-1251447533.file.myqcloud.com
+</code></pre>
+<h3>走直连的IP</h3><pre><code>114.114.114.114
+114.114.115.115
+223.5.5.5
+223.6.6.6
+119.29.29.29
+180.76.76.76
+</code></pre></div></div>
+<h3>OpenClash</h3><strong>全局配置：</strong><br>模式设置：运行模式选混合模式、代理模式选Rule、勾选绕过大陆IP，保存配置<br>常规设置：选择内核编译版本 Linux armv8、绑定网络接口选 br-lan，保存配置<br>DNS 设置：勾选DNS本地劫持+自定义上游服务器+禁止 Dnsmasq 缓存 DNS（这就会使用下方的那些自定义的DNS），保存配置<br>版本更新 - 一键更新<br>
 <strong>配置文件管理：</strong>选择文件 - 你的配置文件，上传即可（如果你是机场，有订阅链接，往下看）<br><strong>配置文件订阅</strong>：添加 - 配置文件名随意、插入机场订阅链接、勾选在线订阅转换，在订阅转换模板中选择“ALC4SSR 规则 Online Full”、Emoji 和 UDP 支持选启用 - 保存，点应用配置
 <br>回到<strong>运行状态</strong>：打开 Dashboard 控制面板，设置 - 输入你的路由器IP地址</p><a href="https://www.youtube.com/watch?v=FViAqOYNCDw">参考视频</a>
 <h3>AdGuardHome</h3>1. 勾选启用、更新核心版本、重定向选“作为dnsmasq的上游服务器”<br>2. 点击 AdGuardHome Web 进入管理页进行配置：<br>&nbsp&nbsp1. 网页管理页面监听端口：3000、DNS 服务器监听端口：5635<br>&nbsp&nbsp2. 建立管理员用户和密码、打开仪表盘登录即可<br><br>设置 - DNS 设置：<br>
-填写上游 DNS 服务器后勾选负载均衡：<br><pre><code>119.29.29.29<!-- 阿里 -->
+填写上游 DNS 服务器后勾选负载均衡：<br><pre><code>114.114.114.114<!-- 114 -->
 223.5.5.5<!-- 腾讯 -->
-114.114.114.114<!-- 114 -->
 2408:8000:6001:7000::8888
 8.8.8.8<!-- 谷歌 -->
 8.8.4.4
 9.9.9.9<!-- Quad9 -->
 149.112.112.112
 119.29.29.29<!-- DNSPod -->
+119.28.28.28
+208.67.222.222<!-- OpenDNS -->
 77.88.8.8<!-- Yandex -->
 77.88.8.1
 https://dns.google/dns-query
@@ -247,26 +303,24 @@ tls://dns.google
 tls://dns.quad9.net
 https://dns.cloudflare.com/dns-query
 https://dns.adguard.com/dns-query
+tls://dns.pub
+https://dns.pub/dns-query
+tls://dns.alidns.com
+https://dns.alidns.com/dns-query
 </code></pre>填写 Bootstrap DNS 服务器（可删空不填，或用你运营商的 DNS）：
-<pre><code>202.96.64.68<!-- 本地运营商 -->
+<pre><code>202.96.64.68
 202.96.69.38
 2408:8000:6001:7000::8888
 119.29.29.29
 119.28.28.28
 223.5.5.5
 223.6.6.6
-114.114.114.114<!-- # 以下国外 -->
-8.8.8.8
-8.8.4.4
-208.67.222.222
-tls://dns.pub
-https://dns.pub/dns-query
-tls://dns.alidns.com
-https://dns.alidns.com/dns-query
+114.114.114.114
 </code></pre>点应用，点测试上游 DNS，在下面的速度限制 - 每个客户端查询次数改为 0（不限制）
 <p>过滤器 - DNS 拦截列表 - 添加阻止列表 - 从列表中选择：这里官方提供了规则，选择其中的“区域-CHN：anti-AD”（该规则包含了国内的大部分规则）</p>
 过滤器 - DNS 拦截列表 - 添加阻止列表 - 添加自定义列表：
 <p><a href="https://raw.githubusercontent.com/o0HalfLife0o/list/master/ad.txt">HalfLife 合并规则</a>（EasylistChina、EasylistLite、CJX’sAnnoyance）（主用）</p>
+<p><a href="https://raw.githubusercontent.com/neodevpro/neodevhost/master/lite_adblocker">强而友善</a></p>
 <p><a href='https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt'>CJX&#39;s Annoyance</a> | <a href='https://gitee.com/xinggsf/Adblock-Rule/raw/master/mv.txt'>乘风视频</a> | <a href='https://easylist-downloads.adblockplus.org/easylistchina.txt'>EasyList China</a> | <a href='https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-easylist.txt'>anti-AD</a> | <a href='https://fanboy.co.nz/r/fanboy-ultimate.txt # Fanboy+Easylist'>Fanboy+Easylist</a> |</p>
 <p>检测过滤是否开启：<a href="https://blockads.fivefilters.org">①</a> <a href="https://www.detectadblock.com">②</a></p>
 <p>过滤器 - 自定义过滤规则：</p><pre><code>@@||pstatp.com^ # 放行该域名，即不过滤</code></pre>
