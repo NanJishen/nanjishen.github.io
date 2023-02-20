@@ -1,0 +1,8 @@
+---
+syntax: Linux
+tags: [ compression ]
+---
+tar 是 Linux 的压缩包和解压缩包工具
+
+# 将当前目录中名为 dir 的目录压缩名为 zipfile 的 tar 压缩包
+tar -cvf zipfile.tar dir

@@ -1,0 +1,8 @@
+---
+syntax: linux
+tags: [ transmission ]
+---
+scp 是 Linux 的文件传输工具
+
+# 将指定SSH别名的服务器上的文件下载到本机的下载目录中
+scp vpsalias:/dir/file.tar T:\Downloads
