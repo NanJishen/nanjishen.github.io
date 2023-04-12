@@ -1,6 +1,6 @@
 <!DOCTYPE html><html><head><meta charset="UTF-8"><title>Windows-极限玩家</title><meta name="Author" content="南极神"><meta name="Keywords" content="Windows,极限玩家"><meta name="Description" content="Windows,极限玩家"><link rel="shortcut icon" href="favicon.ico"><style>a{text-decoration:none;color:#000}body{font-family:'Microsoft YaHei',Tahoma,Helvetica,Arial,sans-serif;background:#f0f2f7}textarea{width:59%;height:1.8rem;text-indent:2em;line-height:2em;resize:none;outline:none}pre{width:80%;padding:.8rem;border:1px solid #ccc}main{margin:1em auto;width:1010px;height:800px;background:#f7f7f7;box-shadow:0 0 25px #eee}nav{float:left;width:20%;height:100%;box-shadow:.1px 0px .5px #000}nav ul{list-style:none;line-height:2.5em}nav a{display:block;}nav a:hover{font-weight:bold}.right{float:right;width:80%;height:100%;overflow:hidden;word-wrap:break-word;background:#fff}.right a{color:#2cb1e6}.content{margin:15px 0;padding:0 12px;width:99%;height:97%;overflow:auto}li{list-style:none}table{border-collapse:collapse}td,th{padding:6px;border:.1px solid #ccc}.sha1{font-size:.7em;font-weight:normal}.dialog-box{position:fixed;top:0;left:0;right:0;bottom:0;background:#fff;visibility:hidden;overflow:auto} .dialog-con{position:relative;margin:0 auto;padding:2.5rem;width:70%;height:auto;background:#fff;font-size:18px;} .dialog-box:target{visibility:visible}.dialog-close{position:fixed;right:20%;top:20px}</style><script>function copyText(){let link = document.getElementById("dllink");link.select();document.execCommand("copy");alert('已成功复制，打开迅雷 - 新建，粘贴链接即可下载')}</script></head><body><main><nav><ul><h2><a href="so.html">Home</a></h2><li><a href="#tips0">下载安装</a></li><li><a href="#tips1">驱动环境</a></li><li><a href="#tips2">初始设置</a></li><li><a href="#tips3">可选优化</a></li><li><a href="#tips4">快捷按键</a></li><li><a href="#tips5">运行命令</a></li><a href="#tips6">游戏相关</a></li></ul><ul><li><a href="#tips7">ArchLinux</a></li><li><a href="#tips8">OpenWrt</a></li><li><a href="#tips9">QNAP</a></li><li><a href="#tips10">Google TV</a></li><li><a href="#tips11">Awtrix</a></li><li><a href="#tips12">Office</a></li></ul></nav><div class="right"><div class="content"><a name="tips0"></a>
-<h3>Win11_22H2 _ 2023-02-21 <i class="sha1">
-SHA1：E376935B413A004F785C707B86405EB313ACBCE3</i></h3><textarea id="dllink" onclick="copyText()">magnet:?xt=urn:btih:89800269883fe3e03665ae511365a87d96bbf5c1</textarea>
+<h3>Win11_22H2 _ 2023-03-21 <i class="sha1">
+SHA1：3DA43AB5D1EDB9ADC5D56031DD07C7EF4B8A39B6</i></h3><textarea id="dllink" onclick="copyText()">magnet:?xt=urn:btih:37ca8ebc21e56d98e233b16ebfbb40249dd75c96</textarea>
 <!-- key：VK7JG-NPHTM-C97JM-9MPGT-3V66T ；https://next.itellyou.cn、https://hellowindows.cn、https://uupdump.net、https://uup.rg-adguard.net -->
 <p>推荐在<a href="https://www.microsoft.com/zh-cn/software-download/windows11"> 微软官方 </a> 或使用 <a href="https://github.com/AveYo/MediaCreationTool.bat">MCT.bat</a>、<a href="https://www.easyuefi.com/windows-iso-downloader/windows-iso-downloader.html">Hasleo</a> 下载并制作镜像<br><br>
 引导启动工具推荐：<a href="http://www.wepe.com.cn">WePE</a> | <a href="https://www.hirensbootcd.org">HBCD_PE</a> | <a href="https://www.ventoy.net">Ventoy</a><a href="https://mp.weixin.qq.com/s/AKXk4xzyjKUKeiOtBeZskw">（使用指南）</a> 
@@ -116,7 +116,9 @@ winget install Python.Python.3
 <p><b>清除任务栏图标记录</b>：HEEY_CLASSES_ROOT\Local Settings\Software\Microsoft\Windows\CurrentVersion\TrayNotify 删除PastIconsStream和IconStreams</p>
 <p><b>重命名网络连接名</b>：HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\NetworkList\Profiles Profiles里会发现你的连接都在这里显示（长字符串名称文件夹），双击你要修改的里的ProfileName值，输入你要的名字</p><p><b>任务栏设为顶部</b>：进入 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\StuckRects3 ，双击 Settings ，选中第2行，第5个字段的 03，改为 01，重启资源管理器</p><p><b>设置任务栏大小</b>：进入 HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced ，右键右侧空白处新建“DWORO 32位值”，命名为 TaskbarSi，双击修改其值，0为最小</p>
 <p><b>无线网卡和有线网卡叠加</b>：cmd 执行 route print ，查看跃点数（Metric），默认有线网卡25，无线网卡45，会优先使用数字小的，因此将其都改成一样的数值即可，右键网卡 - 属性 - TCP/IPv4 属性 - 高级 - 去掉自动跃点勾选，输入 25</p>
-<h2>为游戏优化</h2>关闭虚拟化功能提高游戏性能：<br>关闭内存完整性：开始 - 输入 Core Isolation - 关闭后重启<br>关闭虚拟机平台：开始 - 输入 Windows features - 去勾“虚拟机平台” - 确认后重启
+<h2>为游戏优化</h2>禁用 VBS 虚拟化的安全提高游戏帧数：查看方法：MSInfo32 - 系统摘要 - 基于虚拟化的安全性；关闭方法：管理员运行 Powershell ，执行 bcdedit /set hypervisorlaunchtype off
+<p>关闭内存完整性：开始 - 输入 Core Isolation - 关闭后重启</p>
+<p>以上两个关闭即可，但如果想彻底关闭虚拟机平台：开始 - 输入 Windows features - 去勾“虚拟机平台” - 确认后重启，该关闭只适合不需要虚拟机的用户</p>
 <h2>浏览器设置</h2><b>解决浏览器 http 跳转至 https 问题</b>：浏览器打开 chrome://net-internals/#hsts ，在 Delete domain 项中输入要删除记录的域名，然后可以在 Query domain 项中测试是否删除成功
 <h1>主板引导菜单快捷键</h1>
 <table><thead><tr><th>品牌</th><th>台式</th><th>笔记本</th><th>品牌</th><th>台式</th><th>笔记本</th></tr></thead><tbody><tr><td>华硕</td><td>F8</td><td>F8</td><td>惠普</td><td>F12</td><td>F9</td></tr><tr><td>技嘉</td><td>F12</td><td></td><td>戴尔</td><td>ESC</td><td>F12</td></tr><tr><td>微星</td><td>F11</td><td></td><td>神州</td><td>F12</td><td>12</td></tr><tr><td>华擎</td><td>F11</td><td></td><td>东芝</td><td>F12</td><td></td></tr><tr><td>七彩虹</td><td>F11</td><td></td><td>IBM</td><td>F12</td><td></td></tr><tr><td>联想</td><td>F12</td><td>F12</td><td>三星</td><td>F12</td><td></td></tr></tbody></table>
@@ -135,15 +137,15 @@ winget install Python.Python.3
 <p><a href="https://www.yuque.com/nanjishen/smr0zt/dqbuul">Install</a> | <a href="https://www.yuque.com/nanjishen/smr0zt/ag3sqh">Docs</a> </p>
 <!-- 以下是OpenWrt内容 -->
 <h1>OpenWrt<a name="tips8"></a></h1>
-<a href="https://fw.koolcenter.com/iStoreOS/r2s/">IStoreOS</a>固件，<a href="https://github.com/AUK9527/Are-u-ok">插件</a>、<a href="https://supes.top">在线自定义编译</a>
+固件：<a href="https://fw.koolcenter.com/iStoreOS/r2s/">IStoreOS</a>（<a href="https://github.com/AUK9527/Are-u-ok">插件</a>），<a href='https://github.com/klever1988/nanopi-openwrt/releases'>悟空</a>，<a href='https://www.kancloud.cn/bigdongdong/armgear/2662921'>合集</a>，<a href="https://supes.top">自定编译</a>
 <h3>Nanopi R2S</h3>
-<li>下载<a href='https://github.com/klever1988/nanopi-openwrt/releases'>悟空</a>或<a href='https://www.kancloud.cn/bigdongdong/armgear/2662921'>合集</a>的固件（img 或 img.gz 镜像文件）</li>
+<li>下载固件（img 或 img.gz 镜像文件）</li>
 <li>TF卡插入电脑，使用 Rufus 将固件镜像文件写入到TF卡</li>
 <li>TF卡插到R2S，将R2S的LAN口连接电脑、WAN口连接到光猫后通电</li>
 <li>设定电脑网关为软路由的WAN口IP（192.168.2.1）</li>
-<li>访问<a href="http://192.168.10.1">R2S</a>并登陆（用户名：root 密码：password 或 空）</li>
+<li>访问<a href="http://192.168.10.1">R2S</a>并登陆（用户名：root 密码：password）</li>
 <h4>初始设置</h4>
-<li>网络 - 接口：<ol>
+<li>网络 - 接口（默认第一个网口是 WAN 口，其它都是 LAN 口）：<ol>
 <li>修改WAN口为：PPPOE 拨号</li>
 <li>修改LAN口IP为 192.168.10.1（可自定）</li><br>
 <li>如果使用 IPv6 如下设置：</li>
@@ -167,7 +169,7 @@ winget install Python.Python.3
 <li>网络 - 防火墙 - 设置端口转发（/etc/config/firewall）&nbsp;<a href="#dkzf">&nbsp;&nbsp;</a></li>
 <div class="dialog-box" id="dkzf"><div class="dialog-con"><a href="" class="dialog-close">❌</a>
 <table><thead><tr><th>Services</th><th>Router</th><th>NAS</th></tr></thead><tbody>
-<tr><td>Router</td><td>7680</td><td>80</td></tr>
+<tr><td>Router</td><td>7680</td><td></td></tr>
 <tr><td>Router-tty</td><td>7681</td><td>7681（rt）</td></tr>
 <tr><td>NAS-ssl</td><td>6001</td><td>5001</td></tr>
 <tr><td>NAS-Web</td><td>16800</td><td>80</td></tr>
@@ -184,9 +186,11 @@ winget install Python.Python.3
 <tr><td>Jellyseerr</td><td>18090</td><td>18090</td></tr>
 <tr><td>Jellyfin</td><td>18096</td><td>18096</td></tr>
 <tr><td>Bookbrowser</td><td>18097</td><td>18097</td></tr>
-<tr><td>Aria2-udp</td><td>6888</td><td>6888</td></tr>
 <tr><td>Aria2-rpc</td><td>6800</td><td>6800</td></tr>
+<tr><td>Aria2-udp</td><td>6888</td><td>6888</td></tr>
+<tr><td>qBittorrent-udp</td><td>6881</td><td>6881</td></tr>
 <tr><td>Transmission-udp</td><td>51413</td><td>51413</td></tr>
+<tr><td>qBittorrent-PC</td><td>52000</td><td>52000</td></tr>
 </tbody></table></div></div>
 <p><a href="https://mlapp.cn/1011.html">SD卡分区扩容</a></p>
 <h4>更多设置</h4>系统 - 常规设置 - 时间同步，可以设置主机名和时区；时间同步，可以设置 NTP 服务器：
@@ -628,9 +632,9 @@ linuxserver/qbittorrent
 PUID=1000 # 根据你的id
 PGID=100
 TZ=Asia/Shanghai
-WEBUI_PORT=8080
+WEBUI_PORT=9092
 # 网络 - 网络模式（NAT）- 端口转发 - 新增：
-9090:8080-TCP # 用于 Web 端口
+9092:9092-TCP # 用于 Web 端口
 6881:6881-TCP/UDP # 用于 BT 下载端口
 # 共享文件夹 - 挂载本机共享文件夹 - 新增：
 /share/Container/qbit:/config

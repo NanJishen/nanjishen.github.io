@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="./css/style.css" type="text/css" />
+		<link rel="stylesheet" href="./css/responsive.css" type="text/css" />
+
+		<!-- Primary Meta Tags -->
+		<title>YouTunnel - YouTube video downloader</title>
+		<link rel="icon" type="image/x-icon" href="./assets/images/tl.webp" />
+		<meta name="title" content="YouTunnel - YouTube video downloader" />
+		<meta
+			name="description"
+			content="Download any YouTube video in all available qualities and formats!"
+		/>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://youtunnel.vercel.app/" />
+		<meta property="og:title" content="YouTunnel - YouTube video downloader" />
+		<meta
+			property="og:description"
+			content="Download any YouTube video in all available qualities and formats!"
+		/>
+		<meta property="og:image" content="./assets/images/banner.png" />
+
+		<meta property="twitter:card" content="./assets/images/banner.png" />
+		<meta property="twitter:url" content="https://youtunnel.vercel.app/" />
+		<meta
+			property="twitter:title"
+			content="YouTunnel - YouTube video downloader"
+		/>
+		<meta
+			property="twitter:description"
+			content="Download any YouTube video in all available qualities and formats!"
+		/>
+		<meta property="twitter:image" content="./assets/images/banner.png" />
+	</head>
+	<body class="unselectable">
+		<div class="main-wrapper cv">
+			<div class="inner-controller">
+				<div class="close-btn c">
+					<i class="bi bi-x"></i>
+				</div>
+				<div class="yt-info">
+					<div class="yt-image">
+						<img
+							src="./assets/images/tl.webp"
+							alt="yt-thumbnail"
+							class="yt-info-img"
+						/>
+						<div class="yt-text">
+							<h1 class="yt-title"></h1>
+							<div class="cv">
+								<img
+									src="./assets/images/loading.svg"
+									alt="YouTube Icon"
+									class="yt-channel-icon"
+								/>
+								<h4 class="yt-channel-name"></h4>
+							</div>
+							<div class="yt-d"></div>
+						</div>
+					</div>
+					<div class="download-item"></div>
+				</div>
+				<div class="loading-screen c">
+					<img src="./assets/images/loading.svg" alt="" />
+				</div>
+			</div>
+			<div class="input-wrap c">
+				<div class="inner-wrapper">
+					<img
+						class="main-logo"
+						src="./assets/images/tl.webp"
+						alt="YouTunnel"
+					/>
+					<div class="link-box">
+						<input
+							type="text"
+							class="link-input"
+							placeholder="Video link here..."
+						/>
+					</div>
+					<p class="intro-description">
+						Download any YouTube video in all available qualities and formats!
+					</p>
+				</div>
+			</div>
+		</div>
+	</body>
+	<!-- External CDNs -->
+	<script async src="https://cdn.splitbee.io/sb.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/downloadjs/1.4.8/download.min.js"></script>
+
+	<!-- App Scripts -->
+	<script src="./js/youtube.js"></script>
+	<script src="./js/app.ui.js"></script>
+	<script src="./js/app.js"></script>
+</html>

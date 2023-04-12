@@ -1,0 +1,51 @@
+.c {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.ch {
+	display: flex;
+	justify-content: center;
+}
+
+.cv {
+	display: flex;
+
+	align-items: center;
+}
+
+.bottom-toast {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	background-color: #0070f3;
+	padding: 10px 20px;
+	width: 100%;
+	text-align: center;
+	color: white;
+}
+
+.toast-error {
+	background-color: rgb(255, 89, 89);
+}
+.unselectable {
+	user-select: none;
+	-moz-user-select: none;
+	-khtml-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+}
+
+.selectable {
+	user-select: auto !important;
+	-moz-user-select: auto !important;
+	-khtml-user-select: auto !important;
+	-webkit-user-select: auto !important;
+	-o-user-select: auto !important;
+}
+
+textarea:focus,
+input:focus {
+	outline: none;
+}
