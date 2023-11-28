@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="IP,IP查询,IP地址查询,IP地址,IP地址归属地,查询本机IP">
+  <title>查看我的 IP 地址 | 查询本机 IP 地址及归属地 | 查看 WebRTC 连接 IP ｜ DNS 泄露检测 | Jason Ng 阿禅开源作品 </title>
+  <!-- 引入 Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="res/style.css">
+</head>
+
+<body>
+  <div id="app">
+    <!-- 导航栏 -->
+    <nav id="navbar-top" class="navbar navbar-expand-lg bg-body-tertiary px-3 mb-3 jn-navbar-top"
+      :class="{ 'dark-mode-nav': isDarkMode }">
+
+      <div class="jn-logo">
+        <a class="navbar-brand" :class="{ 'text-white': isDarkMode }" href="#"><i class="bi bi-radar"></i> IP 工具箱</a>
+        <div class="form-check form-switch">
+          <input class="form-check-input" type="checkbox" role="switch" id="darkModeSwitch" @change="toggleDarkMode"
+            :checked="isDarkMode">
+          <label class="form-check-label" for="darkModeSwitch">
+            <i v-if="isDarkMode" class="bi bi-moon-stars"></i>
+            <i v-else class="bi bi-brightness-high"></i>
+          </label>
+        </div>
+      </div>
+      <button class="navbar-toggler" :class="{ 'bg-light': isDarkMode }" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon bg-transparent "></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav ">
+          <a class="nav-link" :class="{ 'text-white jn-deactive': isDarkMode }" href="#scrollspyHeading1">IP 信息</a>
+          <a class="nav-link" :class="{ 'text-white jn-deactive': isDarkMode }" href="#scrollspyHeading2">可用性测试</a>
+          <a class="nav-link" :class="{ 'text-white jn-deactive': isDarkMode }" href="#scrollspyHeading3">WebRTC 测试</a>
+          <a class="nav-link" :class="{ 'text-white jn-deactive': isDarkMode }" href="#scrollspyHeading4">DNS 泄露测试</a>
+        </div>
+      </div>
+    </nav>
+
+
+
+
+    <!-- 翻状态通知 -->
+    <div class="toast-container position-fixed bottom-0 end-0 p-3 jn-toast">
+      <div id="toast" class="toast" :class="{ 'dark-mode': isDarkMode }" role="alert" ref="toast" aria-live="assertive"
+        aria-atomic="true">
+        <div class="toast-header" :class="{ 'dark-mode-title': isDarkMode }">
+          <strong class="me-auto" :class="alertStyle">{{ alertTitle }}</strong>
+          <button type="button" class="btn-close" :class="{ 'dark-mode-close-button': isDarkMode }"
+            data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+          {{ alertMessage }}
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container mt-5 jn-container">
+      <div data-bs-spy="scroll" data-bs-target="#navbar-top" data-bs-root-margin="0px 0px -40%"
+        data-bs-smooth-scroll="true" class="rounded-2" tabindex="0">
+        <!-- IP 数据容器 -->
+        <div class="ip-data-section mb-4">
+          <div class="row" :class="{'jn-title2': !isMobile,'jn-title':isMobile}">
+            <h2 id="scrollspyHeading1" class="col-4" :class="{'mobile-h2' : isMobile }">🛜 IP 数据</h2>
+            <div class="form-check form-switch col-8 jn-radio">
+
+              <div :class="{'col-5': isMobile }">
+                <input v-if="isMobile" class="form-check-input" type="checkbox" id="collapseSwitch"
+                  @change="toggleCollapse" :checked="isCardsCollapsed">
+                <label v-if="isMobile" class="form-check-label" for="collapseSwitch">&nbsp;简约</label>
+              </div>
+
+              <div>
+                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault"
+                  @change="toggleMaps" :checked="isMapShown" :disabled="!bingMapAPIKEY">
+
+                <label class="form-check-label" for="flexSwitchCheckDefault">{{ !bingMapAPIKEY ? '&nbsp;地图不可用' :
+                  '&nbsp;地图' }}</label>
+              </div>
+
+
+
+            </div>
+          </div>
+          <div class="text-secondary">
+            <p>将会从 6 个来源检查 IP 数据，如果当前 IP 栈只有 1 个，则没有数据的来源会显示为空。</p>
+          </div>
+          <div class="jn-card-deck">
+            <div class="row">
+              <div v-for="card in ipDataCards" :key="card.id"
+                :class="{'jn-opacity': !card.asn, 'col-xl-4': true, 'col-lg-6': true, 'col-md-6': true, 'mb-4': true}">
+                <div class="card jn-card" :class="{ 'dark-mode dark-mode-border': isDarkMode }">
+                  <div class="card-header jn-ip-title" :class="{ 'dark-mode-title': isDarkMode }"
+                    style="font-weight: bold;">
+                    <span>来源: {{ card.source }}</span>
+                    <button @click="refreshCard(card)"
+                      :class="['btn', isDarkMode ? 'btn-dark dark-mode-refresh' : 'btn-light']">
+                      <i class="bi bi-arrow-clockwise"></i></button>
+                  </div>
+
+                  <!-- 可选改成 Google Maps 内嵌 iFrame -->
+                  <!-- <iframe class="card-img-top" :src="card.mapUrl" width="100%" height="200" frameborder="0"
+                  style="border:0;" allowfullscreen>
+                </iframe> -->
+
+                  <img v-if="isMapShown" v-if="!isMobile" :src="card.mapUrl" class="card-img-top jn-map-image" alt="地图">
+                  <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item jn-list-group-item" :class="{ 'dark-mode': isDarkMode }"><span
+                          class="jn-text">🖥️ IP 地址</span>: {{ card.ip
+                        }}
+                      </li>
+                      <li class="list-group-item jn-list-group-item"
+                        :class="{ 'dark-mode': isDarkMode,'mobile-list': isMobile }">
+                        <span class="jn-text">🌍 国家</span>: {{
+                        card.country_name }}&nbsp;<span v-if="card.country_code"
+                          :class="'flag-icon flag-icon-' + card.country_code.toLowerCase()"></span>
+                      </li>
+                      <li v-show="!isMobile || !isCardsCollapsed" class="list-group-item jn-list-group-item"
+                        :class="{ 'dark-mode': isDarkMode }"><span class="jn-text">🏚️ 地区</span>: {{ card.region
+                        }}</li>
+                      <li v-show="!isMobile || !isCardsCollapsed" class="list-group-item jn-list-group-item"
+                        :class="{ 'dark-mode': isDarkMode }"><span class="jn-text">🚏 城市</span>: {{ card.city }}
+                      </li>
+                      <li v-show="!isMobile || !isCardsCollapsed" class="list-group-item jn-list-group-item"
+                        :class="{ 'dark-mode': isDarkMode }"><span class="jn-text">🏢 ISP</span>: {{ card.isp }}
+                      </li>
+                      <li v-show="!isMobile || !isCardsCollapsed" class="list-group-item jn-list-group-item"
+                        :class="{ 'dark-mode': isDarkMode }"><span class="jn-text">📶 ASN</span>: <a v-if="card.asnlink"
+                          :href="card.asnlink" target="_blank">{{
+                          card.asn }}</a><a v-else>{{
+                          card.asn
+                          }}</a></li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <!-- 可用性测试容器 -->
+        <div class="availability-test-section mb-4">
+          <div class="jn-title2">
+            <h2 id="scrollspyHeading2" :class="{'mobile-h2' : isMobile }">🚦 可用性测试</h2>
+            <button @click="checkAllConnectivity"
+              :class="['btn', isDarkMode ? 'btn-dark dark-mode-refresh' : 'btn-light']"><i
+                class="bi bi-arrow-clockwise"></i></button>
+          </div>
+          <div class="text-secondary">
+            <p>通过加载对应网站上的小图片进行测试，延迟值仅供参考，实际会更小。</p>
+          </div>
+          <div class="row">
+            <div v-for="test in connectivityTests" :key="test.id" class="col-6 col-md-3 mb-4">
+              <div class="card jn-card" :class="{ 'dark-mode dark-mode-border': isDarkMode }">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="bi" :class="'bi-'+test.icon"></i> {{ test.name }}</h5>
+
+                  <p class="card-text"
+                    :class="{'text-info': test.status === '待检测', 'text-success': test.status.includes('可用'), 'text-danger': test.status === '不可用' || test.status === '超时或不可用'}"
+                    v-html="test.status">
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WebRTC 测试 -->
+        <div class="webrtc-test-section mb-4">
+          <div class="jn-title2">
+            <h2 id="scrollspyHeading3" :class="{'mobile-h2' : isMobile }">🚥 WebRTC 测试</h2>
+            <button @click="checkAllWebRTC" :class="['btn', isDarkMode ? 'btn-dark dark-mode-refresh' : 'btn-light']"><i
+                class="bi bi-arrow-clockwise"></i></button>
+          </div>
+          <div class="text-secondary">
+            <p>WebRTC 往往通过 UDP 直连进行建立，如果测试返回了真实 IP，则意味着你的代理设置没有覆盖这些连接。</p>
+          </div>
+          <div class="row">
+            <div v-for="stun in stunServers" :key="stun.id" class="col-6 col-md-3 mb-4">
+              <div class="card jn-card" :class="{ 'dark-mode dark-mode-border': isDarkMode }">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="bi bi-sign-merge-left-fill"></i> {{ stun.name }}</h5>
+                  <p class="card-text text-secondary" style="font-size: 10pt;">{{ stun.url }}</p>
+                  <p class="card-text"
+                    :class="{'text-info': stun.ip === '待检测或连接错误', 'text-success': stun.ip.includes('.'|':'), 'text-danger': stun.ip === '测试出错'}"
+                    v-html="stun.ip"></p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- DNS Leak 测试 -->
+        <div class="dnsleak-test-section mb-4">
+          <div class="jn-title2">
+            <h2 id="scrollspyHeading4" :class="{'mobile-h2' : isMobile }">🛑 DNS 泄露测试</h2>
+            <button @click="checkAllDNSLeakTest"
+              :class="['btn', isDarkMode ? 'btn-dark dark-mode-refresh' : 'btn-light']"><i
+                class="bi bi-arrow-clockwise"></i></button>
+          </div>
+          <div class="text-secondary">
+            <p>DNS 泄露（DNS Leaks）的意思是，当你<strong>挂上 VPN/代理后</strong>，你解析域名时，依然通过当地的运营商进行解析，这时就有 DNS
+              泄露的风险。</p>
+            <p>泄露测试的方法是通过访问新生成的域名，检测你是通过哪个地区的
+              DNS 进行解析，如果返回的地区数据与你当地的运营商地区相同，则有泄露风险，你可能需要修改你的 VPN/代理设置。</p>
+          </div>
+          <div class="row">
+            <div v-for="leak in leakTest" :key="leak.id" class="col-6 col-md-3 mb-4">
+              <div class="card jn-card" :class="{ 'dark-mode dark-mode-border': isDarkMode }">
+                <div class="card-body">
+                  <h5 class="card-title"><i class="bi bi-server"></i> {{ leak.name }}</h5>
+                  <p class="card-text text-secondary" style="font-size: 10pt;">DNS 出口：{{ leak.ip }}</p>
+                  <p class="card-text" :class="[
+                        'text-success',
+                        {'text-info': leak.geo === '待检测', 'text-danger': leak.geo.includes('China') || leak.geo.includes('china')}
+                      ]">出口地区：{{ leak.geo }}</p>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+
+
+    <!-- 按钮 -->
+    <button class="btn btn-primary position-fixed" style="bottom: 20px; right: 20px; z-index: 1050;"
+      data-bs-toggle="modal" data-bs-target="#IPCheck"><i class="bi bi-search"></i> IP 查询</button>
+
+    <!-- 模态框 -->
+    <div class="modal fade" id="IPCheck" tabindex="-1" aria-labelledby="IPCheck" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content" :class="{ 'dark-mode dark-mode-border': isDarkMode }">
+          <div class="modal-header" :class="{ 'dark-mode-border': isDarkMode }">
+            <h5 class="modal-title" id="IPCheck">IP 查询</h5>
+            <button type="button" class="btn-close" :class="{ 'dark-mode-close-button': isDarkMode }"
+              data-bs-dismiss="modal" aria-label="Close"></button>
+
+          </div>
+          <div class="modal-body" :class="{ 'dark-mode': isDarkMode }">
+            <input type="text" class="form-control mb-2" :class="{ 'dark-mode': isDarkMode }" placeholder="请输入 IP 地址"
+              v-model="inputIP" @keyup.enter="submitQuery">
+            <div v-if="modalQueryError" class="text-danger">{{ modalQueryError }}</div>
+            <div v-if="modalQueryResult" class="mt-2">
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item jn-list-group-item" :class="{ 'dark-mode': isDarkMode }"><span
+                      class="jn-text">🖥️ IP 地址</span>: {{
+                    modalQueryResult.ip }}
+                  </li>
+                  <li class="list-group-item jn-list-group-item" :class="{ 'dark-mode': isDarkMode }">
+                    <span class="jn-text">🌍 国家</span>: {{
+                    modalQueryResult.country_name }}&nbsp;<span v-if="modalQueryResult.country_code"
+                      :class="'flag-icon flag-icon-' + modalQueryResult.country_code.toLowerCase()"></span>
+                  </li>
+                  <li class="list-group-item jn-list-group-item" :class="{ 'dark-mode': isDarkMode }"><span
+                      class="jn-text">🏚️ 地区</span>: {{
+                    modalQueryResult.region
+                    }}</li>
+                  <li class="list-group-item jn-list-group-item" :class="{ 'dark-mode': isDarkMode }"><span
+                      class="jn-text">🚏 城市</span>: {{
+                    modalQueryResult.city }}
+                  </li>
+                  <li class="list-group-item jn-list-group-item" :class="{ 'dark-mode': isDarkMode }"><span
+                      class="jn-text">🏢 ISP</span>: {{
+                    modalQueryResult.isp }}
+                  </li>
+                  <li class="list-group-item jn-list-group-item" :class="{ 'dark-mode': isDarkMode }"><span
+                      class="jn-text">📶 ASN</span>: <a v-if="modalQueryResult.asnlink" :href="modalQueryResult.asnlink"
+                      target="_blank">{{
+                      modalQueryResult.asn }}</a><a v-else>{{ modalQueryResult.asn
+                      }}</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+          <div class="modal-footer" :class="{ 'dark-mode-border': isDarkMode }">
+            <button type="button" class="btn btn-primary"
+              :class="{ 'btn-secondary': !isValidIP(inputIP), 'btn-primary': isValidIP(inputIP) }" @click="submitQuery"
+              :disabled="!isValidIP(inputIP)">查询</button>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p class="text-center">由<a href="https://ttti.cc" class="link-dark"
+          target="_blank">极限玩家驱动</a></p>
+    </footer>
+
+  </div>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+
+  <!-- 引入 Vue.js -->
+  <script src="res/vue.js"></script>
+  <script src="res/app.js"></script>
+
+
+
+</body>
+
+</html>

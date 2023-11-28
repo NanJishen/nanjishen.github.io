@@ -3,34 +3,55 @@
   
   <url>
     <loc>https://ttti.cc/categories/</loc>
-    <lastmod>2022-01-08T00:54:10+08:00</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://ttti.cc/tags/jellyfin/</loc>
-    <lastmod>2022-01-08T00:54:10+08:00</lastmod>
+    <lastmod>2023-10-19T15:17:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ttti.cc/post/</loc>
-    <lastmod>2022-01-08T00:54:10+08:00</lastmod>
+    <lastmod>2023-10-19T15:17:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ttti.cc/tags/</loc>
-    <lastmod>2022-01-08T00:54:10+08:00</lastmod>
+    <lastmod>2023-10-19T15:17:11+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://ttti.cc/</loc>
+    <lastmod>2023-10-19T15:17:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ttti.cc/post/infoverload/</loc>
+    <lastmod>2023-10-19T15:17:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ttti.cc/tags/%E4%BF%A1%E6%81%AF%E8%BF%87%E8%BD%BD/</loc>
+    <lastmod>2023-10-19T15:17:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ttti.cc/categories/%E7%9F%A5%E8%AF%86/</loc>
+    <lastmod>2023-10-19T15:17:11+08:00</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://ttti.cc/tags/jellyfin/</loc>
     <lastmod>2022-01-08T00:54:10+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.5</priority>

@@ -38,7 +38,7 @@
 
 
 
-<meta name="generator" content="Hugo 0.111.3" />
+<meta name="generator" content="Hugo 0.120.4" />
 
 
 <link rel="canonical" href="https://ttti.cc/post/youtubedl/" />
@@ -75,10 +75,11 @@
 <meta property="og:url" content="https://ttti.cc/post/youtubedl/" /><meta property="article:section" content="post" />
 <meta property="article:published_time" content="2020-08-05T20:56:03+08:00" />
 <meta property="article:modified_time" content="2020-08-05T20:56:03+08:00" />
+
 <meta itemprop="name" content="youtube-dl 下载视频使用指南">
 <meta itemprop="description" content="youtube-dl 需要安装 Python 环境，并需配置好系统变量（安装时勾选 Add Python to PATH） 安装 youtube-dl 从官网下载 youtube-dl.exe，然后放到任意目录下即可使用，同"><meta itemprop="datePublished" content="2020-08-05T20:56:03+08:00" />
 <meta itemprop="dateModified" content="2020-08-05T20:56:03+08:00" />
-<meta itemprop="wordCount" content="620">
+<meta itemprop="wordCount" content="1017">
 <meta itemprop="keywords" content="YouTube," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="youtube-dl 下载视频使用指南"/>
 <meta name="twitter:description" content="youtube-dl 需要安装 Python 环境，并需配置好系统变量（安装时勾选 Add Python to PATH） 安装 youtube-dl 从官网下载 youtube-dl.exe，然后放到任意目录下即可使用，同"/>
@@ -370,9 +371,9 @@ if (!doNotTrack) {
 <h3 id="下载最优视频默认">下载最优视频（默认）</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>youtube-dl https://www.youtube.com/watch?v<span style="color:#f92672">=</span>xxxxxxxx
 </span></span></code></pre></div><p>不带任何参数，则默认下载画质、音质最好的视频。</p>
-<h3 id="查看可选的视音频格式">查看可选的视、音频格式</h3>
+<h3 id="查看可选的音视频格式">查看可选的音视频格式</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>youtube-dl -F https://www.youtube.com/watch?v<span style="color:#f92672">=</span>xxxxxxxx
-</span></span></code></pre></div><p>呈现信息</p>
+</span></span></code></pre></div><p>呈现信息：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#ae81ff">249</span>          webm       audio only tiny   53k , opus @ 50k <span style="color:#f92672">(</span>48000Hz<span style="color:#f92672">)</span>, 1.09MiB
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">251</span>          webm       audio only tiny  127k , opus @160k <span style="color:#f92672">(</span>48000Hz<span style="color:#f92672">)</span>, 2.48MiB
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">140</span>          m4a        audio only tiny  130k , m4a_dash container, mp4a.40.2@128k <span style="color:#f92672">(</span>44100Hz<span style="color:#f92672">)</span>, 2.99MiB
@@ -395,13 +396,40 @@ youtube-dl -f 136 https://www.youtube.com/watch?v=xxxxxxxx
 <li>youtube-dl -F [url]（列出所有音频和视频）</li>
 <li>youtube-dl [playlist_url]（下载视频列表）</li>
 </ul>
-<h2 id="字幕相关">字幕相关</h2>
+<h2 id="下载并合并音视频">下载并合并音视频</h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>youtube-dl -f 序号+bestaudio --merge-output-format mp4 <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 注意：合并为 mp4 时，音频如果是 webm 格式则会出现错误，因此可以指定格式：</span>
+</span></span><span style="display:flex;"><span>youtube-dl -f <span style="color:#e6db74">&#39;bestvideo+bestaudio[ext=m4a]&#39;</span> --merge-output-format mp4 <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span>
+</span></span></code></pre></div><h3 id="下载音乐">下载音乐</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>youtube-dl -x --audio-format mp3 <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span> <span style="color:#75715e"># 指定下载 mp3 格式的音频（-x 为提取音频；--audio-format 指定格式：best（预设），aac，flac，mp3，m4a，opus（最高音质）等）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>youtube-dl -x --audio-format mp3 --embed-thumbnail --add-metadata <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span> <span style="color:#75715e"># 嵌入缩略图并写入说明（--embed-thumbnail：嵌入影片缩图（仅限 mp3 和 m4a/mp4）；--add-metadata：加入影片资讯到 ID3 标签里）</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>youtube-dl --extract-audio --audio-format mp3 -o <span style="color:#e6db74">&#34;%(title)s.%(ext)s&#34;</span> <span style="color:#f92672">[</span>playlist_url<span style="color:#f92672">]</span> <span style="color:#75715e"># 下载播放列表，并指定用视频标题题和扩展名</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>youtube-dl -x --audio-format mp3 --embed-thumbnail --add-metadata --playlist-items 1-3 <span style="color:#f92672">[</span>playlist_url<span style="color:#f92672">]</span> <span style="color:#75715e"># 下载该播放列表的 1~3 首歌，并存成 MP3</span>
+</span></span></code></pre></div><h3 id="设定代理">设定代理</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>youtube-dl --proxy 127.0.0.1:1080 <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span> <span style="color:#75715e"># 指定 HTTP 代理下载，IP 开头用 socks5:// 可以指定 Socks5 代理</span>
+</span></span></code></pre></div><h2 id="字幕相关">字幕相关</h2>
 <p>以下命令能够实现，将视频带有的字幕一起下载下来</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>youtube-dl --write-sub --sub-format <span style="color:#e6db74">&#34;ass/srt/best&#34;</span> --convert-subs <span style="color:#e6db74">&#34;srt&#34;</span> <span style="color:#e6db74">&#34;video_url&#34;</span>
-</span></span></code></pre></div><p><code>—write-sub</code>：写入字幕，即把字幕下载。<br>
-<code>--sub-format</code>：指定字幕格式，按顺序选，不存在则选下一个。<br>
-<code>--convert-subs</code>： 转换字幕，格式有限制，通用为 srt ；若不转，某些字幕可能是 .vtt 的；如果有 ass 字幕可下载，则无须加此项。</p>
-<p><img src="https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png" alt=""></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>youtube-dl --list-subs <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span> <span style="color:#75715e"># 列出所有字幕</span>
+</span></span><span style="display:flex;"><span>youtube-dl --write-sub --sub-format <span style="color:#e6db74">&#34;ass/srt/best&#34;</span> --convert-subs <span style="color:#e6db74">&#34;srt&#34;</span> <span style="color:#e6db74">&#34;url&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 选项</span>
+</span></span><span style="display:flex;"><span>—write-sub <span style="color:#75715e"># 写入字幕</span>
+</span></span><span style="display:flex;"><span>--sub-format <span style="color:#75715e"># 指定字幕格式，按顺序选，不存在则选下一个</span>
+</span></span><span style="display:flex;"><span>--convert-subs <span style="color:#75715e"># 转换字幕，格式有限制，通用为 srt ，若不转，某些字幕可能是 .vtt 的，如果有 ass 字幕可下载，则无须加此项</span>
+</span></span><span style="display:flex;"><span>--list-subs <span style="color:#75715e"># 列出所有字幕</span>
+</span></span><span style="display:flex;"><span>--embed-sub <span style="color:#75715e"># 将字幕合并至影片中，需搭配 --write-sub 使用</span>
+</span></span><span style="display:flex;"><span>--all-subs <span style="color:#75715e"># 下载所有字幕</span>
+</span></span><span style="display:flex;"><span>--sub-lang <span style="color:#75715e"># 指定字幕语言，多个语言用逗号分隔</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 实例</span>
+</span></span><span style="display:flex;"><span>youtube-dl --sub-lang zh-CN,en --write-sub --embed-subs <span style="color:#f92672">[</span>url<span style="color:#f92672">]</span> <span style="color:#75715e"># 下载中英字幕并写入到影片</span>
+</span></span><span style="display:flex;"><span>youtube-dl --write-sub --sub-format <span style="color:#e6db74">&#34;ass/srt/best&#34;</span> --convert-subs <span style="color:#e6db74">&#34;srt&#34;</span> url <span style="color:#75715e"># 一并下载字幕</span>
+</span></span><span style="display:flex;"><span>youtube-dl --skip-download --all-subs url <span style="color:#75715e"># 下载所有字幕</span>
+</span></span></code></pre></div><p><img src="https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png" alt=""></p>
 
         </div>
 
@@ -539,11 +567,17 @@ youtube-dl -f 136 https://www.youtube.com/watch?v=xxxxxxxx
       <ul>
         <li><a href="#安装-youtube-dl">安装 youtube-dl</a></li>
         <li><a href="#下载最优视频默认">下载最优视频（默认）</a></li>
-        <li><a href="#查看可选的视音频格式">查看可选的视、音频格式</a></li>
+        <li><a href="#查看可选的音视频格式">查看可选的音视频格式</a></li>
         <li><a href="#自行组合方案">自行组合方案</a></li>
       </ul>
     </li>
     <li><a href="#命令格式">命令格式</a></li>
+    <li><a href="#下载并合并音视频">下载并合并音视频</a>
+      <ul>
+        <li><a href="#下载音乐">下载音乐</a></li>
+        <li><a href="#设定代理">设定代理</a></li>
+      </ul>
+    </li>
     <li><a href="#字幕相关">字幕相关</a></li>
   </ul>
 </nav>

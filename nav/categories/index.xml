@@ -6,6 +6,7 @@
     <description>Recent content in Categories on 极限导航</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <copyright>极限玩家</copyright><atom:link href="https://ttti.cc/nav/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>极限玩家</copyright>
+    <atom:link href="https://ttti.cc/nav/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
