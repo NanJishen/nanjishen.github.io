@@ -42,8 +42,7 @@ slmgr /ipk x-x-x-x-x ：设置密钥，5×5的序列号
 <br>slmgr.vbs -xpr ：查看当前许可证截止日期
 <br>slmgr.vbs -cpky ：从注册表中清除产品密钥
 <br>slmgr.vbs -ilc ：导入OEM证书，后面为OEM证书的路径 -->
-<h1>驱动与运行库<a name="tips1"></a></h1> → <a href="https://www.intel.cn">Intel</a> | <a href="https://www.amd.com/zh-hans">AMD</a>（<a href="https://www.amd.com/zh-hans/support/chipsets/amd-socket-am4/b550">B550</a>，<a href="https://www.amd.com/zh-hans/support/graphics/amd-radeon-6000-series/amd-radeon-6800-series/amd-radeon-rx-6800-xt">6800XT</a>）| <a href="https://www.nvidia.com">NVIDIA</a> | <a href="https://cn.msi.com">微星</a> | <a href="https://www.asus.com/CN/">华硕</a>（<a href="https://www.asus.com.cn/Motherboards-Components/Motherboards/TUF-Gaming/TUF-GAMING-B550M-PLUS-WI-FI/HelpDesk_Download/">B550M</a>）| <a href="https://www.gigabyte.cn">技嘉</a> | <a href="https://www.asrock.com">华擎</a>（<a href="http://www.asrockchina.com.cn/Graphics-Card/AMD/Radeon%20RX%206800%20XT%20Taichi%20X%2016G%20OC/index.cn.asp#Download">太极</a>） <br><br>
-→ <a href="http://cn.razerzone.com">雷蛇</a>（<a href="https://mysupport.razer.com/app/answers/detail/a_id/3750">毒蝰终极版</a>、<a href="https://mysupport.razer.com/app/answers/detail/a_id/6232">利维坦巨兽V2X</a>
+<h1>驱动与运行库<a name="tips1"></a></h1> → <a href="https://www.intel.cn">Intel</a> | <a href="https://www.amd.com/zh-hans">AMD</a>（<a href="https://www.amd.com/zh-hans/support/chipsets/amd-socket-am4/b550">B550</a>，<a href="https://www.amd.com/zh-hans/support/graphics/amd-radeon-6000-series/amd-radeon-6800-series/amd-radeon-rx-6800-xt">6800XT</a>）| <a href="https://www.nvidia.com">NVIDIA</a> | <a href="https://cn.msi.com">微星</a> | <a href="https://www.asus.com/CN/">华硕</a>（<a href="https://www.asus.com.cn/Motherboards-Components/Motherboards/TUF-Gaming/TUF-GAMING-B550M-PLUS-WI-FI/HelpDesk_Download/">B550M</a>）<code>查看 BIOS 版本：wmic bios get smbiosbiosversion</code> | <a href="https://www.gigabyte.cn">技嘉</a> | <a href="https://www.asrock.com">华擎</a>（<a href="http://www.asrockchina.com.cn/Graphics-Card/AMD/Radeon%20RX%206800%20XT%20Taichi%20X%2016G%20OC/index.cn.asp#Download">太极</a>） <br><br>→ <a href="http://cn.razerzone.com">雷蛇</a>（<a href="https://mysupport.razer.com/app/answers/detail/a_id/3750">毒蝰终极版</a>、<a href="https://mysupport.razer.com/app/answers/detail/a_id/6232">利维坦巨兽V2X</a>
 ）| <a href="https://www.vgnclub.com">VNG 键盘</a> | <a href="https://www.durgod.com/Zeus">杜伽键盘</a> | <a href="https://www.zanmson.cn/Drivers/MouseDriver/172.html">GM3323D</a> | <br><br>
 → <a href="http://support.thrustmaster.cn">图马思特</a> | <br><br>
 → <a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=35">DirectX</a> | <a href="https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads">Visual C++</a> |  
@@ -233,8 +232,8 @@ winget install Python.Python.3
 <tr><td>Transmission-udp</td><td>6883</td><td>6883</td></tr>
 <tr><td>qBittorrent-PC</td><td>52000</td><td>52000</td></tr>
 </tbody></table><h3>威联通反代设置</h3>Router 端口转发到 NAS（相同端口号），威联通控制台 - 网络访问 - 反向代理 - 添加：<p>以 FreshRSS 为例</p>
-<p>来源：<br>·规则名称：自定义<br>·协议：HTTPS<br>·域名：ttti.cc<br>·端口：181</p>
-<p>目标：<br>·协议：HTTP<br>·主机：192.168.x.x<br>·端口：1810</p>
+<p>来源：<br>·规则名称：自定义<br>·协议：HTTPS<br>·域名：ttti.cc 或 xx.ttti.cc（二级域名）<br>·端口：181</p>
+<p>目标：<br>·协议：HTTP<br>·主机：192.168.x.x 或 localhost（本机使用）<br>·端口：1810</p>
 </code></pre></div></div>
 <p><a href="https://www.bilibili.com/read/cv21217419">SD卡分区扩容</a>、<a href="https://mlapp.cn/1011.html">备用</a></p>
 <h4>更多设置</h4>系统 - 常规设置 - 时间同步，设置主机名和时区；时间同步，设置 NTP 服务器：
@@ -683,7 +682,8 @@ portainer/portainer-ce:latest</code></pre>
 选 host 才支持 IPv6
 # 共享文件夹 - 挂载本机共享文件夹 - 新增：
 /share/Container/ddnsgo:/root </code></pre>
-浏览器访问 NAS-IP:9876 ，先点选你的 DNS 服务商，如 Cloudflare，并填写 Token（获取方法：登陆 Cloudflare - 右上角头像 - 我的个人资料 - API 令牌 - 创建令牌 - 点击“编辑区域 DNS”右侧的“使用模板”，在“区域资源”中选择你的域名，或者选择所有区域 - 拉到最底下点击继续以显示摘要 - 复制令牌）- DDNS-GO 配置完成后点击底部 Save
+浏览器访问 NAS-IP:9876 ，点选所用的 DNS 服务商，如 Cloudflare，并填写 Token，在 IPv4/IPv6 - 勾选启用 - 填写域名 - 底部 Save
+<p> Cloudflare Token 获取方法：登陆 Cloudflare - 右上角头像 - 我的个人资料 - API 令牌 - 创建令牌 - 点击“编辑区域 DNS”右侧的“使用模板”，在“区域资源”中选择你的域名，或者选择所有区域 - 拉到最底下点击继续以显示摘要 - 复制令牌</p>
 <h4>Bitwarden</h4>部署镜像 vaultwarden/server
 <pre><code># 名称自定义，点高级设置
 # 网络
@@ -745,7 +745,7 @@ CRON_MIN=*/30 # 每30分钟刷新一次
 浏览器访问 NAS-IP 开始安装向导 http://192.168.10.111:184
 <p>安装插件，下载后放入：NAS\Container\freshrss\www\freshrss\extensions 中</p>
 <p>修改基础URL：修改 NAS\Container\freshrss\www\freshrss\data\config.php 文件中的 base_url 字段</p>
-<p>配置移动端访问：右上角设置 - 用户账户 - 认证中勾选：“允许 API 访问”，返回用户账户 - 在下方 API 管理点击链接可以看到你的 Fever API 地址，密码可以设置也可以不设置</p>
+<p>配置移动端访问：右上角设置 - 认证 - 勾选“允许 API 访问”并提交，账户 - API 管理 - 点击下方的链接可以看到你的 Fever API 地址，密码可以设置也可以不设置</p>
 <p>设置 - 阅读：文章显示“只显示未读”；展开的分类“无分类”，勾选“默认显示收藏的所有文章”；去掉“点击文章区域外以关闭”</p>
 <h4>Radarr</h4>部署镜像 linuxserver/radarr：
 <pre><code># 名称自定义，点高级设置
@@ -1047,8 +1047,10 @@ TZ:Asia/Shanghai
 <h3>刷写固件</h3>下载<a href="https://awtrixdocs.blueforcer.de/#/en-en/controller">官方固件</a>，将 Awtrix 通过 USB 连接电脑
 <p></p>
 启动 Flashing Tool 工具烧录（启动后如果无法正常显示连接端口，是因为电脑没有安装 <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers">CP210x</a>驱动，下载并安装驱动后，重新连接即可
-<h3>安装服务端</h3>启动 whyet/awtrix2 的容器
+<h3>安装服务端</h3>启动 whyet/awtrix2 的容器，备用：cuijiemmx/awtrix2
 <pre><code>TZ=Asia/Shanghai
+7000-7001:7000-7001-TCP
+5568:5568-UDP
 /share/Container/awtrix2:/data
 </code></pre>
 访问 NAS-IP:7000，如果容器无法正常工作，可以下载 <a href="https://blueforcer.de/awtrix/stable/awtrix.jar">awtrix.jar</a>，并将其放到 awtrix2 目录中后重启容器
