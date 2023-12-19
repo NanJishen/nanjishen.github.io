@@ -4,13 +4,32 @@ import connectivityTests from "../contents/connectivityTests.js";
 import stunServers from "../contents/stunServers.js";
 import ipDataCards from "../contents/ipDataCards.js";
 import leakTest from "../contents/leakTest.js";
-import { mappingKeys, keyMap } from "./shortcut.js";
+import speedTest from "../contents/speedTest.js";
+import { triggerSpeedTest, resetSpeedTest, engine } from "../res/cfSpeedTest.js";
+import { mappingKeys, navigateCards, keyMap } from "./shortcut.js";
+import config from "../res/ga.js";
+
+Vue.config.productionTip = false;
+
+(function () {
+  const scriptTag = document.createElement("script");
+  scriptTag.async = true;
+  scriptTag.src = `https://www.googletagmanager.com/gtag/js?id=${config.GOOGLE_ANALYTICS_ID}`;
+  document.head.appendChild(scriptTag);
+
+  window.dataLayer = window.dataLayer || [];
+  window.gtag = function () {
+    window.dataLayer.push(arguments);
+  };
+  window.gtag("js", new Date());
+  window.gtag("config", config.GOOGLE_ANALYTICS_ID);
+})();
 
 new Vue({
   el: "#app",
   data: {
-    // Enter your Bing Maps API key here
-    bingMapAPIKEY: "Ap0hOWNJvbQM3gu7Fnp_fjPb1pE1bl2Z8a3hQtuMtmG4XUjC3O0A464yfwSNlBFQ",
+
+    isEnvBingMapKey: false,
     currentLanguage: "en",
     currentTexts: {},
 
@@ -19,7 +38,7 @@ new Vue({
     alertTitle: "",
     alertToShow: false,
     inputIP: "",
-    inputBingMapAPIKEY: "",
+    inputBingMapAPIKEY: "Ap0hOWNJvbQM3gu7Fnp_fjPb1pE1bl2Z8a3hQtuMtmG4XUjC3O0A464yfwSNlBFQ",
     bingMapAPIKEYError: false,
     bingMapLanguage: "en",
     modalQueryResult: null,
@@ -27,10 +46,13 @@ new Vue({
     isMapShown: false,
     isDarkMode: false,
     isMobile: false,
-    isCardsCollapsed: false,
+    isCardsCollapsed: JSON.parse(localStorage.getItem('isCardsCollapsed')) || false,
     isInfoMasked: false,
     isInfosLoaded: false,
     infoMaskLevel: 0,
+    ipDataCache: new Map(),
+    speedTestStatus: "idle",
+    copiedStatus: {},
 
     // from contents
     connectivityTests,
@@ -40,6 +62,7 @@ new Vue({
     stunServers,
     originstunServers: {},
     leakTest,
+    speedTest,
     originleakTest: {},
 
     // keyMap
@@ -146,41 +169,84 @@ new Vue({
           this.ipDataCards[5].ip = this.currentTexts.ipInfos.IPv6Error;
         });
     },
+
     async fetchIPDetails(cardIndex, ip) {
       const card = this.ipDataCards[cardIndex];
-      try {
-        const response = await fetch(`https://ipapi.co/${ip}/json/`);
-        const data = await response.json();
-        if (data.error) {
-          throw new Error(data.reason);
-        }
-        card.ip = ip;
-        card.country_name = data.country_name || "";
-        card.country_code = data.country || "";
-        card.region = data.region || "";
-        card.city = data.city || "";
-        card.latitude = data.latitude || "";
-        card.longitude = data.longitude || "";
-        card.isp = data.org || "";
-        card.asn = data.asn || "";
+      card.ip = ip;
 
-        // 构造 AS Number 的链接
-        if (card.asn === "") {
-          card.asnlink = false;
-          card.mapUrl = "";
-        } else {
-          card.asnlink = `https://radar.cloudflare.com/traffic/${card.asn}`;
-          card.mapUrl = `https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/${card.latitude},${card.longitude}/5?mapSize=800,640&pp=${card.latitude},${card.longitude};66&key=${this.bingMapAPIKEY}&fmt=jpeg&dpi=Large&c=${this.bingMapLanguage}`;
+      // 检查缓存中是否已有该 IP 的数据
+      if (this.ipDataCache.has(ip)) {
+        // 使用缓存的数据填充卡片
+        const cachedData = this.ipDataCache.get(ip);
+        Object.assign(card, cachedData);
+        return;
+      }
 
-          // 可选改成 Google Maps 内嵌 iFrame
-          // card.mapUrl = `https://www.google.com/maps?q=${card.latitude},${card.longitude}&z=2&output=embed`;
+      // 尝试从多个不同的源获取数据
+      const sources = [
+        { url: `/api/ipinfo?ip=${ip}`, transform: this.transformDataFromIPapi },
+        { url: `https://ipapi.co/${ip}/json/`, transform: this.transformDataFromIPapi },
+        { url: `https://api.ipcheck.ing/json/${ip}`, transform: this.transformDataFromIPcheck }
+      ];
+
+      for (const source of sources) {
+        try {
+          const response = await fetch(source.url);
+          const data = await response.json();
+
+          // 根据数据源进行数据转换
+          const cardData = source.transform(data);
+
+          if (cardData) {
+            Object.assign(card, cardData);
+            this.ipDataCache.set(ip, cardData);
+            break;
+          }
+        } catch (error) {
+          console.error("Error fetching IP details:", error);
         }
-      } catch (error) {
-        console.error("Get IP error:", error);
-        // 设置错误信息或保持字段为空
-        card.mapUrl = "";
       }
     },
+
+    transformDataFromIPapi(data) {
+      if (data.error) {
+        throw new Error(data.reason);
+      }
+
+      return {
+        country_name: data.country_name || "",
+        country_code: data.country || "",
+        region: data.region || "",
+        city: data.city || "",
+        latitude: data.latitude || "",
+        longitude: data.longitude || "",
+        isp: data.org || "",
+        asn: data.asn || "",
+        asnlink: data.asn ? `https://radar.cloudflare.com/traffic/${data.asn}` : false,
+        mapUrl: data.latitude && data.longitude ? `/api/map?latitude=${data.latitude}&longitude=${data.longitude}&language=${this.bingMapLanguage}` : ""
+      };
+    },
+
+    transformDataFromIPcheck(data) {
+      if (data.status !== "success") {
+        throw new Error("IP lookup failed");
+      }
+
+      return {
+        country_name: data.country || "",
+        country_code: data.countryCode || "",
+        region: data.regionName || "",
+        city: data.city || "",
+        latitude: data.lat || "",
+        longitude: data.lon || "",
+        isp: data.isp || "",
+        asn: data.as ? data.as.split(" ")[0] : "",
+        asnlink: data.as ? `https://radar.cloudflare.com/traffic/${data.as.split(" ")[0]}` : false,
+        mapUrl: data.lat && data.lon ? `/api/map?latitude=${data.lat}&longitude=${data.lon}&language=${this.bingMapLanguage}` : ""
+      };
+    },
+
+
     refreshCard(card) {
       // 清空卡片数据
       this.clearCardData(card);
@@ -218,7 +284,7 @@ new Vue({
       card.longitude = "";
       card.asn = "";
       card.isp = "";
-      card.mapUrl = "res/defaultMap.jpg";
+      card.mapUrl = "res/img/defaultMap.jpg";
     },
 
     toggleMaps() {
@@ -231,26 +297,33 @@ new Vue({
     checkAllIPs() {
       // 从所有来源获取 IP 地址
       setTimeout(() => {
-        this.getIPFromCloudflare_V4();
-        this.getIPFromCloudflare_V6();
-      }, 1000);
-      setTimeout(() => {
-        this.getIPFromTaobao();
         this.getIPFromUpai();
       }, 100);
       setTimeout(() => {
-        this.getIPFromIpify_V4();
-        this.getIPFromIpify_V6();
+        this.getIPFromTaobao();
+      }, 1000);
+      setTimeout(() => {
+        this.getIPFromCloudflare_V4();
       }, 2000);
+      setTimeout(() => {
+        this.getIPFromCloudflare_V6();
+      }, 100);
+      setTimeout(() => {
+        this.getIPFromIpify_V4();
+      }, 4000);
+      setTimeout(() => {
+        this.getIPFromIpify_V6();
+      }, 1000);
     },
 
+    // 检查网络连通性
     checkConnectivityHandler(test, isAlertToShow, onTestComplete) {
       const beginTime = +new Date();
 
       var img = new Image();
       var timeout = setTimeout(() => {
         test.status = this.currentTexts.connectivity.StatusUnavailable;
-        onTestComplete(false); // 调用回调函数，参数表示测试失败
+        onTestComplete(false);
       }, 3 * 1000);
 
       img.onload = () => {
@@ -258,19 +331,25 @@ new Vue({
         test.status =
           this.currentTexts.connectivity.StatusAvailable +
           ` ( ${+new Date() - beginTime} ms )`;
-        onTestComplete(true); // 调用回调函数，参数表示测试成功
+        onTestComplete(true);
       };
 
       img.onerror = () => {
         clearTimeout(timeout);
         test.status = this.currentTexts.connectivity.StatusUnavailable;
-        onTestComplete(false); // 调用回调函数，参数表示测试失败
+        onTestComplete(false);
       };
 
       img.src = `${test.url}${Date.now()}`;
     },
 
-    checkAllConnectivity(isAlertToShow) {
+    checkAllConnectivity(isAlertToShow, isRefresh) {
+
+      if (isRefresh) {
+        connectivityTests.forEach((test) => {
+          test.status = this.currentTexts.connectivity.StatusWait;
+        });
+      }
       let totalTests = connectivityTests.length;
       let successCount = 0;
       let completedCount = 0;
@@ -316,6 +395,7 @@ new Vue({
       }
     },
 
+    // 通知气泡
     showToast() {
       this.$nextTick(() => {
         const toastEl = this.$refs.toast;
@@ -327,6 +407,8 @@ new Vue({
         }
       });
     },
+
+    // 查询 IP 信息
     async submitQuery() {
       if (this.isValidIP(this.inputIP)) {
         this.modalQueryError = "";
@@ -345,49 +427,33 @@ new Vue({
       return ipv4Pattern.test(ip) || ipv6Pattern.test(ip);
     },
     async fetchIPForModal(ip) {
-      try {
-        const response = await fetch(`https://ipapi.co/${ip}/json/`);
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        const data = await response.json();
-        if (data.error) {
-          throw new Error(data.reason);
-        }
+      const sources = [
+        { url: `/api/ipinfo?ip=${ip}`, transform: this.transformDataFromIPapi },
+        { url: `https://ipapi.co/${ip}/json/`, transform: this.transformDataFromIPapi },
+        { url: `https://api.ipcheck.ing/json/${ip}`, transform: this.transformDataFromIPcheck }
+      ];
 
-        // 更新 modalQueryResult
-        this.modalQueryResult = {
-          ip,
-          country_name: data.country_name || "",
-          country_code: data.country_code || "",
-          region: data.region || "",
-          city: data.city || "",
-          latitude: data.latitude || "",
-          longitude: data.longitude || "",
-          isp: data.org || "",
-          asn: data.asn || "",
-          asnlink: data.asn
-            ? `https://radar.cloudflare.com/traffic/${data.asn}`
-            : false,
-          mapUrl:
-            data.latitude && data.longitude
-              ? `https://www.google.com/maps?q=${data.latitude},${data.longitude}&z=2&output=embed`
-              : "",
-        };
-      } catch (error) {
-        console.error("获取 IP 详情时出错:", error);
-        this.modalQueryError = error.message;
+      for (const source of sources) {
+        try {
+          const response = await fetch(source.url);
+          if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+          }
+          const data = await response.json();
+          if (data.error) {
+            throw new Error(data.reason || "IP lookup failed");
+          }
+
+          // 使用对应的转换函数更新 modalQueryResult
+          this.modalQueryResult = source.transform(data);
+          break;
+        } catch (error) {
+          console.error("Error fetching IP details:", error);
+        }
       }
     },
-    resetModalData() {
-      this.inputIP = "";
-      this.modalQueryResult = null;
-      this.modalQueryError = "";
-      if (this.bingMapAPIKEYError) {
-        this.inputBingMapAPIKEY = "";
-      }
-      this.bingMapAPIKEYError = false;
-    },
+
+    // 检查 WebRTC
     async checkSTUNServer(stun) {
       try {
         const servers = { iceServers: [{ urls: stun.url }] };
@@ -398,10 +464,7 @@ new Vue({
           if (event.candidate) {
             candidateReceived = true;
             const candidate = event.candidate.candidate;
-            const ipMatch =
-              /(\b(?:[0-9a-f]{1,4}:){7}[0-9a-f]{1,4}\b)|([0-9]{1,3}(\.[0-9]{1,3}){3})/i.exec(
-                candidate
-              );
+            const ipMatch = /([0-9a-f]{1,4}(:[0-9a-f]{1,4}){7}|[0-9a-f]{0,4}(:[0-9a-f]{1,4}){0,6}::[0-9a-f]{0,4}|::[0-9a-f]{1,4}(:[0-9a-f]{1,4}){0,6}|[0-9]{1,3}(\.[0-9]{1,3}){3})/i.exec(candidate);
             if (ipMatch) {
               stun.ip = ipMatch[0];
               pc.close();
@@ -428,25 +491,30 @@ new Vue({
       }
     },
 
-    checkAllWebRTC() {
-      this.stunServers.forEach((stun) => {
-        this.checkSTUNServer(stun);
+    checkAllWebRTC(isRefresh) {
+      this.stunServers.forEach((server) => {
+        if (isRefresh) {
+          server.ip = this.currentTexts.webrtc.StatusWait;
+        }
+        this.checkSTUNServer(server);
       });
     },
 
-    generate32DigitString() {
-      const unixTime = Date.now().toString(); // 13 位 Unix 时间戳
-      const fixedString = "jason5ng32"; // 固定字符串
-      const randomString = Math.random().toString(36).substring(2, 11); // 随机 9 位字符串
 
-      return unixTime + fixedString + randomString; // 拼接字符串
+    // DNS 泄漏测试
+    generate32DigitString() {
+      const unixTime = Date.now().toString();
+      const fixedString = "jason5ng32";
+      const randomString = Math.random().toString(36).substring(2, 11);
+
+      return unixTime + fixedString + randomString;
     },
 
     generate14DigitString() {
       const fixedString = "jn32"; // 固定字符串
-      const randomString = Math.random().toString(36).substring(2, 11); // 随机 9 位字符串
+      const randomString = Math.random().toString(36).substring(2, 11);
 
-      return fixedString + randomString; // 拼接字符串
+      return fixedString + randomString;
     },
 
     fetchLeakTestIpApiCom(index) {
@@ -488,7 +556,6 @@ new Vue({
           return response.json();
         })
         .then((data) => {
-          // 获取 data 对象中的指定键
           const getKey = Object.keys(data)[key];
           const keyEntry = data[getKey];
 
@@ -506,7 +573,13 @@ new Vue({
         });
     },
 
-    checkAllDNSLeakTest() {
+    checkAllDNSLeakTest(isRefresh) {
+      if (isRefresh) {
+        this.leakTest.forEach((server) => {
+          server.geo = this.currentTexts.dnsleaktest.StatusWait;
+          server.ip = this.currentTexts.dnsleaktest.StatusWait;
+        });
+      }
       setTimeout(() => {
         this.fetchLeakTestIpApiCom(0);
       }, 100);
@@ -523,6 +596,8 @@ new Vue({
         this.fetchLeakTestSfSharkCom(3, 0);
       }, 1000);
     },
+
+    // 黑暗模式
     toggleDarkMode() {
       this.isDarkMode = !this.isDarkMode;
       this.updateBodyClass();
@@ -544,12 +619,16 @@ new Vue({
         this.updateBodyClass();
       }
     },
+
+    // 手机简洁模式
     handleResize() {
-      this.isMobile = window.innerWidth < 768; // 设置断点为 768px
+      this.isMobile = window.innerWidth < 768;
     },
     toggleCollapse() {
       this.isCardsCollapsed = !this.isCardsCollapsed;
     },
+
+    // 更新语言
     toggleLanguage() {
       this.currentLanguage = this.currentLanguage === "en" ? "cn" : "en";
       this.updateTexts();
@@ -567,16 +646,17 @@ new Vue({
     updatePageTitle(lang) {
       document.title = this.currentTexts.page.title;
     },
-    // 更新语言
+
+    // 手动设置语言
     getLanguageFromURL() {
       const urlParams = new URLSearchParams(window.location.search);
-      const language = urlParams.get('hl');
-      if (language === 'zh' || language === 'cn') {
-        this.currentLanguage = 'cn';
+      const language = urlParams.get("hl");
+      if (language === "zh" || language === "cn") {
+        this.currentLanguage = "cn";
         this.updateTexts();
         return true;
-      } else if (language === 'en') {
-        this.currentLanguage = 'en';
+      } else if (language === "en") {
+        this.currentLanguage = "en";
         this.updateTexts();
         return true;
       }
@@ -601,9 +681,9 @@ new Vue({
         server.ip = this.currentTexts.dnsleaktest.StatusWait;
       });
     },
+
     // 信息遮罩
     toggleInfoMask() {
-      // this.isInfoMasked = !this.isInfoMasked;
       if (this.infoMaskLevel === 0) {
         this.originipDataCards = JSON.parse(JSON.stringify(this.ipDataCards));
         this.originstunServers = JSON.parse(JSON.stringify(this.stunServers));
@@ -614,7 +694,6 @@ new Vue({
         this.alertTitle = this.currentTexts.alert.maskedInfoTitle_1;
         this.alertToShow = true;
         this.showToast();
-        // this.isInfoMasked = true;
       } else if (this.infoMaskLevel === 1) {
         this.infoMask();
         this.alertStyle = "text-success";
@@ -622,7 +701,6 @@ new Vue({
         this.alertTitle = this.currentTexts.alert.maskedInfoTitle;
         this.alertToShow = true;
         this.showToast();
-        // this.isInfoMasked = true;
       } else {
         this.infoUnmask();
         this.alertStyle = "text-danger";
@@ -630,7 +708,6 @@ new Vue({
         this.alertTitle = this.currentTexts.alert.unmaskedInfoTitle;
         this.alertToShow = true;
         this.showToast();
-        // this.isInfoMasked = false;
       }
     },
     infoMask() {
@@ -655,7 +732,7 @@ new Vue({
           card.longitude = "-122.078514";
           card.isp = "Google LLC";
           card.asn = "AS15169";
-          card.mapUrl = "res/defaultMap.jpg";
+          card.mapUrl = "res/img/defaultMap.jpg";
         });
         this.leakTest.forEach((server) => {
           server.geo = "United States";
@@ -671,31 +748,24 @@ new Vue({
     },
 
     // Bing Map 相关
-    addBingMapKey() {
-      if (this.isValidKey(this.inputBingMapAPIKEY)) {
-        this.bingMapAPIKEY = this.inputBingMapAPIKEY;
-        this.ipDataCards.forEach((card) => {
-          if (card.latitude && card.longitude) {
-            card.mapUrl = `https://dev.virtualearth.net/REST/v1/Imagery/Map/Road/${card.latitude},${card.longitude}/5?mapSize=800,640&pp=${card.latitude},${card.longitude};66&key=${this.bingMapAPIKEY}&fmt=jpeg&dpi=Large&c=${this.bingMapLanguage}`;
+    validateBingMapKey() {
+      fetch('/api/validate-map-key')
+        .then(response => response.json())
+        .then(data => {
+          this.isEnvBingMapKey = data.isValid;
+          if (!this.isEnvBingMapKey) {
+            this.isMapShown = false;
+          } else if (localStorage.getItem("isMapShown")) {
+            this.isMapShown = localStorage.getItem("isMapShown") === "true";
           }
+        })
+        .catch(error => {
+          console.error('Error validating Bing Map Key:', error);
+          this.isEnvBingMapKey = false;
+          this.isMapShown = false;
         });
-        this.closeModal("addBingMapKey");
-        this.isMapShown = true;
-      } else {
-        this.bingMapAPIKEYError = true;
-      }
     },
-    removeBingMapKey() {
-      this.bingMapAPIKEY = "";
-      this.inputBingMapAPIKEY = "";
-      localStorage.removeItem("bingMapAPIKEY");
-      this.closeModal("addBingMapKey");
-      this.isMapShown = false;
-    },
-    isValidKey(key) {
-      const keyPattern = /^[A-Za-z0-9_-]{64}$/;
-      return keyPattern.test(key);
-    },
+
     // PWA 颜色
     PWAColor() {
       if (this.isDarkMode) {
@@ -714,6 +784,7 @@ new Vue({
           .setAttribute("content", "#ffffff");
       }
     },
+
     // open or close modal
     openModal(id) {
       const modalElement = document.getElementById(id);
@@ -728,6 +799,20 @@ new Vue({
       if (modalInstance) {
         modalInstance.hide();
       }
+    },
+
+    setupModalFocus() {
+      const modals = document.querySelectorAll(".modal");
+      modals.forEach((modal) => {
+        modal.addEventListener("shown.bs.modal", () => {
+          this.$nextTick(() => {
+            const inputElement = modal.querySelector(".form-control");
+            if (inputElement) {
+              inputElement.focus();
+            }
+          });
+        });
+      });
     },
     // scroll to element
     scrollToElement(el, offset = 0) {
@@ -744,13 +829,13 @@ new Vue({
     refreshEverything() {
       this.checkAllIPs();
       setTimeout(() => {
-        this.checkAllConnectivity(false);
+        this.checkAllConnectivity(false, true);
       }, 2000);
       setTimeout(() => {
-        this.checkAllWebRTC();
+        this.checkAllWebRTC(true);
       }, 4000);
       setTimeout(() => {
-        this.checkAllDNSLeakTest();
+        this.checkAllDNSLeakTest(true);
       }, 3000);
       setTimeout(() => {
         this.alertStyle = "text-success";
@@ -767,6 +852,146 @@ new Vue({
         loadingElement.classList.add("hidden");
       }
     },
+
+    // Speed Test
+    updateSpeedTestResults(results) {
+      const summary = results.getSummary();
+
+      this.speedTest.downloadSpeed = parseFloat((summary.download / 1000000).toFixed(2));
+      this.speedTest.uploadSpeed = parseFloat((summary.upload / 1000000).toFixed(2));
+      this.speedTest.latency = parseFloat(summary.latency.toFixed(2));
+      this.speedTest.jitter = parseFloat(summary.jitter.toFixed(2));
+    },
+
+    updateSpeedTestColor(status) {
+      switch (status) {
+        case 'idle':
+          return 'text-secondary';
+        case 'running':
+          return 'text-info';
+        case 'finished':
+          return 'text-success';
+        case 'error':
+          return 'text-danger';
+        default:
+          return '';
+      }
+    },
+
+    startSpeedTest() {
+      const newEngine = resetSpeedTest();
+      newEngine.onRunningChange = running => {
+        this.speedTestStatus = "running";
+        this.speedTest.downloadSpeed = 0;
+        this.speedTest.uploadSpeed = 0;
+        this.speedTest.latency = 0;
+        this.speedTest.jitter = 0;
+      };
+
+      newEngine.onResultsChange = ({ type }) => {
+        const rawData = newEngine.results.raw;
+
+        // 进度条
+        let progress = 0;
+        const progressPerStage = 100 / 3;  // 将总进度平均分配到每个阶段
+
+        if (rawData.download && rawData.download.started) {
+          progress += rawData.download.finished ? progressPerStage : progressPerStage / 2;
+        }
+        if (rawData.upload && rawData.upload.started) {
+          progress += rawData.upload.finished ? progressPerStage : progressPerStage / 2;
+        }
+        if (rawData.latency && rawData.latency.started) {
+          progress += rawData.latency.finished ? progressPerStage : progressPerStage / 2;
+        }
+
+        // 确保进度不超过100%
+        progress = Math.min(progress, 100);
+
+
+        // 更新进度条
+        const progressBar = document.getElementById('speedtest-progress');
+        progressBar.style.width = `${progress}%`;
+        progressBar.setAttribute('aria-valuenow', progress);
+
+        // 更新下载速度
+        if (rawData.download && rawData.download.results) {
+          const downloadKeys = Object.keys(rawData.download.results);
+          if (downloadKeys.length > 0) {
+            const lastDownloadKey = downloadKeys[downloadKeys.length - 1];
+            const downloadTimings = rawData.download.results[lastDownloadKey].timings;
+            if (downloadTimings.length > 0) {
+              const latestDownload = downloadTimings[downloadTimings.length - 1];
+              const newDownloadSpeed = parseFloat((latestDownload.bps / 1000000).toFixed(2));
+              if (newDownloadSpeed > this.speedTest.downloadSpeed) {
+                this.speedTest.downloadSpeed = newDownloadSpeed;
+              }
+            }
+          }
+        }
+        // 更新上传速度
+        if (rawData.upload && rawData.upload.results) {
+          const uploadKeys = Object.keys(rawData.upload.results);
+          if (uploadKeys.length > 0) {
+            const lastUploadKey = uploadKeys[uploadKeys.length - 1];
+            const uploadTimings = rawData.upload.results[lastUploadKey].timings;
+            if (uploadTimings.length > 0) {
+              const latestUpload = uploadTimings[uploadTimings.length - 1];
+              const newUploadSpeed = parseFloat((latestUpload.bps / 1000000).toFixed(2));
+              if (newUploadSpeed > this.speedTest.uploadSpeed) {
+                this.speedTest.uploadSpeed = newUploadSpeed;
+              }
+            }
+          }
+        }
+        // 更新延迟
+        if (rawData.latency && rawData.latency.results && rawData.latency.results.timings && rawData.latency.results.timings.length > 0) {
+          const latencyTimings = rawData.latency.results.timings;
+          const latestLatency = latencyTimings[latencyTimings.length - 1].ping;
+          const newLatency = parseFloat(latestLatency.toFixed(2));
+          if (newLatency < this.speedTest.latency || this.speedTest.latency === 0) {
+            this.speedTest.latency = newLatency;
+          }
+        }
+      };
+
+      newEngine.onFinish = results => {
+        this.speedTestStatus = "finished";
+        this.updateSpeedTestResults(results);
+        const scores = results.getScores();
+
+        // 更新 Vue 实例的数据属性
+        this.speedTest.streamingScore = scores.streaming.points;
+        this.speedTest.gamingScore = scores.gaming.points;
+        this.speedTest.rtcScore = scores.rtc.points;
+      };
+
+      newEngine.onError = (e) => {
+        if (typeof e === 'string' && !e.includes("ICE")) {
+          this.speedTestStatus = "error";
+        }
+        console.error('Speed Test Error: ', e);
+      };
+
+      triggerSpeedTest();
+    },
+    refreshstartSpeedTest() {
+      if (this.speedTestStatus !== "running") {
+        this.startSpeedTest();
+      }
+    },
+    // 复制 IP 地址
+    copyToClipboard(ip, id) {
+      navigator.clipboard.writeText(ip).then(() => {
+        this.$set(this.copiedStatus, id, true);
+        // 设置定时器在 5 秒后重置状态
+        setTimeout(() => {
+          this.$set(this.copiedStatus, id, false);
+        }, 5000);
+      }).catch(err => {
+        console.error('Copy error', err);
+      });
+    },
   },
 
   created() {
@@ -776,21 +1001,8 @@ new Vue({
     }
     this.updateTexts();
     this.langPatch();
-    if (localStorage.getItem("bingMapAPIKEY") && this.bingMapAPIKEY === "") {
-      this.bingMapAPIKEY = localStorage.getItem("bingMapAPIKEY");
-    }
-
-    if (this.bingMapAPIKEY) {
-      this.inputBingMapAPIKEY = this.bingMapAPIKEY;
-    }
-    if (!this.bingMapAPIKEY) {
-      this.isMapShown = false;
-    } else if (localStorage.getItem("isMapShown")) {
-      this.isMapShown = localStorage.getItem("isMapShown") === "true";
-    }
+    this.validateBingMapKey();
     this.isMobile = window.innerWidth < 768;
-    this.isCardsCollapsed = this.isMobile;
-    // this.handleResize();
     window.addEventListener("resize", this.handleResize);
   },
   destroyed() {
@@ -798,10 +1010,10 @@ new Vue({
   },
   watch: {
     isMapShown(newVal) {
-      localStorage.setItem("isMapShown", newVal);
+      localStorage.setItem("isMapShown", JSON.stringify(newVal));
     },
-    bingMapAPIKEY(newVal) {
-      localStorage.setItem("bingMapAPIKEY", newVal);
+    isCardsCollapsed(newVal) {
+      localStorage.setItem('isCardsCollapsed', JSON.stringify(newVal));
     },
   },
   mounted() {
@@ -810,13 +1022,24 @@ new Vue({
     this.PWAColor();
     this.checkAllIPs();
     this.hideLoading();
-    mappingKeys([
+    this.setupModalFocus();
+    mappingKeys(
       {
-        keys: "gg",
+        keys: "g",
         action() {
           window.scrollTo({ top: 0, behavior: "smooth" });
         },
         description: this.currentTexts.shortcutKeys.GoToTop,
+      },
+      {
+        keys: 'j',
+        action: () => navigateCards('down'),
+        description: this.currentTexts.shortcutKeys.GoNext
+      },
+      {
+        keys: 'k',
+        action: () => navigateCards('up'),
+        description: this.currentTexts.shortcutKeys.GoPrevious
       },
       {
         keys: "G",
@@ -829,17 +1052,18 @@ new Vue({
         description: this.currentTexts.shortcutKeys.GoToBottom,
       },
       {
-        keys: "d",
+        keys: "D",
         action: this.toggleDarkMode,
         description: this.currentTexts.shortcutKeys.ToggleDarkMode,
       },
       {
-        keys: "rr",
+        keys: "R",
         action: this.refreshEverything,
         description: this.currentTexts.shortcutKeys.RefreshEverything,
       },
       {
-        keys: "r([1-6])",
+        keys: "([1-6])",
+        type: "regex",
         action: (num) => {
           const card = this.ipDataCards[num - 1];
           const [el] = this.$refs[card.id];
@@ -849,51 +1073,49 @@ new Vue({
         description: this.currentTexts.shortcutKeys.RefreshIPCard,
       },
       {
-        keys: "rc",
+        keys: "c",
         action: () => {
-          this.scrollToElement("scrollspyHeading2", 80);
-          this.checkAllConnectivity(false);
+          this.scrollToElement("Connectivity", 80);
+          this.checkAllConnectivity(false, true);
         },
         description: this.currentTexts.shortcutKeys.RefreshConnectivityTests,
       },
       {
-        keys: "rw",
+        keys: "w",
         action: () => {
-          this.scrollToElement("scrollspyHeading3", 80);
-          this.checkAllWebRTC();
+          this.scrollToElement("WebRTC", 80);
+          this.checkAllWebRTC(true);
         },
         description: this.currentTexts.shortcutKeys.RefreshWebRTC,
       },
       {
-        keys: "rl",
+        keys: "d",
         action: () => {
-          this.scrollToElement("scrollspyHeading4", 80);
-          this.checkAllDNSLeakTest();
+          this.scrollToElement("DNSLeakTest", 80);
+          this.checkAllDNSLeakTest(true);
         },
         description: this.currentTexts.shortcutKeys.RefreshDNSLeakTest,
       },
       {
+        keys: "s",
+        action: () => {
+          this.scrollToElement("SpeedTest", 80);
+          this.refreshstartSpeedTest();
+        },
+        description: this.currentTexts.shortcutKeys.StartSpeedTest,
+      },
+      {
         keys: "m",
         action: () => {
-          if (this.bingMapAPIKEY) {
+          if (this.isEnvBingMapKey) {
             window.scrollTo({ top: 0, behavior: "smooth" });
             this.toggleMaps();
-          } else {
-            this.openModal("addBingMapKey");
           }
         },
         description: this.currentTexts.shortcutKeys.ToggleMaps,
       },
       {
-        keys: "k",
-        action: () => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-          this.openModal("addBingMapKey");
-        },
-        description: this.currentTexts.shortcutKeys.AddBingMapKey,
-      },
-      {
-        keys: "c",
+        keys: "q",
         action: () => {
           this.openModal("IPCheck");
         },
@@ -909,35 +1131,30 @@ new Vue({
 
       // help
       {
-        keys: "\\?",
+        keys: "?",
         action: () => {
           this.openModal("helpModal");
         },
         description: this.currentTexts.shortcutKeys.Help,
-      },
-    ]);
+      }
+    );
     this.keyMap = keyMap;
     setTimeout(() => {
-      this.checkAllConnectivity(true);
+      this.checkAllConnectivity(true, false);
     }, 2500);
     setTimeout(() => {
-      this.checkAllWebRTC();
+      this.checkAllWebRTC(false);
     }, 4000);
     setTimeout(() => {
-      this.checkAllDNSLeakTest();
+      this.checkAllDNSLeakTest(false);
     }, 2500);
     setTimeout(() => {
-      this.checkAllConnectivity(false);
+      this.checkAllConnectivity(false, false);
     }, 6000);
     setTimeout(() => {
       this.isInfosLoaded = true;
     }, 6000);
     const modalElement = document.getElementById("IPCheck");
     modalElement.addEventListener("hidden.bs.modal", this.resetModalData);
-    const bingMapAPIKEYElement = document.getElementById("addBingMapKey");
-    bingMapAPIKEYElement.addEventListener(
-      "hidden.bs.modal",
-      this.resetModalData
-    );
   },
 });

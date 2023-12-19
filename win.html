@@ -43,7 +43,7 @@ slmgr /ipk x-x-x-x-x ：设置密钥，5×5的序列号
 <br>slmgr.vbs -cpky ：从注册表中清除产品密钥
 <br>slmgr.vbs -ilc ：导入OEM证书，后面为OEM证书的路径 -->
 <h1>驱动与运行库<a name="tips1"></a></h1> → <a href="https://www.intel.cn">Intel</a> | <a href="https://www.amd.com/zh-hans">AMD</a>（<a href="https://www.amd.com/zh-hans/support/chipsets/amd-socket-am4/b550">B550</a>，<a href="https://www.amd.com/zh-hans/support/graphics/amd-radeon-6000-series/amd-radeon-6800-series/amd-radeon-rx-6800-xt">6800XT</a>）| <a href="https://www.nvidia.com">NVIDIA</a> | <a href="https://cn.msi.com">微星</a> | <a href="https://www.asus.com/CN/">华硕</a>（<a href="https://www.asus.com.cn/Motherboards-Components/Motherboards/TUF-Gaming/TUF-GAMING-B550M-PLUS-WI-FI/HelpDesk_Download/">B550M</a>）<code>查看 BIOS 版本：wmic bios get smbiosbiosversion</code> | <a href="https://www.gigabyte.cn">技嘉</a> | <a href="https://www.asrock.com">华擎</a>（<a href="http://www.asrockchina.com.cn/Graphics-Card/AMD/Radeon%20RX%206800%20XT%20Taichi%20X%2016G%20OC/index.cn.asp#Download">太极</a>） <br><br>→ <a href="http://cn.razerzone.com">雷蛇</a>（<a href="https://mysupport.razer.com/app/answers/detail/a_id/3750">毒蝰终极版</a>、<a href="https://mysupport.razer.com/app/answers/detail/a_id/6232">利维坦巨兽V2X</a>
-）| <a href="https://www.vgnclub.com">VNG 键盘</a> | <a href="https://www.durgod.com/Zeus">杜伽键盘</a> | <a href="https://www.zanmson.cn/Drivers/MouseDriver/172.html">GM3323D</a> | <br><br>
+）| <a href="https://www.vgnclub.com">VGN 键盘</a> | <a href="https://www.durgod.com/Zeus">杜伽键盘</a> | <a href="https://www.zanmson.cn/Drivers/MouseDriver/172.html">GM3323D</a> | <br><br>
 → <a href="http://support.thrustmaster.cn">图马思特</a> | <br><br>
 → <a href="https://www.microsoft.com/zh-cn/download/details.aspx?id=35">DirectX</a> | <a href="https://support.microsoft.com/zh-cn/help/2977003/the-latest-supported-visual-c-downloads">Visual C++</a> |  
 <a href="https://dotnet.microsoft.com/download/dotnet-framework">NET Framework</a> | <a href="https://dotnet.microsoft.com/download/dotnet/5.0/runtime">.NET Runtime</a> | <a href="https://www.free-codecs.com/download/hevc_video_extension.htm">HEVC_H265</a> | <a href="https://github.com/abbodi1406/vcredist">第三方运行库合集</a><br><br>
@@ -73,10 +73,10 @@ shutdown.exe /r /fw # 重启并进入 UEFI BIOS
 <h3>新系统安装软件</h3>
 <p>基础软件：QQ+微信、MemPad、Snipaste、KeePassXC、CopyQ、Cheat、Qrcp
 <pre><code>winget install 7zip.7zip
-winget install KeePassXCTeam.KeePassXC
-winget install hluk.CopyQ
-winget install Tencent.QQ
-winget install Tencent.WeChat
+  winget install KeePassXCTeam.KeePassXC
+  winget install hluk.CopyQ
+  winget install Tencent.WeChat
+  winget install Tencent.QQ
 </code></pre></p>
 <p>开发环境：Terminal、VS Code、Scoop（sudo）
 <pre><code>winget install Microsoft.WindowsTerminal
@@ -121,7 +121,7 @@ winget install Python.Python.3
 <h2>为游戏优化</h2>禁用 VBS 虚拟化的安全提高游戏帧数：查看方法：MSInfo32 - 系统摘要 - 基于虚拟化的安全性；关闭方法：管理员运行 Powershell ，执行 bcdedit /set hypervisorlaunchtype off
 <p>关闭内存完整性：开始 - 输入 Core Isolation - 关闭后重启</p>
 <p>以上两个关闭即可，但如果想彻底关闭虚拟机平台：开始 - 输入 Windows features - 去勾“虚拟机平台” - 确认后重启，该关闭只适合不需要虚拟机的用户</p>
-<h2>浏览器设置</h2><b>解决浏览器 http 跳转至 https 问题</b>：浏览器打开 chrome://net-internals/#hsts ，在 Delete domain 项中输入要删除记录的域名，然后可以在 Query domain 项中测试是否删除成功
+<h2>浏览器设置</h2><b>解决浏览器 http 跳转至 https 问题</b>：浏览器打开 chrome://net-internals/#hsts ，在 Delete domain 项中输入要删除记录的域名，然后可以在 Query domain 项中测试是否删除成功<p><b>清除 DNS 缓存</b>：浏览器打开 chrome://net-internals/#dns ，点击 Clear host cache</p>
 <h1>主板引导菜单快捷键</h1>
 <table><thead><tr><th>品牌</th><th>台式</th><th>笔记本</th><th>品牌</th><th>台式</th><th>笔记本</th></tr></thead><tbody><tr><td>华硕</td><td>F8</td><td>F8</td><td>惠普</td><td>F12</td><td>F9</td></tr><tr><td>技嘉</td><td>F12</td><td></td><td>戴尔</td><td>ESC</td><td>F12</td></tr><tr><td>微星</td><td>F11</td><td></td><td>神州</td><td>F12</td><td>12</td></tr><tr><td>华擎</td><td>F11</td><td></td><td>东芝</td><td>F12</td><td></td></tr><tr><td>七彩虹</td><td>F11</td><td></td><td>IBM</td><td>F12</td><td></td></tr><tr><td>联想</td><td>F12</td><td>F12</td><td>三星</td><td>F12</td><td></td></tr></tbody></table>
 <h1>快捷键<a name="tips4"></a></h1><table><tr><th>快捷键</th><th>作用</th></tr><tr><td>Ctrl + Shift + Esc</td><td>任务管理器</td></tr><tr><td>Ctrl + Alt + Del</td><td>重启页面</td></tr><tr><td>Alt + F4</td><td>关闭当前程序</td></tr><tr><td>Win + ←/→</td><td>贴靠左右窗口</td></tr><tr><td>Win + ↑/↓</td><td>4/1大小角/最大化/最小化</td></tr><tr><td>Win + Tab</td><td>切换任务窗口（界面不会消失）</td></tr><tr><td>Alt + Tab</td><td>切换任务窗口</td></tr><tr><td>Win + Space</td><td>切换输入法</td></tr><tr><td>Win + A</td><td>操作中心</td></tr><tr><td>Win + B</td><td>光标移至通知栏上</td></tr><tr><td>Win + C</td><td>Teams</td></tr><tr><td>Win + D</td><td>显示桌面</td></tr><tr><td>Win + E</td><td>打开此电脑</td></tr><tr><td>Win + F</td><td>反馈中心</td></tr><tr><td>Win + H</td><td>听写</td></tr><tr><td>Win + I</td><td>设置</td></tr><tr><td>Win + K</td><td>连接</td></tr><tr><td>Win + L</td><td>锁屏</td></tr><tr><td>Win + M</td><td>最小化所有窗口</td></tr><tr><td>Win + N</td><td>通知中心</td></tr><tr><td>Win + Q</td><td>搜索</td></tr><tr><td>Win + P</td><td>屏幕投影</td></tr><tr><td>Win + X</td><td>开始快捷菜单</td></tr><tr><td>Win + R</td><td>运行</td></tr><tr><td>Win + S</td><td>搜索</td></tr><tr><td>Win + T</td><td>切换任务栏上的程序</td></tr><tr><td>Win + U</td><td>轻松访问中心</td></tr><tr><td>Win + W</td><td>小部件</td></tr><td>Win + Z</td><td>Snap 布局</td></tr><tr><td>Win + PauseBreak</td><td>系统属性</td></tr><tr><td>Win + -/+</td><td>放大镜放大/缩小（Win + Esc关闭）</td></tr><tr><td>Win + ，</td><td>查看桌面</td></tr><tr><td>Win + 回车</td><td>讲述人</td></tr><tr><td>Win + F1</td><td>Windows帮助</td></tr><tr><td>Win + Ctrl + F</td><td>搜索网络计算机</td></tr><tr><td>Win + 数字键</td><td>打开/切换任务栏的程序</td></tr><tr><td>Win + Shift + 数字键</td><td>打开任务栏的新程序</td></tr><tr><td>Win + Shift + ↑/↓</td><td>垂直拉伸/缩小窗口（宽度不变）</td></tr><tr><td>Win + Shift + ←/→</td><td>将活动窗口移至左/右侧显示器</td></tr><tr><td>Win + Shift + S</td><td>屏幕区域截图</td></tr><tr><td>Win + Home</td><td>最小化/恢复所有窗口（除当前窗口）</td></tr><tr><td>Win + PgUp/PgDn</td><td>将开始屏幕或开始屏幕应用移至左/右显示器</td></tr><tr><td>Win + Ctrl + D</td><td>创建新虚拟桌面</td></tr><tr><td>Win + Ctrl + L</td><td>实时字幕</td></tr><tr><td>Win + Ctrl + F4</td><td>关闭当前虚拟桌面</td></tr><tr><td>Win + Ctrl + ←/→</td><td>切换虚拟桌面</td></tr></table><h3>常规通用</h4><table><tr><th>快捷键</th><th>作用</th></tr><tr><td>F1</td><td>帮助</td></tr><tr><td>F2</td><td>重命名</td></tr><tr><td>F3</td><td>搜索文件或文件夹</td></tr><tr><td>F4</td><td>跳转到地址栏</td></tr><tr><td>F5</td><td>刷新（Ctrl+F5强制刷新）</td></tr><tr><td>F6</td><td>在窗口或桌面上循环切换屏幕元素</td></tr><tr><td>F10</td><td>激活活动程序中的菜单栏</td><tr><td>F11</td><td>最大化/全屏切换</td></tr></tr><tr><td>Ctrl+滚轮</td><td>更改图标大小</td></tr><tr><td>Ctrl+Alt+1/2/3…</td><td>8种图标排版模式</td></tr><tr><td>Ctrl+A</td><td>全选</td></tr><tr><td>Ctrl+C</td><td>复制</td></tr><tr><td>Ctrl+F</td><td>选择搜索框（资源管理器）</td></tr><tr><td>Ctrl+N</td><td>新窗口（资源管理器）</td></tr><tr><td>Ctrl+R</td><td>刷新</td></tr><tr><td>Ctrl+V</td><td>粘贴</td></tr><tr><td>Ctrl+W</td><td>关闭当前窗口（资源管理器）</td></tr><tr><td>Ctrl+X</td><td>剪切</td></tr><tr><td>Ctrl+Y</td><td>重做</td></tr><tr><td>Ctrl+X</td><td>撤销</td></tr><tr><td>Ctrl+Esc</td><td>开始屏幕</td></tr><tr><td>Alt+Enter</td><td>属性</td></tr><tr><td>Alt+Space</td><td>快捷菜单</td></tr><tr><td>Alt+Tab</td><td>应用程序间切换</td></tr><tr><td>Ctrl+Shift+上下左右箭头</td><td>选择一段文字</td></tr><tr><td>Ctrl+D/Del</td><td>删除到回收站（Shift+Del彻底删除）</td></tr><tr><td>Ctrl+Tab</td><td>切换标签</td></tr><tr><td>Ctrl+F4</td><td>关闭标签</td><tr><td>Ctrl+Esc</td><td>开始菜单</td></tr><tr><td>Alt+F4</td><td>关闭程序</td></tr><tr><td>Alt+Esc</td><td>以项目打开的顺序循环切换项目</td></tr><tr><td>Alt+下划线的字母</td><td>显示对应菜单/执行菜单命令</td></tr><tr><td>Alt+↑</td><td>上一级文件夹（文件管理器）</td></tr><tr><td>Shift+F10</td><td>右键快捷菜单</td></tr></table><h3>文件管理器中</h4><table><tr><th>快捷键</th><th>作用</th><tr><td>Alt+↑/Backspace</td><td>上一级文件夹</td></tr><tr><td>Ctrl+F</td><td>选择搜索框</td></tr><tr><td>Ctrl+N</td><td>打开新窗口</td></tr><tr><td>Ctrl+W</td><td>关闭当前窗口</td></tr><tr><td>Ctrl+Shift+N</td><td>新建文件夹</td></tr><tr><td>Ctrl+.</td><td>顺时针旋转图片</td></tr><tr><td>Ctrl+,</td><td>逆时针旋转图片</td></tr><tr><td>Alt+D</td><td>选择地址栏</td></tr><tr><td>Alt+P</td><td>显示预览窗格</td></tr><tr><td>Alt+←/→</td><td>回退/前进</td></tr><tr><td>Ctrl+Shift+E</td><td>显示上面的所有文件夹</td></tr></table><h3>对话框中</h4><table><tr><th>快捷键</th><th>作用</th></tr><tr><td>Ctrl+Tab</td><td>在选项卡上向前移动</td></tr><tr><td>Ctrl+Shift+Tab</td><td>在选项卡上向后移动</td></tr><tr><td>Tab</td><td>在选项上向前移动</td></tr><tr><td>Shift+Tab</td><td>在选项上向后移动</td></tr><tr><td>Alt+加下划线的字母</td><td>执行与该字母的命令</td></tr></table><h3>桌面上</h4><table><tr><td>Ctrl+Alt+1-8</td><td>切换图标查看大小</td></tr><tr><td>Ctrl+滚轮</td><td>调整图标大小</td></tr></table>
@@ -139,18 +139,20 @@ winget install Python.Python.3
 <tr><td><a href="ms-settings:regionformatting">语言和区域</a></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 </tbody></table>
-<h1>游戏相关<a name="tips6"></a></h1><h3>习惯设置</h3>
+<h1>游戏相关<a name="tips6"></a></h1><h2>习惯设置</h2>
 <li>鼠标 DPI 3200 ；Windows 速度 6（EDPI：DPI × 游戏内灵敏度）</li>
 <li>《英雄联盟》速度 25 ，卷屏 39</li>
-<li>《无畏契约》速度 0.16（职业玩家平均 EDPI 为 280 ，除以你的鼠标 DPI 即可（280 ÷ 3200 ≈ 0.09））</li>
+<li>《无畏契约》速度 0.12（职业玩家平均 EDPI 为 280 ，除以你的鼠标 DPI 即可（280 ÷ 3200 ≈ 0.09））</li>
 <p>应用商店 - 搜索：Xbox（用于游戏）、Xbox Accessories（用于手柄）、Xbox 控制台小帮手（用于社交）、Xbox Games Bar（用于游戏截图录制）</p>
 <h2>Xbox Games Bar 快捷键</h2>
 <table><thead><tr><th>快捷键</th><th>功能</th></tr></thead><tbody><tr><td>Win+G</td><td>启动工具</td></tr><tr><td>Win+Alt+PrtScrn</td><td>截图</td></tr><tr><td>Win+Alt+G</td><td>录制最后30秒</td></tr><tr><td>Win+Alt+R</td><td>启停录制视频</td></tr><tr><td>Win+Alt+M</td><td>开关麦克风</td></tr><tr><td>Win+Alt+B</td><td>开关 HDR</td></tr></tbody></table>
+<h2>Windows HDR</h2>商店下载 Windows HDR Calibration 应用对显示器进行校准，使用其能正确识别亮度<p>如果平时关闭 HDR，游戏时候可以用快捷键 Win+Alt+B 开关（Xbox Game Bar ）</p><p>针对游戏 HDR ，可以下载 Autoactions 程序，将需要的游戏加入，即可为游戏自动开关 HDR</p><p>Potplayer 播放视频能自动根据视频类型开关 HDR，选项 - 视频 - 右侧“视频渲染器” 选 D3D11，下面勾选 H/W 处理 HDR 输出 勾上（勾成横线，而不是 ✓ 才是自动切换，效果碾压 MadVR</p>
 <h1>Arch Linux<a name="tips7"></a></h1>
-<textarea id="dllink">https://archlinux.org/releng/releases/2022.04.05/torrent/</textarea> <a href="https://archlinux.org/download/">...</a>
-<p><a href="https://wiki.archlinux.org">Arch Wiki</a> | <a href="https://mirrorz.org">Mirrorz</a> | <a href="https://archlinuxgui.in">ArchLinux GUI</a></p>
+<p><a href="https://archlinux.org/download/">Download</a> | <a href="https://wiki.archlinux.org">Arch Wiki</a> | <a href="https://mirrorz.org">Mirrorz</a> | <a href="https://archlinuxgui.in">ArchLinux GUI</a></p>
 <p><a href="https://www.yuque.com/nanjishen/smr0zt/dqbuul">Install</a> | <a href="https://www.yuque.com/nanjishen/smr0zt/ag3sqh">Docs</a> </p>
-<h3>初始软件</h3>Firefox、Obsidian、Kwrite、Spectacle、KeepassXC、CopyQ
+<h3>初始软件</h3>Firefox：Bitwarden、SwitchyOmega、uBlock Origin、New Tab、沉浸式翻译、读点东西、沙拉查词
+<p>Obsidian、Joplin、Kwrite、Spectacle、CopyQ、Rustdesk</p>
+<h3>必备软件</h3>tssh、
 <!-- 以下是OpenWrt内容 -->
 <h1>OpenWrt<a name="tips8"></a></h1>
 固件：<a href="https://fw.koolcenter.com/iStoreOS">IStoreOS</a>（<a href="https://github.com/AUK9527/Are-u-ok">插件</a>），<a href="https://immortalwrt.org">ImmortalWrt</a>，<a href='https://github.com/klever1988/nanopi-openwrt/releases'>悟空</a>，<a href='https://www.kancloud.cn/bigdongdong/armgear/2662921'>合集</a>，云编译：<a href="https://openwrt.ai">①</a> <a href="https://supes.top">②</a>
