@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Ffmpeg on 极限玩家</title>
+    <link>https://ttti.cc/tags/ffmpeg/</link>
+    <description>Recent content in Ffmpeg on 极限玩家</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <copyright>极限玩家</copyright>
+    <lastBuildDate>Sat, 26 Sep 2020 16:04:00 +0800</lastBuildDate>
+    <atom:link href="https://ttti.cc/tags/ffmpeg/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>开源免费音视频处理神器 FFmpeg</title>
+      <link>https://ttti.cc/post/ffmpeg/</link>
+      <pubDate>Sat, 26 Sep 2020 16:04:00 +0800</pubDate>
+      <guid>https://ttti.cc/post/ffmpeg/</guid>
+      <description>FFmpeg 是一款免费开源（LGPL、GPL 许可证），且领先的全能型多媒体处理软件，可以处理视频、音乐及图片，它采用了非常先进的音频/视频编解码库 li</description>
+    </item>
+  </channel>
+</rss>

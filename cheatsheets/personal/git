@@ -1,0 +1,8 @@
+---
+syntax: bash
+tags: [ vcs ]
+---
+Git 用于代码版本库管理
+
+# Git 三连
+git add . && git commit -m "%date%" && git push

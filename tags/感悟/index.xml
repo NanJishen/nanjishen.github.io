@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>感悟 on 极限玩家</title>
+    <link>https://ttti.cc/tags/%E6%84%9F%E6%82%9F/</link>
+    <description>Recent content in 感悟 on 极限玩家</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <copyright>极限玩家</copyright>
+    <lastBuildDate>Wed, 10 Jun 2020 18:25:57 +0800</lastBuildDate>
+    <atom:link href="https://ttti.cc/tags/%E6%84%9F%E6%82%9F/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>读-写-问</title>
+      <link>https://ttti.cc/post/search-read-ask/</link>
+      <pubDate>Wed, 10 Jun 2020 18:25:57 +0800</pubDate>
+      <guid>https://ttti.cc/post/search-read-ask/</guid>
+      <description>很多问题的解决都可以通过三连：Search - Read - Ask ，这套连招很管用，然而大部分人都不习惯搜索、没耐心阅读、不会提问。 检索在今天已经非常重要了</description>
+    </item>
+  </channel>
+</rss>

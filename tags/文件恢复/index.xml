@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>文件恢复 on 极限玩家</title>
+    <link>https://ttti.cc/tags/%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/</link>
+    <description>Recent content in 文件恢复 on 极限玩家</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <copyright>极限玩家</copyright>
+    <lastBuildDate>Tue, 30 Jun 2020 10:11:07 +0800</lastBuildDate>
+    <atom:link href="https://ttti.cc/tags/%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>微软推出文件恢复工具：Windows File Recovery</title>
+      <link>https://ttti.cc/post/wfr/</link>
+      <pubDate>Tue, 30 Jun 2020 10:11:07 +0800</pubDate>
+      <guid>https://ttti.cc/post/wfr/</guid>
+      <description>微软推出了免费的文件恢复工具：Windows File Recovery。你可以在 Microsoft Store 中下载（即 Win10 商店中下载）。 同时，该工具仅支持 Win10 version 19041.0 及以上版本，也</description>
+    </item>
+  </channel>
+</rss>

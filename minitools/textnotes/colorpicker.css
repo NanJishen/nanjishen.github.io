@@ -1,0 +1,57 @@
+.shadow, .color-picker, .color-picker ul li {
+  -webkit-box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.color-picker {
+  background-color: #fff;
+  border-radius: 20px;
+  height: 74px;
+  width: 50vh;
+  margin: 20px 0px;
+  padding-top: 17px;
+}
+
+.color-picker ul {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
+}
+
+.color-picker ul li {
+  border-radius: 20px;
+}
+
+.color-button {
+  width: 55px;
+  height: 55px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.pink {
+  background-color: #FF0066;
+}
+
+.purple {
+  background-color: #8A3FFC;
+}
+
+.orange {
+  background-color: #F1C21B;
+}
+
+.green {
+  background-color: #08BDBA;
+}
+
+.blue {
+  background-color: #0F62FE;
+}
+/*# sourceMappingURL=colorpicker.css.map */

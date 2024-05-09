@@ -1,0 +1,18 @@
+---
+syntax: powershell
+tags: [ shell ]
+---
+Powershell 是 Windows 的 Shell
+
+# 清空 Powershell 输入历史
+Remove-Item (Get-PSReadlineOption).HistorySavePath
+
+# 桌面图片批量重命名
+$i = 0
+ls -Path C:\Users\nanji\Desktop -Filter *.jpg |
+ForEach-Object {
+$extension = $_.Extension
+$newName = 'pic_{0:d2}{1}' -f $i, $extension
+$i++
+Rename-Item -Path $_.FullName -NewName $newName
+}

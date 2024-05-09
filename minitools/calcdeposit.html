@@ -1,0 +1,68 @@
+﻿
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>存款计算器</title><link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+<script>// 输入内容为空提示
+function perSaving() {
+var amount = document.per_form.amountTextBox.value
+var yrate = document.per_form.yRateTextBox.value
+var term = document.per_form.termTextBox.value
+
+if (amount == "") {
+alert("请输入存款金额!")
+document.per_form.amountTextBox.focus()
+window.event.returnValue = false;
+return
+}
+if (yrate == "") {
+alert("请输入年利率或选择期限种类!")
+document.per_form.yRateTextBox.focus()
+window.event.returnValue = false;
+return
+}
+if (term == "") {
+alert("请输入存期!")
+document.per_form.termTextBox.focus()
+window.event.returnValue = false;
+return
+}
+
+if (isNaN(amount)) {
+alert("请输入数字!")
+document.per_form.amountTextBox.focus()
+window.event.returnValue = false;
+return
+}
+if (isNaN(yrate)) {
+alert("请输入数字!")
+document.per_form.yRateTextBox.focus()
+window.event.returnValue = false;
+return
+}
+if (isNaN(term)) {
+alert("请输入数字!")
+document.per_form.termTextBox.focus()
+window.event.returnValue = false;
+return
+}
+var taxrate = 0.00;//Saving Tax Rate,20090210
+var interest = amount * yrate * term * 0.01 / 12
+var tax = taxrate * amount * yrate * term * 0.01 / 12
+var result = amount * (1 + (1 - taxrate) * yrate * term * 0.01 / 12)
+interest = Math.round(interest * 100)
+interest = interest / 100
+interest = interest + ""
+document.per_form.interestTextBox.value = interest
+
+tax = Math.round(tax * 100)
+tax = tax / 100
+tax = tax + ""
+document.per_form.taxTextBox.value = tax
+
+result = Math.round(result * 100)
+result = result / 100
+result = result + ""
+document.per_form.resultTextBox.value = result
+window.event.returnValue = false;
+} 
+</script>
+</head><body><form name=per_form method=post action="" id=per_form><div></div><script>function __doPostBack(e){theForm.onsubmit&&0==theForm.onsubmit()||("00"==document.getElementById(e).value?document.per_form.yRateTextBox.value="0.4200":"03"==document.getElementById(e).value?(document.per_form.yRateTextBox.value="2.8200",document.per_form.termTextBox.value="03"):"06"==document.getElementById(e).value?(document.per_form.yRateTextBox.value="3.0600",document.per_form.termTextBox.value="06"):"12"==document.getElementById(e).value?(document.per_form.yRateTextBox.value="3.3000",document.per_form.termTextBox.value="12"):"24"==document.getElementById(e).value?(document.per_form.yRateTextBox.value="4.0200",document.per_form.termTextBox.value="24"):"36"==document.getElementById(e).value?(document.per_form.yRateTextBox.value="4.8000",document.per_form.termTextBox.value="36"):"60"==document.getElementById(e).value&&(document.per_form.yRateTextBox.value="5.2250",document.per_form.termTextBox.value="60"))}var theForm=document.forms.per_form;theForm||(theForm=document.per_form);</script><div><table width=600 border=0 align=center cellpadding=0 cellspacing=0 class=black><tr><td align=center valign=top><table cellspacing=0 cellpadding=0 width=70% align=middle><tr bgcolor=#fff><td colspan=4 height=30><div class=20 align=center><font><strong>存款计算器（本金 × 利率 × 存期 = 利息）</strong></font></div><tr><td align=center valign=top><br><table cellspacing=0 bgcolor=#ffffff bordercolordark=#ffffff cellpadding=8 bordercolorlight=darkgray border=1><tr><td align=right><span class=content>币种</span><td align=left><select name=currencyDropDownList id=currencyDropDownList><option selected value=10>人民币</select><tr><td align=right><span class=content>期限</span><td align=left><select name=duringDropDownlist onchange="setTimeout(&quot;__doPostBack('duringDropDownlist','')&quot;,0)" id=duringDropDownlist><option selected value=请选择期限种类>请选择期限种类<option value=00>活期<option value=03>整存整取 三个月<option value=06>整存整取 半年<option value=12>整存整取 一年<option value=24>整存整取 二年<option value=36>整存整取 三年<option value=60>整存整取 五年</select><tr><td align=right><span class=content>存款金额</span><td align=left><input name=amountTextBox id=amountTextBox style="width:130px"><span class=content>元</span><tr><td align=right><span class=content>年利率</span><td align=left><input name=yRateTextBox id=yRateTextBox style="color:#404040;width:130px"><span class=content>（%）</span></tr><tr><td align=right><span class=content>存期</span><td align=left><input name=termTextBox id=termTextBox style="width:130px"> <span class=content>月</span><tr bgcolor=#e0e0e0><td align=right><span class=content>利息</span><td align=left><input name=interestTextBox readonly id=interestTextBox style="width:130px"> <span class=content>元</span><tr bgcolor=#e0e0e0><td align=right><span class=content>扣除利息税</span><td align=left><input name=taxTextBox readonly id=taxTextBox style="width:130px"> <span class=content>元</span><tr bgcolor=#e0e0e0><td align=right><span class=content>本息合计(税后)</span><td align=left><input name=resultTextBox readonly id=resultTextBox style="width:130px"> <span class=content>元</span> <input type=button name=calculateImageButton id=calculateImageButton value=🧮 alt=计算 align=bottom onclick=perSaving() style="height:21px;border-width:0"></table><br></table></table><p></p></div></form>
+	<body></html>

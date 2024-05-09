@@ -1,0 +1,64 @@
+body{
+    background-color: #fffefc;
+    border-top: 3px solid #209237;
+}
+.slideout-panel {
+    background-color: #fffefc;
+}
+.header .site-navbar .menu .menu-item .menu-item-link {
+    color: #08631a;
+}
+.header .site-navbar .menu .menu-item {
+    display: block;
+    height: 80%;
+}
+.header .site-navbar .menu .active {
+    border-bottom: 2px solid;
+    color: #08631a
+}
+.mobile-navbar {
+    background: #fffefc;
+    font-weight: bold;
+}
+.mobile-navbar .mobile-header-logo .logo {
+    font-size: 27px;
+    color:#000
+}
+.mobile-menu .mobile-menu-list .mobile-menu-item>a {
+    color:#08631a;
+    font-weight:600;
+    text-shadow: 3px 3px 6px #d9d5d5;
+}
+.header .logo-wrapper .logo {
+    font-weight: bold;
+    color: #08631a;
+    padding-left: 1em;
+}
+main {
+    padding: 2em 0;
+}
+.bg-llight {
+    background-color: #fffefc;
+}
+.post {
+    background-color: #fffefc;
+    padding: 5px 20px;
+}
+.post .post-header .post-meta .post-meta-author a {
+    color: #08631a;
+}
+.post .post-content .read-more .read-more-link {
+    color: #209237;
+    font-size: 1em;
+}
+.post .post-header .post-title {
+    font-size: 1.2em;
+}
+.pagination li a {
+    background-color: #fffefc;
+    border: 1px solid #222;
+    color: #222;
+    line-height: 1.42857143;
+    /* padding: 3px 9px; */
+    margin-bottom: 0em;
+}

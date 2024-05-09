@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>软件 on 极限玩家</title>
+    <link>https://ttti.cc/tags/%E8%BD%AF%E4%BB%B6/</link>
+    <description>Recent content in 软件 on 极限玩家</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <copyright>极限玩家</copyright>
+    <lastBuildDate>Sat, 08 Jan 2022 00:54:10 +0800</lastBuildDate><atom:link href="https://ttti.cc/tags/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>威联通通过 Docker 安装 Jellyfin</title>
+      <link>https://ttti.cc/post/qnap-jellyfin-nyanmisaka/</link>
+      <pubDate>Sat, 08 Jan 2022 00:54:10 +0800</pubDate>
+      
+      <guid>https://ttti.cc/post/qnap-jellyfin-nyanmisaka/</guid>
+      <description>威联通通过 Docker 安装 Jellyfin 是很简单的。但是支持硬件解码对小白来说略难。不过其实采用 nyanmisaka 大神的 Docker 镜像，是默认支持硬件转码的。有效的减少了折腾。下面就来说</description>
+    </item>
+    
+  </channel>
+</rss>

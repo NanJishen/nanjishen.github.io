@@ -1,0 +1,81 @@
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><title>极限搜索</title><meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no"><meta name="Author" content="南极神"><meta name="Keywords" content="极限玩家,极限搜索,极限导航,网址导航"><meta name="Description" content="极限搜索,极限玩家,极限玩家导航,南极神,网址导航">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<style>body{font:16px 'Microsoft YaHei',Tahoma,Helvetica,Arial,sans-serif;color:#666}a{color:#666;text-decoration:none}
+li{list-style:none}h1{display:flex;justify-content:center;margin-top: 2rem;font-size:2.5rem}main{display:flex;justify-content:center;margin-left:1.2rem}#S{padding:10px;width:600px;font-size:1.1rem;border:1px solid #ccc;border-radius:7px;outline:none}#S:hover{box-shadow: 0 0 1px #ccc}.btn-so{position:relative;right:33px;top:12px;text-align:center;cursor:pointer}.btn-so:hover .list-so{display:block}.btn-so::before{content:"　";position:absolute;top:-11px;right:-11px;width:50px;height:110%}.list-so{padding:0;display:none;position:absolute;right:-12px;top:17px}.list-so a{display:block;width:65px;margin-top:5px;text-align:center;border:1px solid #eee}.list-so a:hover{border:1px solid #000}.list-so-two{position:absolute;display:none;right:56px;bottom:0px} .list-so-btn:hover .list-so-two{display:block;} i{position:fixed;right:15px;top:10px}#siderbar{padding-top:26px;width:160px;height:99%;overflow:hidden;position:fixed;top:-1px;right:1px;z-index:100;margin-right:-220px;transition:.3s ease-in-out;background:#fff;box-shadow:#eee -1px -1px 10px}#siderbar a{line-height:3rem}#siderbar a:hover{border-bottom:1px solid #000}#siderbar>ul{padding:0;text-align:center}.submenu:hover .submenu-list{display:block}.submenu-list{display:none;position:fixed;padding:11px;width:96px;top:120px;right:135px;background: #fff;box-shadow: 0 0 6px #ccc}#cmdhelp{width:83%;margin:1rem auto;border:1px solid #ccc;overflow-wrap:break-word;font:.9rem Consolas;max-width:600px;height:30%;overflow:hidden;display:none}#cmdhelp li{line-height:1.5rem}#cmdhelp ul{display:inline-table}#rcode{position:fixed;top:1px;left:-9px;width:105%;height:110%;margin:5px auto;text-align:center;background:#000;display:none;z-index:200}.reward{font-weight:bold}.rcode{box-shadow: 0 2px 10px #000}</style></head><body ontouchstart><h1><a href="index.html">极限搜索</a></h1><br><main><input type="text" id="S" onblur="runcmd()" onkeydown="if(event.keyCode==13){d.click()}"><span class="btn-so"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAABmJLR0QA/wD/AP+gvaeTAAABxklEQVQ4jdXRv2tTURTA8e95UaNEyCSKBBSkIEgfFcHBqf9BcVIEt+TmGUHM4GKLZOhQdYgQaHw3gQyCg5Ojs+JqA4KTKDpEBMEfGBp95ByXtNTS96LYxTPee+7n/Liwy5H7i1wpl8uHwzDc2+/3R6lJ05RqtTqjqksisgAUJ8fvgQfAXe/91635QRZWqVTOm1k/CIISUBGRUyIyZ2a3gQvAmnPu5B91GEXRWVV9Ctzy3t/Zfl+v1w8Mh8OHQJjP50+3Wq1vmR2qahN4tBMG0Gw21wuFwiXARqPRjcyRnXMngHMispJWcAMF7onI5UwQmAW+xHH8KgsECILgOXDMOVdMBUUkD/ychgGY2Q+AJEn2pYLj8fg1cKhWqx2ZBqpqCHzu9XqfUsFSqbQGvEuSxE0DReQK8BiwVLDRaKiZLYnIzSiK5tMw59wicCaXyy1vnO3JqHwQyKvqE+fcChB77z9MoFlgEVgQkYvtdvvN5ruUylVgFaiZ2XcRWQaOAx+B/UBRRJ6Z2XXv/YvfGsnCvPfxZAXBYDCYE5EZVV03s5fdbvftjpNtw8rAfTO71ul0VtPWkRWb4G5gsOWXzewocPVfsP8jfgGBVbHxJtmO0AAAAABJRU5ErkJggg==">
+<ul class="list-so">
+<li><a onclick="window.open('https://www.bing.com/search?showconv=1&sendquery=1&q=' + S.value)" id="d">AI</a></li>
+<li><a onclick="window.open('https://www.baidu.com/s?wd=' + S.value)">百度</a></li>
+<li><a onclick="window.open('https://www.google.com/search?q=' + S.value)">谷歌</a></li>
+<li><a onclick="window.open('https://cn.bing.com/search?q=' + S.value)">必应</a></li>
+<li><a onclick="window.open('https://www.zhihu.com/search?type=content&q=' + S.value)">知乎</a></li>
+<li><a onclick="window.open('https://cn.bing.com/dict/search?q=' + S.value)">翻译</a></li>
+<li><a onclick="window.open('https://yandex.com/images/search?text=' + S.value)">图片</a></li>
+<li><a onclick="window.open('https://www.youtube.com/results?search_query=' + S.value)">油管</a></li>
+<li><a onclick="window.open('https://search.bilibili.com/all?keyword=' + S.value)">哔哩</a></li>
+<li><a onclick="window.open('https://s.taobao.com/search?q=' + S.value)">淘宝</a></li>
+<li><a onclick="window.open('https://search.jd.com/Search?keyword=' + S.value)">京东</a></li>
+<li><a onclick="window.open('https://s.weibo.com/weibo/' + S.value)">微博</a></li>
+<li class="list-so-btn"><a>影视</a>
+<ul class="list-so-two">
+  <li><a onclick="window.open('https://www.douban.com/search?q=' + S.value)">豆瓣</a></li>
+  <li><a onclick="window.open('https://subhd.tv/search/' + S.value)">字幕</a></li>
+  <li><a onclick="window.open('https://www.rottentomatoes.com/search?search=' + S.value)">番茄</a></li>
+</ul>
+</li>
+<li class="list-so-btn"><a>程序</a>
+<ul class="list-so-two">
+  <li><a onclick="window.open('https://hub.docker.com/search?q=' + S.value)">容器</a></li>
+  <li><a onclick="window.open('https://play.google.com/store/search?q=' + S.value)">应用</a></li>
+  <li><a onclick="window.open('https://chrome.google.com/webstore/search/' + S.value)">扩展</a></li>
+  <li><a onclick="window.open('https://greasyfork.org/zh-CN/scripts?q=' + S.value)">油猴</a></li>
+</ul>
+</li>
+<li class="list-so-btn"><a>更多</a>
+<ul class="list-so-two">
+  <li><a onclick="window.open('https://xueqiu.com/k?q=' + S.value)">股票</a></li>
+  <li><a onclick="window.open('https://my.tv.sohu.com/user/a/wvideo/getQRCode.do?text=' + S.value)">QR</a></li>
+  <li><a onclick="window.open('https://tldr.ostera.io/' + S.value)">Tldr</a></li>
+  <li><a onclick="window.open('https://cheat.sh/' + S.value)">Cheat</a></li>
+  <li><a onclick="window.open('https://check-host.net/ip-info?host=' + S.value)">IP</a></li>
+  <li><a onclick="window.open('https://ping.pe/' + S.value)">Ping</a></li>
+</ul>
+</li>
+</ul>
+</span>
+</main><script>document.getElementById("S").focus()</script>
+<script>function openRcode(){document.getElementById('rcode').style.display='block'}function closeRcode(){document.getElementById('rcode').style.display='none';document.getElementById('siderbar').style['margin-right']='-210px';}</script><div id="rcode" onclick="closeRcode()"><img class="rcode" src="imgme/pay.jpg" alt="赞赏支持"></div>
+<div id="siderbar"><i onclick="siderBar()"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px"
+width="25" height="25" viewBox="0 0 172 172" style=" fill:#000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><path d="M0,172.00002v-172.00002h172.00002v172.00002z" fill="none"></path><g fill="#666"><path d="M21.5,37.625v10.75h129v-10.75zM21.5,80.625v10.75h129v-10.75zM21.5,123.625v10.75h129v-10.75z"></path></g></g></svg></i>
+<ul><li><a href="https://ttti.cc/nav/index.html">网站导航</a></li><li><a href="https://ttti.cc">极限博客</a></li><li><a href="app.html">软件推荐</a></li><li><a href="win.html">操作系统</a></li><li class="submenu"><a>在线工具</a>
+<ul class="submenu-list"><li><a href="minitools/notepad.html">生成.TXT</a></li><li><a href="minitools/lettercover.html">直角引号</a></li><li><a href="minitools/stitching.html">截图拼接</a></li><li><a href="minitools/calcdate.html">日期计算</a></li><li><a href="minitools/texttoimg.html">文字便笺</a></li><li><a href="minitools/cfpng/index.html">生成颜色图</a></li><li><a href="minitools/palette.html">颜色编码</a></li><li><a href="minitools/bjxsignal.html">百家姓磁链</a></li><li><a href="minitools/todolist.html">代办列表</a></li></li></ul></li><li><a class="reward" href="javascript:openRcode()">赞赏支持</a></li><li><a href="minitools/about.html">关于我的</a></li></ul></div>
+<script>function runcmd(){let s = document.getElementById('S');let cmd = s.value;switch(cmd){
+case'?':document.getElementById("cmdhelp").style.display="block";s.value='';s.value='';s.focus();break;
+case'a':window.location.href="../../XYZ/index.html";s.value='';break;
+case'aria':window.location.href="file:///C:/Users/nanji/OneDrive/Apps/Aria2/AriaNg.html";s.value='';break;
+case'bdy':window.location.href="https://pan.baidu.com";break;
+case'cow':window.location.href="https://cowtransfer.com";s.value='';break;
+case'cheat':window.location.href="cheatsheets/index.html";s.value='';break;
+case'em':window.location.href="https://outlook.live.com";s.value='';break;
+case'gem':window.location.href="https://mail.google.com";s.value='';break;
+case'gh':window.location.href="https://github.com";s.value='';break;
+case'gm':window.location.href="https://gitmind.cn/app";s.value='';break;
+case'hc':window.location.href="https://hack.chat?extplayer";s.value='';break;
+case'ip':window.location.href="https://ipcheck.ing/";s.value='';break;
+case'mb':window.location.href="https://mubu.com";s.value='';break;
+case'mp':window.location.href="https://mp.weixin.qq.com";s.value='';break;
+case'r2':window.location.href="https://theoldreader.com";s.value='';break;
+case'rt':window.location.href="http://192.168.10.1";s.value='';break;
+case'rt2':window.location.href="http://192.168.1.1";s.value='';break;
+case'ss':window.location.href="https://ss.giki.app";s.value='';break
+case'tb':window.location.href="https://login.taobao.com";s.value='';break;
+case'tm':window.location.href="https://time.is";s.value='';break;
+case'tq':window.location.href="http://www.weather.com.cn/weather1dn/101070501.shtml";s.value='';break;
+case'tr':window.location.href="https://cn.bing.com/translator";s.value='';break;
+case'xyz':window.location.href="https://xyz.nanjis.top/xyz/";break;
+// case'':window.location.href="";s.value='';break;
+}}function siderBar(){let sbtn=document.getElementById('siderbar');if(sbtn.style['margin-right']=='0px'){sbtn.style['margin-right']='-220px'}else{sbtn.style['margin-right']='0px'}}</script>
+<div id="cmdhelp"><ul><li>a &nbsp;&nbsp;= 导航页</li><li>bdy = 百度云</li><li>cow = 奶牛快传</li><li>em &nbsp;= Outlook</li><li>gem &nbsp;= Gmail</li><li>gh &nbsp;= GitHub</li><li>gm &nbsp;= GitMind</li><li>ip &nbsp;= 本机IP</li><li>mb &nbsp;= 幕布</li><li>mp &nbsp;= 公众号</li><li>tm &nbsp;= 时间</li><li>tq &nbsp;= 天气</li><li>tr &nbsp;= 翻译</li><li>cheat &nbsp;= 命令备忘单</li></ul></div></body></html>

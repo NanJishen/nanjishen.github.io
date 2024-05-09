@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>方法 on 极限玩家</title>
+    <link>https://ttti.cc/categories/%E6%96%B9%E6%B3%95/</link>
+    <description>Recent content in 方法 on 极限玩家</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <copyright>极限玩家</copyright>
+    <lastBuildDate>Sun, 14 Mar 2021 16:50:37 +0800</lastBuildDate>
+    <atom:link href="https://ttti.cc/categories/%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>给Win10右键菜单加上校验文件功能</title>
+      <link>https://ttti.cc/post/jiao-yan-wen-jian/</link>
+      <pubDate>Sun, 14 Mar 2021 16:50:37 +0800</pubDate>
+      <guid>https://ttti.cc/post/jiao-yan-wen-jian/</guid>
+      <description>有时候，我们需要校验文件的哈希值，以确保该文件是否有损坏，或者被篡改。比如 Win10 或 Ubuntu 系统的安装镜像。若哈希值错误，则表示不适合重装系统，否则重装</description>
+    </item>
+    <item>
+      <title>图片防盗链解决方案</title>
+      <link>https://ttti.cc/post/pic-mirror-img/</link>
+      <pubDate>Fri, 12 Mar 2021 20:50:06 +0800</pubDate>
+      <guid>https://ttti.cc/post/pic-mirror-img/</guid>
+      <description>很多时候，图片镜像缓存服务有不错的用途： 将有防盗链的图片引用到网页，使其能显示出来 将 http 图片引用到 https 页面，以绕过证书验证 加载无法显示的图片（X</description>
+    </item>
+    <item>
+      <title>Youtube 详细统计信息测速指南</title>
+      <link>https://ttti.cc/post/youtubecouts/</link>
+      <pubDate>Thu, 04 Mar 2021 14:45:18 +0800</pubDate>
+      <guid>https://ttti.cc/post/youtubecouts/</guid>
+      <description>对于出海上网来说，无论是自架梯子还是购买机场，都需要测试网速，虽然可以使用 Speedtest 这样的标准测速网站，但实际不如直接观看 YouTube 视频“详细统计信息”来的</description>
+    </item>
+    <item>
+      <title>JSDelivr CDN 加速 GitHub</title>
+      <link>https://ttti.cc/post/jsdelivrtogithub/</link>
+      <pubDate>Fri, 19 Jun 2020 16:49:13 +0800</pubDate>
+      <guid>https://ttti.cc/post/jsdelivrtogithub/</guid>
+      <description>jsDelivr 提供了 Web 上常用静态资源的服务，不但有全球 CDN 加速，也采用了国内的 CDN 进行加速（有备案） jsDelivr 确保每个地区的使用者都能获得最好的连接速度，它还可以可</description>
+    </item>
+    <item>
+      <title>读-写-问</title>
+      <link>https://ttti.cc/post/search-read-ask/</link>
+      <pubDate>Wed, 10 Jun 2020 18:25:57 +0800</pubDate>
+      <guid>https://ttti.cc/post/search-read-ask/</guid>
+      <description>很多问题的解决都可以通过三连：Search - Read - Ask ，这套连招很管用，然而大部分人都不习惯搜索、没耐心阅读、不会提问。 检索在今天已经非常重要了</description>
+    </item>
+    <item>
+      <title>动图演示从官方下载并制作Win10启动U盘</title>
+      <link>https://ttti.cc/post/win10-setup/</link>
+      <pubDate>Thu, 28 May 2020 10:21:57 +0800</pubDate>
+      <guid>https://ttti.cc/post/win10-setup/</guid>
+      <description>微软今天发布 Win10 2004 正式版了，然而还是很多小白依赖第三方下载，事实上微软官方是提供镜像下载的，同时还具备U盘制作功能，就是说，根本不需要依赖第三</description>
+    </item>
+  </channel>
+</rss>

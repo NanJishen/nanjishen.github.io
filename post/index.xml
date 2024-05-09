@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on 极限玩家</title>
+    <link>https://ttti.cc/post/</link>
+    <description>Recent content in Posts on 极限玩家</description>
+    <generator>Hugo</generator>
+    <language>zh-cn</language>
+    <copyright>极限玩家</copyright>
+    <lastBuildDate>Thu, 19 Oct 2023 15:17:11 +0800</lastBuildDate>
+    <atom:link href="https://ttti.cc/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>你并非缺乏创造力而是不知所措</title>
+      <link>https://ttti.cc/post/infoverload/</link>
+      <pubDate>Thu, 19 Oct 2023 15:17:11 +0800</pubDate>
+      <guid>https://ttti.cc/post/infoverload/</guid>
+      <description>应对内容过载 数字囤积已成为当今互联网社会的一种普遍体验： 抖音上的视频观看量达了 1 亿 贴吧上分享了 100 万帖子 小红书上视频观看次数达 200 万 我们在付出代</description>
+    </item>
+    <item>
+      <title>威联通通过 Docker 安装 Jellyfin</title>
+      <link>https://ttti.cc/post/qnap-jellyfin-nyanmisaka/</link>
+      <pubDate>Sat, 08 Jan 2022 00:54:10 +0800</pubDate>
+      <guid>https://ttti.cc/post/qnap-jellyfin-nyanmisaka/</guid>
+      <description>威联通通过 Docker 安装 Jellyfin 是很简单的。但是支持硬件解码对小白来说略难。不过其实采用 nyanmisaka 大神的 Docker 镜像，是默认支持硬件转码的。有效的减少了折腾。下面就来说</description>
+    </item>
+    <item>
+      <title>威联通通过 Docker 安装 Transmission</title>
+      <link>https://ttti.cc/post/qnap-docker-transmission/</link>
+      <pubDate>Fri, 07 Jan 2022 17:17:13 +0800</pubDate>
+      <guid>https://ttti.cc/post/qnap-docker-transmission/</guid>
+      <description>Transmission 是著名又老牌的 PT/BT 下载软件。这里将说明使用威联通的 Docker 安装 Transmission（ Docker 真的香 ）。 首先，登陆威联通后启动 ContainerStation - 创建 - 搜索 Transmission - 选择结</description>
+    </item>
+    <item>
+      <title>威联通 QNAP 通过 Docker 部署 Aria2 下载神器</title>
+      <link>https://ttti.cc/post/qnap-docker-aria/</link>
+      <pubDate>Wed, 22 Dec 2021 01:01:34 +0800</pubDate>
+      <guid>https://ttti.cc/post/qnap-docker-aria/</guid>
+      <description>这是我的威联通 NAS 第一次使用 Docker 容器并安装镜像。我选择了一个我最常用的，也是所有达人都会使用的下载神器：Aria2。说它是神器，是因为它极为小巧</description>
+    </item>
+    <item>
+      <title>威联通 QNAP 挂载阿里云盘简单明快教程</title>
+      <link>https://ttti.cc/post/qnap-aliyunpan/</link>
+      <pubDate>Mon, 13 Dec 2021 17:46:13 +0800</pubDate>
+      <guid>https://ttti.cc/post/qnap-aliyunpan/</guid>
+      <description>双11期间购入了威联通的NAS，而在今天挂载上了阿里云盘，以便进行HBS3同步作业的云备份，借此也顺便写个简单明快的教程，废话不多说，让我们</description>
+    </item>
+    <item>
+      <title>《哥斯拉大战金刚》完全展现出观众对巨兽对决的期望-值8.5分</title>
+      <link>https://ttti.cc/post/godzilla-vs-kong/</link>
+      <pubDate>Tue, 25 May 2021 20:57:30 +0800</pubDate>
+      <guid>https://ttti.cc/post/godzilla-vs-kong/</guid>
+      <description>《哥斯拉大战金刚》连贯的节奏，简单的阴谋，剧情毫无拖沓，这反而恰恰是这部电影最需要的。导演完全展现出&amp;quot;观众对怪兽大战的期望（巨兽对</description>
+    </item>
+    <item>
+      <title>新一代多系统启动U盘 Ventoy 使用指南</title>
+      <link>https://ttti.cc/post/ventoy/</link>
+      <pubDate>Fri, 02 Apr 2021 21:49:08 +0800</pubDate>
+      <guid>https://ttti.cc/post/ventoy/</guid>
+      <description>如果你还在用过去的，制作安装系统U盘的方式，那你需要准备N个U盘，并且每次更新镜像都要解压或者用写盘软件重新写盘。同时在今天，可能需要多个系</description>
+    </item>
+    <item>
+      <title>更换到更现代的双向链笔记软件 Obsidian</title>
+      <link>https://ttti.cc/post/obsidianforfirst/</link>
+      <pubDate>Sun, 21 Mar 2021 15:21:50 +0800</pubDate>
+      <guid>https://ttti.cc/post/obsidianforfirst/</guid>
+      <description>先说一下个人使用笔记本软件的经过：从 OneNote → Joplin → Obsidian（现在开始），我一直认为，笔记软件是组织和管理知识的最好方式，尤其对于现代人来说</description>
+    </item>
+    <item>
+      <title>解锁家庭局域网内手机和电视观看电脑里的影片</title>
+      <link>https://ttti.cc/post/lanvideoplay/</link>
+      <pubDate>Sun, 21 Mar 2021 15:15:36 +0800</pubDate>
+      <guid>https://ttti.cc/post/lanvideoplay/</guid>
+      <description>我发现很多新手小伙伴，甚至有些用电脑很长一段时间的老手，仍然不会将电脑里的影片共享给家里的安卓电视/盒子或者手机上播放，于是就有了这篇内容的</description>
+    </item>
+    <item>
+      <title>5款极致小巧的扩展让你的浏览器更高效</title>
+      <link>https://ttti.cc/post/ji-xiao-kuozan-xiaolv/</link>
+      <pubDate>Thu, 18 Mar 2021 23:19:54 +0800</pubDate>
+      <guid>https://ttti.cc/post/ji-xiao-kuozan-xiaolv/</guid>
+      <description>作为极限玩家，对软件的轻巧也有着极致追求，因为轻量化是高效率的原因之一。很多时候，我们只想要完成我们要完成的事情，或者说让某件事更便捷的做到</description>
+    </item>
+    <item>
+      <title>给Win10右键菜单加上校验文件功能</title>
+      <link>https://ttti.cc/post/jiao-yan-wen-jian/</link>
+      <pubDate>Sun, 14 Mar 2021 16:50:37 +0800</pubDate>
+      <guid>https://ttti.cc/post/jiao-yan-wen-jian/</guid>
+      <description>有时候，我们需要校验文件的哈希值，以确保该文件是否有损坏，或者被篡改。比如 Win10 或 Ubuntu 系统的安装镜像。若哈希值错误，则表示不适合重装系统，否则重装</description>
+    </item>
+    <item>
+      <title>图片防盗链解决方案</title>
+      <link>https://ttti.cc/post/pic-mirror-img/</link>
+      <pubDate>Fri, 12 Mar 2021 20:50:06 +0800</pubDate>
+      <guid>https://ttti.cc/post/pic-mirror-img/</guid>
+      <description>很多时候，图片镜像缓存服务有不错的用途： 将有防盗链的图片引用到网页，使其能显示出来 将 http 图片引用到 https 页面，以绕过证书验证 加载无法显示的图片（X</description>
+    </item>
+    <item>
+      <title>Youtube 详细统计信息测速指南</title>
+      <link>https://ttti.cc/post/youtubecouts/</link>
+      <pubDate>Thu, 04 Mar 2021 14:45:18 +0800</pubDate>
+      <guid>https://ttti.cc/post/youtubecouts/</guid>
+      <description>对于出海上网来说，无论是自架梯子还是购买机场，都需要测试网速，虽然可以使用 Speedtest 这样的标准测速网站，但实际不如直接观看 YouTube 视频“详细统计信息”来的</description>
+    </item>
+    <item>
+      <title>开源免费音视频处理神器 FFmpeg</title>
+      <link>https://ttti.cc/post/ffmpeg/</link>
+      <pubDate>Sat, 26 Sep 2020 16:04:00 +0800</pubDate>
+      <guid>https://ttti.cc/post/ffmpeg/</guid>
+      <description>FFmpeg 是一款免费开源（LGPL、GPL 许可证），且领先的全能型多媒体处理软件，可以处理视频、音乐及图片，它采用了非常先进的音频/视频编解码库 li</description>
+    </item>
+    <item>
+      <title>youtube-dl 下载视频使用指南</title>
+      <link>https://ttti.cc/post/youtubedl/</link>
+      <pubDate>Wed, 05 Aug 2020 20:56:03 +0800</pubDate>
+      <guid>https://ttti.cc/post/youtubedl/</guid>
+      <description>youtube-dl 需要安装 Python 环境，并需配置好系统变量（安装时勾选 Add Python to PATH） 安装 youtube-dl 从官网下载 youtube-dl.exe，然后放到任意目录下即可使用，同</description>
+    </item>
+    <item>
+      <title>微软推出文件恢复工具：Windows File Recovery</title>
+      <link>https://ttti.cc/post/wfr/</link>
+      <pubDate>Tue, 30 Jun 2020 10:11:07 +0800</pubDate>
+      <guid>https://ttti.cc/post/wfr/</guid>
+      <description>微软推出了免费的文件恢复工具：Windows File Recovery。你可以在 Microsoft Store 中下载（即 Win10 商店中下载）。 同时，该工具仅支持 Win10 version 19041.0 及以上版本，也</description>
+    </item>
+    <item>
+      <title>JSDelivr CDN 加速 GitHub</title>
+      <link>https://ttti.cc/post/jsdelivrtogithub/</link>
+      <pubDate>Fri, 19 Jun 2020 16:49:13 +0800</pubDate>
+      <guid>https://ttti.cc/post/jsdelivrtogithub/</guid>
+      <description>jsDelivr 提供了 Web 上常用静态资源的服务，不但有全球 CDN 加速，也采用了国内的 CDN 进行加速（有备案） jsDelivr 确保每个地区的使用者都能获得最好的连接速度，它还可以可</description>
+    </item>
+    <item>
+      <title>读-写-问</title>
+      <link>https://ttti.cc/post/search-read-ask/</link>
+      <pubDate>Wed, 10 Jun 2020 18:25:57 +0800</pubDate>
+      <guid>https://ttti.cc/post/search-read-ask/</guid>
+      <description>很多问题的解决都可以通过三连：Search - Read - Ask ，这套连招很管用，然而大部分人都不习惯搜索、没耐心阅读、不会提问。 检索在今天已经非常重要了</description>
+    </item>
+    <item>
+      <title>动图演示从官方下载并制作Win10启动U盘</title>
+      <link>https://ttti.cc/post/win10-setup/</link>
+      <pubDate>Thu, 28 May 2020 10:21:57 +0800</pubDate>
+      <guid>https://ttti.cc/post/win10-setup/</guid>
+      <description>微软今天发布 Win10 2004 正式版了，然而还是很多小白依赖第三方下载，事实上微软官方是提供镜像下载的，同时还具备U盘制作功能，就是说，根本不需要依赖第三</description>
+    </item>
+  </channel>
+</rss>

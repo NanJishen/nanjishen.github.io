@@ -1,0 +1,1 @@
+$(document).ready(function(){$("#btnExport").click(function(){html2canvas(document.getElementById("palette"),{scrollY:-window.scrollY,scrollX:-window.scrollX,scale:4}).then(e=>{var t=e.toDataURL("image/png",1).replace("image/png","image/octet-stream"),e=document.createElement("a");e.download="Colorie.png",e.href=t,e.click()})})});

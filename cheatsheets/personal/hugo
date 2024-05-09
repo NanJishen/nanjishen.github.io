@@ -1,0 +1,11 @@
+---
+syntax: bash
+tags: [ development ]
+---
+hugo 用于博客生成
+
+# 指定编辑器新建文章
+hugo new --editor code post/x.md 
+
+# 打包到指定目录（可写入 .bat 文件方便日后双击执行）
+hugo -d D:/Download/www

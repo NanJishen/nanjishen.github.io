@@ -1,0 +1,26 @@
+---
+tags: [ qrcp ]
+---
+qrcp 用于通过二维码扫码与手机互传文件
+
+# 开始配置向导
+qrcp config 
+
+# 发送当前目录中的文件
+qrcp file1.png file2.mp4
+
+# 发送指定目录中的文件
+qrcp.exe "T:\Downloads\file.txt"
+
+# 发送整个目录
+qrcp docs/
+
+# 发送前压缩成 zip 包
+qrcp --zip file1.mp3
+
+接受文件（然后用手机扫码并选择文件发送，会保存在你配置文件中指定的输出目录中）
+qrcp.exe receive 
+qrcp receive --output=T:\Downloads\ # 手动指定目录
+
+# 如果你希望用浏览器显示二维码
+qrcp --browser file1.txt

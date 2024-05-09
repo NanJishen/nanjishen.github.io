@@ -1,0 +1,40 @@
+.shadow {
+  -webkit-box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.1);
+          box-shadow: 4px 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+  color: #FF0066;
+  font-size: 50px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  line-height: 60px;
+}
+
+@media (max-width: 1020px), (max-height: 690px) {
+  .left-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .left-box .inputs {
+    -ms-grid-column-align: center;
+        justify-self: center;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    width: 80%;
+    margin-right: 50px;
+  }
+  .text-input {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=leftbox.css.map */

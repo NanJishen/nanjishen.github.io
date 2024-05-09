@@ -1,0 +1,11 @@
+---
+syntax: bash
+tags: [ image ]
+---
+Squoosh 用于图像处理，安装 npm 后可以直接用 npx @squoosh/cli --mozjpeg 使用而无需安装
+
+# 批量压缩桌面图片
+squoosh-cli --mozjpeg auto C:/Users/nanji/Desktop/ -d ./output # 这条有错
+
+# 压缩图片到指定目录，如不指定-d 输出目录则为覆盖原文件
+npx @squoosh/cli --mozjpeg '{"quality":75,"baseline":false,"arithmetic":false,"progressive":true,"optimize_coding":true,"smoothing":0,"color_space":3,"quant_table":3,"trellis_multipass":false,"trellis_opt_zero":false,"trellis_opt_table":false,"trellis_loops":1,"auto_subsample":true,"chroma_subsample":2,"separate_chroma_quality":false,"chroma_quality":75}' 图片.png -d T:/Downloads/small
