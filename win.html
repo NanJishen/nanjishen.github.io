@@ -54,9 +54,9 @@ winget install Microsoft.VCRedist.2015+.x64
 winget install Microsoft.DotNet.DesktopRuntime.x
 </code></pre>
 <h1>新装系统设置<a name="tips2"></a></h1>
-<h3>重装系统前的准备与备份</h3>下载驱动：芯片组、显卡、声卡
-<p>Git 现有项目：\Documents\KNotes | \Webs\home | \OneDrive\Gitweb</p>
-<p>备份配置：输入法 + OBS + Epic | 主目录中的 .config 和 .ssh 目录</p>
+<h3>重装系统前</h3>下载驱动：芯片组、显卡、声卡、键鼠
+<p>Git 现有项目：<br>- Qsync\Documents\KNotes<br>- Qsync\Webs\home<br>- OneDrive\Gitweb</p>
+<p>备份：<br>- 输入法 + OBS + Epic<br>- 主目录中的 .config 和 .ssh 目录<br>- Qsync 到 U盘</p>
 <p>shutdown.exe /r /fw # 重启并进入 UEFI BIOS</p>
 <h3>初始设置</h3>
 <p>关闭系统还原：右键开始 - 系统 - 系统保护 - 配置 - 删除并禁用</p>
@@ -86,19 +86,40 @@ winget install Microsoft.VisualStudioCode
 winget install Git.Git
 winget install Python.Python.3
 </code></pre></p>
-<a href="#diskdlist">D盘软件列表</a>
+<a href="#diskdlist">我的软件列表</a>
 <div class="dialog-box" id="diskdlist"><div class="dialog-con"><a href="" class="dialog-close">❌</a>列出以便保存：ls | select Name > ~\Desktop\list.txt
-<pre># Program Files
-
-手写模拟
+<p>C:\Users\nanji\scoop</p>
+<pre>
+7zip
+bottom
+ffmpeg
+git
+glow
+gping
+htmlq
+hugo
+hugo-extended
+ImageMagick
+innounp
+lux
+pandoc
+qBittorrent
+sudo
+tealdeer
+wixtoolset
+</pre>
+<p>D:\Program Files</p>
+<pre>手写模拟
 AliWW
 Aria2
 Audacity
 Battle.net
 Bongo Cat
 Caesium
+ChatTTS
 CodeFormer-GUI
 copytranslator
+DisplayHDR Tests
 EA Games
 FlowLauncher
 Foobar2000
@@ -110,41 +131,38 @@ LazPaint
 Lxmusic
 ModifiableWindowsApps
 Nomacs
+Nyrna
 Photoshop
 ProxySU
 ReNamer
 ScreenToGif
 Shutter Encoder
 Sniptool
+Subtitle Edit
 THS
+TranSmart
 Upscayl
-WeGameApps
 ascii-image-converter.exe
 IPTV Checker.exe
 milky-warp.exe
-
-# Program Files (x86)
-
-Epic Games
+</pre>
+D:\Program Files (x86)
+<pre>Epic Games
 Steam
 Ubisoft
-WeGame
-
-# T:\PortableApps
-
-AllDupPortable
+</pre>
+<p>E:\PortableApps</p>
+<pre>AllDupPortable
+Anto
 calibrePortable
 ClamWinPortable
 Dupeguru
 Freetube
 GoogleChromePortable
 Hitomi
-Jellyfin
 Listen1
 PhotoDemon
-PortableApps.com
 PotPlayerPortable
-qBittorrentPortable
 R-Studio Network
 SQLiteDatabaseBrowserPortable
 TreeSizeFreePortable
@@ -161,7 +179,7 @@ WizTreePortable
 <li>插入镜像，在安装向导左下角点“修复计算机”</li>
 当系统出问题，弹出“恢复”或“自动修复”后，点击“查看高级修复选项”或“高级选项”即可进入WinRE
 <h1>可选的优化与常见问题<a name="tips3"></a></h1>
-中国科学院国家授时中心：ntp.ntsc.ac.cn
+中国科学院国家授时中心：ntp.ntsc.ac.cn<p><b>Win11 启用不安全 SMB 访问</b>：运行 gpedit.msc - 计算机配置 - 管理模板 - 网络 - Lanman 工作站 - 右侧“启用不安全的来宾登录” 改为“已启用”</p>
 <p><b>删除 Win11 桌面菜单中的A卡驱动项</b>：注册表定位到 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Shell Extensions\Blocked 在其下新建字符串值，命名为 {FDADFEE3-02D1-4E7C-A511-380F4C98D73B}，数值为 AMD Software : Adrenalin Edition</p>
 <p><b>访问另一台电脑共享目录的方法</b>：文件管理器 - 右键此电脑 - 添加一个网络位置，输入地址：\\192.168.1.1\downloads（IP地址为另一台机器的IP，downloads 为另一台机器共享的目录名）</p>
 <p><b>自动关机计划</b>：创建计划任务→启动程序："C:\Windows\System32\shutdown.exe "并在下面的参数中输入"-s -t 60"</p>
@@ -226,16 +244,16 @@ WizTreePortable
 <tr><td><a href="ms-settings:regionformatting">语言和区域</a></td><td></td><td></td></tr>
 <tr><td></td><td></td><td></td></tr>
 </tbody></table>
-<h1>游戏相关<a name="tips6"></a></h1><h2>习惯设置</h2>鼠标驱动配置文件：红 800 ，绿 1600 ，蓝 3200（DPI）
-<li>鼠标 DPI 3200 ；Windows 速度 5（EDPI：DPI × 游戏内灵敏度）</li>
+<h1>游戏相关<a name="tips6"></a></h1><h2>习惯设置</h2>鼠标驱动配置文件 DPI ：红 800 ，绿 1600 ，蓝 3200
+<li>鼠标 DPI 1600 ；Windows 速度 9（EDPI：DPI × 游戏内灵敏度）</li>
 <li>《英雄联盟》速度 25 ，卷屏 39</li>
-<li>《无畏契约》速度 0.08（职业玩家平均 EDPI 为 280 ，除以你的鼠标 DPI 即可（280 ÷ 3200 ≈ 0.09））</li>
+<li>《无畏契约》速度 0.15，职业玩家平均 EDPI 为 280 ，除以你的鼠标 DPI 即可（280 ÷ 1600 ≈ 0.15）</li>
 <p>应用商店 - 搜索：Xbox（用于游戏）、Xbox Accessories（用于手柄）、Xbox 控制台小帮手（用于社交）、Xbox Games Bar（用于游戏截图录制）</p>
 <h2>Xbox Games Bar 快捷键</h2>
 <table><thead><tr><th>快捷键</th><th>功能</th></tr></thead><tbody><tr><td>Win+G</td><td>启动工具</td></tr><tr><td>Win+Alt+B</td><td>开关 HDR</td></tr><tr><td>Win+Alt+PrtScrn</td><td>截图</td></tr><tr><td>Win+Alt+G</td><td>录制最后30秒</td></tr><tr><td>Win+Alt+R</td><td>启停录制视频</td></tr><tr><td>Win+Alt+M</td><td>开关麦克风</td></tr></tbody></table>
 <h2>游戏设置</h2>禁用 VBS 虚拟化安全，以提高游戏帧数，管理员运行 Powershell：<pre>bcdedit # 查看 hypervisorlaunchtype 项是否为 auto（表示开启）
 bcdedit /set hypervisorlaunchtype off # 将其关闭，如需恢复改为 auto 即可</pre>或运行 MSInfo32 - 下方“查找：基于虚拟化的安全性”，也可以查看是否开启
-<p>关闭内存完整性：开始 - 输入 Core Isolation（内核隔离） - 关闭“内存完整性”后重启</p>
+<p>关闭内存完整性：开始 - 输入 Core Isolation（内核隔离）- 关闭“内存完整性”后重启</p>
 <p>以上两个关闭即可，如果想彻底关闭虚拟机平台：开始 - 输入 Windows features（启用或关闭 Windows 功能）- 去勾“虚拟机平台”- 确认后重启，该关闭只适合不需要虚拟机的用户</p>
 <h2>Windows HDR</h2>SDR 使用 sRGB 模式：设置 - 系统 - 屏幕 - 高级显示器设置 - 显示器 1 的显示适配器属性 - 颜色管理 - 设备下拉选择显示器 - 设为 sRGB 2.1 配置文件
 <p>显示器的玩家1，不需要任何设置，只需在商店下载 Windows HDR Calibration 工具对显示器进行校准，使其能正确识别亮度并添加到色彩管理，然后在启用 HDR 后将“高级”列表下的配置文件设置为默认，之后可用 Win+Alt+B 开关 HDR ，如果需要托盘控制可以安装 <a href="https://github.com/res2k/HDRTray">HDRTray</a></p>
@@ -249,7 +267,7 @@ bcdedit /set hypervisorlaunchtype off # 将其关闭，如需恢复改为 auto �
 <h3>必备软件</h3>tssh、
 <!-- 以下是OpenWrt内容 -->
 <h1>OpenWrt<a name="tips8"></a></h1>
-固件：<a href="https://fw.koolcenter.com/iStoreOS">IStoreOS</a>（<a href="https://github.com/AUK9527/Are-u-ok">插件</a>），<a href="https://downloads.immortalwrt.org">ImmortalWrt</a>，<a href='https://github.com/klever1988/nanopi-openwrt/releases'>悟空</a>，<a href='https://www.kancloud.cn/bigdongdong/armgear/2662921'>合集</a>，云编译：<a href="https://openwrt.ai">①</a> <a href="https://supes.top">②</a>
+固件：<a href="https://fw.koolcenter.com/iStoreOS">IStoreOS</a>（<a href="https://github.com/AUK9527/Are-u-ok">插件</a>），<a href="https://downloads.immortalwrt.org">ImmortalWrt</a>，<a href='https://github.com/klever1988/nanopi-openwrt/releases'>悟空</a>，<a href='https://www.kancloud.cn/bigdongdong/armgear/2662921'>合集</a>，云编译：<a href="https://openwrt.ai">①</a> <a href="https://supes.top">②</a> <a href="https://www.youtube.com/watch?v=xIVtUwZR6U0">悟空</a>
 <h3>查看架构</h3>确认架构才能安装对应编译的软件（ x86 或 R2S 是 aarch64_generic），SSH 到软路由执行命令：：
 <pre><code>opkg print-architecture</code></pre>
 <h3>R2S</h3><p>下载固件（img 或 img.gz 镜像文件）</p>
@@ -783,11 +801,10 @@ geosite:cn # China
 </pre>
 </div></div><a name="passwall2"></a>
 <h3>PassWall2</h3>主要概念：分流节点是分流，单选节点是全局，所以要设置好分流规则<br>主开关：控制启停<br>节点：选 [Xray 分流（分流总节点）]<br>选 [直连]：Direct、DirectGame、China<br>选 [默认]：Proxy、ProxyGame、GooglePlay<br>选 [关闭]：UDP、QUIC、OpenAI、Netflix<br>[默认]：选你的主用节点<br>
-<p>规则管理 - 手动更新（geoip 和 geosite），下方设置各分流规则（规则越上优先级越高）：</p>
-<li>[ Proxy ]：填写的域名都将走代理</li>
-<li>[ Direct ]：填写的域名都将直连</li>
-<p>你可以自定义一个 [ YouTube ] ，然后指定一个节点专门看油管</p>
-<p>访问控制 - 添加：MITV（F0:B0:40:34:59:13 (MITV.lan)），TCP 和 UDP不转发端口，都勾选所有</p>
+<p>规则管理 - 手动更新（geoip 和 geosite），下方设置各分流规则（规则越上优先级越高）：<br>- [Proxy] 填写的域名都将走代理<br>- [Direct] 填写的域名都将直连</p>
+<p>你可以自定义一个 [YouTube] ，然后指定一个节点专门看油管</p>
+<p>访问控制：可以指定设备不走代理，例如添加小米电视：<br>
+- MITV（备注名自定义，方便识别）<br>- 源地址：指定不走代理的设备（F0:B0:40:34:59:13 (MITV.lan)）<br>- TCP 与 UDP 不转发端口都勾选“所有‘</p>
 <h3>ShadowSocksR Plus+</h3><a href="https://github.com/fw876/helloworld">项目地址</a>
 <h3>OpenClash</h3><strong>全局配置：</strong><br>模式设置：运行模式选混合模式、代理模式选Rule、勾选绕过大陆IP，保存配置<br>常规设置：选择内核编译版本 Linux armv8、绑定网络接口选 br-lan，保存配置<br>DNS 设置：勾选DNS本地劫持+自定义上游服务器+禁止 Dnsmasq 缓存 DNS（这就会使用下方的那些自定义的DNS），保存配置<br>版本更新 - 一键更新<br>
 <strong>配置文件管理：</strong>选择文件 - 你的配置文件，上传即可（如果你是机场，有订阅链接，往下看）<br><strong>配置文件订阅</strong>：添加 - 配置文件名随意、插入机场订阅链接、勾选在线订阅转换，在订阅转换模板中选择“ALC4SSR 规则 Online Full”、Emoji 和 UDP 支持选启用 - 保存，点应用配置
@@ -872,7 +889,7 @@ PassWall - DNS - 远程 DNS - 设为“路由器IP:端口”（即上面的5635�
 <p><a href="https://youtu.be/u5mdffBeaMw">从申请亚马逊服务器到安装 AdGuard 设置 DOH 服务 </a></p>
 <h3>创建新分区</h3>系统 - 磁盘管理 - 可见磁盘（/dev/mmcblk0）右边点修改 - 下方 Free Space 即空余空间，在中止扇区输入 +50M 或 +10g - 点右侧创建，接着再点右侧的 EXT4 进行格式化<h3>挂载磁盘</h3>系统 - 挂载点 - 生成配置 - 拉到下方挂载点分类中可以看到新建的分区，点右侧修改 - 勾选启用此挂载点、挂载点选 /mnt/mmcblk0p3，保存应用
 <h3>Aria2</h3>勾选启用，以 root 权限运行<br>文件和位置：配置文件目录 /var/etc/aria2 ；默认下载目录 /mnt/mmcblk0p3/download（需提前新建）<br>bt设置：附加 Tracker 列表
-<h3>共享目录</h3>网络存储 - 网络共享 - 共享目录点添加：名字自定、目录自定（例如 /tmp/upload/）、勾选可浏览，使用 root，允许匿名用户，创建文件权限 0666，创建目录权限 0777<p>Win10 映射网络驱动器：此电脑 - 计算机 - 映射网络驱动器，输入 <code>\\192.168.1.1\目录名</code> 或 <code>\\IMMORTALWRT\目录名</code></p>
+<h3>共享目录（smb）</h3>网络存储/服务 - 网络共享 - 共享目录 - 添加：名字自定、目录自定（例如 /mnt/nvme0n1-4/smb/）、勾选可浏览，使用 root，允许匿名用户，创建文件权限 0777，创建目录权限 0777<p>Win10 映射网络驱动器：此电脑 - 计算机 - 映射网络驱动器，输入 <code>\\192.168.1.1\目录名</code> 或 <code>\\IMMORTALWRT\目录名</code></p>
 <h3>挂载 SMB</h3>例如挂载 NAS 的共享目录：服务 - 挂载网络共享 - 挂载 CIFS/SMB，并填写：NAS-IP，共享目录 Downloads/alist ，挂载路径（本地目录）/mnt/smb ，版本 SMBv2，可读写，UTF-8 字符集，你 NAS 的用户名+密码<pre><code># 命令行版本
 opkg install kmod-fs-cifs # 安装软件包
 # 挂载局域网SMB 到 mnt/windown 目录（需要先创建好）
@@ -1302,7 +1319,7 @@ UMASK=022
 /share/Container/alist:/opt/alist/data
 /share/Downloads/alist:/nasdl # 用于日后挂载本地目录用
 </code></pre>
-浏览器访问 NAS-IP ，登陆后点击底部管理 - 用户，修改账号（备注：控制台执行 ./alist admin 可以查询管理员账号密码）
+浏览器访问 NAS-IP ，登陆后点击底部管理 - 用户，修改账号（备注：终端执行 docker exec -it alist ./alist admin 查看管理员信息，执行 docker exec -it alist ./alist admin set 设置密码）
 <p>挂载本机目录的方法：管理 - 存储 - 添加 - 本机，虚拟路径输入 / 根（表示显示在 Alias 列表第一层，你也可以加一层目录，例如 /NAS ），根目录路径输入 /nasdl（即上面挂载的 /share/Downloads/alist）</p>
 <h4>Talebook</h4>在线图书阅读系统，和上面一样操作，搜索 talebook/talebook 镜像
 <pre><code># 网络
@@ -1310,15 +1327,15 @@ UMASK=022
 # 共享文件夹
 /share/Media/Books:/data
 </code></pre>
-<h4>PicoShare</h4>创建容器 mtlynch/picoshare
+<h4>PicoShare</h4>创建容器 elestio/picoshare:latest
 <pre><code># 名称自定义，点高级设置
 # 网络
-11114:11114 - TCP
+285:4001 - TCP
 # 共享文件夹
-/share/Downloads/picoshare:/data # 保存上传的文件的位置
+/mnt/nvme0n1-4/ddate/picoshare:/data # 保存上传的文件的位置
 # 环境变量
-PORT=11114 # 与上面网络的端口相同
-PS_SHARED_SECRET=password # 密码
+PORT=4001 # 与上面网络的端口相同
+PS_SHARED_SECRET=你的密码
 </code></pre>
 <h4>PiGallery2</h4>创建容器 bpatrik/pigallery2
 <pre><code># 名称自定义，点高级设置
@@ -1344,6 +1361,7 @@ NODE_ENV=production
 TZ=Asia/Shanghai
 PUID=1000
 PGID=1000
+DEBUG=false
 </code></pre>
 <h4>Lsky Pro</h4>创建容器 halcyonazure/lsky-pro-docker
 <pre><code># 名称自定义，点高级设置
