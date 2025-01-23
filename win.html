@@ -74,19 +74,20 @@ winget install Microsoft.DotNet.DesktopRuntime.x
 <p>避免系统更新厂商驱动：systempropertiesadvanced.exe（系统属性-高级）- 硬件 - 设备安装设置 - 选否</p>
 <p>添加 ICC 配置文件：设置 - 系统 - 屏幕 - 高级显示器设置 - 显示器信息分类中点“显示器 1 的显示适配器属性”- 颜色管理 - 设备选“你当前的显示器” - 添加并浏览文件</p>
 <h3>新系统安装软件</h3>
-<p>基础软件：QQ+微信、MemPad、Snipaste、CopyQ、Cheat、Qrcp
+<p>基础软件：QQ、微信、Snipaste、CopyQ、Cheat、Qrcp
 <pre><code>winget install 7zip.7zip
 winget install hluk.CopyQ
 winget install Tencent.WeChat
-winget install Tencent.QQ
+winget install Tencent.QQ.NT
 </code></pre></p>
 <p>开发环境：Terminal、VS Code、Scoop（sudo）
 <pre><code>winget install Microsoft.WindowsTerminal
+winget install fastfetch
 winget install Microsoft.VisualStudioCode
 winget install Git.Git
 winget install Python.Python.3
 </code></pre></p>
-<a href="#diskdlist">我的软件列表</a>
+<strong><a href="#diskdlist">我的软件列表</a></strong>
 <div class="dialog-box" id="diskdlist"><div class="dialog-con"><a href="" class="dialog-close">❌</a>列出以便保存：ls | select Name > ~\Desktop\list.txt
 <p>C:\Users\nanji\scoop</p>
 <pre>
@@ -143,6 +144,7 @@ THS
 TranSmart
 Upscayl
 ascii-image-converter.exe
+Inpaint.exe
 IPTV Checker.exe
 milky-warp.exe
 </pre>
@@ -154,13 +156,14 @@ Ubisoft
 <p>E:\PortableApps</p>
 <pre>AllDupPortable
 Anto
+AutoAudioRecorder # 自动录音
 calibrePortable
 ClamWinPortable
 Dupeguru
-Freetube
 GoogleChromePortable
 Hitomi
 Listen1
+OCRhelper # OCR识别
 PhotoDemon
 PotPlayerPortable
 R-Studio Network
@@ -245,7 +248,7 @@ WizTreePortable
 <tr><td></td><td></td><td></td></tr>
 </tbody></table>
 <h1>游戏相关<a name="tips6"></a></h1><h2>习惯设置</h2>鼠标驱动配置文件 DPI ：红 800 ，绿 1600 ，蓝 3200
-<li>鼠标 DPI 1600 ；Windows 速度 9（EDPI：DPI × 游戏内灵敏度）</li>
+<li>鼠标 DPI 1600 ；Windows 速度 10（EDPI：DPI × 游戏内灵敏度）</li>
 <li>《英雄联盟》速度 25 ，卷屏 39</li>
 <li>《无畏契约》速度 0.15，职业玩家平均 EDPI 为 280 ，除以你的鼠标 DPI 即可（280 ÷ 1600 ≈ 0.15）</li>
 <p>应用商店 - 搜索：Xbox（用于游戏）、Xbox Accessories（用于手柄）、Xbox 控制台小帮手（用于社交）、Xbox Games Bar（用于游戏截图录制）</p>
@@ -261,7 +264,10 @@ bcdedit /set hypervisorlaunchtype off # 将其关闭，如需恢复改为 auto �
 <h1>Arch Linux<a name="tips7"></a></h1>
 <p>笔记本：惠普 OMEN 15-ax017TX 暗影精灵 II 代游戏本</p>
 <p><a href="https://archlinux.org/download/">Download</a> | <a href="https://wiki.archlinux.org">Arch Wiki</a> | <a href="https://mirrorz.org">Mirrorz</a> | <a href="https://gitlab.com/prism7/archery">Amelia</a></p>
-<p><a href="https://github.com/archlinux">Github</a></p>
+<p><a href="https://github.com/mylinuxforwork/dotfiles">ML4W</a></p>
+<pre>
+sudo pacman -Sy && sudo pacman -S openssh && sudo systemctl start sshd
+</pre>
 <h3>初始软件</h3>Firefox：Bitwarden、SwitchyOmega、uBlock Origin、New Tab、沉浸式翻译、读点东西、沙拉查词
 <p>Obsidian、Joplin、Kwrite、Spectacle、CopyQ、Rustdesk</p>
 <h3>必备软件</h3>tssh、
@@ -691,7 +697,7 @@ luci-theme-material # Material
 </code></pre>
 </div></div>
 <h2>使用第三方软件源</h2>
-打开第三方软件源项目地址：<a href="https://op.dllkids.xyz/packages/">①</a> <a href="https://op.supes.top/packages">②</a>，接着选择软路由对应的架构，然后浏览器复制地址
+打开第三方软件源项目地址：<a href="https://op.dllkids.xyz/packages/">①</a> <a href="https://dl.openwrt.ai">②</a>，接着选择软路由对应的架构，然后浏览器复制地址
 <p>OpenWrt - 系统 - 软件包 - 配置 OPKG - 先注释掉 #option check_signature</p>
 然后拉到下方“/etc/opkg/customfeeds.conf”位置添加，例如：
 <pre><code># 格式：src/gz + 自定义名 + 你刚复制的链接
@@ -804,7 +810,7 @@ geosite:cn # China
 <p>规则管理 - 手动更新（geoip 和 geosite），下方设置各分流规则（规则越上优先级越高）：<br>- [Proxy] 填写的域名都将走代理<br>- [Direct] 填写的域名都将直连</p>
 <p>你可以自定义一个 [YouTube] ，然后指定一个节点专门看油管</p>
 <p>访问控制：可以指定设备不走代理，例如添加小米电视：<br>
-- MITV（备注名自定义，方便识别）<br>- 源地址：指定不走代理的设备（F0:B0:40:34:59:13 (MITV.lan)）<br>- TCP 与 UDP 不转发端口都勾选“所有‘</p>
+- MITV（备注名自定义，方便识别）<br>- 源地址：指定不走代理的设备（F0:B0:40:34:59:13 (MITV.lan)）<br>- TCP 与 UDP 不转发端口都勾选“所有”</p>
 <h3>ShadowSocksR Plus+</h3><a href="https://github.com/fw876/helloworld">项目地址</a>
 <h3>OpenClash</h3><strong>全局配置：</strong><br>模式设置：运行模式选混合模式、代理模式选Rule、勾选绕过大陆IP，保存配置<br>常规设置：选择内核编译版本 Linux armv8、绑定网络接口选 br-lan，保存配置<br>DNS 设置：勾选DNS本地劫持+自定义上游服务器+禁止 Dnsmasq 缓存 DNS（这就会使用下方的那些自定义的DNS），保存配置<br>版本更新 - 一键更新<br>
 <strong>配置文件管理：</strong>选择文件 - 你的配置文件，上传即可（如果你是机场，有订阅链接，往下看）<br><strong>配置文件订阅</strong>：添加 - 配置文件名随意、插入机场订阅链接、勾选在线订阅转换，在订阅转换模板中选择“ALC4SSR 规则 Online Full”、Emoji 和 UDP 支持选启用 - 保存，点应用配置
@@ -970,7 +976,8 @@ cd /share/CACHEDEV3_DATA/Downloads/ # 通过上面获取的位置，前面加上
 parted /dev/sdb print # 查看各硬盘，通过容量判断哪个是固态及机械
 hdparm -y /dev/sda # 立即休眠硬盘
 hdparm -C /dev/sda # 查看硬盘状态（active/idle（唤醒状态） 或 standby（低功耗休眠模式））</code></pre>
-<h3>HBS 套件</h3>创建单向镜像同步：同步 - 创建-单向同步作业 - 选择源和目标目录 - 指定计划 - 规则在策略里勾选“移除目标文件夹中的其他文件”
+<h3>HBS 3 文件备份同步中心</h3>创建单向镜像同步：同步 - 创建-单向同步作业 - 选择源和目标目录 - 指定计划 - 规则在策略里勾选“移除目标文件夹中的其他文件”
+<h3>HybridMount 文件型云网关</h3>创建远程挂载：可以挂载 SMB 、云存储等网络分享到文件管理器目录
 <h3>设置 SSL 证书</h3>控制台 - 安全 - SSL 证书和私钥 - 取代当前证书 - 选择你之前申请的证书文件
 <h3>MariaDB 10 数据库</h3>控制台 - 应用程序 - MariaDB - 安装 MariaDB 10，然后启动它设置初始密码，用户名默认是 root
 <p>在 App Center 中安装 phpMyAdmin ，启动并登陆 MariaDB 数据库</p>
@@ -982,26 +989,42 @@ cd /share/CACHEDEV1_DATA/Web/phpMyAdmin # 进入 phpMyAdmin 所在路径
 vi config.inc.php # 修改该文件，并在结尾的 ?> 前加入如下内容
 port: $cfg['Servers'][$i]['port'] = '3307';
 socket: $cfg['Servers'][$i]['socket'] = '/var/run/mariadb10.sock';</code></pre>
-<h3>Container 套件（Docker）</h3>打开 App Center - QTS 必备分类 - 安装 Container Station（设置中文是在右上角头像右边三个点，语言里选中文）
+<h3>Container 套件（Docker）</h3>打开 App Center - QTS 必备分类 - 安装 Container Station
 <p>以下“部署镜像”，即表示 “Container Station - 容器 - 浏览 - 搜索镜像名 - 选择镜像 - 部署</p>
 <h4>配置镜像加速</h4>访问<a href="https://www.aliyun.com">阿里云</a> - 顶部导航 - 产品 - 容器与中间件 - 容器镜像服务ACR - 管理控制台 - 镜像工具 - 镜像加速器 - 复制地址；NAS - ContainerStation - 属性 - Registry 服务器 - 新增 - 粘贴之前复制的镜像加速器地址，并勾选信任SSL签署和设为默认
-<h4>Portainer</h4>先登陆 NAS 开启 admin 账户，并用其 SSH 登陆 NAS ，执行安装命令：<pre><code>docker volume create portainer_data
+<h4>Portainer</h4>先登陆 NAS 开启 admin 账户，然后 SSH 登陆 NAS ，执行安装命令：<pre>docker volume create portainer_data
 docker run -d -p 8000:8000 -p 9443:9443 -p 9000:9000 --name portainer \
 --restart=always \
 -v /var/run/docker.sock:/var/run/docker.sock \
 -v portainer_data:/data \
-portainer/portainer-ce:latest</code></pre>
-安装完成后浏览器访问 NAS-IP:9000 并创建管理员账号，接着选择 Local 进行连接
-<p>注意：威联通 NAS 的文件路径要添加格式：/share/CACHEDEV硬盘序号_DATA/共享文件夹/（例如：/share/Downloads ）；端口指定（hsot）可以写成 ：0.0.0.0:9091</p>
-<a name="ddnsgo"></a>
-<h4>DDNS-GO</h4>部署镜像 jeessy/ddns-go
-<pre><code># 优先 Openwrt - Docker-容器 - 添加 - 解析 CLI 并导入
-docker run -d --name ddns-go --restart=always --net=host -v /mnt/nvme0n1-4/ddate/ddnsgo:/root jeessy/ddns-go
+portainer/portainer-ce:latest
 
-# 次选 威联通 NAS，网络里选 host 才支持 IPv6
+注意：威联通 NAS 挂载路径，例如 /share/Downloads ，端口指定 hsot</pre>
+浏览器访问 NAS-IP:9000 ，创建管理员账号后选择 Local 进行连接
+<p>一个 Portainer 端就可以远程管理多端，在其他端安装 portainer/agent 即可：在主机端 - 环境 Environments - 右上角 Add environments - 选 Docker Standalone - 底部 Start Wizard - Agent - 复制命令到被控制端安装，然后再底部填写被控制端的IP或域名端口后点 Connect 连接</p>
+<h4>Dockge</h4> louislam/dockge 是很方便的 compose.yaml 图形管理工具
+<pre>mkdir -p /opt/stacks /opt/dockge # 创建目录
+services:
+  dockge:
+    image: louislam/dockge:1
+    restart: unless-stopped
+    ports:
+      - 9001:5001
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /opt/dockge/data:/app/data
+      - /opt/dockge/stacks:/opt/stacks # 堆栈路径，日后备份该目录保存所有 compose.yaml 
+    environment:
+      - DOCKGE_STACKS_DIR=/opt/stacks # 堆栈路径需和上面一致
+</pre>
+<a name="ddnsgo"></a>
+<h4>DDNS-GO</h4>镜像 jeessy/ddns-go ，优先部署于 Openwrt，Docker-容器 - 添加 - 解析 CLI 并导入
+<pre>docker run -d --name ddns-go --restart=always --net=host -v /mnt/nvme0n1-4/ddate/ddnsgo:/root jeessy/ddns-go
+
+# 或威联通 NAS，网络里选 host 才支持 IPv6
 # 共享文件夹 - 挂载本机共享文件夹 - 新增：
-/share/Container/ddnsgo:/root </code></pre>
-浏览器访问 NAS-IP:9876 ，点选所用的 DNS 服务商，如 Cloudflare，并填写 Token，在 IPv4/IPv6 - 勾选启用 - 填写域名 - 底部 Save
+/share/Container/ddnsgo:/root</pre>
+浏览器访问 NAS-IP:9876 ，配置 DNS 服务商，如 Cloudflare，填写 Token，在 IPv4/IPv6 - 勾选启用 - 填写域名 - 底部 Save
 <p> Cloudflare Token 获取方法：登陆 Cloudflare - 右上角头像 - 我的个人资料 - API 令牌 - 创建令牌 - 点击“编辑区域 DNS”右侧的“使用模板”，在“区域资源”中选择你的域名，或者选择所有区域 - 拉到最底下点击继续以显示摘要 - 复制令牌</p>
 <h4>Bitwarden</h4>部署镜像 vaultwarden/server
 <pre><code># 名称自定义，点高级设置
@@ -1011,7 +1034,8 @@ docker run -d --name ddns-go --restart=always --net=host -v /mnt/nvme0n1-4/ddate
 /share/Container/bkeypass:/data
 -e SIGNUPS_ALLOWED=false # 注册你的账号后可以重新部署镜像增加这个参数以禁止注册</code></pre>
 设置反代后浏览器访问并注册账号，后续安装浏览器扩展并选择自托管登陆，在工具中可以导入数据<p>设置 - 自动填充 - 默认 URL 匹配检测改为“主机”（为了匹配不同的端口号）</p><p>浏览器设置快捷键 Alt + Shift + K 为当前网站自动填充最后使用的登录信息</p>
-<h4>Filebrowser</h4>通过 Portainer 部署<pre><code>Image：filebrowser/filebrowser:latest
+<h4>Filebrowser</h4>
+<pre>Image：filebrowser/filebrowser:latest
 Manual network port publishin：
   host（1110）→ container（80）
 Volumes：
@@ -1020,9 +1044,25 @@ Volumes：
   /share/Container/filebrowser/config:/config
 Env:
   PGID:100
-  PUID:1000</code></pre>
+  PUID:1000</pre>
 账号密码 admin ，点左下角 Settings - Language - 简体中文；设置 - 用户管理 - 修改默认的 admin 为你自己的账户和密码；再新建一个账号并指定目录范围给家人用
-<h4>Adguard home</h4>通过 Portainer 部署
+<h4>VS Code-server</h4>
+<pre>services:
+  code-server:
+    image: linuxserver/code-server:latest
+    container_name: code-server
+    environment:
+      - PUID=1000
+      - PGID=100
+      - TZ=Etc/UTC
+    volumes:
+      - /mnt/nvme0n1-4/ddate/coder:/config
+    ports:
+      - 200:8443
+    restart: unless-stopped
+</pre>
+默认工作目录为 /config/workspace ，如果你想挂载本机的目录，可以在 docker compose 文件中增加一条，例如 /mnt/nvme0n1-4/ddate:/ddate
+<h4>Adguard home</h4>
 <pre><code>Image：adguard/adguardhome
 Manual network port publishin：
   host（53）→ container（53）
@@ -1126,30 +1166,23 @@ TZ:Asia/Shanghai
 设置清晰度：Profiles - Any - 取消勾选你不要的清晰度；在 Language Profiles  修改 English 添加中文并调整顺序<br>
 添加索引器：Indexers - +号 -（参考 Radarr）<br>
 添加下载客户端：Download Clients - +号 - 选择你对应的客户端，记得填写 Category 即标签 tv；在下面 Remote Path Mappings 添加远程路径 Media/Downloads/complete/tv/ 到本地路径 /mymedia/Downloads/complete/tv/
-<h4><a href="#jellyfindc">Jellyfin</a></h4><div class="dialog-box" id="jellyfindc"><div class="dialog-con"><a href="" class="dialog-close">❌</a>
-<pre>version: "3"
-services:
+<h4>Jellyfin</h4>使用了 nyanmisaka 的镜像，这是容器走 host 网络的实例，不用绑定端口，然后通过威联通反代外网 18096 到内网 8096 端口
+<pre>services:
   jellyfin:
-  container_name: jellyfin
-  devices:
-    PathInContainer: /dev/dri
-    PathOnHost: /dev/dri
-  environment:
-    - PUID=0
-    - PGID=0
-    - TZ=Asia/Shanghai
-  hostname: NanNAS
-  image: nyanmisaka/jellyfin:latest
-  networks:
-    - bridge
-  ports:
-    - 18096:8096
-    - 18098:8920 # https（不用可以跳过）
-  restart: always
-  volumes:
-    - /share/Container/Jellyfin/cache:/cache
-    - /share/Container/Jellyfin/config:/config
-    - /share/Media:/media
+    container_name: jellyfin
+    image: nyanmisaka/jellyfin:latest
+    environment:
+      - PUID=1000
+      - PGID=100
+      - TZ=Asia/Shanghai
+    volumes:
+      - /share/Container/Jellyfin/config:/config
+      - /share/Container/Jellyfin/cache:/cache
+      - /share/Media:/media # 你的媒体保存目录
+    devices:
+      - /dev/dri:/dev/dri
+    restart: unless-stopped
+    network_mode: 'host'
 
 # 附加说明
 Portainer 部署的话，Runtime & Resources：Devices - add device：
@@ -1157,41 +1190,11 @@ Portainer 部署的话，Runtime & Resources：Devices - add device：
     /dev/dri/renderD128:/dev/dri/renderD128 
     /dev/dri/card0:/dev/dri/card0 
 # 威联通里创建的话，选择设备，选择 Direct Rendering Infrastructure (226)
-</pre></div></div>
+</pre>
 浏览器访问 NAS-IP - 菜单 - 控制台 - 播放 - 转码（硬件加速：选 Intel QuickSync ，下面勾选所有格式）- 硬件编码选项：勾选启用硬件编码，勾选允许以 HEVC 格式编码（即支持H265）；启用色调映射 - 算法选 BT.2390
 <p>设置 - 字幕：偏好 Chinese，模式智能模式，所有复杂格式</p>
 <p>设置备用字体：在 home 目录下创建一个 font 目录，将中文字体复制到该目录并给予所有人读取写入权限；控制台 - 播放 - 填写上面的 font 目录路径并勾选启用备用字体</p>
 <p>字体插件：控制台 - 插件 - 目录，在元数据分类中找到 Open Subtitles 插件并安装，完成后重启容器，再回到插件页面，点击 Open Subtitles，输入账号密码，没有则点击 Register 进行注册；之后在你要下载字幕的电影上点击 ··· 点修改字幕，点搜索图标，然后点下载图标</p>
-<p>通过 Container Station 部署：部署镜像 nyanmisaka/jellyfin</p>
-<pre><code># 名称自定义，点高级设置
-# 网络 - 网络模式（NAT）- 端口转发 - 新增：
-8096:8096-TCP
-# 设备 - 新增
-Direct Rendering lnfrastructure(226)
-# 共享文件夹 - 挂载本机共享文件夹 - 新增：
-/share/Container/jellyfin/config:/config
-/share/Container/jellyfin/cache:/cache
-/share/media:/media
-</code></pre>
-通过 Container Station 部署：创建 - 创建应用程序 - 编辑如下
-<pre><code>version: "2.1"
-services:
-  jellyfin:
-    image: nyanmisaka/jellyfin:latest
-    container_name: jellyfin
-    environment:
-      - PUID=0
-      - PGID=0
-      - TZ=Asia/Shanghai
-    volumes:
-      - /share/Container/jellyfin:/config # 无需变动，文件夹会自动创建
-      - /share/media:/media # 自定义媒体库路径
-    ports:
-      - 8096:8096
-      - 8096:8920
-    devices:
-      - /dev/dri:/dev/dri</code></pre>
-
 <h4>jellyseerr</h4>jellyseerr 是一个协同选片系统
 <pre><code>image: fallenbagel/jellyseerr:latest
 environment:
@@ -1253,54 +1256,57 @@ bash install-tr-control-cn.sh # 执行脚本
 选择6（指定安装目录），输入上面得到的 /usr/share/transmission 注意，这里不包含 web
 选择1（安装最新的发布版本（release）），安装完成，使用浏览器访问即可看到新的 WebUI
 </code></pre>
-<h4><a href="#aria2dc">Aria2</a></h4><div class="dialog-box" id="aria2dc"><div class="dialog-con"><a href="" class="dialog-close">❌</a>
+<h4>Aria2</h4>
 <pre>version: "3"
 services:
   aria2:
+  image: p3terx/aria2-pro:test
   container_name: aria2
   environment:
-  image: p3terx/aria2-pro:test
+    - PUID=1000
+    - PGID=100
+    - UMASK_SET=022
+    - RPC_SECRET=nanjishen
+    - RPC_PORT=6800
+    - LISTEN_PORT=6888
   networks:
     - bridge
   ports:
     - 6800:6800/tcp
     - 6888:6888/tcp
-    - 6888/udp
-  restart: always
+    - 6888:6888/udp
+  restart: unless-stopped
   volumes:
-    - /share/Downloads/alist/offline:/opt/alist/data/temp/aria2
     - /share/Container/aria2:/config
     - /share/Downloads/alist:/downloads
-networks:
-  bridge:
-  external: true
-</pre></div></div>
-<h4><a href="#qbitdc">qbittorrent</a></h4><div class="dialog-box" id="qbitdc"><div class="dialog-con"><a href="" class="dialog-close">❌</a>
-<pre>version: "3"
-services:
+    - /share/Downloads/alist/系统/offline:/opt/alist/data/temp/aria2
+  network_mode: bridge
+</pre>
+<h4>qbittorrent</h4>以 Portainer 部署 docker-compose 为例
+<pre>services:
   qbittorrent:
-  container_name: qbittorrent
-  environment:
-    - PGID=0
-    - PUID=0
-    - TZ=Asia/ShangHai
-    - WEBUI_PORT=9092
-  image: linuxserver/qbittorrent:latest
-  ports:
-    - 6881:6881 # BT 下载端口
-    - 6881:6881/udp
-    - 9092:9092 # WebUI 端口
-  restart: always
-  volumes:
-    - /share/Container/qbittorrent:/config
-    - /share/Media:/downloads # 媒体目录
-    - /share/Downloads:/dl # 目录1
-    - /share/Backup/sexdl:/sexdl # 目录2
-    - /share/Videos/Sex/DL:/sexdl2 # 目录
-  networks:
-    - bridge
-</pre></div></div>
-浏览器访问 NAS-IP:9092 默认账户名 admin 密码 adminadmin
+    image: linuxserver/qbittorrent:latest
+    container_name: qbittorrent
+    environment:
+      - PUID=1000
+      - PGID=100
+      - TZ=Asia/ShangHai
+      - WEBUI_PORT=9092 # WebUI 端口
+      - TORRENTING_PORT=6881 # BT 下载端口
+    volumes:
+      - /share/Container/qbittorrent:/config # 配置目录
+      - /share/Media:/downloads # 媒体目录
+      - /share/Downloads:/dl # 目录1
+      - /share/Backup/sexdl:/sexdl # 目录2
+      - /share/Videos/Sex/DL:/sexdl2 # 目录3
+      - /share/winsmb:/winsmb # 目录4，该目录挂载了外部SMB，如 Windows 电脑
+    ports:
+      - 9092:9092 # WebUI 端口
+      - 6881:6881 # BT 下载端口
+      - 6881:6881/udp
+    network_mode: bridge
+    restart: unless-stopped</pre>
+浏览器访问 NAS-IP:9092 账户名 admin 临时密码在启动时打印到容器日志中
 <p>更改语言：设置 - Web UI - 用户界面语言选中文</p>
 <p>关于路径：默认是 /downloads ，如果你要分类下载可以设置为 /downloads/Movie（如果下载时路径错了，可以右键下载条目点更改保存位置）</p>
 <p>设置免密登陆：设置 - 高级，勾选“对 IP 子网白名单中的客户端跳过身份验证”，输入访问端的IP：192.168.10.101/32</p>
@@ -1448,8 +1454,10 @@ TZ:Asia/Shanghai
 <h3>最后</h3>设置 - 遥控器和配件 - 设置遥控器按钮（Chromecast Remote）- 添加设备 - 选择你的电视品牌<br>
 设置 - 显示和声音：文字缩放、分辨率、开启 HDR<br>
 别忘记，显示设置调节 HDR
-<h1><a name="tips11"> </a>Awtrix</h1>
-<h3>刷写固件</h3><a href="https://github.com/Blueforcer/awtrix-light">新版固件</a>，<a href="https://developer.lametric.com/icons">图标编号</a>，<a href="https://blueforcer.github.io/awtrix-light">文档</a><P><b><a href="https://flows.blueforcer.de">新版流</a>- HA 蓝图</b>：</P><a href="https://flows.blueforcer.de/flow/qMpQAg0Ro0Ky">Night clock mode</a>（夜间时钟）：日间模式用色（橘黄：深 #ff4000 ，浅 #ff5600）;星期用色（当前星期 #00ff00 ，非当前星期 #393939）</p><p><a href="https://flows.blueforcer.de/flow/9dZKg529OyE2">Awtrix random effect</a>（随机特效）<p><a href="https://github.com/arfoll/ha-awtrix-blueprints">ha-awtrix</a>（发送消息及生成应用，属自定义蓝图，放到 homeassistant\blueprints\automation\ha-awtrix 目录）</p>
+<h1><a name="tips11"> </a>Awtrix</h1><a href="http://192.168.10.158">管理页</a>
+<h3>刷写固件</h3><a href="https://github.com/Blueforcer/awtrix3">新版固件</a>，<a href="https://developer.lametric.com/icons">图标编号</a>，<a href="https://blueforcer.github.io/awtrix3">文档</a>
+，<a href="https://flows.blueforcer.de">新版流</a>，<a href="https://www.youtube.com/watch?v=hsc_yUWwcVY">配合HA使用视频</a>（<a href="https://github.com/10der/homeassistant-custom_components-awtrix">自定义存储库</a>）
+<P><b>HA蓝图</b>：</P><a href="https://flows.blueforcer.de/flow/qMpQAg0Ro0Ky">Night clock mode</a>（夜间时钟）：日间模式用色（橘黄：深 #ff4000 ，浅 #ff5600）;星期用色（当前星期 #00ff00 ，非当前星期 #393939）</p><p><a href="https://flows.blueforcer.de/flow/9dZKg529OyE2">Awtrix random effect</a>（随机特效）<p><a href="https://github.com/arfoll/ha-awtrix-blueprints">ha-awtrix</a>（发送消息及生成应用，属自定义蓝图，放到 homeassistant\blueprints\automation\ha-awtrix 目录）</p>
 <p><a href="https://awtrixdocs.blueforcer.de/#/en-en/controller">旧版固件</a>，将 Awtrix 通过 USB 连接电脑
 </p>
 启动 Flashing Tool 工具烧录（启动后如果无法正常显示连接端口，是因为电脑没有安装 <a href="https://www.silabs.com/developers/usb-to-uart-bridge-vcp-drivers">CP210x</a>驱动，下载并安装驱动后，重新连接即可
