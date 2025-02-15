@@ -6,15 +6,17 @@
     <description>Recent content in Win10 on 极限玩家</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
+    <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Thu, 28 May 2020 10:21:57 +0800</lastBuildDate>
     <atom:link href="https://ttti.cc/tags/win10/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>动图演示从官方下载并制作Win10启动U盘</title>
       <link>https://ttti.cc/post/win10-setup/</link>
-      <pubDate>Thu, 28 May 2020 10:21:57 +0800</pubDate>
+      <pubDate>Thu, 28 May 2020 10:21:57 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
       <guid>https://ttti.cc/post/win10-setup/</guid>
-      <description>微软今天发布 Win10 2004 正式版了，然而还是很多小白依赖第三方下载，事实上微软官方是提供镜像下载的，同时还具备U盘制作功能，就是说，根本不需要依赖第三</description>
+      <description>&lt;p&gt;微软今天发布 Win10 2004 正式版了，然而还是很多小白依赖第三方下载，事实上微软官方是提供镜像下载的，同时还具备U盘制作功能，就是说，根本不需要依赖第三方网站。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

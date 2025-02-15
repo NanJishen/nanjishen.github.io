@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>字母加空格，引号换直角</title>
+    <meta name="Author" content="南极神">
+    <meta name="Keywords" content="极限玩家,引号转直角,在线工具">
+    <meta name="Description" content="字母加空格，引号换直角">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" type="image/png" href="../favicon.ico">
+    <style>
+        a, a:visited, a:active {
+            text-decoration: none;
+            color: #666;
+        }
+        body {
+            background: #000 url(http://wx2.sinaimg.cn/large/6f0785d9ly1g221mm3dijj21z4140ae7.jpg) no-repeat;
+            background-size: cover;
+            color: #666;
+        }
+        main {
+            margin: 3em auto;
+            padding: 1.5em;
+            width: 60%;
+            min-width: 20rem;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 1px 3px 20px #000;
+        }
+        section {
+            margin: 0 1.1em;
+        }
+        form {
+            text-align: center;
+        }
+        input {
+            margin: 16px;
+            background: #1b9ad1;
+            outline: 0;
+            border: 0;
+            border-radius: 20px;
+            width: 7rem;
+            height: 43px;
+            color: #fff;
+            font-weight: bold;
+            box-shadow: 0 0 15px #ccc;
+        }
+        input:active {
+            text-shadow: 1px 2px 25px #000;
+        }
+        textarea {
+            padding: 10px;
+            width: 94.5%;
+            font-size: 1.3rem;
+            outline: 0;
+        }
+        textarea::placeholder {
+            position: relative;
+            top: 15px;
+        }
+        .tooltip {
+            color: #1b9ad1;
+            position: relative;
+            font-weight: normal;
+            font-size: .9rem;
+        }
+        .tooltip:before {
+            content: attr(data-tip);
+            position: absolute;
+            left: -150%;
+            top: 129%;
+            display: block;
+            padding: .5em;
+            width: 280px;
+            transform: translateX(-50%);
+            background: #1b9ad1;
+            color: #fff;
+            font-size: 1.3rem;
+            box-shadow: 2px 2px 8px #ccc;
+            outline: 0;
+            z-index: -1;
+        }
+        .tooltip:after {
+            content: '';
+            display: block;
+            height: 0;
+            width: 0;
+            border: 10px solid transparent;
+            border-bottom-color: #1b9ad1;
+            position: absolute;
+            top: 60%;
+            transform: translateX(-50%);
+            left: 50%;
+            z-index: -999;
+        }
+        .tooltip:hover::before,
+        .tooltip:focus::before,
+        .tooltip:hover::after,
+        .tooltip:focus::after {
+            z-index: 2;
+        }
+        h1 {
+            display: flex;
+            color: #3d3d3d;
+            font-size: 20px;
+        }
+        @media screen and (max-device-width: 1000px) {
+            main {
+                margin-top: 1em;
+                width: 85%;
+            }
+            section {
+                margin: .3em;
+            }
+        }
+    </style>
+    <script>
+        function addBlank(inText) {
+            let outText = inText.value
+                .replace(/([\u4E00-\u9FA3])([A-Za-z0-9\(\[\{@#])/g, "$1 $2")
+                .replace(/([A-Za-z0-9\.,!@#%?\)\]\}])([\u4E00-\u9FA3])/g, "$1 $2")
+                .replace(/([〔〕（）。，！？《》—“”「」]) +/g, "$1")
+                .replace(/ +([〔〕（）。，！？《》—“”「」])/g, "$1")
+                .replace(/ +/g, " ")
+                .replace(/“/g, "「")
+                .replace(/”/g, "」")
+                .replace(/‘/g, "『")
+                .replace(/’/g, "』");
+            inText.value = outText;
+        }
+
+        function copyText() {
+            const copyTextarea = document.getElementById("copy");
+            copyTextarea.select();
+            document.execCommand("Copy");
+            copyTextarea.value = "";
+        }
+
+        function downloadText() {
+            const text = document.getElementById("copy").value;
+            const blob = new Blob([text], { type: "text/plain" });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = "text.txt"; // 下载的文件名
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+        }
+    </script>
+</head>
+<body>
+    <main>
+        <section>
+            <a href="../so.html">Home</a> | <a href="PtoMd.html">PtoMd</a> | 
+            <a href="notepad/notepad.html">Edit</a> | <a href=""></a>
+            <h1>
+                字母加空格，引号换直角
+                <span data-tip="在“中英文混排中”，给中文与英文之间加一个空格，用直角代替引号。这样看上去即美观又工整，观看和阅读体验都更好，值得推荐。你可以在下面输入：“测试”文字abc，然后点击底部的 Convert 再点 Copy 复制到剪切板" class="tooltip" href="" tabindex="0">&nbsp说明</span>
+            </h1>
+        </section>
+        <form>
+            <textarea id="copy" name="inText" placeholder=" >" rows="22"></textarea>
+            <input onclick="addBlank(this.form.inText);" type="button" name="btnConvert" value="CONVERT">
+            <input onclick="copyText();" type="button" value="COPY">
+            <input onclick="downloadText();" type="button" value="DOWNLOAD">
+        </form>
+    </main>
+</body>
+</html>

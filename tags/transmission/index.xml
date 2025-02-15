@@ -6,15 +6,17 @@
     <description>Recent content in Transmission on 极限玩家</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
+    <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Fri, 07 Jan 2022 17:17:13 +0800</lastBuildDate>
     <atom:link href="https://ttti.cc/tags/transmission/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>威联通通过 Docker 安装 Transmission</title>
       <link>https://ttti.cc/post/qnap-docker-transmission/</link>
-      <pubDate>Fri, 07 Jan 2022 17:17:13 +0800</pubDate>
+      <pubDate>Fri, 07 Jan 2022 17:17:13 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
       <guid>https://ttti.cc/post/qnap-docker-transmission/</guid>
-      <description>Transmission 是著名又老牌的 PT/BT 下载软件。这里将说明使用威联通的 Docker 安装 Transmission（ Docker 真的香 ）。 首先，登陆威联通后启动 ContainerStation - 创建 - 搜索 Transmission - 选择结</description>
+      <description>&lt;p&gt;Transmission 是著名又老牌的 PT/BT 下载软件。这里将说明使用威联通的 Docker 安装 Transmission（ Docker 真的香 ）。&lt;/p&gt;&#xA;&lt;p&gt;首先，登陆威联通后启动 ContainerStation - 创建 - 搜索 Transmission - 选择结果中的第二进行安装，如图所示：&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

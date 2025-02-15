@@ -6,15 +6,17 @@
     <description>Recent content in Obsidian on 极限玩家</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
+    <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Sun, 21 Mar 2021 15:21:50 +0800</lastBuildDate>
     <atom:link href="https://ttti.cc/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>更换到更现代的双向链笔记软件 Obsidian</title>
       <link>https://ttti.cc/post/obsidianforfirst/</link>
-      <pubDate>Sun, 21 Mar 2021 15:21:50 +0800</pubDate>
+      <pubDate>Sun, 21 Mar 2021 15:21:50 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
       <guid>https://ttti.cc/post/obsidianforfirst/</guid>
-      <description>先说一下个人使用笔记本软件的经过：从 OneNote → Joplin → Obsidian（现在开始），我一直认为，笔记软件是组织和管理知识的最好方式，尤其对于现代人来说</description>
+      <description>&lt;p&gt;先说一下个人使用笔记本软件的经过：从 OneNote →  Joplin → Obsidian（现在开始），我一直认为，笔记软件是组织和管理知识的最好方式，尤其对于现代人来说，电子笔记是必不可少的（纸张笔记不够效率）。因为现代是一个知识内容的工作时代。人脑是绝对不够用的。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

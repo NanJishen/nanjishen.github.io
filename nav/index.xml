@@ -8,5 +8,19 @@
     <language>zh-CN</language>
     <copyright>极限玩家</copyright>
     <atom:link href="https://ttti.cc/nav/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>子页面一</title>
+      <link>https://ttti.cc/nav/sub1/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ttti.cc/nav/sub1/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>子页面二</title>
+      <link>https://ttti.cc/nav/sub2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://ttti.cc/nav/sub2/</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

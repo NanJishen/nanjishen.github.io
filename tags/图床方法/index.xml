@@ -6,15 +6,17 @@
     <description>Recent content in 图床方法 on 极限玩家</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
+    <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Fri, 12 Mar 2021 20:50:06 +0800</lastBuildDate>
     <atom:link href="https://ttti.cc/tags/%E5%9B%BE%E5%BA%8A%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>图片防盗链解决方案</title>
       <link>https://ttti.cc/post/pic-mirror-img/</link>
-      <pubDate>Fri, 12 Mar 2021 20:50:06 +0800</pubDate>
+      <pubDate>Fri, 12 Mar 2021 20:50:06 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
       <guid>https://ttti.cc/post/pic-mirror-img/</guid>
-      <description>很多时候，图片镜像缓存服务有不错的用途： 将有防盗链的图片引用到网页，使其能显示出来 将 http 图片引用到 https 页面，以绕过证书验证 加载无法显示的图片（X</description>
+      <description>&lt;p&gt;很多时候，图片镜像缓存服务有不错的用途：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;将有防盗链的图片引用到网页，使其能显示出来&lt;/li&gt;&#xA;&lt;li&gt;将 http 图片引用到 https 页面，以绕过证书验证&lt;/li&gt;&#xA;&lt;li&gt;加载无法显示的图片（X号的图）&lt;/li&gt;&#xA;&lt;li&gt;加快显示，加载较慢的图片&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;图片镜像缓存服务：&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

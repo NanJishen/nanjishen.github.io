@@ -6,15 +6,17 @@
     <description>Recent content in 文件恢复 on 极限玩家</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
+    <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Tue, 30 Jun 2020 10:11:07 +0800</lastBuildDate>
     <atom:link href="https://ttti.cc/tags/%E6%96%87%E4%BB%B6%E6%81%A2%E5%A4%8D/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>微软推出文件恢复工具：Windows File Recovery</title>
       <link>https://ttti.cc/post/wfr/</link>
-      <pubDate>Tue, 30 Jun 2020 10:11:07 +0800</pubDate>
+      <pubDate>Tue, 30 Jun 2020 10:11:07 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
       <guid>https://ttti.cc/post/wfr/</guid>
-      <description>微软推出了免费的文件恢复工具：Windows File Recovery。你可以在 Microsoft Store 中下载（即 Win10 商店中下载）。 同时，该工具仅支持 Win10 version 19041.0 及以上版本，也</description>
+      <description>&lt;p&gt;微软推出了免费的文件恢复工具：Windows File Recovery。你可以在 Microsoft Store 中下载（即 Win10 商店中下载）。&lt;/p&gt;&#xA;&lt;p&gt;同时，&lt;strong&gt;该工具仅支持 Win10 version 19041.0 及以上版本&lt;/strong&gt;，也就是你要升级到最新版本 Win10 2004，才能使用它！&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

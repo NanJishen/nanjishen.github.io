@@ -6,15 +6,17 @@
     <description>Recent content in Ventoy on 极限玩家</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
+    <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Fri, 02 Apr 2021 21:49:08 +0800</lastBuildDate>
     <atom:link href="https://ttti.cc/tags/ventoy/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>新一代多系统启动U盘 Ventoy 使用指南</title>
       <link>https://ttti.cc/post/ventoy/</link>
-      <pubDate>Fri, 02 Apr 2021 21:49:08 +0800</pubDate>
+      <pubDate>Fri, 02 Apr 2021 21:49:08 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
       <guid>https://ttti.cc/post/ventoy/</guid>
-      <description>如果你还在用过去的，制作安装系统U盘的方式，那你需要准备N个U盘，并且每次更新镜像都要解压或者用写盘软件重新写盘。同时在今天，可能需要多个系</description>
+      <description>&lt;p&gt;如果你还在用过去的，制作安装系统U盘的方式，那你需要准备N个U盘，并且每次更新镜像都要解压或者用写盘软件重新写盘。同时在今天，可能需要多个系统的安装盘。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

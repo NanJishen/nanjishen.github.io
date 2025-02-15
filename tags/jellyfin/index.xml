@@ -6,15 +6,17 @@
     <description>Recent content in Jellyfin on 极限玩家</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
+    <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Sat, 08 Jan 2022 00:54:10 +0800</lastBuildDate>
     <atom:link href="https://ttti.cc/tags/jellyfin/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>威联通通过 Docker 安装 Jellyfin</title>
       <link>https://ttti.cc/post/qnap-jellyfin-nyanmisaka/</link>
-      <pubDate>Sat, 08 Jan 2022 00:54:10 +0800</pubDate>
+      <pubDate>Sat, 08 Jan 2022 00:54:10 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
       <guid>https://ttti.cc/post/qnap-jellyfin-nyanmisaka/</guid>
-      <description>威联通通过 Docker 安装 Jellyfin 是很简单的。但是支持硬件解码对小白来说略难。不过其实采用 nyanmisaka 大神的 Docker 镜像，是默认支持硬件转码的。有效的减少了折腾。下面就来说</description>
+      <description>&lt;p&gt;威联通通过 Docker 安装 Jellyfin 是很简单的。但是支持硬件解码对小白来说略难。不过其实采用  nyanmisaka 大神的 Docker 镜像，是默认支持硬件转码的。有效的减少了折腾。下面就来说说如何安装。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

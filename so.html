@@ -7,10 +7,10 @@
   <meta name="Keywords" content="极限搜索,极限玩家,极限导航,网址导航">
   <meta name="Description" content="极限搜索,极限玩家,极限玩家导航,南极神,网址导航">
   <title>极限搜索</title>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon-16x16.png" type="image/png" sizes="16x16">
-  <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
-  <link rel="apple-touch-icon" href="apple-touch-icon.png" sizes="180x180">
+  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="./assets/so.css">
 </head>
@@ -21,7 +21,7 @@
 
   <main>
     <div class="search-container">
-      <input type="text" id="searchInput" placeholder="输入搜索内容" 
+      <input type="text" id="searchInput" placeholder="Search" 
              onblur="executeCommand()" 
              onkeydown="if(event.keyCode === 13) document.getElementById('defaultSearch').click()">
       
@@ -40,7 +40,7 @@
         <button onclick="search('微博')">微博</button>
         
         <div class="dropdown">
-          <button>影视</button>
+          <button onclick="toggleDropdown(this)">影视</button>
           <div class="dropdown-content">
             <button onclick="search('豆瓣')">豆瓣</button>
             <button onclick="search('字幕')">字幕</button>
@@ -49,7 +49,7 @@
         </div>
 
         <div class="dropdown">
-          <button>程序</button>
+          <button onclick="toggleDropdown(this)">程序</button>
           <div class="dropdown-content">
             <button onclick="search('容器')">容器</button>
             <button onclick="search('应用')">应用</button>
@@ -59,7 +59,7 @@
         </div>
 
         <div class="dropdown">
-          <button>更多</button>
+          <button onclick="toggleDropdown(this)">更多</button>
           <div class="dropdown-content">
             <button onclick="search('股票')">股票</button>
             <button onclick="search('QR')">QR</button>
@@ -81,16 +81,13 @@
       <li><a href="app.html">软件推荐</a></li>
       <li><a href="win.html">操作系统</a></li>
       <li class="has-submenu">
-        <a href="javascript:void(0)">在线工具</a>
+        <a href="javascript:void(0)" onclick="toggleDropdown(this)">在线工具</a>
         <ul>
-          <li><a href="minitools/notepad.html">生成.TXT</a></li>
-          <li><a href="minitools/lettercover.html">直角引号</a></li>
+          <li><a href="minitools/textedit.html">文本处理</a></li>
           <li><a href="minitools/stitching.html">截图拼接</a></li>
           <li><a href="minitools/calcdate.html">日期计算</a></li>
-          <li><a href="minitools/texttoimg.html">文字便笺</a></li>
-          <li><a href="minitools/cfpng/index.html">生成颜色图</a></li>
-          <li><a href="minitools/palette.html">颜色编码</a></li>
-          <li><a href="minitools/todolist.html">代办列表</a></li>
+          <li><a href="minitools/Palette/palette.html">颜色编码</a></li>
+          <li><a href="minitools/todolist.html">要事第一</a></li>
         </ul>
       </li>
       <li><button onclick="showDonation()">赞赏支持</button></li>
@@ -98,9 +95,14 @@
     </ul>
   </aside>
 
-  <div id="donationModal" onclick="hideDonation()">
+<!-- 赞赏支持模态框 -->
+<div id="donationModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="hideDonation()">&times;</span>
+    <h3>感谢你的支持</h3>
     <img src="assets/pay.jpg" alt="赞赏二维码">
   </div>
+</div>
 
   <div id="helpModal" class="modal">
     <div class="modal-content">
@@ -151,13 +153,12 @@
     // 快捷命令
     const shortcuts = {
       '?': showHelp,
+      '？': showHelp,
       'a': () => window.location.href = "../../XYZ/index.html",
       'aria': () => window.location.href = "file:///C:/Users/nanji/OneDrive/Apps/Aria2/AriaNg.html",
-      'bdy': () => window.location.href = "https://pan.baidu.com",
-      'cow': () => window.location.href = "https://cowtransfer.com",
       'cheat': () => window.location.href = "cheatsheets/index.html",
-      'em': () => window.location.href = "https://outlook.live.com",
-      'gem': () => window.location.href = "https://mail.google.com",
+      'oml': () => window.location.href = "https://outlook.live.com",
+      'gml': () => window.location.href = "https://mail.google.com",
       'gh': () => window.location.href = "https://github.com",
       'gm': () => window.location.href = "https://gitmind.cn/app",
       'hc': () => window.location.href = "https://hack.chat?extplayer",
@@ -187,41 +188,53 @@
     function toggleSidebar() {
       const sidebar = document.getElementById('sidebar');
       sidebar.classList.toggle('active');
-      
-      // 关闭所有展开的子菜单
-      const submenus = document.querySelectorAll('#sidebar .has-submenu');
-      submenus.forEach(submenu => {
-        submenu.classList.remove('open');
-      });
     }
 
-    // 子菜单功能
-    document.addEventListener('DOMContentLoaded', function() {
+    // 点击页面其他区域关闭侧边栏
+    document.addEventListener('click', function(event) {
       const sidebar = document.getElementById('sidebar');
-      
-      // 处理子菜单点击
-      sidebar.addEventListener('click', function(e) {
-        const target = e.target;
-        
-        // 如果是子菜单项
-        if (target.parentElement.classList.contains('has-submenu')) {
-          e.preventDefault();
-          const submenu = target.parentElement;
-          submenu.classList.toggle('open');
-        }
-        
-        // 阻止点击事件冒泡到侧边栏
-        if (target.tagName === 'A' || target.tagName === 'BUTTON') {
-          e.stopPropagation();
-        }
-      });
+      const sidebarToggle = document.getElementById('sidebar-toggle');
+
+      // 如果点击的不是侧边栏或汉堡菜单按钮，则关闭侧边栏
+      if (!sidebar.contains(event.target) && !sidebarToggle.contains(event.target)) {
+        sidebar.classList.remove('active');
+      }
     });
 
-    // 赞赏功能
-    function showDonation() {
-      document.getElementById('donationModal').style.display = 'block';
+    // 子菜单功能
+    function toggleDropdown(button) {
+      // 关闭所有其他已经打开的子菜单
+      const dropdowns = document.querySelectorAll('.dropdown-content, #sidebar ul ul');
+      dropdowns.forEach(dropdown => {
+        if (dropdown !== button.nextElementSibling && dropdown !== button.parentElement.querySelector('ul')) {
+          dropdown.classList.remove('show');
+        }
+      });
+
+      // 切换当前点击的子菜单
+      if (button.nextElementSibling) {
+        button.nextElementSibling.classList.toggle('show');
+      } else if (button.parentElement.querySelector('ul')) {
+        button.parentElement.querySelector('ul').classList.toggle('show');
+      }
     }
 
+    // 关闭所有下拉菜单
+    document.addEventListener('click', function(event) {
+      if (!event.target.matches('.dropdown button, #sidebar .has-submenu > a')) {
+        const dropdowns = document.querySelectorAll('.dropdown-content, #sidebar ul ul');
+        dropdowns.forEach(dropdown => {
+          dropdown.classList.remove('show');
+        });
+      }
+    });
+
+    // 显示赞赏支持模态框
+    function showDonation() {
+      document.getElementById('donationModal').style.display = 'flex';
+    }
+
+    // 隐藏赞赏支持模态框
     function hideDonation() {
       document.getElementById('donationModal').style.display = 'none';
     }
@@ -229,23 +242,8 @@
     // 帮助信息
     function showHelp() {
       const helpContent = `
-        <h3>快捷命令</h3>
-        <ul>
-          <li>a &nbsp;&nbsp;= 导航页</li>
-          <li>bdy = 百度云</li>
-          <li>cow = 奶牛快传</li>
-          <li>em &nbsp;= Outlook</li>
-          <li>gem &nbsp;= Gmail</li>
-          <li>gh &nbsp;= GitHub</li>
-          <li>gm &nbsp;= GitMind</li>
-          <li>ip &nbsp;= 本机IP</li>
-          <li>mb &nbsp;= 幕布</li>
-          <li>mp &nbsp;= 公众号</li>
-          <li>tm &nbsp;= 时间</li>
-          <li>tq &nbsp;= 天气</li>
-          <li>tr &nbsp;= 翻译</li>
-          <li>cheat &nbsp;= 命令备忘单</li>
-        </ul>
+        <h3>快捷命令</h3><br>
+<table style="width:300px"><tr><th></th><th></th></tr><tr><td>a</td><td>导航页</td></tr><tr><td>oml</td><td>Outlook</td></tr><tr><td>gml</td><td>Gmail</td></tr><tr><td>gh</td><td>GitHub</td></tr><tr><td>gm</td><td>GitMind</td></tr><tr><td>ip</td><td>本机IP</td></tr><tr><td>mp</td><td>公众号</td></tr><tr><td>tm</td><td>时间</td></tr><tr><td>tq</td><td>天气</td></tr><tr><td>tr</td><td>翻译</td></tr><tr><td>cheat</td><td>命令备忘单</td></tr></table>
       `;
       document.getElementById('helpContent').innerHTML = helpContent;
       document.getElementById('helpModal').style.display = 'flex';

@@ -1,10 +1,10 @@
 :root {
-  --primary-color: #2563eb;
-  --secondary-color: #1e40af;
-  --background-color: #f8fafc;
-  --text-color: #1e293b;
-  --border-radius: 12px;
-  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  --primary-color: #222222;
+  --secondary-color: #0d0d0d;
+  --background-color: #1a1a1a; /* 深色背景 */
+  --text-color: #f8c073; /* 浅色文字 */
+  --border-radius: 10px;
+  --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5); /* 更深的阴影 */
 }
 
 * {
@@ -30,9 +30,9 @@ header {
   box-shadow: var(--shadow);
 }
 
-header h1 {
-  font-size: 2.5rem;
+h1, h3{
   font-weight: 700;
+  color: #ffaa32;
 }
 
 header a {
@@ -49,17 +49,19 @@ header a {
 #searchInput {
   width: 100%;
   padding: 1rem;
-  border: 2px solid #e2e8f0;
+  border: 2px solid #333;
   border-radius: var(--border-radius);
   font-size: 1rem;
   margin-bottom: 1rem;
   transition: all 0.2s ease;
+  background-color: #262626;
+  color: var(--text-color);
 }
 
 #searchInput:focus {
   outline: none;
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+  box-shadow: 0 0 0 1px #ff950086;
 }
 
 .search-options {
@@ -73,8 +75,8 @@ header a {
 }
 
 button {
-  background-color: white;
-  border: 1px solid #e2e8f0;
+  background-color: #252525;
+  border: 1px solid #444;
   border-radius: var(--border-radius);
   padding: 0.75rem 1rem;
   font-size: 0.9rem;
@@ -83,11 +85,12 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--text-color); /* 浅色文字 */
 }
 
 button:hover {
   background-color: var(--primary-color);
-  color: white;
+  color: #ffaa00;
   transform: translateY(-1px);
   box-shadow: var(--shadow);
 }
@@ -101,18 +104,18 @@ button:hover {
   top: 100%;
   left: 0;
   right: 0;
-  background: white;
+  background: #252525; /* 深色背景 */
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
-  padding: 0.5rem;
+  padding: 0.2rem;
   display: none;
   z-index: 10;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-content.show {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 0.5rem;
+
 }
 
 #sidebar {
@@ -121,7 +124,7 @@ button:hover {
   right: -220px;
   width: 220px;
   height: 100vh;
-  background: white;
+  background: #252525; /* 深色背景 */
   box-shadow: var(--shadow);
   transition: right 0.3s ease;
   padding: 1rem;
@@ -139,7 +142,7 @@ button:hover {
   width: 40px;
   height: 40px;
   background: var(--primary-color);
-  color: white;
+  color: #f8c073;
   border: none;
   border-radius: var(--border-radius);
   cursor: pointer;
@@ -157,7 +160,21 @@ button:hover {
 }
 
 #sidebar button {
-  display: none;
+  background: none;
+  border: none;
+  color: var(--text-color); /* 浅色文字 */
+  text-align: left;
+  width: 100%;
+  padding: 0.5rem;
+  cursor: pointer;
+  font-size: 1rem;
+  display: block;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+#sidebar button:hover {
+  background: #444;
 }
 
 #sidebar ul {
@@ -180,12 +197,16 @@ button:hover {
 }
 
 #sidebar a:hover {
-  background: #f1f5f9;
+  background: #444;
 }
 
 #sidebar ul ul {
   padding-left: 1rem;
   display: none;
+}
+
+#sidebar ul ul.show {
+  display: block;
 }
 
 #sidebar ul ul li {
@@ -212,53 +233,60 @@ button:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
   display: none;
   justify-content: center;
   align-items: center;
+  z-index: 1002;
 }
 
 #donationModal img {
   max-width: 300px;
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
+  background: #252525; 
+  padding: 1rem;
 }
 
 .modal {
   display: none;
   position: fixed;
-  z-index: 1000;
-  left: 0;
   top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: #000000b3;
   justify-content: center;
   align-items: center;
+  z-index: 1000;
 }
 
 .modal-content {
-  background-color: var(--background-color);
-  margin: auto;
+  background-color: #252525;
   padding: 2rem;
   border-radius: var(--border-radius);
-  width: 90%;
-  max-width: 600px;
-  position: relative;
   box-shadow: var(--shadow);
+  max-width: 90%;
+  position: relative;
+  color: var(--text-color); /* 浅色文字 */
 }
 
-.close {
+.modal-content .close {
   position: absolute;
+  top: 0.5rem;
   right: 1rem;
-  top: 1rem;
   font-size: 1.5rem;
   cursor: pointer;
-  color: var(--text-color);
+  color: var(--text-color); /* 浅色文字 */
 }
 
-.close:hover {
+.modal-content .close:hover {
   color: var(--primary-color);
+}
+
+.modal-content img {
+  max-width: 100%;
+  border-radius: var(--border-radius);
 }
 
 #helpContent {
@@ -267,7 +295,7 @@ button:hover {
 
 #helpContent h3 {
   margin-top: 0;
-  color: var(--primary-color);
+  color: #ffaa32
 }
 
 #helpContent ul {
@@ -283,11 +311,7 @@ button:hover {
   .search-options {
     grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
   }
-  
-  header h1 {
-    font-size: 2rem;
-  }
-  
+
   #searchInput {
     padding: 0.75rem;
   }

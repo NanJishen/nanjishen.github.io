@@ -1,0 +1,43 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>极限玩家调色盘</title>
+<meta name="Author" content="南极神"><meta name="Description" content="极限玩家,南极个人主页">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="shortcut icon" type="image/png" href="../../favicon.ico"><link href="classic.min.css" rel="stylesheet">
+<style>*{margin:0;padding:0;box-sizing:border-box}body,html{height:100%;width:100%;font-family:'Montserrat',sans-serif}body{background:linear-gradient(to bottom,#f0f8ff,#fff)}header{padding:2vh 0;text-align:center;color:#36425b}header h1{font-size:3em;font-weight:300}header a{display:inline-block;color:#fff;padding:.75em 1.25em;background:#4285f4;border-radius:50em;box-shadow:0 .15em .5em rgba(66,133,244,.75)}header a:hover{background:#4291f6}main{margin:0 auto;display:flex;align-items:center;flex-direction:column}.theme-container button{font-family:'Montserrat',sans-serif;font-weight:500;color:#36425b;background:#e4f1ff;border:none;border-bottom:2px solid rgba(80,139,234,.67);padding:.6em .8em;cursor:pointer;opacity:.45}.theme-container button.active{opacity:1}.pickr-container{margin-top:2em}main>p{margin-top:.35em;font-size:.75em;color:#42445a}.color-list{display:flex;justify-content:center;flex-wrap:wrap;margin-top:2em;gap:.5em}.color-list ul{display:block;list-style:none;padding:1.3rem;color:#36425b;background:hsla(0,0%,100%,.8);border-radius:10px;box-shadow:0 4px 6px rgba(0,0,0,.1);text-align: center;}.color-list li{width:50px;height:50px;margin-top:5px;border-radius:5px;cursor:pointer}.theme-container button.active{display: none;}</style></head><body><header><h1>Palette</h1></header>
+<main>
+<div class="theme-container"></div>
+<div class="pickr-container"></div>
+<p>---</p>
+<p><a href="../cfpng/index.html">Pin PNG</a></p>
+<div class="color-list">
+<ul>黑色
+    <li data-color="#0d0d0d"></li>
+    <li data-color="#0c0c0c"></li>
+    <li data-color="#1f1f1f"></li>
+</ul>
+<ul>灰白
+    <li data-color="#fbfbfb"></li>
+    <li data-color="#eeeeee"></li>
+    <li data-color="#cccccc"></li>
+    <li data-color="#757575"></li>
+</ul>
+<ul>灰蓝
+    <li data-color="#2e3033"></li>
+    <li data-color="#373b41"></li>
+    <li data-color="#334b64"></li>
+    <li data-color="#4f7da4"></li>
+    <li data-color="#ccdddd"></li>
+</ul>
+<ul>蓝色
+    <li data-color="#0077ff"></li>
+    <li data-color="#009bdb"></li>
+    <li data-color="#0063b1"></li>
+    <li data-color="#3b8cff"></li>
+    <li data-color="#0067dd"></li>
+</ul>
+<ul>紫色
+    <li data-color="#4a115d"></li>
+    <li data-color="#55007f"></li>
+</ul>
+</div>
+</main>
+<script src="pickr.min.js"></script>
+<script>const pickrContainer=document.querySelector('.pickr-container'),themeContainer=document.querySelector('.theme-container'),themes=[['classic',{swatches:['rgba(244, 67, 54, 1)','rgba(233, 30, 99, 0.95)','rgba(156, 39, 176, 0.9)','rgba(103, 58, 183, 0.85)','rgba(63, 81, 181, 0.8)','rgba(33, 150, 243, 0.75)','rgba(3, 169, 244, 0.7)','rgba(0, 188, 212, 0.7)','rgba(0, 150, 136, 0.75)','rgba(76, 175, 80, 0.8)','rgba(139, 195, 74, 0.85)','rgba(205, 220, 57, 0.9)','rgba(255, 235, 59, 0.95)','rgba(255, 193, 7, 1)'],components:{preview:!0,opacity:!0,hue:!0,interaction:{hex:!0,rgba:!0,hsva:!0,input:!0,clear:!0,save:!0}}}]];let buttons=[],pickr=null;for(const [theme,config] of themes){const button=document.createElement('button');button.innerHTML=theme,buttons.push(button),button.addEventListener('click',()=>{const el=document.createElement('p');pickrContainer.appendChild(el),pickr&&pickr.destroyAndRemove(),buttons.forEach(btn=>btn.classList[btn===button?'add':'remove']('active')),pickr=new Pickr(Object.assign({el,theme,default:'#42445a'},config)),pickr.on('init',instance=>console.log('Event: "init"',instance)).on('hide',instance=>console.log('Event: "hide"',instance)).on('show',(color,instance)=>console.log('Event: "show"',color,instance)).on('save',(color,instance)=>console.log('Event: "save"',color,instance)).on('clear',instance=>console.log('Event: "clear"',instance)).on('change',(color,source,instance)=>console.log('Event: "change"',color,source,instance)).on('changestop',(source,instance)=>console.log('Event: "changestop"',source,instance)).on('cancel',instance=>console.log('Event: "cancel"',instance)).on('swatchselect',(color,instance)=>console.log('Event: "swatchselect"',color,instance))}),themeContainer.appendChild(button)}buttons[0].click(),document.querySelectorAll('.color-list li').forEach(li=>{const color=li.getAttribute('data-color');li.style.backgroundColor=color,li.addEventListener('click',()=>{navigator.clipboard.writeText(color).then(()=>{console.log(`颜色代码 ${color} 已复制到剪贴板`)}).catch(err=>{console.error('复制失败: ',err)})})});</script></body></html>

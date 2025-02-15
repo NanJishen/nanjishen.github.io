@@ -6,22 +6,24 @@
     <description>Recent content in NAS on 极限玩家</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
+    <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Wed, 22 Dec 2021 01:01:34 +0800</lastBuildDate>
     <atom:link href="https://ttti.cc/tags/nas/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>威联通 QNAP 通过 Docker 部署 Aria2 下载神器</title>
       <link>https://ttti.cc/post/qnap-docker-aria/</link>
-      <pubDate>Wed, 22 Dec 2021 01:01:34 +0800</pubDate>
+      <pubDate>Wed, 22 Dec 2021 01:01:34 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
       <guid>https://ttti.cc/post/qnap-docker-aria/</guid>
-      <description>这是我的威联通 NAS 第一次使用 Docker 容器并安装镜像。我选择了一个我最常用的，也是所有达人都会使用的下载神器：Aria2。说它是神器，是因为它极为小巧</description>
+      <description>&lt;p&gt;这是我的威联通 NAS 第一次使用 Docker 容器并安装镜像。我选择了一个我最常用的，也是所有达人都会使用的下载神器：Aria2。说它是神器，是因为它极为小巧并且强大。&lt;/p&gt;</description>
     </item>
     <item>
       <title>威联通 QNAP 挂载阿里云盘简单明快教程</title>
       <link>https://ttti.cc/post/qnap-aliyunpan/</link>
-      <pubDate>Mon, 13 Dec 2021 17:46:13 +0800</pubDate>
+      <pubDate>Mon, 13 Dec 2021 17:46:13 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
       <guid>https://ttti.cc/post/qnap-aliyunpan/</guid>
-      <description>双11期间购入了威联通的NAS，而在今天挂载上了阿里云盘，以便进行HBS3同步作业的云备份，借此也顺便写个简单明快的教程，废话不多说，让我们</description>
+      <description>&lt;p&gt;双11期间购入了威联通的NAS，而在今天挂载上了阿里云盘，以便进行HBS3同步作业的云备份，借此也顺便写个简单明快的教程，废话不多说，让我们开始。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

@@ -6,15 +6,17 @@
     <description>Recent content in Github on 极限玩家</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
+    <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Fri, 19 Jun 2020 16:49:13 +0800</lastBuildDate>
     <atom:link href="https://ttti.cc/tags/github/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>JSDelivr CDN 加速 GitHub</title>
       <link>https://ttti.cc/post/jsdelivrtogithub/</link>
-      <pubDate>Fri, 19 Jun 2020 16:49:13 +0800</pubDate>
+      <pubDate>Fri, 19 Jun 2020 16:49:13 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
       <guid>https://ttti.cc/post/jsdelivrtogithub/</guid>
-      <description>jsDelivr 提供了 Web 上常用静态资源的服务，不但有全球 CDN 加速，也采用了国内的 CDN 进行加速（有备案） jsDelivr 确保每个地区的使用者都能获得最好的连接速度，它还可以可</description>
+      <description>&lt;p&gt;jsDelivr 提供了 Web 上常用静态资源的服务，不但有全球 CDN 加速，也采用了国内的 CDN 进行加速（有备案）&lt;/p&gt;&#xA;&lt;p&gt;jsDelivr 确保每个地区的使用者都能获得最好的连接速度，它还可以可将不同的 JavaScript 或 CSS 集合在一起使用。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

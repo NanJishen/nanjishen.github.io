@@ -6,22 +6,24 @@
     <description>Recent content in YouTube on 极限玩家</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
+    <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Thu, 04 Mar 2021 14:45:18 +0800</lastBuildDate>
     <atom:link href="https://ttti.cc/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Youtube 详细统计信息测速指南</title>
       <link>https://ttti.cc/post/youtubecouts/</link>
-      <pubDate>Thu, 04 Mar 2021 14:45:18 +0800</pubDate>
+      <pubDate>Thu, 04 Mar 2021 14:45:18 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
       <guid>https://ttti.cc/post/youtubecouts/</guid>
-      <description>对于出海上网来说，无论是自架梯子还是购买机场，都需要测试网速，虽然可以使用 Speedtest 这样的标准测速网站，但实际不如直接观看 YouTube 视频“详细统计信息”来的</description>
+      <description>&lt;p&gt;对于出海上网来说，无论是自架梯子还是购买机场，都需要测试网速，虽然可以使用 Speedtest 这样的标准测速网站，但实际不如直接观看 YouTube 视频“详细统计信息”来的实用高效。&lt;/p&gt;</description>
     </item>
     <item>
       <title>youtube-dl 下载视频使用指南</title>
       <link>https://ttti.cc/post/youtubedl/</link>
-      <pubDate>Wed, 05 Aug 2020 20:56:03 +0800</pubDate>
+      <pubDate>Wed, 05 Aug 2020 20:56:03 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
       <guid>https://ttti.cc/post/youtubedl/</guid>
-      <description>youtube-dl 需要安装 Python 环境，并需配置好系统变量（安装时勾选 Add Python to PATH） 安装 youtube-dl 从官网下载 youtube-dl.exe，然后放到任意目录下即可使用，同</description>
+      <description>&lt;p&gt;youtube-dl 需要安装 Python 环境，并需配置好系统变量（安装时勾选 Add Python to PATH）&lt;/p&gt;&#xA;&lt;h3 id=&#34;安装-youtube-dl&#34;&gt;安装 youtube-dl&lt;/h3&gt;&#xA;&lt;p&gt;从&lt;a href=&#34;https://yt-dl.org&#34;&gt;官网&lt;/a&gt;下载 youtube-dl.exe，然后放到任意目录下即可使用，同时视频默认会下载到它的同目录。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

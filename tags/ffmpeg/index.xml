@@ -6,15 +6,17 @@
     <description>Recent content in Ffmpeg on 极限玩家</description>
     <generator>Hugo</generator>
     <language>zh-cn</language>
+    <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
+    <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Sat, 26 Sep 2020 16:04:00 +0800</lastBuildDate>
     <atom:link href="https://ttti.cc/tags/ffmpeg/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>开源免费音视频处理神器 FFmpeg</title>
       <link>https://ttti.cc/post/ffmpeg/</link>
-      <pubDate>Sat, 26 Sep 2020 16:04:00 +0800</pubDate>
+      <pubDate>Sat, 26 Sep 2020 16:04:00 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
       <guid>https://ttti.cc/post/ffmpeg/</guid>
-      <description>FFmpeg 是一款免费开源（LGPL、GPL 许可证），且领先的全能型多媒体处理软件，可以处理视频、音乐及图片，它采用了非常先进的音频/视频编解码库 li</description>
+      <description>&lt;p&gt;&lt;strong&gt;FFmpeg 是一款免费开源（LGPL、GPL 许可证），且领先的全能型多媒体处理软件&lt;/strong&gt;，可以处理视频、音乐及图片，它采用了非常先进的音频/视频编解码库 libavcodec，能够进行采集、编码、解码、转码、压缩、合并、流化、音视频分离等操作。&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
