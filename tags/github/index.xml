@@ -2,21 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Github on 极限玩家</title>
-    <link>https://ttti.cc/tags/github/</link>
+    <link>https://nav.ttti.cc/tags/github/</link>
     <description>Recent content in Github on 极限玩家</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
     <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Fri, 19 Jun 2020 16:49:13 +0800</lastBuildDate>
-    <atom:link href="https://ttti.cc/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://nav.ttti.cc/tags/github/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>JSDelivr CDN 加速 GitHub</title>
-      <link>https://ttti.cc/post/jsdelivrtogithub/</link>
-      <pubDate>Fri, 19 Jun 2020 16:49:13 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/jsdelivrtogithub/</guid>
-      <description>&lt;p&gt;jsDelivr 提供了 Web 上常用静态资源的服务，不但有全球 CDN 加速，也采用了国内的 CDN 进行加速（有备案）&lt;/p&gt;&#xA;&lt;p&gt;jsDelivr 确保每个地区的使用者都能获得最好的连接速度，它还可以可将不同的 JavaScript 或 CSS 集合在一起使用。&lt;/p&gt;</description>
+      <link>https://nav.ttti.cc/post/jsdelivrtogithub/</link>
+      <pubDate>Fri, 19 Jun 2020 16:49:13 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/jsdelivrtogithub/</guid>
+      
+        <description>&lt;p&gt;jsDelivr 提供了 Web 上常用静态资源的服务，不但有全球 CDN 加速，也采用了国内的 CDN 进行加速（有备案）&lt;/p&gt;
+&lt;p&gt;jsDelivr 确保每个地区的使用者都能获得最好的连接速度，它还可以可将不同的 JavaScript 或 CSS 集合在一起使用。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.jsdelivr.com&#34;&gt;官方网站&lt;/a&gt; | 加速地址：https://testingcf.jsdelivr.net&lt;/p&gt;
+&lt;h3 id=&#34;github-使用镜像加速服务&#34;&gt;GitHub 使用镜像加速服务&lt;/h3&gt;
+&lt;p&gt;很简单，比如，将仓库中的 DPlayer.min.js 文件利用 jsDelivr 加速，以下示例：&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;原始链接：&lt;/strong&gt;
+&lt;code&gt;https://github.com/sunpma/goIndex/tree/master/js/DPlayer.min.js&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;jsDelivr 加速链接：&lt;/strong&gt;
+&lt;code&gt;https://testingcf.jsdelivr.net/gh/sunpma/goIndex/js/DPlayer.min.js&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;如果按版本分类releases-一个-v10-版本&#34;&gt;如果按版本分类，Releases 一个 v1.0 版本，&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;原始链接：&lt;/strong&gt;
+&lt;code&gt;https://github.com/sunpma/goIndex/blob/v1.0/js/DPlayer.min.js&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;jsDelivr 加速链接：&lt;/strong&gt;
+&lt;code&gt;https://testingcf.jsdelivr.net/gh/sunpma/goIndex@v1.0/js/DPlayer.min.js&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;如果要直接加载最新版本，可以使用 latest 标签：
+&lt;code&gt;https://testingcf.jsdelivr.net/gh/sunpma/goIndex@latest/js/DPlayer.min.js&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;加载镜像连接的规则：&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;GitHub 镜像，为 gh&lt;/li&gt;
+&lt;li&gt;WordPress 镜像，为 wp&lt;/li&gt;
+&lt;li&gt;npm 镜像，为 npm&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+      
     </item>
+    
   </channel>
 </rss>

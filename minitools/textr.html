@@ -1,0 +1,29 @@
+<!DOCTYPE html><html><head><meta charset="UTF-8"><title>Textr</title><meta name="viewport" content="width=device-width,initial-scale=1"><style>body{font-size:20px;background:#000}div{display:flex;flex-direction:column;align-items:center}#conti{display:none}textarea{font-size:16px;background:#000;margin:5px;padding:5px;width:1020px;height:150px;border:2px solid green;color:#fff;margin-bottom:-30px}button{position:relative;min-width:60px;height:40px;color:#ff8c00;font-weight:700;outline:0;border:2px solid green;background:0 0;top:-10px;right:-487px}@media screen and (max-width:850px){textarea{width:95%}button{right:-41.7%}}</style></head><body><div id="conti">
+
+<i id="p1">
+</i>
+<i id="p2">
+</i>
+<i id="p3">
+</i>
+<i id="p4">
+</i>
+<i id="p5">
+</i>
+<i id="p6">
+</i>
+<i id="p7">
+</i>
+<i id="p8">
+</i>
+<i id="p9">
+</i>
+<i id="p10">
+</i>
+<i id="p11">
+</i>
+<i id="p12">
+</i>
+<i id="p13">
+</i>
+</div><div id="controls"></div><script>"use strict";const controls=document.getElementById('controls');for(let i=1;i<=13;i++){const textarea=document.createElement('textarea');textarea.id=`bar${i}`;const button=document.createElement('button');button.textContent='Cut';button.dataset.clipboardAction='cut';button.dataset.clipboardTarget=`#bar${i}`;controls.appendChild(textarea);controls.appendChild(button);}document.querySelectorAll('button[data-clipboard-action="cut"]').forEach(e=>e.addEventListener("click",function(){document.querySelector(this.dataset.clipboardTarget).select(),document.execCommand("cut")}));for(let e=1;e<=13;e++)document.getElementById(`bar${e}`).value=document.getElementById(`p${e}`).innerText.trim();</script></body></html>

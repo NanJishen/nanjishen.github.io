@@ -2,21 +2,61 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Transmission on 极限玩家</title>
-    <link>https://ttti.cc/tags/transmission/</link>
+    <link>https://nav.ttti.cc/tags/transmission/</link>
     <description>Recent content in Transmission on 极限玩家</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
     <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Fri, 07 Jan 2022 17:17:13 +0800</lastBuildDate>
-    <atom:link href="https://ttti.cc/tags/transmission/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://nav.ttti.cc/tags/transmission/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>威联通通过 Docker 安装 Transmission</title>
-      <link>https://ttti.cc/post/qnap-docker-transmission/</link>
-      <pubDate>Fri, 07 Jan 2022 17:17:13 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/qnap-docker-transmission/</guid>
-      <description>&lt;p&gt;Transmission 是著名又老牌的 PT/BT 下载软件。这里将说明使用威联通的 Docker 安装 Transmission（ Docker 真的香 ）。&lt;/p&gt;&#xA;&lt;p&gt;首先，登陆威联通后启动 ContainerStation - 创建 - 搜索 Transmission - 选择结果中的第二进行安装，如图所示：&lt;/p&gt;</description>
+      <link>https://nav.ttti.cc/post/qnap-docker-transmission/</link>
+      <pubDate>Fri, 07 Jan 2022 17:17:13 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/qnap-docker-transmission/</guid>
+      
+        <description>&lt;p&gt;Transmission 是著名又老牌的 PT/BT 下载软件。这里将说明使用威联通的 Docker 安装 Transmission（ Docker 真的香 ）。&lt;/p&gt;
+&lt;p&gt;首先，登陆威联通后启动 ContainerStation - 创建 - 搜索 Transmission - 选择结果中的第二进行安装，如图所示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2201/0601.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;威联通使用 Docker 安装 Transmission 和 Aria2 基本相似，但注意挂载 /watch 目录。它非常方便。即你将种子文件丢到这个目录中后，便会自动开始下载并将种子文件标记为“已添加”，例如我这里挂载了 /Downloads/torrent 目录。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2201/0602.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2201/0603.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安装完成后你发现默认的 WebUI 比较简陋，且不是中文界面。当然，你可以就这么使用它，同时也可以弄的更舒适。我们可以安装 transmission-web-control。能让 Transmission 的 WebUI 更漂亮并支持中文。下面来说说如何安装。&lt;/p&gt;
+&lt;p&gt;在 ContainerStation 中点击 Transmission 镜像，再点击上面的“终端机”并输入 bin/sh，然后浏览器会打开一个新页面并进入终端，如图所示。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2201/0604.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在打开的终端页面执行命令：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;# 查找 web 目录
+find / -name web # 结果为 /usr/share/transmission/web
+
+# 下载 transmission-web-control 安装脚本
+wget https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control-cn.sh 
+
+# 执行该脚本
+bash install-tr-control-cn.sh
+
+# 选择6（指定安装目录），输入上面得到的 /usr/share/transmission（注意，这里不包含 web）
+
+# 接着选择1（安装最新的发布版本（release））&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2201/0605.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安装完成后使用浏览器访问 NAS-IP:9091 即可看到新的 WebUI 了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2201/0606.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;最后，Transmission 和 Aria2 不同的地方在于它是专业的 bt 下载。我通常会使用 Aria2 下载热门 bt 资源，以及 http/ftp 资源。而不那么热门的资源，我会使用 Transmission 。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2201/0607.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+      
     </item>
+    
   </channel>
 </rss>

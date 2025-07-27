@@ -2,21 +2,463 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ffmpeg on 极限玩家</title>
-    <link>https://ttti.cc/tags/ffmpeg/</link>
+    <link>https://nav.ttti.cc/tags/ffmpeg/</link>
     <description>Recent content in Ffmpeg on 极限玩家</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
     <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Sat, 26 Sep 2020 16:04:00 +0800</lastBuildDate>
-    <atom:link href="https://ttti.cc/tags/ffmpeg/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://nav.ttti.cc/tags/ffmpeg/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>开源免费音视频处理神器 FFmpeg</title>
-      <link>https://ttti.cc/post/ffmpeg/</link>
-      <pubDate>Sat, 26 Sep 2020 16:04:00 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/ffmpeg/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;FFmpeg 是一款免费开源（LGPL、GPL 许可证），且领先的全能型多媒体处理软件&lt;/strong&gt;，可以处理视频、音乐及图片，它采用了非常先进的音频/视频编解码库 libavcodec，能够进行采集、编码、解码、转码、压缩、合并、流化、音视频分离等操作。&lt;/p&gt;</description>
+      <link>https://nav.ttti.cc/post/ffmpeg/</link>
+      <pubDate>Sat, 26 Sep 2020 16:04:00 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/ffmpeg/</guid>
+      
+        <description>&lt;p&gt;&lt;strong&gt;FFmpeg 是一款免费开源（LGPL、GPL 许可证），且领先的全能型多媒体处理软件&lt;/strong&gt;，可以处理视频、音乐及图片，它采用了非常先进的音频/视频编解码库 libavcodec，能够进行采集、编码、解码、转码、压缩、合并、流化、音视频分离等操作。&lt;/p&gt;
+&lt;p&gt;不过呢，对于一般电脑用户来说很少会用，因为它是基于命令行的，但是很多软件都使用了它的开源框架，比如：QQ 影音、KMPlayer、暴风影音，以及早期的 Potplayer。&lt;/p&gt;
+&lt;p&gt;可以说 FFmpeg 是音视频处理界的神器，然而对于小白来说看起来非常难，导致上手困难，但其实操作并没有那么复杂，为了帮助小白打开这扇门，于是就有了这篇文章&amp;hellip; 不点个赞吗？&lt;/p&gt;
+&lt;h2 id=&#34;ffmpeg-的安装&#34;&gt;FFmpeg 的安装&lt;/h2&gt;
+&lt;p&gt;首先就是去&lt;a href=&#34;http://ffmpeg.org&#34;&gt;官网下载&lt;/a&gt;了，在下面选择 Windows 已经构建好的版本，下载后将压缩包解压，其中 bin 文件夹中的程序就是我们要的。&lt;/p&gt;
+&lt;p&gt;我个人通常会将 bin 文件夹重命名为 FFmpeg，然后将其移动到个人的软件目录中，我的个人软件目录 &lt;code&gt;C:\Users\nanji\OneDrive\Apps\FFmpeg&lt;/code&gt;，当然你也可以放到任意目录。&lt;/p&gt;
+&lt;p&gt;将上面的路径添加到添加环境变量，以便可以在命令行中直接调用：按 [Win]键，输入 env ，点击“编辑系统环境变量”，在下方点击“环境变量”，之后在系统变量中双击 Path ，添加上面的路径即可。加入环境变量后就算完成了，在终端中执行：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg 或 ffmpeg -version &lt;span style=&#34;color:#75715e&#34;&gt;# 查看版本，以确认否安装成功&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;ffmpeg-的使用&#34;&gt;FFmpeg 的使用&lt;/h2&gt;
+&lt;p&gt;这里说说简单的日常使用，如果你是更专业的用户，可以参考官方帮助，了解更高级的用法，不过一般来说，这些对普通用户就足够了~&lt;/p&gt;
+&lt;h3 id=&#34;视频信息&#34;&gt;视频信息&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i video.avi &lt;span style=&#34;color:#75715e&#34;&gt;# 查看本地视频信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i http://..file1.mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 查看远程 Web 网络视频信息&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;video.mkv&amp;#34;&lt;/span&gt; 2&amp;gt;&amp;amp;&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; | sed -n &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;s/.*, \(.*\) tbr.*/\1/p&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 查看视频帧率&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffprobe -v &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; -of compact&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;p&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; -select_streams &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; -show_entries stream&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;r_frame_rate &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;video.mkv&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 查看视频帧率&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;格式转换&#34;&gt;格式转换&lt;/h3&gt;
+&lt;p&gt;最常用的就是一个文件的格式转换成另一个：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.flv filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 反之&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 filename.flv
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 拷贝转换，即保持原样的编码不变，只转换格式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.ts -vcodec copy -acodec copy filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 中文名音乐转换&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;.\下辈子不一定遇见.m4a&amp;#39;&lt;/span&gt; -f mp3 &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;.\下辈子不一定遇见.mp3&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# WAV 转换到 MP3&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i a.wav -vn -ar &lt;span style=&#34;color:#ae81ff&#34;&gt;48000&lt;/span&gt; -ac &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; -b:a &lt;span style=&#34;color:#ae81ff&#34;&gt;256&lt;/span&gt; output-b.mp3
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# ppt 导出的 webm 转 mp4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -fflags +genpts -i in.webm -r &lt;span style=&#34;color:#ae81ff&#34;&gt;24&lt;/span&gt; out.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# mpg 转 mp4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i in.mpg -c:v libx264 -c:a aac -crf &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt; -preset:v veryslow out.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 选项&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-i &lt;span style=&#34;color:#75715e&#34;&gt;# 输入的视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-f &lt;span style=&#34;color:#75715e&#34;&gt;# 输出的视频（格式）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-vn &lt;span style=&#34;color:#75715e&#34;&gt;# 有时音频文件有图片，指定不在输出中出现图像&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-ar &lt;span style=&#34;color:#75715e&#34;&gt;# 设置要转换的音频文件的音频频率，可以使用 8kHz、44.1kHz 或 48kHz 等值调整音质和频率&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-ac &lt;span style=&#34;color:#75715e&#34;&gt;# 设置音频通道的数量&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-b:a &lt;span style=&#34;color:#75715e&#34;&gt;# 设置每秒的音频比特率，千位越高，音质越高&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;编码并转换格式&#34;&gt;编码并转换格式&lt;/h3&gt;
+&lt;p&gt;用 &lt;code&gt;-vcodec&lt;/code&gt; 参数来手动指定格式：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.wmv -vcodec h264 filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vcodec wmv1 filename.wmv
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.wmv -s 640x480 -b 500k -vcodec h264 -r &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt; -acodec libfaac -ab 48k -ac &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; filename.mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 设定更多选项，说明如下&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 选项&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-r ：指定帧率
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-s ：指定分辨率
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-b ：指定比特率；于此同时可以对声道进行转码
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-acodec ：指定音频编码
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-ab ：指定音频比特率
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-ac ：指定声道数&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;H264 为最佳，当然你还可以指定 mpeg4 、libxvid ，不过呢 FFmpeg 默认会根据文件格式选择最合适的容器格式与编码格式，一般不用指定的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;软件编码和硬件编码&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 软件编码速度慢，但压缩效果更好，输出质量更高，如果有时间并希望获得更高质量的编码，应该使用软件编码&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input -c:v libx265 -crf &lt;span style=&#34;color:#ae81ff&#34;&gt;26&lt;/span&gt; -preset fast -c:a aac -b:a 128k output.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 硬件编码，在 -vaapi_devices 参数中添加驱动程序路径&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls /dev/dri
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -vaapi_device /dev/dri/renderD128 -i input -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;format=nv12,hwupload&amp;#39;&lt;/span&gt; -c:v hevc_vaapi -profile:v main -rc_mode CQP -global_quality &lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt; output.mp4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;VP9 的编码&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 为了使 VP9 编码获得更好的压缩效果，使用了两道程序&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mkv -b:v &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; -tile-columns &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; -g &lt;span style=&#34;color:#ae81ff&#34;&gt;240&lt;/span&gt; -threads &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt; -quality good -crf &lt;span style=&#34;color:#ae81ff&#34;&gt;31&lt;/span&gt; -c:v libvpx-vp9 -pass &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; -an -f null /dev/null &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;ffmpeg -i input.mkv -b:v &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; -tile-columns &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt; -g &lt;span style=&#34;color:#ae81ff&#34;&gt;240&lt;/span&gt; -threads &lt;span style=&#34;color:#ae81ff&#34;&gt;8&lt;/span&gt; -quality good -crf &lt;span style=&#34;color:#ae81ff&#34;&gt;31&lt;/span&gt; -c:v libvpx-vp9 -c:a libopus -pass &lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; -speed &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt; -y output.webm&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;AV1 的编码&lt;/strong&gt;，AV1 是比 vp9 和 h265 更优的压缩算法（优30%），但其软件编码速度非常慢，所以你应该使用支持 AV1 的专用显卡&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -h encoder&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;libaom-av1 &lt;span style=&#34;color:#75715e&#34;&gt;# 检查 libaom 模块是否存在于 ffmpeg 安装中 &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mp4 -c:v libaom-av1 -crf &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt; av1_test.mkv
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 用 av1 编码压缩视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -noautorotate -y -vsync &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; -hwaccel cuda -hwaccel_output_format cuda -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;input.mp4&amp;#34;&lt;/span&gt; -c:a copy -c:v av1_nvenc -aq-strength &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt; -temporal_aq &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt; -preset p6 -cq:v &lt;span style=&#34;color:#ae81ff&#34;&gt;39&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;T:/output.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;# 如果要保留视频元数据，可以用 exiftool 处理
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;exiftool -tagsFromFile &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; -overwrite_original &amp;#34;&lt;/span&gt;/data/record/DJI_001_av1/&lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;压缩视频&#34;&gt;压缩视频&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 降低fps和音频码率以减少大小，同时视频清晰度不变&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -r &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; -b:a 32k filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 采用H.264算法压缩视频，并指定10fps，以AAC算法压缩音频，码率32k&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vcodec libx264 -crf &lt;span style=&#34;color:#ae81ff&#34;&gt;20&lt;/span&gt; filename.mp4 &lt;span style=&#34;color:#75715e&#34;&gt;#&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 再比如&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -crf &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt; filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i 480p.mp4 480p.webm&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;转成-gif-动图&#34;&gt;转成 GIF 动图&lt;/h3&gt;
+&lt;p&gt;可以将视频转成 Gif 动图：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 将视频前 30 帧转成 Gif 动图&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vframes &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt; -y -f gif filename.gif
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 转换为 GIF&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mov -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; scale=960:-1, fps=16, split[s0][s1];[s0]palettegen[p];[s1][p]paletteuse &amp;#34;&lt;/span&gt; -loop &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; output.gif
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 将视频转成 Gif 并指定时间和帧率&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -ss 00:00:00.000 -i filename.mp4 -pix_fmt rgb24 -r &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; -s 320x240 -t 00:00:10.000 filename.gif
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 上面的参数说明：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-ss 指定了开始时间
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-r 指定了以 &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; 帧频率
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-s 指定了输出 320x240 大小
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-t 指定了时间长度
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 将视频转为 gif，用 -pix_fmt 指定编码&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -ss 0:0:30 -t &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; -s 320x240 -pix_fmt rgb24 filename.gif&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;选项与参数&#34;&gt;选项与参数&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-i ：输入的文件，即文件的全面（filename）
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-vcodec ：编码格式，支持主流的 H.264和H.265（默认值：xvid）
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-preset ：编码速率控制，编码越快，信息丢失越多，即视频质量变差
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-crt ：输出质量的（0-51）0 为最高质量，默认值 23，建议值 18-28
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-y ：不经提示的覆盖输出文件
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-vf ：视频过滤器
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-acodec ：音频编码方式
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-ab ：音频数据流量，一般选择 32，64，96，128（推荐）&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;注：-crt 会直接影响到输出视频的码率，之后再设置－b 指定码率将不会生效；-preset 例如 x264 编码的预设值可以通过该参数指定。它主要影响编码的速度，并不会很大的影响编码出来的结果的质量。&lt;/p&gt;
+&lt;h3 id=&#34;合并-mp4-视频&#34;&gt;合并 MP4 视频&lt;/h3&gt;
+&lt;p&gt;将多个视频合并：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# mp4 最好是先转成无损的 ts 后再进行合并&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i file1.mp4 -vcodec copy -acodec copy -vbsf h264_mp4toannexb file1.ts
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i file2.mp4 -vcodec copy -acodec copy -vbsf h264_mp4toannexb file2.ts
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;concat:file1.ts|file2.ts&amp;#34;&lt;/span&gt; -acodec copy -vcodec copy -absf aac_adtstoasc filename.mp4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;更改分辨率大小&#34;&gt;更改分辨率大小&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -filter:v scale&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;1280:720 -c:a copy filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 又或者&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -s 1280x720 -c:a copy filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 将宽度调整为 1920 保持源比率&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mov -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;scale=1920:-1&amp;#34;&lt;/span&gt; output.mp4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;也可以调整视频的宽高比：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -aspect 16:9 filename.mp4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;转换视频码率&#34;&gt;转换视频码率&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 将视频转换成 3 Mbps 码率的视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -b:v 3000k filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 官方建议用 -b:v 时，应同时加上 -bufsize 用于设置码率控制缓冲器大小&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -b:v 3000k -bufsize 3000k filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 指定码率阈值，-minrate（别低于）和 -maxrate（别高于）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -b:v 3000k -bufsize 3000k -maxrate 3500k filename.mp4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;剪辑视频&#34;&gt;剪辑视频&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 从 00:00:21 开始剪辑，时间为 10 秒钟&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mov -ss 00:00:21 -t 00:00:10 -acodec aac -vcodec h264 -strict -2 filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 从 00:01:30 开始剪辑，持续时间为 20秒，编码原样不变&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -ss 0:1:30 -t 0:0:20 -i filename.avi -vcodec copy -acodec copy filename.avi
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 从 10秒 开始剪辑，持续15秒（比上面更简洁）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -ss &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; -t &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt; -codec copy filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -ss &lt;span style=&#34;color:#ae81ff&#34;&gt;10&lt;/span&gt; -t &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt; -i filename.mp4 -codec copy filename.mp4 &lt;span style=&#34;color:#75715e&#34;&gt;#（相比上面解决第一帧黑屏问题）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 裁剪参数 crop=width:height:x:y 说明：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# width 和 height 表示剪裁后的宽和高的尺寸，&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# x:y 表示裁剪区域的左上角坐标&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 截取视频局部&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -filter:v &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;crop=width:height:x:y&amp;#34;&lt;/span&gt; filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 将竖向的视频 1080 x 1920，保留中间 1080×1080 部分&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -strict -2 -vf crop&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;1080:1080:0:420 filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 截取部分视频，从[80,60]的位置开始，截取宽200，高100的视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -filter:v &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;crop=80:60:200:100&amp;#34;&lt;/span&gt; -c:a copy filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 截取右下角的四分之一&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -filter:v &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;crop=in_w/2:in_h/2:in_w/2:in_h/2&amp;#34;&lt;/span&gt; -c:a copy filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 截去底部40像素高度&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -filter:v &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;crop=in_w:in_h-40&amp;#34;&lt;/span&gt; -c:a copy filename.mp4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;视频旋转&#34;&gt;视频旋转&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 旋转 90 度&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -metadata:s:v rotate&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;90&amp;#34;&lt;/span&gt; -codec copy filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 顺时针旋转 90 度&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;transpose=1&amp;#34;&lt;/span&gt; filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 逆时针旋转 90 度&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;transpose=2&amp;#34;&lt;/span&gt; filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 顺时针旋转 90 度后再水平翻转&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;transpose=3&amp;#34;&lt;/span&gt; filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 逆时针旋转 90 度后再水平翻转&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;transpose=0&amp;#34;&lt;/span&gt; filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 水平翻转视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vf hflip filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 垂直翻转视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vf vflip filename.mp4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;播放速度与倒放&#34;&gt;播放速度与倒放&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 视频倒放：无音频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -filter_complex &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;0:v&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;reverse&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;v&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; -map &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;v&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; -preset superfast filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 视频倒放：音频不变&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vf reverse filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 音频倒放：视频不变&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -map &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; -c:v copy -af &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;areverse&amp;#34;&lt;/span&gt; reversed_audio.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 音视频同时倒放&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vf reverse -af areverse -preset superfast filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 视频加速：帧速率变为 2 倍，调整倍速范围（0.25，4）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vf setpts&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;PTS/2 -af atempo&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;2&lt;/span&gt; filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mov -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;setpts=PTS/2&amp;#34;&lt;/span&gt; -af &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;asetpts=PTS/2&amp;#34;&lt;/span&gt; output.mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 播放速度为2倍&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mov -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;setpts=PTS/.5&amp;#34;&lt;/span&gt; -af &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;asetpts=PTS/.5&amp;#34;&lt;/span&gt; output.mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 播放速度 1/2x&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 视频减速播放&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mkv -an -filter:v &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;setpts=0.5*PTS&amp;#34;&lt;/span&gt; filename.mkv&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;图片与视频转换&#34;&gt;图片与视频转换&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 将图片序列合成视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -f image2 -i image%d.jpg filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 将视频分解成图片序列&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 image%d.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg –i test.avi –r &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; –f image2 image-%3d.jpeg &lt;span style=&#34;color:#75715e&#34;&gt;# -r 表示频率，-ss 开始时间，-t 持续时间&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 将视频的 8.01 秒处截取 800*600 的缩略图&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -y -f image2 -ss 08.010 -t 0.001 -s 800x600 jt.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -r 0.5 -i c:/tmp/image%04d.jpg -i c:/time.mp3 -vcodec mpeg4 c:/filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 添加图片水印&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -i logo.png -filter_complex overlay filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 添加 GIF 文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -y -i filename.mp4 -ignore_loop &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; -i filename.gif -filter_complex overlay&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;0:H-h filename.mp4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;分离与合并音视频&#34;&gt;分离与合并音视频&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vn filename.mp3 &lt;span style=&#34;color:#75715e&#34;&gt;# 从视频分离出音频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -an output-mute.mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 从视频分离出视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 从视频中去除音频，使用 -an 参数去掉音频，使用 -vcodec copy 表示拷贝视频原样&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vcodec copy -an filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 提取视频中的音频，使用 -vn 参数去掉视频，-acodec copy 表示拷贝音频原样&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -acodec copy -vn filename.mp3
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 音频与视频合成，使用 -y 参数表示覆盖输出文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -y –i filename.mp4 –i filename.mp3 –vcodec copy –acodec copy filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 选项&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-ar &lt;span style=&#34;color:#75715e&#34;&gt;# 设置采样率&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-ac &lt;span style=&#34;color:#75715e&#34;&gt;# 设置声音的声道数&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-acodec &lt;span style=&#34;color:#75715e&#34;&gt;# 设置声音编解码器，未设定则采用输入流相同的编解码器，一般后面加 copy 表示拷贝，-an 不处理音频&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;对视频进行操作&#34;&gt;对视频进行操作&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 剪切视频，-ss 表示开始时间; -t 表示持续时间&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -ss 0:2:50 -t 0:0:20 -i filename.mp4 -vcodec copy -acodec copy filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 视频截图，-s 设置分辨率; -f 强迫采用格式 fmt&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg –i filename.mp4 –f image2 -t 0.001 -s 320x240 image-%3d.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 视频分解为图片，-r 指定截屏频率&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg –i filename.mp4 –r &lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt; –f image2 image-%3d.jpg
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 视频拼接&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -f concat -i filelist.txt -c copy filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 旋转视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vf rotate&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;PI/2 filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 缩放视频，iw 表示输入的宽度，iw/2 就是一半; -1 为保持宽高比&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -vf scale&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;iw/2:-1 filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 视频变速&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -filter:v setpts&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;0.5*PTS filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 音频变速&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp3 -filter:a atempo&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;2.0 filename.mp3
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 音视频同时变速，但音视频为互倒关系&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -filter_complex &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[0:v]setpts=0.5*PTS[v];[0:a]atempo=2.0[a]&amp;#34;&lt;/span&gt; -map &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[v]&amp;#34;&lt;/span&gt; -map &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[a]&amp;#34;&lt;/span&gt; filename.mp4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;合并图片为视频&#34;&gt;合并图片为视频&lt;/h3&gt;
+&lt;p&gt;将要合并的图片放在同一个文件夹中，并重命名为：&lt;code&gt;img001.png&lt;/code&gt; , &lt;code&gt;img002.png&lt;/code&gt; , &lt;code&gt;img003.png&lt;/code&gt;：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -framerate &lt;span style=&#34;color:#ae81ff&#34;&gt;24&lt;/span&gt; -i img%03d.png filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 或者&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -r 0.5 -i img%03d.jpg filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 将图片合成视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -f image2 -i img%d.jpg filename.mp4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;视频添加水印&#34;&gt;视频添加水印&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 视频添加水印，main_w-overlay_w-10 表示视频的宽度-水印的宽度-水印边距&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.mp4 -i logo.jpg -filter_complex &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;0:v&lt;span style=&#34;color:#f92672&#34;&gt;][&lt;/span&gt;1:v&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;overlay&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;main_w-overlay_w-10:main_h-overlay_h-10&lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;out&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; -map &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;out&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; -map 0:a -codec:a copy filename.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 添加文本水印&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.flv -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;drawtext=fontfile=simhei.ttf: text=&amp;#39;文本&amp;#39;:x=100:y=10:fontsize=24:fontcolor=yellow:shadowy=2&amp;#34;&lt;/span&gt; filename.mp4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;FFmpeg&lt;/strong&gt; 这个神器非常值得学习，因为视频在今天来说是很主流的内容载体，虽然对小白来来说，看起来很复杂，但其实只要掌握几个基本命令就足够了，同时它在 Windows 和 Linux 上都可以使用。&lt;/p&gt;
+&lt;h3 id=&#34;字幕处理&#34;&gt;字幕处理&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 提取软字幕（srt）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mkv &lt;span style=&#34;color:#75715e&#34;&gt;# 先查看视频信息，例如，可以看到 Stream #0:2(chi): Subtitle: subrip (srt)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mkv -map 0:s:0 subtitle.srt &lt;span style=&#34;color:#75715e&#34;&gt;# 提取字幕到 .srt 文件，其中 -map 0:s:0 选择第一个字幕流（索引从0开始，第二个字幕即 0:s:1 ）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 提取所有字幕（如下将 N 替换为字幕流总数减 1）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i in &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;0..N&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; ffmpeg -i input.mkv -map 0:s:$i subtitle_$i.srt; &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 如果字幕是 .ass 等文本格式格式字幕，可以提取并转换为 .srt 格式（不支持非文本格式字幕）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mkv -map 0:s:0 -c:s srt subtitle.srt&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;更多参考&#34;&gt;更多参考&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.linuxmi.com/linux-ffmpeg.html&#34;&gt;在 Linux 上用 FFmpeg 命令进行音频和视频处理&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+      
     </item>
+    
   </channel>
 </rss>

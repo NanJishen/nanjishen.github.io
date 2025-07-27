@@ -2,42 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on 极限玩家</title>
-    <link>https://ttti.cc/categories/</link>
+    <link>https://nav.ttti.cc/categories/</link>
     <description>Recent content in Categories on 极限玩家</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
     <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
-    <lastBuildDate>Thu, 19 Oct 2023 15:17:11 +0800</lastBuildDate>
-    <atom:link href="https://ttti.cc/categories/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>知识</title>
-      <link>https://ttti.cc/categories/%E7%9F%A5%E8%AF%86/</link>
-      <pubDate>Thu, 19 Oct 2023 15:17:11 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/categories/%E7%9F%A5%E8%AF%86/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>软件</title>
-      <link>https://ttti.cc/categories/%E8%BD%AF%E4%BB%B6/</link>
-      <pubDate>Sat, 08 Jan 2022 00:54:10 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/categories/%E8%BD%AF%E4%BB%B6/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>电影</title>
-      <link>https://ttti.cc/categories/%E7%94%B5%E5%BD%B1/</link>
-      <pubDate>Tue, 25 May 2021 20:57:30 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/categories/%E7%94%B5%E5%BD%B1/</guid>
-      <description></description>
-    </item>
-    <item>
-      <title>方法</title>
-      <link>https://ttti.cc/categories/%E6%96%B9%E6%B3%95/</link>
-      <pubDate>Sun, 14 Mar 2021 16:50:37 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/categories/%E6%96%B9%E6%B3%95/</guid>
-      <description></description>
-    </item>
+    <lastBuildDate>Fri, 25 Apr 2025 13:56:03 +0800</lastBuildDate>
+    
+        <atom:link href="https://nav.ttti.cc/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>

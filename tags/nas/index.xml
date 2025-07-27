@@ -2,28 +2,82 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>NAS on 极限玩家</title>
-    <link>https://ttti.cc/tags/nas/</link>
+    <link>https://nav.ttti.cc/tags/nas/</link>
     <description>Recent content in NAS on 极限玩家</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
     <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Wed, 22 Dec 2021 01:01:34 +0800</lastBuildDate>
-    <atom:link href="https://ttti.cc/tags/nas/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://nav.ttti.cc/tags/nas/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>威联通 QNAP 通过 Docker 部署 Aria2 下载神器</title>
-      <link>https://ttti.cc/post/qnap-docker-aria/</link>
-      <pubDate>Wed, 22 Dec 2021 01:01:34 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/qnap-docker-aria/</guid>
-      <description>&lt;p&gt;这是我的威联通 NAS 第一次使用 Docker 容器并安装镜像。我选择了一个我最常用的，也是所有达人都会使用的下载神器：Aria2。说它是神器，是因为它极为小巧并且强大。&lt;/p&gt;</description>
+      <link>https://nav.ttti.cc/post/qnap-docker-aria/</link>
+      <pubDate>Wed, 22 Dec 2021 01:01:34 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/qnap-docker-aria/</guid>
+      
+        <description>&lt;p&gt;这是我的威联通 NAS 第一次使用 Docker 容器并安装镜像。我选择了一个我最常用的，也是所有达人都会使用的下载神器：Aria2。说它是神器，是因为它极为小巧并且强大。&lt;/p&gt;
+&lt;p&gt;威联通的 Docker 镜像也是走 DockerHub，所以一切都是通用的（ Linux Windows MacOS ）。因此你在 DockerHub 上只要在 Tag 中确认了它是支持 X86 架构（amd64）的便是都可以使用。&lt;/p&gt;
+&lt;p&gt;启动 ContainerStation（如果你没有安装，请去软件中心安装它），接着点创建，输入你要搜索的镜像名称，例如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/2101.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;由 p3terx 大神制作的 aria2-pro 是公认最好的镜像。它提供了完美配置加自动更新 Tracker 服务器（ aria2 对小白来说上手很难，主要是因为小白不会修改配置文件和更新 Tracker ，但是修改配置文件是 Linux 最基础的东西）。&lt;/p&gt;
+&lt;p&gt;我之前在电脑上用的并没有使用 Docker 去部署，而是自行修改配置文件并运行的。现在在威联通上这一点就简单了，小白也可以轻松做到。但是 Docker 是有点学习成本的，放心不会太高（建议：比起照搬，最好是去了解下 Docker 的参数）。&lt;/p&gt;
+&lt;h2 id=&#34;开始安装流程&#34;&gt;开始安装流程&lt;/h2&gt;
+&lt;p&gt;威联通安装 Docker 镜像和 DockerHub 上获取是一样的。首先选择你的版本，通常无脑 “latest” ，字面意思：“最新的”，然后下一步：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/2102.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;名称随意自定义，只是为了方便你识别。然后点“高级选项”，进行主要参数配置。先指定网络端口“主机=容器”（具体内容可以从 DockerHub 说明文档中查阅）。例如这里的是 6800 作为 RPC 端口（就是我们浏览器访问控制台的端口），然后指定 TCP+UDP 的 6888 端口，这个是下载时用的监听端口。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/2103.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;网络配置完成后，在左面点“共享文件夹”，现在来挂载所需的目录。挂载目录在威联通中是可以点选的。例如这个镜像需要配置两个目录，分别为 /config 和 /downloads，前者保存配置文件，后者保存下载的目录，之后就可以点击创建了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/2104.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;创建完成后，威联通会自动启动并运行镜像，然后你就可以用浏览器的 AriaNG 访问了（ AriaNG 是什么？请自行百度）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/2105.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;默认密码是大神的名字，我们可以修改成自己的密码。威联通提供了 Text Editor 作为文本编辑器，如图的修改，即可更改密码 ↓&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/2106.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;容器运行后服务就已经部署好了，最后推荐个微信小程序，就叫：aria，使用起来比较方便，即便你人在外面，也可以直接通过小程序添加下载连接将你要下载的东西下载到家里的 NAS 中了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+      
     </item>
+    
     <item>
       <title>威联通 QNAP 挂载阿里云盘简单明快教程</title>
-      <link>https://ttti.cc/post/qnap-aliyunpan/</link>
-      <pubDate>Mon, 13 Dec 2021 17:46:13 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/qnap-aliyunpan/</guid>
-      <description>&lt;p&gt;双11期间购入了威联通的NAS，而在今天挂载上了阿里云盘，以便进行HBS3同步作业的云备份，借此也顺便写个简单明快的教程，废话不多说，让我们开始。&lt;/p&gt;</description>
+      <link>https://nav.ttti.cc/post/qnap-aliyunpan/</link>
+      <pubDate>Mon, 13 Dec 2021 17:46:13 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/qnap-aliyunpan/</guid>
+      
+        <description>&lt;p&gt;双11期间购入了威联通的NAS，而在今天挂载上了阿里云盘，以便进行HBS3同步作业的云备份，借此也顺便写个简单明快的教程，废话不多说，让我们开始。&lt;/p&gt;
+&lt;h3 id=&#34;开启-nas-的-web-服务&#34;&gt;开启 NAS 的 Web 服务&lt;/h3&gt;
+&lt;p&gt;威联通 - 控制台 - Web 服务器 - 勾选“启用web服务器”- 应用。&lt;/p&gt;
+&lt;h3 id=&#34;安装阿里云盘套件&#34;&gt;安装阿里云盘套件&lt;/h3&gt;
+&lt;p&gt;首先，下载并安装阿里云插件，访问项目网页地址：&lt;code&gt;github.com/iranee/qnap-aliyunpan-webdav&lt;/code&gt; 。选择你对应的版本，例如我是 x86 构架的威联通，那么我选择下载：aliyunpan_1.0.08_x86_64.qpkg 。&lt;/p&gt;
+&lt;p&gt;下载完成后，在威联通中启动软件中心（ App Center）中，在软件中心的右上角点击“手动安装”按钮，浏览你刚刚下载的安装包后点击安装。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/1301.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;安装完成后，在桌面启动阿里云盘，填写 Token 和 账号密码并保存。
+&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/1302.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;通过浏览器访问 &lt;code&gt;NAS-IP:端口号&lt;/code&gt;，来这是以下是否成功，如果能够成功访问就表示成功。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/1303.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h3 id=&#34;挂载为网络磁盘&#34;&gt;挂载为网络磁盘&lt;/h3&gt;
+&lt;p&gt;接下来，我们来将其挂载为网络驱动器。启动文件总管，点击右上角的“远程挂载”按钮，然后选择 Webdav Cloud/Serve.. ，填入 NAS-IP:端口号。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/1304.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;结果看到如下提示便是成功。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/1305.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;打开文件总管，可以看到挂载成功后的阿里云盘。现在可以像管理本地磁盘一样在文件管理器中进行操作（还避免了安装阿里云盘臃肿的客户端）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/1306.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;常规操作，来，测个速。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/1307.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/1308.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;它同时支持 HBS 同步套件，比如我设置一个定时同步任务：每晚凌晨1点，将我 NAS 的 2号盘 和 阿里云盘 自动同步一次，这样就保证了数据安全。&lt;/p&gt;
+&lt;p&gt;由于阿里云盘不限速，所以基本可以20M速度下载（即运营商的200M），所以阿里云盘是目前首选的网盘，我们今天会更在乎成本吗？不会，我们更在乎速度！&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nassets/imgp/posts/d2112/1309.jpg&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+      
     </item>
+    
   </channel>
 </rss>

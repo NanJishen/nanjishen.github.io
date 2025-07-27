@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>极限玩家</title>
-    <link>https://ttti.cc/</link>
+    <link>https://nav.ttti.cc/</link>
     <description>Recent content on 极限玩家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -11,15 +11,171 @@
     <copyright>极限玩家</copyright>
     <lastBuildDate>Mon, 05 Jan 9024 00:37:56 +0800</lastBuildDate>
     
-        <atom:link href="https://ttti.cc/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://nav.ttti.cc/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>yt-dlp 下载视频使用指南</title>
+      <link>https://nav.ttti.cc/post/ytdlp/</link>
+      <pubDate>Fri, 25 Apr 2025 13:56:03 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/ytdlp/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://github.com/yt-dlp/yt-dlp&#34;&gt;yt-dlp&lt;/a&gt; 是一个强大的命令行视频下载工具，支持数千个网站的音视频及字幕下载。&lt;/p&gt;
+&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
+&lt;p&gt;视频地址可以使用 &lt;code&gt;url&lt;/code&gt; 或 &lt;code&gt;vid&lt;/code&gt; 在视频页点分享后可以直接复制 url 链接，也可用复制 &lt;code&gt;youtu.be/&lt;/code&gt; 后面的 &lt;code&gt;vid&lt;/code&gt; 号&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -U &lt;span style=&#34;color:#75715e&#34;&gt;# 升级版本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -F url 或 vid &lt;span style=&#34;color:#75715e&#34;&gt;# 列出音频和视频，可用查看详细信息及编号&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp url &lt;span style=&#34;color:#75715e&#34;&gt;# 默认直接下载最高画质视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --yes-playlist &lt;span style=&#34;color:#75715e&#34;&gt;# 下载播放列表&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f &lt;span style=&#34;color:#ae81ff&#34;&gt;22&lt;/span&gt; url 或 vid &lt;span style=&#34;color:#75715e&#34;&gt;# 下载编号 22 的视频（可用看到是 720p 还包含了音轨）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f 137+140 url --merge-output-format mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 将音视频合并下载为 MP4 文件（需要 ffmpeg）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bestvideo[height&amp;lt;=1080]+bestaudio&amp;#34;&lt;/span&gt; url &lt;span style=&#34;color:#75715e&#34;&gt;# 指定下载格式（即 1080p+高品质音频）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f &lt;span style=&#34;color:#ae81ff&#34;&gt;22&lt;/span&gt; url --proxy socks5://127.0.0.1:10808 &lt;span style=&#34;color:#75715e&#34;&gt;# 使用代理&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;常用实例&#34;&gt;常用实例&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 通过指定代理下载音视频及字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -F url &lt;span style=&#34;color:#75715e&#34;&gt;# 先列出所有音视频，以确定要下载哪个&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f 136+140 url --write-auto-subs --sub-langs zh-Hans --proxy socks5://192.168.10.1:18111 &lt;span style=&#34;color:#75715e&#34;&gt;# 指定视频音频字幕（自动翻译）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 下载播放列表，最佳视频+最佳音频，并输出为 mp4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ytdl -f &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bestvideo+bestaudio&amp;#34;&lt;/span&gt; --merge-output-format mp4 &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://youtube.com/playlist?list=XXX&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 同时下载写入英文字幕+略缩图+影片介绍（适合转存）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --write-subs --write-auto-subs --sub-format SRT --sub-langs en --write-thumbnail --write-description url&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;音频&#34;&gt;音频&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -x --audio-format mp3 url &lt;span style=&#34;color:#75715e&#34;&gt;# 仅下载音频为 mp3 格式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f &lt;span style=&#34;color:#ae81ff&#34;&gt;140&lt;/span&gt; url &lt;span style=&#34;color:#75715e&#34;&gt;# 下载编号为 140 的音频&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;字幕&#34;&gt;字幕&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --list-subs url &lt;span style=&#34;color:#75715e&#34;&gt;# 列出字幕，查看所需语言字幕是否存在&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --write-subs --sub-langs zh-Hans,en --skip-download --convert-subs srt url &lt;span style=&#34;color:#75715e&#34;&gt;# 下载中文和英文字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --write-auto-subs --sub-langs zh-Hans --skip-download url &lt;span style=&#34;color:#75715e&#34;&gt;# 下载自动翻译字幕到中文&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f 137+140 url --write-subs --sub-langs zh-Hans &lt;span style=&#34;color:#75715e&#34;&gt;# 下载视频+音频+字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f 137+140 url --embed-subs --sub-langs &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;zh-Hans&amp;#34;&lt;/span&gt; --merge-output-format mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 下载视频+音频+字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i 1.mp4 -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;subtitles=1.srt&amp;#39;&lt;/span&gt; -c:a copy output.mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 如果要写入硬字幕&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;下载需要登录的视频&#34;&gt;下载需要登录的视频&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Firefox&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --cookies-from-browser firefox:/Users/appinn/Library/Application&lt;span style=&#34;color:#ae81ff&#34;&gt;\ &lt;/span&gt;Support/Firefox/Profiles/12345.default-release-12345/ https://www.bilibili.com/video/xxx
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Edge，&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp.exe --cookies-from-browser edge:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C:\Users\appinn\AppData\Local\Microsoft\Edge\User Data\Profile 1&amp;#34;&lt;/span&gt; -F https://www.bilibili.com/video/xxxx
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Chrome&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp.exe --cookies-from-browser chrome:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C:\Users\scavi\AppData\Local\Google\Chrome\User Data\Default&amp;#34;&lt;/span&gt; -F https://www.bilibili.com/video/xxxx&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;参数与配置文件&#34;&gt;参数与配置文件&lt;/h3&gt;
+&lt;p&gt;可将参数写在同目录中名为 &lt;code&gt;yt-dlp.conf&lt;/code&gt; 的配置文件中，这样只需执行下载命令，便会根据配置文件中的参数进行下载&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 可以随时编辑配置文件调整，将不要的选项前加上 # 号注释掉&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 格式：yt-dlp -f [编号] [代理配置] [视频链接] [合并语句] [外部下载器选择] [下载器参数]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f 137+140 --proxy socks5://127.0.0.1:8080 url --merge-output-format mp4 --external-downloader aria2c --downloader-args aria2c:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-x 16 -k 1M&amp;#34;&lt;/span&gt; url
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 说明&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-f 137+140 &lt;span style=&#34;color:#75715e&#34;&gt;# 指定下载的编号为 137 和 140（视频+音频） &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--output T:/%&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;title&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;s-%&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;resolution&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;s.%&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ext&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;s &lt;span style=&#34;color:#75715e&#34;&gt;# 指定输出路径&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--proxy socks5://192.168.1.1:0000 &lt;span style=&#34;color:#75715e&#34;&gt;# socks5 代理配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--merge-output-format mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 合并后输出格式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-x --audio-format mp3 &lt;span style=&#34;color:#75715e&#34;&gt;# 如果只要音频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--external-downloader aria2c &lt;span style=&#34;color:#75715e&#34;&gt;# 下载器选择&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--downloader-args &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;下载器名&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[下载器配置]&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 如上 -x 16 为16线程 -k 1M 代表块大小为1M（youtube 不支持分块，此句可忽略）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 字幕处理&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--write-subs &lt;span style=&#34;color:#75715e&#34;&gt;# 下载字幕文件，如 .srt &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--embed-subs &lt;span style=&#34;color:#75715e&#34;&gt;# 或将字幕嵌入视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--sub-langs zh-Hans,en &lt;span style=&#34;color:#75715e&#34;&gt;# 指定字幕语言&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--convert-subs srt &lt;span style=&#34;color:#75715e&#34;&gt;# 转换成 srt&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--skip-download &lt;span style=&#34;color:#75715e&#34;&gt;# 只下载字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 是否保存元数据&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--embed-thumbnail &lt;span style=&#34;color:#75715e&#34;&gt;# 缩略图&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--embed-metadata &lt;span style=&#34;color:#75715e&#34;&gt;# 元数据&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Cookies 引入&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--cookies-from-browser chrome:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;T:\PortableApps\ungoogled-chromium\userdata\Default&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--cookies T:/www.youtube.com_cookies.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 指定 ffmpeg 路径&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--ffmpeg-location D:/Qsync/Apps/MPV/ffmpeg.exe&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;调用不同的配置文件&#34;&gt;调用不同的配置文件&lt;/h3&gt;
+&lt;p&gt;使用不同的配置文件来管理不同的下载设置能够提高效率&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --config-location /path/to/config/file.conf &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;URL&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 直接指定配置文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --ignore-config --config-location /path/to/config/file.conf &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;URL&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 忽略默认配置文件并指定配置文件&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;创建多个配置文件，按需使用&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# D:/MPV/default.conf (默认)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# D:/MPV/hd.conf (高清视频)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-f &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bestvideo[height&amp;lt;=1080]+bestaudio/best[height&amp;lt;=1080]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-o &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%(title)s.%(ext)s&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--merge-output-format mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# D:/MPV/audio.conf (仅音频)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-x
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--audio-format mp3
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--audio-quality &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-o &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%(title)s.%(ext)s&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;使用-cookie-文件&#34;&gt;使用 Cookie 文件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;浏览器登录油管，点击 &lt;a href=&#34;https://chromewebstore.google.com/detail/cclelndahbckbenkjhflpdbgdldlbecc&#34;&gt;Get cookies.txt LOCALLY&lt;/a&gt; 扩展 - Export ，下载 &lt;code&gt;cookies.txt&lt;/code&gt; 文件&lt;/li&gt;
+&lt;li&gt;使用命令引入 &lt;code&gt;yt-dlp -F url --cookies T:\cookies.txt&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>你并非缺乏创造力而是不知所措</title>
-      <link>https://ttti.cc/post/infoverload/</link>
+      <link>https://nav.ttti.cc/post/infoverload/</link>
       <pubDate>Thu, 19 Oct 2023 15:17:11 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/infoverload/</guid>
+      <guid>https://nav.ttti.cc/post/infoverload/</guid>
       
         <description>&lt;h2 id=&#34;应对内容过载&#34;&gt;应对内容过载&lt;/h2&gt;
 &lt;p&gt;数字囤积已成为当今互联网社会的一种普遍体验：&lt;/p&gt;
@@ -92,11 +248,233 @@
     </item>
     
     <item>
+      <title>Google谷歌搜索方法和技巧</title>
+      <link>https://nav.ttti.cc/post/googlesearch/</link>
+      <pubDate>Wed, 05 Oct 2022 00:37:56 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/googlesearch/</guid>
+      
+        <description>&lt;h2 id=&#34;基础搜索&#34;&gt;基础搜索&lt;/h2&gt;
+&lt;p&gt;不管你要搜索什么，都应先用简单的字与词进行搜索，例如 &lt;code&gt;最近的停车场在哪里&lt;/code&gt; 。你随时可以根据需要添加一些描述性字词。如果你要查找特定地点的某个场所或商品，可添加该地点名称。例如：&lt;code&gt;广州早茶&lt;/code&gt;。不想打字？可以查看&lt;a href=&#34;https://support.google.com/websearch/answer/2940021&#34;&gt;如何使用语音搜索功能&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;仔细选择措辞&#34;&gt;仔细选择措辞&lt;/h3&gt;
+&lt;p&gt;在确定输入搜索框中的字词时，尽量选择要查找的网站上可能会出现的字词。 例如：不要使用&lt;code&gt;我的头很痛&lt;/code&gt;，而要使用&lt;code&gt;头痛&lt;/code&gt;这样的精确的关键词，因为医学网站上往往会使用后者。&lt;/p&gt;
+&lt;h3 id=&#34;快速查询&#34;&gt;快速查询&lt;/h3&gt;
+&lt;p&gt;在你输入搜索字词后直接在搜索结果页上给出相关解答。当然并非所有功能在所有地区都提供。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;天气：&lt;/strong&gt; 例如 &lt;code&gt;weather:本溪&lt;/code&gt;、&lt;code&gt;广州天气&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;股票：&lt;/strong&gt; 例如 &lt;code&gt;stocks:工商银行&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;地图：&lt;/strong&gt; 例如 &lt;code&gt;map:本溪&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;字典：&lt;/strong&gt; 例如 &lt;code&gt;define:apple&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;计算：&lt;/strong&gt; 例如 &lt;code&gt;3\*9123&lt;/code&gt; ，数学公式或求解复杂的图形公式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;电影：&lt;/strong&gt; 例如 &lt;code&gt;movie:CODA&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;体育：&lt;/strong&gt; 搜索球队的名称，即可查看相关赛程和比赛得分等信息。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基本信息：&lt;/strong&gt; 搜索名人、地点、电影或歌曲的名称即可看到相关信息。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;指定源：&lt;/strong&gt; 例如 &lt;code&gt;apple source:the_verge&lt;/code&gt;，然后切换到新闻标签&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;单位换算&#34;&gt;单位换算&lt;/h3&gt;
+&lt;p&gt;各种单位的换算可以使用 &lt;code&gt;in&lt;/code&gt; 关键字，例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;货币换算：&lt;/strong&gt; 例如 &lt;code&gt;$100 in CNY&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;单位换算：&lt;/strong&gt; 例如 &lt;code&gt;毫米 in 厘米&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重量换算：&lt;/strong&gt; 例如 &lt;code&gt;500克 in 斤&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;速度换算：&lt;/strong&gt; 例如 &lt;code&gt;10公里 in 英里&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;时间换算：&lt;/strong&gt; 例如 &lt;code&gt;3小时 in 分钟&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;各种操作符&#34;&gt;各种操作符&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&amp;quot; &amp;ldquo;&lt;/strong&gt;：引号括起能完整的搜索内容，例如 &lt;code&gt;&amp;quot;william gates&amp;quot;&lt;/code&gt; 能排除 bill gates&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OR，/，|&lt;/strong&gt;：逻辑“或”，例如 &lt;code&gt;jobs OR gates / jobs | gates&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AND&lt;/strong&gt;： 逻辑“和”，例如 &lt;code&gt;jobs AND gates&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-&lt;/strong&gt;： 逻辑“排除”，例如 &lt;code&gt;jobs -apple&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;*&lt;/strong&gt;：“通配符”将匹配任何单词或短语，例如 &lt;code&gt;steve * apple &lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;()&lt;/strong&gt;：说个术语或操作符分组，例如  &lt;code&gt;(ipad OR iphone) apple&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$&lt;/strong&gt;：搜索价格，适用于欧元，但不适用于英镑，例如 &lt;code&gt;ipad $329&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;+：&lt;/strong&gt; 强制对单个单词或短语进行精确匹配搜索，例如 &lt;code&gt;jobs +apple&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;专家搜索提示&#34;&gt;专家搜索提示&lt;/h3&gt;
+&lt;p&gt;想了解更多有助于你成为搜索达人的提示和技巧？请点击以下链接，了解更多高级搜索技巧。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/2466433&#34;&gt;搜索运算符&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/1325808&#34;&gt;逆向图片搜索&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/112511&#34;&gt;在 Google 上搜索图片&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/142143&#34;&gt;过滤搜索结果&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;指定标题和链接搜索&#34;&gt;指定标题和链接搜索&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;intitle&lt;/code&gt; 用来搜索标题中包含某个词(或词)的页面。例如 &lt;code&gt;intitle:apple&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;allintitle:&lt;/code&gt; 与 intitle 类似，但只返回包含 title 标记中所有指定单词的结果。例如，allintitle:apple iphone&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;inurl:&lt;/code&gt; 查找 URL 中包含某个单词(或单词)的页面。例如 &lt;code&gt;inurl:apple&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;allinurl:&lt;/code&gt; 与 inurl 类似，但只返回包含 URL 中所有指定单词的结果。例如 &lt;code&gt;allinurl:apple iphone&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;inanchor: 查找链接到特定锚文本的页面，例如 &lt;code&gt;inanchor:apple iphone&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;allinanchor:&lt;/code&gt; 与 inanchor 类似，但只返回包含入站锚文本中所有指定单词的结果。例如 &lt;code&gt;allinanchor:apple iphone&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;指定日期搜索&#34;&gt;指定日期搜索&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;日期..日期&lt;/code&gt; ，例如 &lt;code&gt;wwdc video 2010..2014&lt;/code&gt;，这将搜索 2010年到2014年之间的 wwdc 视频。&lt;/p&gt;
+&lt;h2 id=&#34;指定网站进行搜索&#34;&gt;指定网站进行搜索&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;site:&lt;/code&gt; 用来指定站点进行搜索，例如，&lt;code&gt;site:quchao.net&lt;/code&gt;（注意：不能在其中加入空格，这是错误的：&lt;code&gt;site: quchao.net&lt;/code&gt;），下面是一些实例：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;site:yourblog.com/category&lt;/code&gt; 搜索 WordPress 博客分类页面&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;site:yourblog.com inurl:tag&lt;/code&gt; 搜索 WordPress“ tag”页面&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;site:asos.com -inurl:https&lt;/code&gt; 搜索不安全的页面（即链接不包含 https 的页面）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-site:asos.com &amp;quot;搜索内容 &amp;amp; 搜索内容&amp;quot;&lt;/code&gt; 搜索指定内容，但是不包括指定网站&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;intitle:&amp;quot;文章标题包含的内容&amp;quot; -ttti.cc -pinterest&lt;/code&gt; 搜索我们的文章标题内容，但不包括我们的网站，用来看看有没有其它网站盗用了我们的文章&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;related: 用来查询相关网站，例如 &lt;code&gt;related:apple.com&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;提高搜索的精确性&#34;&gt;提高搜索的精确性&lt;/h2&gt;
+&lt;p&gt;优化图片高级搜索（总体而言）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;转到&lt;a href=&#34;https://google.com/advanced_image_search&#34;&gt;高级图片搜索&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;使用地区或文件类型等过滤条件来缩小搜索结果范围。&lt;/li&gt;
+&lt;li&gt;点击底部的&lt;strong&gt;高级搜索&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;搜索精确尺寸的图片&lt;/strong&gt;，在关键字后加上 &lt;code&gt;imagesize:&amp;lt;宽度&amp;gt;x&amp;lt;高度&amp;gt;&lt;/code&gt; 来指定尺寸（以像素为单）：imagesize:500x400&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;搜索社交媒体&lt;/strong&gt;，在关键字前加上 &lt;code&gt;@&lt;/code&gt; 可用于搜索社交媒体：&lt;code&gt;@twitter&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;搜索特定价格&lt;/strong&gt;，在表示价格的数字前加上 &lt;code&gt;$&lt;/code&gt; ，例如：&lt;code&gt;相机 $400&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;从搜索结果中排除特定字词&lt;/strong&gt;，在要排除的关键字前加上 &lt;code&gt;-&lt;/code&gt;，例如：&lt;code&gt;中国美食 -麻辣&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;搜索完全匹配的结果&lt;/strong&gt;
+为字词或短语加上引号。例如：&lt;code&gt;&amp;quot;最高的建筑&amp;quot;&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在某个数字范围内执行搜索&lt;/strong&gt;
+在两个数字之间加上 &lt;code&gt;..&lt;/code&gt;。例如：&lt;code&gt;相机 $50..$100&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;组合搜索&lt;/strong&gt;
+在各个搜索查询字词之间加上“&lt;code&gt;OR&lt;/code&gt;”。例如：&lt;code&gt;马拉松 OR 比赛&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;搜索特定网站&lt;/strong&gt;
+在网站或网域前加上“&lt;code&gt;site:&lt;/code&gt;”。例如：&lt;code&gt;site:youtube.com&lt;/code&gt; 或 &lt;code&gt;site:.gov&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;查看网站的 Google 缓存版本&lt;/strong&gt;
+在网址前加上“&lt;code&gt;cache:&lt;/code&gt;”。前提是已被索引过。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;重要提示：&lt;/strong&gt; 并非所有搜索运算符都能返回一个不漏的搜索结果。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;邻近搜索：&lt;/strong&gt; &lt;code&gt;AROUND(X)&lt;/code&gt; 可以查找包含两个单词或短语的页面，例如 &lt;code&gt;apple AROUND(4) iphone&lt;/code&gt;。表示，单词“ apple”和“ iphone”必须出现在内容中，而且不能超过4个单词的距离。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;按文件的类型搜索&#34;&gt;按文件的类型搜索&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;filetype:&lt;/code&gt; 用来搜索指定的文件类型的文件。例如：&lt;code&gt;apple filetype:pdf&lt;/code&gt; 或者 &lt;code&gt;apple ext:pdf&lt;/code&gt; ，这将搜索其中包含 “apple” 一词的 PDF 文件。下面是一些例子：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;site:ahrefs.com filetype:pdf&lt;/code&gt; 在指定网站搜索 pdf 文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;site:ahrefs.com (ext:PDF OR ext:docx OR ext:xls )&lt;/code&gt; 在指定网站搜索多个类型的文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Google 可将大多数类型的网页和文件内容编入索引。最常编入索引的文件类型包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Adobe Flash (.swf)&lt;/li&gt;
+&lt;li&gt;Adobe 便携式文档格式 (.pdf)&lt;/li&gt;
+&lt;li&gt;Google 地球（.kml、.kmz）&lt;/li&gt;
+&lt;li&gt;GPS 交换格式 (.gpx)&lt;/li&gt;
+&lt;li&gt;Hancom Hanword (.hwp)&lt;/li&gt;
+&lt;li&gt;HTML（.htm、.html）&lt;/li&gt;
+&lt;li&gt;Microsoft Excel（.xls、.xlsx）&lt;/li&gt;
+&lt;li&gt;Microsoft Word（.doc、.docx）&lt;/li&gt;
+&lt;li&gt;OpenOffice 电子表格 (.ods)&lt;/li&gt;
+&lt;li&gt;富文本格式 (.rtf)&lt;/li&gt;
+&lt;li&gt;可缩放矢量图形 (.svg)&lt;/li&gt;
+&lt;li&gt;TeX/LaTeX (.tex)&lt;/li&gt;
+&lt;li&gt;文本文件（.txt、.text、其他文件扩展名），包括采用常用编程语言的源代码：
+&lt;ul&gt;
+&lt;li&gt;Basic 源代码 (.bas)&lt;/li&gt;
+&lt;li&gt;C/C++ 源代码（.c、.cc、.cpp、.cxx、.h、.hpp）&lt;/li&gt;
+&lt;li&gt;C# 源代码 (.cs)&lt;/li&gt;
+&lt;li&gt;Java 源代码 (.java)&lt;/li&gt;
+&lt;li&gt;Perl 源代码 (.pl)&lt;/li&gt;
+&lt;li&gt;Python 源代码 (.py)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;无线标记语言（.wml、.wap）&lt;/li&gt;
+&lt;li&gt;XML (.xml)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://support.google.com/webmasters/answer/35287?hl=zh-Hans&#34;&gt;Google 编入索引的文件类型参考&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;搜索影片种子&#34;&gt;搜索影片种子&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;奇异博士2:torrent&lt;/code&gt; 搜索电影
+&lt;code&gt;&amp;quot;IPZ-919&amp;quot;&lt;/code&gt;搜索车牌&lt;/p&gt;
+&lt;h2 id=&#34;指定内容进行搜索&#34;&gt;指定内容进行搜索&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;intext:&lt;/code&gt; 搜索内容中某处包含某个单词(或词)的页面。例如 &lt;code&gt;intext:apple&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;allintext:&lt;/code&gt; 与 intext”类似，但只返回包含页面上某处所有指定单词的结果。例如 &lt;code&gt;allintext:apple iphone&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;索引搜索&#34;&gt;索引搜索&lt;/h2&gt;
+&lt;p&gt;索引搜索可以呈现一个网站的文件目录，将网站的资源以数据列表的形式呈现出来，用这个方法甚至可以突破一些网站的限制，用法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;index of/&amp;rdquo; 进击的巨人 filetype:mp4 -inurl:xxx，组合搜索&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;index of/&amp;rdquo; mp3 inurl:lib，配合 inurl: 搜索指定&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;index of/&amp;rdquo; 软件名，可以突破网站入口下载软件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;以图搜图搜相关图片&#34;&gt;以图搜图搜相关图片&lt;/h2&gt;
+&lt;p&gt;你可以依据图片查找网上的相关图片。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;类似图片&lt;/li&gt;
+&lt;li&gt;包含这些图片的网站&lt;/li&gt;
+&lt;li&gt;用作搜索依据的图片的其他尺寸版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考：&lt;a href=&#34;https://support.google.com/websearch/answer/1325808&#34;&gt;https://support.google.com/websearch/answer/1325808&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;上传图片 / 拖放图片&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;转到 &lt;a href=&#34;https://images.google.com/&#34;&gt;Google 图片&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;点击“按图搜索”图标，上传一张图片&lt;/li&gt;
+&lt;li&gt;或将文件管理器图片拖放到搜索窗口&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;依据网址进行搜索&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;转到您想要用作搜索依据的图片所在的网站。&lt;/li&gt;
+&lt;li&gt;要复制网址，请右键点击相应图片。&lt;/li&gt;
+&lt;li&gt;点击&lt;strong&gt;复制图片地址&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;转到 &lt;a href=&#34;https://images.google.com/&#34;&gt;Google 图片&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;点击“按图搜索”图标。&lt;/li&gt;
+&lt;li&gt;点击&lt;strong&gt;粘贴图片网址&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;将网址粘贴到文本框中。&lt;/li&gt;
+&lt;li&gt;点击&lt;strong&gt;按图搜索&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;用作搜索依据的网址不会保存在您的浏览记录中。不过，Google 可能会存储这些网址，以便改善产品和服务。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;依据网站中的图片进行搜索&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;转到您想要用作搜索依据的图片所在的网站。&lt;/li&gt;
+&lt;li&gt;右键点击相应图片。&lt;/li&gt;
+&lt;li&gt;点击&lt;strong&gt;在 Google 上搜索这张图片&lt;/strong&gt;。系统随即会在新的标签页中显示搜索结果。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;参考：&lt;a href=&#34;https://support.google.com/websearch/answer/1325808&#34;&gt;https://support.google.com/websearch/answer/1325808&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Google 会如何使用您用作搜索依据的图片
+Google 会将您在搜索时上传的图片存储 7 天。这些图片不会被纳入搜索记录中，仅会用以改善产品和服务。&lt;/p&gt;
+&lt;h2 id=&#34;一些复杂的实例&#34;&gt;一些复杂的实例&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;site:youtube.com &amp;quot;chicken soup&amp;quot;&lt;/code&gt; 搜索到鸡汤，在结果页面点击“工具”，可以选择类型“素描画”&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fitness intitle:&amp;quot;write for us&amp;quot; inurl:&amp;quot;write-for-us&amp;quot;&lt;/code&gt; 搜索文章&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fitness (&amp;quot;write for us&amp;quot; | inurl:&amp;quot;guest post guidelines&amp;quot; | inurl:&amp;quot;inurl:guest-post&amp;quot;)&lt;/code&gt; 搜索文章（加入博客）&lt;/li&gt;
+&lt;li&gt;inurl:author/tim-soulo 搜索蒂姆做为作者发布的网站和帖子&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(fitness | health) AND (&amp;quot;write for us&amp;quot; inurl:&amp;quot;guest-post&amp;quot;) AND site:.co.uk&lt;/code&gt; 更复杂的实例&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;seo intext:&amp;quot;ryan stewart&amp;quot; inurl:author -site:webris.org&lt;/code&gt; 搜索每一个人写的网站&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;author:”tim soulo” -site:ahrefs.com -site:bloggerjet.com&lt;/code&gt; 搜索 Tim Soulo 的帖子，但排除来自 ahrefs.com 和 bloggerjet.com (Tim 的个人博客)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;allintitle:review (semrush OR moz OR majestic)&lt;/code&gt; 查找竞争对手的评论&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;site:quora.com intitle:(SEO | &amp;quot;link building&amp;quot; | &amp;quot;keyword research&amp;quot;)&lt;/code&gt; 在提问网站搜索答案&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;site:ttti.cc/blog&lt;/code&gt; 搜索指定网站页面的博客&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;googlebot&#34;&gt;GoogleBot&lt;/h2&gt;
+&lt;p&gt;Googlebot 是 Google 的网页抓取工具的通用名称。具体而言，Googlebot 是两种不同类型的抓取工具的通用名称：用于在桌面设备上模拟用户操作的桌面版抓取工具，以及用于在移动设备上模拟用户操作的移动版抓取工具。
+&lt;a href=&#34;https://support.google.com/webmasters/answer/182072?hl=zh-Hans&#34;&gt;https://support.google.com/webmasters/answer/182072?hl=zh-Hans&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;p&gt;如果你想了解更多关于谷歌搜索的相关知识，也可以访问谷歌官方帮助文档进行加强学习。
+&lt;a href=&#34;https://support.google.com/websearch?hl=zh-Hans&#34;&gt;谷歌搜索中文帮助页面&lt;/a&gt;、&lt;a href=&#34;https://sites.google.com/site/resourcesandsearchstrategies&#34;&gt;运算符&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=yWLD9139Ipc&#34;&gt;如何使用高级搜索操作员使用 Google（9个可操作的提示）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ahrefs.com/blog/google-advanced-search-operators/#find-resource-pages&#34;&gt;Google搜索操作员：完整列表（42个高级操作员）&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;duckduckgo&#34;&gt;DuckDuckGo&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;将文本转换为 ASCII 码&lt;/strong&gt;，搜索 &lt;code&gt;figlet 要转换的英文&lt;/code&gt; ，例如 &lt;code&gt;figlet nanji&lt;/code&gt;
+&lt;strong&gt;查看社交没额题状态&lt;/strong&gt;，搜索 &lt;code&gt;@用户名&lt;/code&gt; ，例如 &lt;code&gt;@nanjishen&lt;/code&gt;
+&lt;strong&gt;密码生成器&lt;/strong&gt;，搜索 &lt;code&gt;password 数量&lt;/code&gt; ，例如 &lt;code&gt;password 18&lt;/code&gt;
+&lt;strong&gt;搜索备忘单&lt;/strong&gt;，搜索 &lt;code&gt;关键字+cheatsheet&lt;/code&gt; ，例如 &lt;code&gt;vim cheatsheet&lt;/code&gt;
+&lt;strong&gt;搜索颜色代码&lt;/strong&gt;，搜索 &lt;code&gt;color HEX&lt;/code&gt;，例如 &lt;code&gt;color #99e3c9&lt;/code&gt;
+&lt;strong&gt;获取适合用于html的颜色&lt;/strong&gt;，搜索 &lt;code&gt;color codes&lt;/code&gt;
+&lt;strong&gt;生成随机数&lt;/strong&gt;，搜索 &lt;code&gt;random number&lt;/code&gt; ，默认从 1-0 之间随机取值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;random number 50&lt;/code&gt; 从50以内随机生成&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;random number 20 and 30&lt;/code&gt; 从 20 和 30之间随机生成
+&lt;strong&gt;生成二维码&lt;/strong&gt;，搜索 &lt;code&gt;qr 任何文本&lt;/code&gt; ，例如 &lt;code&gt;qr https://ttti.cc&lt;/code&gt;
+&lt;strong&gt;获取特殊字符的 HTML 代码&lt;/strong&gt;，搜索 &lt;code&gt;html chars&lt;/code&gt;
+&lt;strong&gt;获取一些CSS动画&lt;/strong&gt;，搜索 &lt;code&gt;css animations&lt;/code&gt;
+&lt;strong&gt;查看短链接的实际网址&lt;/strong&gt;，搜索 &lt;code&gt;expand 短链接&lt;/code&gt;
+&lt;strong&gt;大小写字母转换&lt;/strong&gt;，转换成小写搜索 &lt;code&gt;lowercase HELLO&lt;/code&gt; ，转换成大写搜索 &lt;code&gt;uppercase hello&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>威联通通过 Docker 安装 Jellyfin</title>
-      <link>https://ttti.cc/post/qnap-jellyfin-nyanmisaka/</link>
+      <link>https://nav.ttti.cc/post/qnap-jellyfin-nyanmisaka/</link>
       <pubDate>Sat, 08 Jan 2022 00:54:10 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/qnap-jellyfin-nyanmisaka/</guid>
+      <guid>https://nav.ttti.cc/post/qnap-jellyfin-nyanmisaka/</guid>
       
         <description>&lt;p&gt;威联通通过 Docker 安装 Jellyfin 是很简单的。但是支持硬件解码对小白来说略难。不过其实采用  nyanmisaka 大神的 Docker 镜像，是默认支持硬件转码的。有效的减少了折腾。下面就来说说如何安装。&lt;/p&gt;
 &lt;p&gt;登陆威联通后，启动 ContainerStation（如果你没有安装可以先去 APP Center 中安装它），然后，点击创建 - 搜索 Jellyfin - 选择结果中的 nyanmisaka/Jellyfin 如图所示：&lt;/p&gt;
@@ -120,11 +498,198 @@
     </item>
     
     <item>
+      <title>Logseq 使用方法简单总结</title>
+      <link>https://nav.ttti.cc/post/logseq/</link>
+      <pubDate>Sat, 08 Jan 2022 00:50:20 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/logseq/</guid>
+      
+        <description>&lt;h2 id=&#34;journals&#34;&gt;Journals&lt;/h2&gt;
+&lt;p&gt;左侧面板的  Journals 为日记分类。如果你不需要可以在设置中关闭。它会每天自动生成对应日期的页面。你可以将每天所想所遇随手记录，聚沙成塔。&lt;/p&gt;
+&lt;h2 id=&#34;all-pages&#34;&gt;All pages&lt;/h2&gt;
+&lt;p&gt;左侧面板的 All pages 点击后可以看到所有页面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Contents ：目录页，编辑该页就是编辑右侧面板的目录&lt;/li&gt;
+&lt;li&gt;favorites ：喜欢页，该页（待补充）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关于页面的使用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以先建立块 &lt;code&gt;[[新页面名]]&lt;/code&gt;，然后单击该块就会新建对应的新页面&lt;/li&gt;
+&lt;li&gt;在页面中点右上角的 &lt;code&gt;···&lt;/code&gt; ，接着点击删除即可删除该页&lt;/li&gt;
+&lt;li&gt;页面名尽量不要使用特殊符号，因为页面名也是文件名，不支持一些特殊符号，例如 &lt;code&gt;.&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;块概念&#34;&gt;块概念&lt;/h2&gt;
+&lt;p&gt;这是双链笔记的主要用法。将重要的“关键字”用双方括号括起来 &lt;code&gt;[[关键字]]&lt;/code&gt; 。日后点击该块即可跳转到对应页面。添加块的方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无论中英文下按连按两次 &lt;code&gt;[[ 或 【【 &lt;/code&gt; 即可添加块&lt;/li&gt;
+&lt;li&gt;框选你要设置块的关键字，按 &lt;code&gt;Alt + [[ 或 【【&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;块引用：可用 &lt;code&gt;(( ))&lt;/code&gt; 将要被引用的内容括起来。在被引用的块的右上角，会显示当前块被引用了几次。单击数字，会打开右侧边栏。&lt;/p&gt;
+&lt;p&gt;块内换行可以用 &lt;code&gt;Shift+Enter&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;右键左侧小点可以弹出右键菜单：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以设置条目的颜色&lt;/li&gt;
+&lt;li&gt;可以拷贝引用，然后用 Ctrl+V 粘贴即可&lt;/li&gt;
+&lt;li&gt;可以右键块在右侧边栏打开&lt;/li&gt;
+&lt;li&gt;右键点击条目左侧的点可以将当前保存为模板，方便日后直接调用。因此你应该先设置好作为模板的样式和内容在去转为模板。其它页面调用模板只需 &lt;code&gt;/Template&lt;/code&gt; 即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;命令语法&#34;&gt;命令语法&lt;/h2&gt;
+&lt;p&gt;输入左斜杠 &lt;code&gt;/&lt;/code&gt; 可以调用命令，其中包含了很多，例如插入图片，日期等：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/PAG&lt;/code&gt; 会筛选出页面链接语法，有“页面内容引用”和“页面链接引用”可选&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/BL&lt;/code&gt; 会筛选出块的链接语法，有“块内容引用”和“块链接引用”可选&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;输入 &lt;code&gt;&amp;lt;&lt;/code&gt; 尖括号可以调用出另一类命令，能够插入例如 小 Note，Tips 等小注释引用。&lt;/p&gt;
+&lt;p&gt;以上只是简单的列举，你可以自行看看。有很多的命令，这样调用起来会非常方便。&lt;/p&gt;
+&lt;h2 id=&#34;设置-todo&#34;&gt;设置 TODO&lt;/h2&gt;
+&lt;p&gt;先输入内容，然后 &lt;code&gt;/todo&lt;/code&gt; 即可将该内容设置为 TODO 条目。当然，也可以先输入 &lt;code&gt;/todo&lt;/code&gt; 再输入内容。还可以设置 &lt;code&gt;/later&lt;/code&gt; &lt;code&gt;/now&lt;/code&gt; &lt;code&gt;/done&lt;/code&gt; 等（更多状态可以在 / 命令菜单中查到）。然后可以通过点击标记完成。&lt;/p&gt;
+&lt;p&gt;设置优先级的：光标在 TODO 条目结尾处，输入 &lt;code&gt;/C&lt;/code&gt; （有 A、B、C 三个级别，可以通过鼠标悬停上方，点选切换。&lt;/p&gt;
+&lt;p&gt;设置截止日期：光标在 TODO 条目结尾处，输入 &lt;code&gt;/DEADLINE&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;TODO 条目可能分散于各处。可以通过 Ctrl+K 键打开全局搜索 todo 关键字。接着你会看到结果中最上面的一条左面带一个 P 符号（表示页面），点击进入该页后可以看到所有 TODO 都会汇总在这里。&lt;/p&gt;
+&lt;h2 id=&#34;查询内容&#34;&gt;查询内容&lt;/h2&gt;
+&lt;p&gt;输入 &lt;code&gt;/query&lt;/code&gt; 可以查询内容，并插入到页面中。例如 &lt;code&gt;{{query todo}}&lt;/code&gt;，就可以查询 todo 条目。你可以在其它页面插入该查询，将鼠标指向查询可以看到更多用法：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#75715e&#34;&gt;#tag}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#f92672&#34;&gt;[[&lt;/span&gt;page&lt;span style=&#34;color:#f92672&#34;&gt;]]}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;full-text search&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;and &lt;span style=&#34;color:#f92672&#34;&gt;[[&lt;/span&gt;project&lt;span style=&#34;color:#f92672&#34;&gt;]]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;task NOW LATER&lt;span style=&#34;color:#f92672&#34;&gt;))}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;or &lt;span style=&#34;color:#f92672&#34;&gt;[[&lt;/span&gt;page 1&lt;span style=&#34;color:#f92672&#34;&gt;]]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[[&lt;/span&gt;page 2&lt;span style=&#34;color:#f92672&#34;&gt;]])}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;and &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;between -7d +7d&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;task DONE&lt;span style=&#34;color:#f92672&#34;&gt;))}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;property key value&lt;span style=&#34;color:#f92672&#34;&gt;)}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;page-tags &lt;span style=&#34;color:#75715e&#34;&gt;#tag)}}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;收藏页面&#34;&gt;收藏页面&lt;/h2&gt;
+&lt;p&gt;右上角点击 &amp;hellip; ，然后点“添加收藏”，可以将当前页面添加到左侧面板中的“收藏页面”。例如建立一个页面叫做 Dashboard 做为仪表盘。然后在上面添加一些查询内容，比如 &lt;code&gt;{{query todo}}&lt;/code&gt; 。&lt;/p&gt;
+&lt;h2 id=&#34;标签与分类&#34;&gt;标签与分类&lt;/h2&gt;
+&lt;p&gt;打标签：先输入一个 &lt;code&gt;#&lt;/code&gt; 号，然后紧挨着输入标签内容，例如 &lt;code&gt;#标签&lt;/code&gt; 。你也可以将标签页添加到收藏页面，方便快速点击跳转&lt;/p&gt;
+&lt;p&gt;分类：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;type:: 心理学, 幸福课 &lt;span style=&#34;color:#75715e&#34;&gt;# 可以英文逗号分割多个类似&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;author:: 泰勒·本·沙哈尔
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;publish:: 中信出版社
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mark:: 书籍&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;那么如何查询呢？可以参考[[#查询内容]]段落。&lt;/p&gt;
+&lt;h2 id=&#34;设置卡片&#34;&gt;设置卡片&lt;/h2&gt;
+&lt;p&gt;首先输入一个问题，例如：&lt;code&gt;hello 是什么意思？&lt;/code&gt; ，然后在后面输入 &lt;code&gt;#card&lt;/code&gt;，即可将该问题设置为卡片。接着回车换行，再按&lt;code&gt;TAB&lt;/code&gt;键缩进，然后输入答案，最终格式：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hello 是什么意思？ &lt;span style=&#34;color:#75715e&#34;&gt;#card&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	它的英文是：您好&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;不仅如此，还可以给答案增加一个填空，先按照上述方法建立卡片，在答案中可以输入&lt;code&gt;/cloze&lt;/code&gt;然后输入填空中的答案最终格式格式为：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;一些问题 &lt;span style=&#34;color:#75715e&#34;&gt;#card &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;cloze 填空中的答案&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt; 以及 &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;cloze 填空中的答案&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;有的卡片和答案后，点击左侧导航面板中的 Flashcards 即可看到这些设置的卡片。&lt;/p&gt;
+&lt;h2 id=&#34;基本编辑&#34;&gt;基本编辑&lt;/h2&gt;
+&lt;p&gt;编辑器是支持 Emoji 表情的，所以你可以尽情使用。&lt;/p&gt;
+&lt;p&gt;插入图片：先复制图片，然后使用 Ctrl+V 直接粘贴到编辑器中。图片也会被同时复制到所在库的根目录中的 assets 目录中。&lt;/p&gt;
+&lt;p&gt;插入表格：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|*标题*|*标题*|*标题*|
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|内容|内容|内容|
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|内容|内容|内容|
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|内容|内容|内容|&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;插入文件：可以直接将文件拖入到编辑器中，同样会被复制到所在库的根目录中的 assets 目录中。&lt;/p&gt;
+&lt;h2 id=&#34;引用-pdf-文件&#34;&gt;引用 pdf 文件&lt;/h2&gt;
+&lt;p&gt;直接将 PDF 文件拖入编辑器中，之后鼠标悬停即可直接查看文件。点击该文件可以进入阅读模式。不仅如此，你还可以框选文字标注颜色，然后回到编辑器里 &lt;code&gt;Ctrl + V&lt;/code&gt;，引用这个文件的段落，那么当点击段落后，即可跳转到该段落。&lt;/p&gt;
+&lt;p&gt;你也可以输入以插入文件：&lt;code&gt;file:: [xxx.pdf](../assets/xxx.pdf)&lt;/code&gt;，以这样的形式插入，点击后会用浏览器直接打开 PDF 文件。&lt;/p&gt;
+&lt;h2 id=&#34;快捷键&#34;&gt;快捷键&lt;/h2&gt;
+&lt;p&gt;在设置 - 常规 - 快捷键设置，可以查看和自定义快捷键&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;按键&lt;/th&gt;
+          &lt;th&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+,&lt;/td&gt;
+          &lt;td&gt;打开设置&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+C，Ctrl+B&lt;/td&gt;
+          &lt;td&gt;切换编辑器是否显示 &lt;code&gt;[[ ]]&lt;/code&gt; 块括号&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+F&lt;/td&gt;
+          &lt;td&gt;搜索当前页面并高亮关键字&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+K&lt;/td&gt;
+          &lt;td&gt;打开全局搜索/创建页面&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+Shift+K&lt;/td&gt;
+          &lt;td&gt;搜索当前页面搜索&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+Shift+P&lt;/td&gt;
+          &lt;td&gt;命令面板&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Shift+鼠标左键点击&lt;code&gt;[[ ]]&lt;/code&gt;块&lt;/td&gt;
+          &lt;td&gt;右侧新窗口打开该块页面&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+↑ 和 Ctrl+↓&lt;/td&gt;
+          &lt;td&gt;折叠 和 展开&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+Shift+= 或 Ctrl+-&lt;/td&gt;
+          &lt;td&gt;放大或缩小界面，Ctrl+0 恢复默认大小&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+N&lt;/td&gt;
+          &lt;td&gt;打开一个新的 Logseq 实例&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;插件与主题&#34;&gt;插件与主题&lt;/h2&gt;
+&lt;p&gt;右上角 &amp;hellip;. - 插件，可以查看到已安装的插件和主题，及访问插件和主题市场。
+右上角 &amp;hellip;. - 主题，可以切换已安装的主题。&lt;/p&gt;
+&lt;p&gt;插件推荐：
+&lt;a href=&#34;https://github.com/haydenull/logseq-plugin-markdown-table&#34;&gt;Markdown Table Editor&lt;/a&gt;：编辑表格更直观
+&lt;a href=&#34;https://github.com/pengx17/logseq-plugin-bullet-threading&#34;&gt;Bullet Threading&lt;/a&gt; ：列表添加指向线&lt;/p&gt;
+&lt;p&gt;主题推荐：
+&lt;a href=&#34;https://github.com/sansui233/logseq-bonofix-theme&#34;&gt;Bonofix theme&lt;/a&gt;：简洁专注，适用于子弹笔记和写作
+&lt;a href=&#34;https://github.com/pengx17/logseq-dev-theme&#34;&gt;Dev theme&lt;/a&gt;：简洁专注，在 MAC 上有更好的体验
+&lt;a href=&#34;https://github.com/haydenull/logseq-woz-theme&#34;&gt;Woz theme&lt;/a&gt;：基于 Dev Theme 的简洁，但阅读更舒适
+&lt;a href=&#34;https://github.com/santiyounger/Cobra&#34;&gt;Cobra&lt;/a&gt;：基于 Obsidian 的 &lt;a href=&#34;https://github.com/santiyounger/Wasp-Obsidian-Theme&#34;&gt;Wasp&lt;/a&gt; 主题
+&lt;a href=&#34;https://github.com/tzcl/logseq-monokai&#34;&gt;Monokai&lt;/a&gt;：暗黑主题，受到 Monokai 和 Dracula 的启发&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>威联通通过 Docker 安装 Transmission</title>
-      <link>https://ttti.cc/post/qnap-docker-transmission/</link>
+      <link>https://nav.ttti.cc/post/qnap-docker-transmission/</link>
       <pubDate>Fri, 07 Jan 2022 17:17:13 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/qnap-docker-transmission/</guid>
+      <guid>https://nav.ttti.cc/post/qnap-docker-transmission/</guid>
       
         <description>&lt;p&gt;Transmission 是著名又老牌的 PT/BT 下载软件。这里将说明使用威联通的 Docker 安装 Transmission（ Docker 真的香 ）。&lt;/p&gt;
 &lt;p&gt;首先，登陆威联通后启动 ContainerStation - 创建 - 搜索 Transmission - 选择结果中的第二进行安装，如图所示：&lt;/p&gt;
@@ -164,11 +729,424 @@ bash install-tr-control-cn.sh
     </item>
     
     <item>
+      <title>如何更好的提问</title>
+      <link>https://nav.ttti.cc/post/askquestion-/</link>
+      <pubDate>Wed, 05 Jan 2022 00:37:56 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/askquestion-/</guid>
+      
+        <description>&lt;h2 id=&#34;个人总结&#34;&gt;个人总结&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;阅读手册&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;尝试阅读手册找答案&lt;/li&gt;
+&lt;li&gt;尝试阅读常见问题&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;自己尝试&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;尝试检查或实验&lt;/li&gt;
+&lt;li&gt;如果是程序员阅读代码&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;搜索&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;搜索引擎搜索问题&lt;/li&gt;
+&lt;li&gt;搜索准备提问的论坛&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提问&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;明确提问的场所&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;注意&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;顺序只是建议，不是规则&lt;/li&gt;
+&lt;li&gt;尝试某种问题适应某种解决方案&lt;/li&gt;
+&lt;li&gt;尝试后带着问题阅读，才更能了解之前的段落&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;简介&#34;&gt;简介&lt;/h2&gt;
+&lt;p&gt;在&lt;a href=&#34;http://www.catb.org/~esr/faqs/hacker-howto.html&#34;&gt;黑客&lt;/a&gt;的世界里，当你拋出一个技术问题时，最终是否能得到有用的回答，往往取决于你所提问和追问的方式。本指南将教你如何正确的提问以获得你满意的答案。&lt;/p&gt;
+&lt;p&gt;不只是黑客，现在开源（Open Source）软件已经相当盛行，你常常也可以由其他有经验的使用者身上得到好答案，这是件&lt;strong&gt;好事&lt;/strong&gt;；使用者比起黑客来，往往对那些新手常遇到的问题更宽容一些。然而，将有经验的使用者视为黑客，并采用本指南所提的方法与他们沟通，同样也是能从他们身上得到满意回答的最有效方式。&lt;/p&gt;
+&lt;p&gt;首先你应该明白，黑客们喜爱有挑战性的问题，或者能激发他们思维的好问题。如果我们并非如此，那我们也不会成为你想询问的对象。如果你给了我们一个值得反复咀嚼玩味的好问题，我们自会对你感激不尽。好问题是激励，是厚礼。好问题可以提高我们的理解力，而且通常会暴露我们以前从没意识到或者思考过的问题。对黑客而言，&amp;ldquo;好问题！&amp;ldquo;是诚挚的大力称赞。&lt;/p&gt;
+&lt;p&gt;尽管如此，黑客们有着蔑视或傲慢面对简单问题的坏名声，这有时让我们看起来对新手、无知者似乎较有敌意，但其实不是那样的。&lt;/p&gt;
+&lt;p&gt;我们不讳言我们对那些不愿思考、或者在发问前不做他们该做的事的人的蔑视。那些人是时间杀手 —— 他们只想索取，从不付出，消耗我们可用在更有趣的问题或更值得回答的人身上的时间。我们称这样的人为 &lt;code&gt;失败者（撸瑟）&lt;/code&gt; （由于历史原因，我们有时把它拼作 &lt;code&gt;lusers&lt;/code&gt;）。&lt;/p&gt;
+&lt;p&gt;我们意识到许多人只是想使用我们写的软件，他们对学习技术细节没有兴趣。对大多数人而言，电脑只是种工具，是种达到目的的手段而已。他们有自己的生活并且有更要紧的事要做。我们了解这点，也从不指望每个人都对这些让我们着迷的技术问题感兴趣。尽管如此，我们回答问题的风格是指向那些真正对此有兴趣并愿意主动参与解决问题的人，这一点不会变，也不该变。如果连这都变了，我们就是在降低做自己最擅长的事情上的效率。&lt;/p&gt;
+&lt;p&gt;我们（在很大程度上）是自愿的，从繁忙的生活中抽出时间来解答疑惑，而且时常被提问淹没。所以我们无情的滤掉一些话题，特别是拋弃那些看起来像失败者的家伙，以便更高效的利用时间来回答&lt;code&gt;赢家（winner）&lt;/code&gt;的问题。&lt;/p&gt;
+&lt;p&gt;如果你厌恶我们的态度，高高在上，或过于傲慢，不妨也设身处地想想。我们并没有要求你向我们屈服 —— 事实上，我们大多数人非常乐意与你平等地交流，只要你付出小小努力来满足基本要求，我们就会欢迎你加入我们的文化。但让我们帮助那些不愿意帮助自己的人是没有效率的。无知没有关系，但装白痴就是不行。&lt;/p&gt;
+&lt;p&gt;所以，你不必在技术上很在行才能吸引我们的注意，但你必须表现出能引导你变得在行的特质 &amp;ndash; 机敏、有想法、善于观察、乐于主动参与解决问题。如果你做不到这些使你与众不同的事情，我们建议你花点钱找家商业公司签个技术支持服务合同，而不是要求黑客个人无偿地帮助你。&lt;/p&gt;
+&lt;p&gt;如果你决定向我们求助，当然你也不希望被视为失败者，更不愿成为失败者中的一员。能立刻得到快速并有效答案的最好方法，就是像赢家那样提问 &amp;ndash; 聪明、自信、有解决问题的思路，只是偶尔在特定的问题上需要获得一点帮助。&lt;/p&gt;
+&lt;h2 id=&#34;在提问之前&#34;&gt;在提问之前&lt;/h2&gt;
+&lt;p&gt;在准备提问之前，请先努力做到以下事情：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;尝试在你准备提问的论坛的旧文章中搜索答案。&lt;/li&gt;
+&lt;li&gt;尝试上网搜索以找到答案。&lt;/li&gt;
+&lt;li&gt;尝试阅读手册以找到答案。&lt;/li&gt;
+&lt;li&gt;尝试阅读常见问题文件（FAQ）以找到答案。&lt;/li&gt;
+&lt;li&gt;尝试自己检查或试验以找到答案。&lt;/li&gt;
+&lt;li&gt;向你身边的强者朋友打听以找到答案。&lt;/li&gt;
+&lt;li&gt;如果你是程序开发者，请尝试阅读源代码以找到答案。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;做上述努力，有助于树立你并不是一个不劳而获且浪费别人的时间的提问者。如果你能一并表达在做了上述努力的过程中所学到的东西会更好，因为我们更乐于回答那些表现出能从答案中学习的人的问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;运用某些策略，比如先用 Google 搜索你所遇到的各种错误信息&lt;/strong&gt;（既搜索 &lt;a href=&#34;http://groups.google.com/&#34;&gt;Google 论坛&lt;/a&gt;，也搜索网页），这样很可能直接就找到了能解决问题的线索。即使没有结果，在邮件中寻求帮助时加上一句：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我在 Google 中搜过下列句子但没有找到什么有用的东西&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;即使它只是表明了搜索引擎不能提供哪些帮助。这么做（加上搜索过的字串）也让遇到相似问题的其他人能被搜索引擎引导到你的提问来。&lt;/p&gt;
+&lt;p&gt;别着急，不要指望几秒钟的 Google 搜索就能解决一个复杂的问题。在向专家求助之前，再阅读一下常见问题文件（FAQ）、放轻松，再花点时间思考一下这个问题。相信我们，他们能从你的提问看出你做了多少阅读与思考，如果你是有备而来，将更有可能得到解答。不要将所有问题一股脑拋出，只因你的第一次搜索没有找到答案（或者找到太多答案）。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;准备好你的问题，再将问题仔细的思考过一遍，因为草率的发问只能得到草率的回答，或者根本得不到任何答案。越是能表现出在寻求帮助前你为解决问题所付出的努力，你越有可能得到实质性的帮助。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;小心别问错了问题。如果你的问题基于错误的假设，某个普通黑客多半会一边在心里想着&lt;code&gt;蠢问题…&lt;/code&gt;， 一边用无意义的字面解释来答复你，希望着你会从问题的回答（而非你想得到的答案）中汲取教训。&lt;/p&gt;
+&lt;p&gt;绝不要自以为&lt;strong&gt;够格&lt;/strong&gt;得到答案，你没有；你并没有。毕竟你没有为这种服务支付任何报酬。你将会是自己去&lt;strong&gt;挣到&lt;/strong&gt;一个答案，靠提出有内涵的、有趣的、有思维激励作用的问题 —— 一个有潜力能贡献社区经验的问题，而不仅仅是被动的从他人处索取知识。&lt;/p&gt;
+&lt;p&gt;另一方面，表明你愿意在找答案的过程中做点什么是一个非常好的开端。&lt;code&gt;谁能给点提示？&lt;/code&gt;、&lt;code&gt;我的这个例子里缺了什么？&lt;/code&gt;以及&lt;code&gt;我应该检查什么地方&lt;/code&gt;比&lt;code&gt;请把我需要的确切的过程贴出来&lt;/code&gt;更容易得到答复。因为你表现出只要有人能指个正确方向，你就有完成它的能力和决心。&lt;/p&gt;
+&lt;h2 id=&#34;当你提问时&#34;&gt;当你提问时&lt;/h2&gt;
+&lt;h3 id=&#34;慎选提问的论坛&#34;&gt;慎选提问的论坛&lt;/h3&gt;
+&lt;p&gt;小心选择你要提问的场合。避免如下所述的事情：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在与主题不合的论坛上贴出你的问题。&lt;/li&gt;
+&lt;li&gt;在探讨进阶技术问题的论坛张贴非常初级的问题；反之亦然。&lt;/li&gt;
+&lt;li&gt;在太多的不同新闻群组上重复转贴同样的问题（cross-post）。&lt;/li&gt;
+&lt;li&gt;向既非熟人也没有义务解决你问题的人发送私人电邮。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;黑客会剔除掉那些搞错场合的问题，以保护他们沟通的渠道不被无关的东西淹没。你不会想让这种事发生在自己身上的。&lt;/p&gt;
+&lt;p&gt;因此，第一步是找到对的论坛。再说一次，Google 和其它搜索引擎还是你的朋友，用它们来找到与你遭遇到困难的软硬件问题最相关的网站。通常那儿都有常见问题（FAQ）、邮件列表及相关说明文件的链接。如果你的努力（包括&lt;strong&gt;阅读&lt;/strong&gt; FAQ）都没有结果，网站上也许还有报告 Bug 的流程或链接，如果是这样，链过去看看。&lt;/p&gt;
+&lt;p&gt;向陌生的人或论坛发送邮件最可能是风险最大的事情。举例来说，别假设一个提供丰富内容的网页的作者会想充当你的免费顾问。不要对你的问题是否会受到欢迎做太乐观的估计 &amp;ndash; 如果你不确定，那就向别处发送，或者压根别发。&lt;/p&gt;
+&lt;p&gt;在选择论坛、新闻群组或邮件列表时，别太相信名字，先看看 FAQ 或者许可书以弄清楚你的问题是否切题。发文前先翻翻已有的话题，这样可以让你感受一下那里的文化。事实上，&lt;strong&gt;事先在新闻组或邮件列表的历史记录中搜索与你问题相关的关键词是个极好的主意&lt;/strong&gt;，也许这样就找到答案了。即使没有，也能帮助你归纳出更好的问题。&lt;/p&gt;
+&lt;p&gt;别像机关枪似的一次&amp;quot;扫射&amp;quot;所有的帮助渠道，这就像大喊大叫一样会使人不快。要一个一个地来。&lt;/p&gt;
+&lt;p&gt;搞清楚你的主题！最典型的错误之一是在某种致力于跨平台可移植的语言、套件或工具的论坛中提关于 Unix 或 Windows 操作系统程序界面的问题。如果你不明白为什么这是大错，最好在搞清楚这之间差异之前什么也别问。&lt;/p&gt;
+&lt;p&gt;一般来说，在仔细挑选的公共论坛中提问，会比在私有论坛中提同样的问题更容易得到有用的回答。有几个理由可以支持这点，一是看潜在的回复者有多少，二是看观众有多少。黑客较愿意回答那些能帮助到许多人的问题。&lt;/p&gt;
+&lt;p&gt;可以理解的是，老练的黑客和一些热门软件的作者正在接受过多的错发信息。就像那根最后压垮骆驼背的稻草一样，你的加入也有可能使情况走向极端 —— 已经好几次了，一些热门软件的作者从自己软件的支持中抽身出来，因为伴随而来涌入其私人邮箱的无用邮件变得无法忍受。&lt;/p&gt;
+&lt;h3 id=&#34;stack-overflow&#34;&gt;Stack Overflow&lt;/h3&gt;
+&lt;p&gt;搜索，&lt;strong&gt;然后&lt;/strong&gt; 在 Stack Exchange 问。&lt;/p&gt;
+&lt;p&gt;近年来，Stack Exchange community 社区已经成为回答技术及其他问题的主要渠道，尤其是那些开放源码的项目。&lt;/p&gt;
+&lt;p&gt;因为 Google 索引是即时的，在看 Stack Exchange 之前先在 Google 搜索。有很高的机率某人已经问了一个类似的问题，而且 Stack Exchange 网站们往往会是搜索结果中最前面几个。如果你在 Google 上没有找到任何答案，你再到特定相关主题的网站去找。用标签（Tag）搜索能让你更缩小你的搜索结果。&lt;/p&gt;
+&lt;p&gt;Stack Exchange 已经成长到&lt;a href=&#34;http://stackexchange.com/sites&#34;&gt;超过一百个网站&lt;/a&gt;，以下是最常用的几个站：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Super User 是问一些通用的电脑问题，如果你的问题跟代码或是写程序无关，只是一些网络连线之类的，请到这里。&lt;/li&gt;
+&lt;li&gt;Stack Overflow 是问写程序有关的问题。&lt;/li&gt;
+&lt;li&gt;Server Fault 是问服务器和网管相关的问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;网站和-irc-论坛&#34;&gt;网站和 IRC 论坛&lt;/h3&gt;
+&lt;p&gt;本地的使用者群组（user group），或者你所用的 Linux 发行版本也许正在宣传他们的网页论坛或 IRC 频道，并提供新手帮助（在一些非英语国家，新手论坛很可能还是邮件列表）， 这些地方是开始提问的好首选，特别是当你觉得遇到的也许只是相对简单或者很普通的问题时。有广告赞助的 IRC 频道是公开欢迎提问的地方，通常可以即时得到回应。&lt;/p&gt;
+&lt;p&gt;事实上，如果程序出的问题只发生在特定 Linux 发行版提供的版本（这很常见），最好先去该发行版的论坛或邮件列表中提问，再到程序本身的论坛或邮件列表提问。（否则）该项目的黑客可能仅仅回复 &amp;ldquo;用&lt;strong&gt;我们的&lt;/strong&gt;版本&amp;rdquo;。&lt;/p&gt;
+&lt;p&gt;在任何论坛发文以前，先确认一下有没有搜索功能。如果有，就试着搜索一下问题的几个关键词，也许这会有帮助。如果在此之前你已做过通用的网页搜索（你也该这样做），还是再搜索一下论坛，搜索引擎有可能没来得及索引此论坛的全部内容。&lt;/p&gt;
+&lt;p&gt;通过论坛或 IRC 频道来提供使用者支持服务有增长的趋势，电子邮件则大多为项目开发者间的交流而保留。所以最好先在论坛或 IRC 中寻求与该项目相关的协助。&lt;/p&gt;
+&lt;p&gt;在使用 IRC 的时候，首先最好不要发布很长的问题描述，有些人称之为频道洪水。最好通过一句话的问题描述来开始聊天。&lt;/p&gt;
+&lt;h3 id=&#34;第二步使用项目邮件列表&#34;&gt;第二步，使用项目邮件列表&lt;/h3&gt;
+&lt;p&gt;当某个项目提供开发者邮件列表时，要向列表而不是其中的个别成员提问，即使你确信他能最好地回答你的问题。查一查项目的文件和首页，找到项目的邮件列表并使用它。有几个很好的理由支持我们采用这种办法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;任何好到需要向个别开发者提出的问题，也将对整个项目群组有益。反之，如果你认为自己的问题对整个项目群组来说太愚蠢，也不能成为骚扰个别开发者的理由。&lt;/li&gt;
+&lt;li&gt;向列表提问可以分散开发者的负担，个别开发者（尤其是项目领导人）也许太忙以至于没法回答你的问题。&lt;/li&gt;
+&lt;li&gt;大多数邮件列表都会被存档，那些被存档的内容将被搜索引擎索引。如果你向列表提问并得到解答，将来其它人可以通过网页搜索找到你的问题和答案，也就不用再次发问了。&lt;/li&gt;
+&lt;li&gt;如果某些问题经常被问到，开发者可以利用此信息来改进说明文件或软件本身，以使其更清楚。如果只是私下提问，就没有人能看到最常见问题的完整场景。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果一个项目既有&amp;quot;使用者&amp;rdquo; 也有&amp;quot;开发者&amp;rdquo;（或&amp;quot;黑客&amp;quot;）邮件列表或论坛，而你又不会动到那些源代码，那么就向&amp;quot;使用者&amp;quot;列表或论坛提问。不要假设自己会在开发者列表中受到欢迎，那些人多半会将你的提问视为干扰他们开发的噪音。&lt;/p&gt;
+&lt;p&gt;然而，如果你&lt;strong&gt;确信&lt;/strong&gt;你的问题很特别，而且在&amp;quot;使用者&amp;quot; 列表或论坛中几天都没有回复，可以试试前往&amp;quot;开发者&amp;quot;列表或论坛发问。建议你在张贴前最好先暗地里观察几天以了解那里的行事方式（事实上这是参与任何私有或半私有列表的好主意）&lt;/p&gt;
+&lt;p&gt;如果你找不到一个项目的邮件列表，而只能查到项目维护者的电子邮件地址，尽管向他发信。即使是在这种情况下，也别假设（项目）邮件列表不存在。在你的电子邮件中，请陈述你已经试过但没有找到合适的邮件列表，也提及你不反对将自己的邮件转发给他人（许多人认为，即使没什么秘密，私人电子邮件也不应该被公开。通过允许将你的电子邮件转发他人，你给了相应人员处置你邮件的选择）。&lt;/p&gt;
+&lt;h3 id=&#34;使用有意义且描述明确的标题&#34;&gt;使用有意义且描述明确的标题&lt;/h3&gt;
+&lt;p&gt;在邮件列表、新闻群组或论坛中，大约 50 字以内的标题是抓住资深专家注意力的好机会。别用喋喋不休的&lt;code&gt;帮帮忙&lt;/code&gt;、&lt;code&gt;跪求&lt;/code&gt;、&lt;code&gt;急&lt;/code&gt;（更别说&lt;code&gt;救命啊！！！！&lt;/code&gt;这样让人反感的话，用这种标题会被条件反射式地忽略）来浪费这个机会。不要妄想用你的痛苦程度来打动我们，而应该是在这点空间中使用极简单扼要的描述方式来提出问题。&lt;/p&gt;
+&lt;p&gt;一个好标题范例是&lt;code&gt;目标 —— 差异&lt;/code&gt;式的描述，许多技术支持组织就是这样做的。在&lt;code&gt;目标&lt;/code&gt;部分指出是哪一个或哪一组东西有问题，在&lt;code&gt;差异&lt;/code&gt;部分则描述与期望的行为不一致的地方。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;蠢问题：救命啊！我的笔记本电脑不能正常显示了！
+聪明问题：X.org 6.8.1 的鼠标光标会变形，某牌显卡 MV1005 芯片组。
+更聪明问题：X.org 6.8.1 的鼠标光标，在某牌显卡 MV1005 芯片组环境下 - 会变形。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;编写&lt;code&gt;目标 —— 差异&lt;/code&gt; 式描述的过程有助于你组织对问题的细致思考。是什么被影响了？ 仅仅是鼠标光标或者还有其它图形？只在 X.org 的 X 版中出现？或只是出现在 6.8.1 版中？ 是针对某牌显卡芯片组？或者只是其中的 MV1005 型号？ 一个黑客只需瞄一眼就能够立即明白你的环境和你遇到的问题。&lt;/p&gt;
+&lt;p&gt;总而言之，请想像一下你正在一个只显示标题的存档讨论串（Thread）索引中查寻。让你的标题更好地反映问题，可使下一个搜索类似问题的人能够关注这个讨论串，而不用再次提问相同的问题。&lt;/p&gt;
+&lt;p&gt;如果你想在回复中提出问题，记得要修改内容标题，以表明你是在问一个问题， 一个看起来像 &lt;code&gt;Re: 测试&lt;/code&gt; 或者 &lt;code&gt;Re: 新 bug&lt;/code&gt; 的标题很难引起足够重视。另外，在不影响连贯性之下，适当引用并删减前文的内容，能给新来的读者留下线索。&lt;/p&gt;
+&lt;p&gt;对于讨论串，不要直接点击回复来开始一个全新的讨论串，这将限制你的观众。因为有些邮件阅读程序，比如 mutt ，允许使用者按讨论串排序并通过折叠讨论串来隐藏消息，这样做的人永远看不到你发的消息。&lt;/p&gt;
+&lt;p&gt;仅仅改变标题还不够。mutt 和其它一些邮件阅读程序还会检查邮件标题以外的其它信息，以便为其指定讨论串。所以宁可发一个全新的邮件。&lt;/p&gt;
+&lt;p&gt;在网页论坛上，好的提问方式稍有不同，因为讨论串与特定的信息紧密结合，并且通常在讨论串外就看不到里面的内容，故通过回复提问，而非改变标题是可接受的。不是所有论坛都允许在回复中出现分离的标题，而且这样做了基本上没有人会去看。不过，通过回复提问，这本身就是暧昧的做法，因为它们只会被正在查看该标题的人读到。所以，除非你&lt;strong&gt;只想&lt;/strong&gt;在该讨论串当前活跃的人群中提问，不然还是另起炉灶比较好。&lt;/p&gt;
+&lt;h3 id=&#34;使问题容易回复&#34;&gt;使问题容易回复&lt;/h3&gt;
+&lt;p&gt;以&lt;code&gt;请将你的回复发送到……&lt;/code&gt;来结束你的问题多半会得不到回答。如果你觉得花几秒钟在邮件客户端设置一下回复地址都麻烦，我们也觉得花几秒钟思考你的问题更麻烦。如果你的邮件程序不支持这样做，换个好点的；如果是操作系统不支持这种邮件程序，也换个好点的。&lt;/p&gt;
+&lt;p&gt;在论坛，要求通过电子邮件回复是非常无礼的，除非你认为回复的信息可能比较敏感（有人会为了某些未知的原因，只让你而不是整个论坛知道答案）。如果你只是想在有人回复讨论串时得到电子邮件提醒，可以要求网页论坛发送给你。几乎所有论坛都支持诸如&lt;code&gt;追踪此讨论串&lt;/code&gt;、&lt;code&gt;有回复时发送邮件提醒&lt;/code&gt;等功能。&lt;/p&gt;
+&lt;h3 id=&#34;用清晰正确精准并语法正确的语句&#34;&gt;用清晰、正确、精准并语法正确的语句&lt;/h3&gt;
+&lt;p&gt;我们从经验中发现，粗心的提问者通常也会粗心的写程序与思考。回答粗心大意者的问题很不值得，我们宁愿把时间耗在别处。&lt;/p&gt;
+&lt;p&gt;正确的拼写、标点符号和大小写是很重要的。一般来说，如果你觉得这样做很麻烦，不想在乎这些，那我们也觉得麻烦，不想在乎你的提问。花点额外的精力斟酌一下字句，用不着太僵硬与正式 —— 事实上，黑客文化很看重能准确地使用非正式、俚语和幽默的语句。但它&lt;strong&gt;必须很&lt;/strong&gt;准确，而且有迹象表明你是在思考和关注问题。&lt;/p&gt;
+&lt;p&gt;正确地拼写、使用标点和大小写，不要将&lt;code&gt;its&lt;/code&gt;混淆为&lt;code&gt;it&#39;s&lt;/code&gt;，&lt;code&gt;loose&lt;/code&gt;搞成&lt;code&gt;lose&lt;/code&gt;或者将&lt;code&gt;discrete&lt;/code&gt;弄成&lt;code&gt;discreet&lt;/code&gt;。不要&lt;strong&gt;全部用大写&lt;/strong&gt;，这会被视为无礼的大声嚷嚷（全部小写也好不到哪去，因为不易阅读。&lt;a href=&#34;http://en.wikipedia.org/wiki/Alan_Cox&#34;&gt;Alan Cox&lt;/a&gt; 也许可以这样做，但你不行）。&lt;/p&gt;
+&lt;p&gt;更白话的说，如果你写得像是个半文盲[译注：&lt;a href=&#34;http://zh.wikipedia.org/wiki/%E5%B0%8F%E7%99%BD&#34;&gt;小白&lt;/a&gt;]，那多半得不到理睬。也不要使用即时通信中的简写或&lt;a href=&#34;http://zh.wikipedia.org/wiki/%E7%81%AB%E6%98%9F%E6%96%87&#34;&gt;火星文&lt;/a&gt;，如将&lt;code&gt;的&lt;/code&gt;简化为&lt;code&gt;d&lt;/code&gt;会使你看起来像一个为了少打几个键而省字的小白。更糟的是，如果像个小孩似地鬼画符那绝对是在找死，可以肯定没人会理你（或者最多是给你一大堆指责与挖苦）。&lt;/p&gt;
+&lt;p&gt;如果在使用非母语的论坛提问，你可以犯点拼写和语法上的小错，但决不能在思考上马虎（没错，我们通常能弄清两者的分别）。同时，除非你知道回复者使用的语言，否则请使用英语书写。&lt;strong&gt;繁忙的黑客一般会直接删除用他们看不懂语言写的消息。在网络上英语是通用语言，用英语书写可以将你的问题在尚未被阅读就被直接删除的可能性降到最低。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果英文是你的外语（Second language），提示潜在回复者你有潜在的语言困难是很好的：
+[译注：以下附上原文以供使用]&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;English is not my native language; please excuse typing errors.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;英文不是我的母语，请原谅我的错字或语法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;If you speak $LANGUAGE, please email/PM me;
+I may need assistance translating my question.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;如果你说&lt;strong&gt;某语言&lt;/strong&gt;，请寄信/私讯给我；我需要有人协助我翻译我的问题。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I am familiar with the technical terms,
+but some slang expressions and idioms are difficult for me.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;我对技术名词很熟悉，但对于俗语或是特别用法比较不甚了解。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;I&amp;rsquo;ve posted my question in $LANGUAGE and English.
+I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;ul&gt;
+&lt;li&gt;我把我的问题用&lt;strong&gt;某语言&lt;/strong&gt;和英文写出来，如果你只用一种语言回答，我会乐意将其翻译成另一种。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;使用易于读取且标准的文件格式发送问题&#34;&gt;使用易于读取且标准的文件格式发送问题&lt;/h3&gt;
+&lt;p&gt;如果你人为地将问题搞得难以阅读，它多半会被忽略，人们更愿读易懂的问题，所以：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;使用纯文字而不是 HTML (&lt;a href=&#34;http://archive.birdhouse.org/etc/evilmail.html&#34;&gt;关闭 HTML&lt;/a&gt; 并不难）。&lt;/li&gt;
+&lt;li&gt;使用 MIME 附件通常是可以的，前提是真正有内容（譬如附带的源代码或 patch），而不仅仅是邮件程序生成的模板（譬如只是信件内容的拷贝）。&lt;/li&gt;
+&lt;li&gt;不要发送一段文字只是一行句子但自动换行后会变成多行的邮件（这使得回复部分内容非常困难）。设想你的读者是在 80 个字符宽的终端机上阅读邮件，最好设置你的换行分割点小于 80 字。&lt;/li&gt;
+&lt;li&gt;但是，对一些特殊的文件&lt;strong&gt;不要&lt;/strong&gt;设置固定宽度（譬如日志档案拷贝或会话记录）。数据应该原样包含，让回复者有信心他们看到的是和你看到的一样的东西。&lt;/li&gt;
+&lt;li&gt;在英语论坛中，不要使用&lt;code&gt;Quoted-Printable&lt;/code&gt; MIME 编码发送消息。这种编码对于张贴非 ASCII 语言可能是必须的，但很多邮件程序并不支持这种编码。当它们处理换行时，那些文本中四处散布的&lt;code&gt;=20&lt;/code&gt;符号既难看也分散注意力，甚至有可能破坏内容的语意。&lt;/li&gt;
+&lt;li&gt;绝对，&lt;strong&gt;永远&lt;/strong&gt;不要指望黑客们阅读使用封闭格式编写的文档，像微软公司的 Word 或 Excel 文件等。大多数黑客对此的反应就像有人将还在冒热气的猪粪倒在你家门口时你的反应一样。即便他们能够处理，他们也很厌恶这么做。&lt;/li&gt;
+&lt;li&gt;如果你从使用 Windows 的电脑发送电子邮件，关闭微软愚蠢的&lt;code&gt;智能引号&lt;/code&gt;功能 （从[选项] &amp;gt; [校订] &amp;gt; [自动校正选项]，勾选掉&lt;code&gt;智能引号&lt;/code&gt;单选框），以免在你的邮件中到处散布垃圾字符。&lt;/li&gt;
+&lt;li&gt;在论坛，勿滥用&lt;code&gt;表情符号&lt;/code&gt;和&lt;code&gt;HTML&lt;/code&gt;功能（当它们提供时）。一两个表情符号通常没有问题，但花哨的彩色文本倾向于使人认为你是个无能之辈。过滥地使用表情符号、色彩和字体会使你看来像个傻笑的小姑娘。这通常不是个好主意，除非你只是对性而不是对答案感兴趣。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;如果你使用图形用户界面的邮件程序（如微软公司的 Outlook 或者其它类似的），注意它们的默认设置不一定满足这些要求。大多数这类程序有基于选单的&lt;code&gt;查看源代码&lt;/code&gt;命令，用它来检查发送文件夹中的邮件，以确保发送的是纯文本文件同时没有一些奇怪的字符。&lt;/p&gt;
+&lt;h3 id=&#34;精确地描述问题并言之有物&#34;&gt;精确地描述问题并言之有物&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;仔细、清楚地描述你的问题或 Bug 的症状。&lt;/li&gt;
+&lt;li&gt;描述问题发生的环境（机器配置、操作系统、应用程序、以及相关的信息），提供经销商的发行版和版本号（如：&lt;code&gt;Fedora Core 4&lt;/code&gt;、&lt;code&gt;Slackware 9.1&lt;/code&gt;等）。&lt;/li&gt;
+&lt;li&gt;描述在提问前你是怎样去研究和理解这个问题的。&lt;/li&gt;
+&lt;li&gt;描述在提问前为确定问题而采取的诊断步骤。&lt;/li&gt;
+&lt;li&gt;描述最近做过什么可能相关的硬件或软件变更。&lt;/li&gt;
+&lt;li&gt;尽可能的提供一个可以&lt;code&gt;重现这个问题的可控环境&lt;/code&gt;的方法。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;尽量去揣测一个黑客会怎样反问你，在你提问之前预先将黑客们可能遇到的问题回答一遍。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;以上几点中，当你报告的是你认为可能在代码中的问题时，给黑客一个可以重现你的问题的环境尤其重要。当你这么做时，你得到有效的回答的机会和速度都会大大的提升。&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;http://www.chiark.greenend.org.uk/~sgtatham/&#34;&gt;Simon Tatham&lt;/a&gt; 写过一篇名为《&lt;a href=&#34;http://www.chiark.greenend.org.uk/~sgtatham/bugs-cn.html&#34;&gt;如何有效的报告 Bug&lt;/a&gt;》的出色文章。强力推荐你也读一读。&lt;/p&gt;
+&lt;h3 id=&#34;话不在多而在精&#34;&gt;话不在多而在精&lt;/h3&gt;
+&lt;p&gt;你需要提供精确有内容的信息。这并不是要求你简单的把成堆的出错代码或者资料完全转录到你的提问中。如果你有庞大而复杂的测试样例能重现程序挂掉的情境，尽量将它剪裁得越小越好。&lt;/p&gt;
+&lt;p&gt;这样做的用处至少有三点。
+第一，表现出你为简化问题付出了努力，这可以使你得到回答的机会增加；
+第二，简化问题使你更有可能得到&lt;strong&gt;有用&lt;/strong&gt;的答案；
+第三，在精炼你的 bug 报告的过程中，你很可能就自己找到了解决方法或权宜之计。&lt;/p&gt;
+&lt;h3 id=&#34;别动辄声称找到-bug&#34;&gt;别动辄声称找到 Bug&lt;/h3&gt;
+&lt;p&gt;当你在使用软件中遇到问题，除非你非常、&lt;strong&gt;非常&lt;/strong&gt;的有根据，不要动辄声称找到了 Bug。提示：除非你能提供解决问题的源代码补丁，或者提供回归测试来表明前一版本中行为不正确，否则你都多半不够完全确信。这同样适用在网页和文件，如果你（声称）发现了文件的&lt;code&gt;Bug&lt;/code&gt;，你应该能提供相应位置的修正或替代文件。&lt;/p&gt;
+&lt;p&gt;请记得，还有许多其它使用者没遇到你发现的问题，否则你在阅读文件或搜索网页时就应该发现了（你在抱怨前&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#%e5%9c%a8%e6%8f%90%e9%97%ae%e4%b9%8b%e5%89%8d&#34;&gt;已经做了这些，是吧&lt;/a&gt;？）。这也意味着很有可能是你弄错了而不是软件本身有问题。&lt;/p&gt;
+&lt;p&gt;编写软件的人总是非常辛苦地使它尽可能完美。如果你声称找到了 Bug，也就是在质疑他们的能力，即使你是对的，也有可能会冒犯到其中某部分人。当你在标题中嚷嚷着有&lt;code&gt;Bug&lt;/code&gt;时，这尤其严重。&lt;/p&gt;
+&lt;p&gt;提问时，即使你私下非常确信已经发现一个真正的 Bug，最好写得像是&lt;strong&gt;你&lt;/strong&gt;做错了什么。如果真的有 Bug，你会在回复中看到这点。这样做的话，如果真有 Bug，维护者就会向你道歉，这总比你惹恼别人然后欠别人一个道歉要好一点。&lt;/p&gt;
+&lt;h3 id=&#34;低声下气不能代替你的功课&#34;&gt;低声下气不能代替你的功课&lt;/h3&gt;
+&lt;p&gt;有些人明白他们不该粗鲁或傲慢的提问并要求得到答复，但他们选择另一个极端 —— 低声下气：&lt;code&gt;我知道我只是个可悲的新手，一个撸瑟，但...&lt;/code&gt;。这既使人困扰，也没有用，尤其是伴随着与实际问题含糊不清的描述时更令人反感。&lt;/p&gt;
+&lt;p&gt;别用原始灵长类动物的把戏来浪费你我的时间。取而代之的是，尽可能清楚地描述背景条件和你的问题情况。这比低声下气更好地定位了你的位置。&lt;/p&gt;
+&lt;p&gt;有时网页论坛会设有专为新手提问的版面，如果你真的认为遇到了初学者的问题，到那去就是了，但一样别那么低声下气。&lt;/p&gt;
+&lt;h3 id=&#34;描述问题症状而非你的猜测&#34;&gt;描述问题症状而非你的猜测&lt;/h3&gt;
+&lt;p&gt;告诉黑客们你认为问题是怎样造成的并没什么帮助。（如果你的推断如此有效，还用向别人求助吗？），因此要确信你原原本本告诉了他们问题的症状，而不是你的解释和理论；让黑客们来推测和诊断。如果你认为陈述自己的猜测很重要，清楚地说明这只是你的猜测，并描述为什么它们不起作用。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;蠢问题&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我在编译内核时接连遇到 SIG11 错误，
+我怀疑某条飞线搭在主板的走线上了，这种情况应该怎样检查最好？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;聪明问题&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我的组装电脑是 FIC-PA2007 主机板搭载 AMD K6/233 CPU（威盛 Apollo VP2 芯片组），
+256MB Corsair PC133 SDRAM 内存，在编译内核时，从开机 20 分钟以后就频频产生 SIG11 错误，
+但是在头 20 分钟内从没发生过相同的问题。重新启动也没有用，但是关机一晚上就又能工作 20 分钟。
+所有内存都换过了，没有效果。相关部分的标准编译记录如下…。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;由于以上这点似乎让许多人觉得难以配合，这里有句话可以提醒你：&lt;code&gt;所有的诊断专家都来自密苏里州。&lt;/code&gt; 美国国务院的官方座右铭则是：&lt;code&gt;让我看看&lt;/code&gt;（出自国会议员 Willard D. Vandiver 在 1899 年时的讲话：&lt;code&gt;我来自一个出产玉米，棉花，牛蒡和民主党人的国家，滔滔雄辩既不能说服我，也不会让我满意。我来自密苏里州，你必须让我看看。&lt;/code&gt;） 针对诊断者而言，这并不是一种怀疑，而只是一种真实而有用的需求，以便让他们看到的是与你看到的原始证据尽可能一致的东西，而不是你的猜测与归纳的结论。所以，大方的展示给我们看吧！&lt;/p&gt;
+&lt;h3 id=&#34;按发生时间先后列出问题症状&#34;&gt;按发生时间先后列出问题症状&lt;/h3&gt;
+&lt;p&gt;问题发生前的一系列操作，往往就是对找出问题最有帮助的线索。因此，你的说明里应该包含你的操作步骤，以及机器和软件的反应，直到问题发生。在命令行处理的情况下，提供一段操作记录（例如运行脚本工具所生成的），并引用相关的若干行（如 20 行）记录会非常有帮助。&lt;/p&gt;
+&lt;p&gt;如果挂掉的程序有诊断选项（如 -v 的详述开关），试着选择这些能在记录中增加调试信息的选项。记住，&lt;code&gt;多&lt;/code&gt;不等于&lt;code&gt;好&lt;/code&gt;。试着选取适当的调试级别以便提供有用的信息而不是让读者淹没在垃圾中。&lt;/p&gt;
+&lt;p&gt;如果你的说明很长（如超过四个段落），在开头简述问题，接下来再按时间顺序详述会有所帮助。这样黑客们在读你的记录时就知道该注意哪些内容了。&lt;/p&gt;
+&lt;h3 id=&#34;描述目标而不是过程&#34;&gt;描述目标而不是过程&lt;/h3&gt;
+&lt;p&gt;如果你想弄清楚如何做某事（而不是报告一个 Bug），在开头就描述你的目标，然后才陈述重现你所卡住的特定步骤。&lt;/p&gt;
+&lt;p&gt;经常寻求技术帮助的人在心中有个更高层次的目标，而他们在自以为能达到目标的特定道路上被卡住了，然后跑来问该怎么走，但没有意识到这条路本身就有问题。结果要费很大的劲才能搞定。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;蠢问题&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我怎样才能从某绘图程序的颜色选择器中取得十六进制的的 RGB 值？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;strong&gt;聪明问题&lt;/strong&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我正试着用替换一幅图片的色码（color table）成自己选定的色码，我现在知道的唯一方法是编辑每个色码区块（table slot），
+但却无法从某绘图程序的颜色选择器取得十六进制的的 RGB 值。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;第二种提问法比较聪明，你可能得到像是&lt;code&gt;建议采用另一个更合适的工具&lt;/code&gt;的回复。&lt;/p&gt;
+&lt;h3 id=&#34;别要求使用私人电邮回复&#34;&gt;别要求使用私人电邮回复&lt;/h3&gt;
+&lt;p&gt;黑客们认为问题的解决过程应该公开、透明，此过程中如果更有经验的人注意到不完整或者不当之处，最初的回复才能够、也应该被纠正。同时，作为提供帮助者可以得到一些奖励，奖励就是他的能力和学识被其他同行看到。&lt;/p&gt;
+&lt;p&gt;当你要求私下回复时，这个过程和奖励都被中止。别这样做，让&lt;strong&gt;回复者&lt;/strong&gt;来决定是否私下回答 —— 如果他真这么做了，通常是因为他认为问题编写太差或者太肤浅，以至于对其它人没有兴趣。&lt;/p&gt;
+&lt;p&gt;这条规则存在一条有限的例外，如果你确信提问可能会引来大量雷同的回复时，那么这个神奇的提问句会是&lt;code&gt;向我发电邮，我将为论坛归纳这些回复&lt;/code&gt;。试着将邮件列表或新闻群组从洪水般的雷同回复中解救出来是非常有礼貌的 —— 但你必须信守诺言。&lt;/p&gt;
+&lt;h3 id=&#34;清楚明确的表达你的问题以及需求&#34;&gt;清楚明确的表达你的问题以及需求&lt;/h3&gt;
+&lt;p&gt;漫无边际的提问是近乎无休无止的时间黑洞。最有可能给你有用答案的人通常也正是最忙的人（他们忙是因为要亲自完成大部分工作）。这样的人对无节制的时间黑洞相当厌恶，所以他们也倾向于厌恶那些漫无边际的提问。&lt;/p&gt;
+&lt;p&gt;如果你明确表述需要回答者做什么（如提供指点、发送一段代码、检查你的补丁、或是其他等等），就最有可能得到有用的答案。因为这会定出一个时间和精力的上限，便于回答者能集中精力来帮你。这么做很棒。&lt;/p&gt;
+&lt;p&gt;要理解专家们所处的世界，请把专业技能想像为充裕的资源，而回复的时间则是稀缺的资源。你要求他们奉献的时间越少，你越有可能从真正专业而且很忙的专家那里得到解答。&lt;/p&gt;
+&lt;p&gt;所以，界定一下你的问题，使专家花在辨识你的问题和回答所需要付出的时间减到最少，这技巧对你有用答案相当有帮助 —— 但这技巧通常和简化问题有所区别。因此，问&lt;code&gt;我想更好的理解 X，可否指点一下哪有好一点说明？&lt;/code&gt;通常比问&lt;code&gt;你能解释一下 X 吗？&lt;/code&gt;更好。如果你的代码不能运作，通常请别人看看哪里有问题，比要求别人替你改正要明智得多。&lt;/p&gt;
+&lt;h3 id=&#34;询问有关代码的问题时&#34;&gt;询问有关代码的问题时&lt;/h3&gt;
+&lt;p&gt;别要求他人帮你调试有问题的代码，不提示一下应该从何入手。张贴几百行的代码，然后说一声：&lt;code&gt;它不能工作&lt;/code&gt;会让你完全被忽略。只贴几十行代码，然后说一句：&lt;code&gt;在第七行以后，我期待它显示 &amp;lt;x&amp;gt;，但实际出现的是 &amp;lt;y&amp;gt;&lt;/code&gt;比较有可能让你得到回应。&lt;/p&gt;
+&lt;p&gt;最有效描述程序问题的方法是提供最精简的 Bug 展示测试用例（bug-demonstrating test case）。什么是最精简的测试用例？那是问题的缩影；一小个程序片段能&lt;strong&gt;刚好&lt;/strong&gt;展示出程序的异常行为，而不包含其他令人分散注意力的内容。怎么制作最精简的测试用例？如果你知道哪一行或哪一段代码会造成异常的行为，复制下来并加入足够重现这个状况的代码（例如，足以让这段代码能被编译/直译/被应用程序处理）。如果你无法将问题缩减到一个特定区块，就复制一份代码并移除不影响产生问题行为的部分。总之，测试用例越小越好（查看&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#%e8%af%9d%e4%b8%8d%e5%9c%a8%e5%a4%9a%e8%80%8c%e5%9c%a8%e7%b2%be&#34;&gt;话不在多而在精&lt;/a&gt;一节）。&lt;/p&gt;
+&lt;p&gt;一般而言，要得到一段相当精简的测试用例并不太容易，但永远先尝试这样做的是种好习惯。这种方式可以帮助你了解如何自行解决这个问题 —— 而且即使你的尝试不成功，黑客们也会看到你在尝试取得答案的过程中付出了努力，这可以让他们更愿意与你合作。&lt;/p&gt;
+&lt;p&gt;如果你只是想让别人帮忙审查（Review）一下代码，在信的开头就要说出来，并且一定要提到你认为哪一部分特别需要关注以及为什么。&lt;/p&gt;
+&lt;h3 id=&#34;别把自己家庭作业的问题贴上来&#34;&gt;别把自己家庭作业的问题贴上来&lt;/h3&gt;
+&lt;p&gt;黑客们很擅长分辨哪些问题是家庭作业式的问题；因为我们中的大多数都曾自己解决这类问题。同样，这些问题得由&lt;strong&gt;你&lt;/strong&gt;来搞定，你会从中学到东西。你可以要求给点提示，但别要求得到完整的解决方案。&lt;/p&gt;
+&lt;p&gt;如果你怀疑自己碰到了一个家庭作业式的问题，但仍然无法解决，试试在使用者群组，论坛或（最后一招）在项目的&lt;strong&gt;使用者&lt;/strong&gt;邮件列表或论坛中提问。尽管黑客们&lt;strong&gt;会&lt;/strong&gt;看出来，但一些有经验的使用者也许仍会给你一些提示。&lt;/p&gt;
+&lt;h3 id=&#34;去掉无意义的提问句&#34;&gt;去掉无意义的提问句&lt;/h3&gt;
+&lt;p&gt;避免用无意义的话结束提问，例如&lt;code&gt;有人能帮我吗？&lt;/code&gt;或者&lt;code&gt;这有答案吗？&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;首先：如果你对问题的描述不是很好，这样问更是画蛇添足。&lt;/p&gt;
+&lt;p&gt;其次：由于这样问是画蛇添足，黑客们会很厌烦你 —— 而且通常会用逻辑上正确，但毫无意义的回答来表示他们的蔑视， 例如：&lt;code&gt;没错，有人能帮你&lt;/code&gt;或者&lt;code&gt;不，没答案&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;一般来说，避免用 &lt;code&gt;是或否&lt;/code&gt;、&lt;code&gt;对或错&lt;/code&gt;、&lt;code&gt;有或没有&lt;/code&gt;类型的问句，除非你想得到&lt;a href=&#34;http://homepage.ntlworld.com./jonathan.deboynepollard/FGA/questions-with-yes-or-no-answers.html&#34;&gt;是或否类型的回答&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;即使你很急也不要在标题写紧急&#34;&gt;即使你很急也不要在标题写&lt;code&gt;紧急&lt;/code&gt;&lt;/h3&gt;
+&lt;p&gt;这是你的问题，不是我们的。宣称&lt;code&gt;紧急&lt;/code&gt;极有可能事与愿违：大多数黑客会直接删除无礼和自私地企图即时引起关注的问题。更严重的是，&lt;code&gt;紧急&lt;/code&gt;这个字（或是其他企图引起关注的标题）通常会被垃圾信过滤器过滤掉 —— 你希望能看到你问题的人可能永远也看不到。&lt;/p&gt;
+&lt;p&gt;有半个例外的情况是，如果你是在一些很高调，会使黑客们兴奋的地方，也许值得这样去做。在这种情况下，如果你有时间压力，也很有礼貌地提到这点，人们也许会有兴趣回答快一点。&lt;/p&gt;
+&lt;p&gt;当然，这风险很大，因为黑客们兴奋的点多半与你的不同。譬如从 NASA 国际空间站（International Space Station）发这样的标题没有问题，但用自我感觉良好的慈善行为或政治原因发肯定不行。事实上，张贴诸如&lt;code&gt;紧急：帮我救救这个毛绒绒的小海豹！&lt;/code&gt;肯定让你被黑客忽略或惹恼他们，即使他们认为毛绒绒的小海豹很重要。&lt;/p&gt;
+&lt;p&gt;如果你觉得这点很不可思议，最好再把这份指南剩下的内容多读几遍，直到你弄懂了再发文。&lt;/p&gt;
+&lt;h3 id=&#34;礼多人不怪而且有时还很有帮助&#34;&gt;礼多人不怪，而且有时还很有帮助&lt;/h3&gt;
+&lt;p&gt;彬彬有礼，多用&lt;code&gt;请&lt;/code&gt;和&lt;code&gt;谢谢您的关注&lt;/code&gt;，或&lt;code&gt;谢谢你的关照&lt;/code&gt;。让大家都知道你对他们花时间免费提供帮助心存感激。&lt;/p&gt;
+&lt;p&gt;坦白说，这一点并没有比清晰、正确、精准并合法语法和避免使用专用格式重要（也不能取而代之）。黑客们一般宁可读有点唐突但技术上鲜明的 Bug 报告，而不是那种有礼但含糊的报告。（如果这点让你不解，记住我们是按问题能教给我们什么来评价问题的价值的）&lt;/p&gt;
+&lt;p&gt;然而，如果你有一串的问题待解决，客气一点肯定会增加你得到有用回应的机会。&lt;/p&gt;
+&lt;p&gt;（我们注意到，自从本指南发布后，从资深黑客那里得到的唯一严重缺陷反馈，就是对预先道谢这一条。一些黑客觉得&lt;code&gt;先谢了&lt;/code&gt;意味着事后就不用再感谢任何人的暗示。我们的建议是要么先说&lt;code&gt;先谢了&lt;/code&gt;，&lt;strong&gt;然后&lt;/strong&gt;事后再对回复者表示感谢，或者换种方式表达感激，譬如用&lt;code&gt;谢谢你的关注&lt;/code&gt;或&lt;code&gt;谢谢你的关照&lt;/code&gt;。）&lt;/p&gt;
+&lt;h3 id=&#34;问题解决后加个简短的补充说明&#34;&gt;问题解决后，加个简短的补充说明&lt;/h3&gt;
+&lt;p&gt;问题解决后，向所有帮助过你的人发个说明，让他们知道问题是怎样解决的，并再一次向他们表示感谢。如果问题在新闻组或者邮件列表中引起了广泛关注，应该在那里贴一个说明比较恰当。&lt;/p&gt;
+&lt;p&gt;最理想的方式是向最初提问的话题回复此消息，并在标题中包含&lt;code&gt;已修正&lt;/code&gt;，&lt;code&gt;已解决&lt;/code&gt;或其它同等含义的明显标记。在人来人往的邮件列表里，一个看见讨论串&lt;code&gt;问题 X&lt;/code&gt;和&lt;code&gt;问题 X - 已解决&lt;/code&gt;的潜在回复者就明白不用再浪费时间了（除非他个人觉得&lt;code&gt;问题 X&lt;/code&gt;的有趣），因此可以利用此时间去解决其它问题。&lt;/p&gt;
+&lt;p&gt;补充说明不必很长或是很深入；简单的一句&lt;code&gt;你好，原来是网线出了问题！谢谢大家 – Bill&lt;/code&gt;比什么也不说要来的好。事实上，除非结论真的很有技术含量，否则简短可爱的小结比长篇大论更好。说明问题是怎样解决的，但大可不必将解决问题的过程复述一遍。&lt;/p&gt;
+&lt;p&gt;对于有深度的问题，张贴调试记录的摘要是有帮助的。描述问题的最终状态，说明是什么解决了问题，在此&lt;strong&gt;之后&lt;/strong&gt;才指明可以避免的盲点。避免盲点的部分应放在正确的解决方案和其它总结材料之后，而不要将此信息搞成侦探推理小说。列出那些帮助过你的名字，会让你交到更多朋友。&lt;/p&gt;
+&lt;p&gt;除了有礼貌和有内涵以外，这种类型的补充也有助于他人在邮件列表/新闻群组/论坛中搜索到真正解决你问题的方案，让他们也从中受益。&lt;/p&gt;
+&lt;p&gt;至少，这种补充有助于让每位参与协助的人因问题的解决而从中得到满足感。如果你自己不是技术专家或者黑客，那就相信我们，这种感觉对于那些你向他们求助的大师或者专家而言，是非常重要的。问题悬而未决会让人灰心；黑客们渴望看到问题被解决。好人有好报，满足他们的渴望，你会在下次提问时尝到甜头。&lt;/p&gt;
+&lt;p&gt;思考一下怎样才能避免他人将来也遇到类似的问题，自问写一份文件或加个常见问题（FAQ）会不会有帮助。如果是的话就将它们发给维护者。&lt;/p&gt;
+&lt;p&gt;在黑客中，这种良好的后继行动实际上比传统的礼节更为重要，也是你如何透过善待他人而赢得声誉的方式，这是非常有价值的资产。&lt;/p&gt;
+&lt;h2 id=&#34;如何解读答案&#34;&gt;如何解读答案&lt;/h2&gt;
+&lt;h3 id=&#34;rtfm-和-stfw如何知道你已完全搞砸了&#34;&gt;RTFM 和 STFW：如何知道你已完全搞砸了&lt;/h3&gt;
+&lt;p&gt;有一个古老而神圣的传统：如果你收到&lt;code&gt;RTFM （Read The Fucking Manual）&lt;/code&gt;的回应，回答者认为你&lt;strong&gt;应该去读他妈的手册&lt;/strong&gt;。当然，基本上他是对的，你应该去读一读。&lt;/p&gt;
+&lt;p&gt;RTFM 有一个年轻的亲戚。如果你收到&lt;code&gt;STFW（Search The Fucking Web）&lt;/code&gt;的回应，回答者认为你&lt;strong&gt;应该到他妈的网上搜索&lt;/strong&gt;。那人多半也是对的，去搜索一下吧。（更温和一点的说法是 &lt;strong&gt;&lt;a href=&#34;http://lmgtfy.com/&#34;&gt;Google 是你的朋友&lt;/a&gt;&lt;/strong&gt;！）&lt;/p&gt;
+&lt;p&gt;在论坛，你也可能被要求去爬爬论坛的旧文。事实上，有人甚至可能热心地为你提供以前解决此问题的讨论串。但不要依赖这种关照，提问前应该先搜索一下旧文。&lt;/p&gt;
+&lt;p&gt;通常，用这两句之一回答你的人会给你一份包含你需要内容的手册或者一个网址，而且他们打这些字的时候也正在读着。这些答复意味着回答者认为&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;你需要的信息非常容易获得&lt;/strong&gt;；&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;你自己去搜索这些信息比灌给你，能让你学到更多&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;你不应该因此不爽；&lt;strong&gt;依照黑客的标准，他已经表示了对你一定程度的关注，而没有对你的要求视而不见&lt;/strong&gt;。你应该对他祖母般的慈祥表示感谢。&lt;/p&gt;
+&lt;h3 id=&#34;如果还是搞不懂&#34;&gt;如果还是搞不懂&lt;/h3&gt;
+&lt;p&gt;如果你看不懂回应，别立刻要求对方解释。像你以前试着自己解决问题时那样（利用手册，FAQ，网络，身边的高手），先试着去搞懂他的回应。如果你真的需要对方解释，记得表现出你已经从中学到了点什么。&lt;/p&gt;
+&lt;p&gt;比方说，如果我回答你：&lt;code&gt;看来似乎是 zentry 卡住了；你应该先清除它。&lt;/code&gt;，然后，这是一个&lt;strong&gt;很糟的&lt;/strong&gt;后续问题回应：&lt;code&gt;zentry 是什么？&lt;/code&gt; &lt;strong&gt;好&lt;/strong&gt;的问法应该是这样：&lt;code&gt;哦~~~我看过说明了但是只有 -z 和 -p 两个参数中提到了 zentries，而且还都没有清楚的解释如何清除它。你是指这两个中的哪一个吗？还是我看漏了什么？&lt;/code&gt;&lt;/p&gt;
+&lt;h3 id=&#34;处理无礼的回应&#34;&gt;处理无礼的回应&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;很多黑客圈子中看似无礼的行为并不是存心冒犯。相反，它是直接了当，一针见血式的交流风格，这种风格更注重解决问题，而不是使人感觉舒服而却模模糊糊。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;如果你觉得被冒犯了，试着平静地反应。如果有人真的做了出格的事，群组或论坛中的前辈多半会招呼他。如果这&lt;strong&gt;没有&lt;/strong&gt;发生而你却发火了，那么你发火对象的言语可能在黑客社区中看起来是正常的，而&lt;strong&gt;你&lt;/strong&gt;将被视为有错的一方，这将伤害到你获取信息或帮助的机会。&lt;/p&gt;
+&lt;p&gt;另一方面，你偶尔真的会碰到无礼和无聊的言行。与上述相反，对真正的冒犯者狠狠地打击，用犀利的语言将其驳得体无完肤都是可以接受的。然而，在行事之前一定要非常非常的有根据。纠正无礼的言论与开始一场毫无意义的口水战仅一线之隔，黑客们自己莽撞地越线的情况并不鲜见。如果你是新手或外人，避开这种莽撞的机会并不高。如果你想得到的是信息而不是消磨时光，这时最好不要把手放在键盘上以免冒险。&lt;/p&gt;
+&lt;p&gt;（有些人断言很多黑客都有轻度的自闭症或亚斯伯格综合症，缺少用于润滑人类社会&lt;strong&gt;正常&lt;/strong&gt;交往所需的神经。这既可能是真也可能是假的。如果你自己不是黑客，兴许你认为我们脑袋有问题还能帮助你应付我们的古怪行为。只管这么干好了，我们不在乎。我们&lt;strong&gt;喜欢&lt;/strong&gt;我们现在这个样子，并且通常对病患标记都有站得住脚的怀疑）。&lt;/p&gt;
+&lt;p&gt;Jeff Bigler 的观察总结和这个相关也值得一读 (&lt;strong&gt;&lt;a href=&#34;http://www.mit.edu/~jcb/tact.html&#34;&gt;tact filters&lt;/a&gt;&lt;/strong&gt;)。&lt;/p&gt;
+&lt;p&gt;在下一节，我们会谈到另一个问题，当&lt;strong&gt;你&lt;/strong&gt;行为不当时所会受到的&lt;code&gt;冒犯&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;如何避免扮演失败者&#34;&gt;如何避免扮演失败者&lt;/h2&gt;
+&lt;p&gt;在黑客社区的论坛中有那么几次你可能会搞砸 —— 以本指南所描述到的或类似的方式。而你会在公开场合中被告知你是如何搞砸的，也许攻击的言语中还会带点夹七夹八的颜色。&lt;/p&gt;
+&lt;p&gt;这种事发生以后，你能做的最糟糕的事莫过于哀嚎你的遭遇、宣称被口头攻击、要求道歉、高声尖叫、憋闷气、威胁诉诸法律、向其雇主报怨、忘了关马桶盖等等。相反地，你该这么做：&lt;/p&gt;
+&lt;p&gt;熬过去，这很正常。事实上，它是有益健康且合理的。&lt;/p&gt;
+&lt;p&gt;社区的标准不会自行维持，它们是通过参与者积极而&lt;strong&gt;公开地&lt;/strong&gt;执行来维持的。不要哭嚎所有的批评都应该通过私下的邮件传送，它不是这样运作的。当有人评论你的一个说法有误或者提出不同看法时，坚持声称受到个人攻击也毫无益处，这些都是失败者的态度。&lt;/p&gt;
+&lt;p&gt;也有其它的黑客论坛，受过高礼节要求的误导，禁止参与者张贴任何对别人帖子挑毛病的消息，并声称&lt;code&gt;如果你不想帮助用户就闭嘴。&lt;/code&gt; 结果造成有想法的参与者纷纷离开，这么做只会使它们沦为毫无意义的唠叨与无用的技术论坛。&lt;/p&gt;
+&lt;p&gt;夸张的讲法是：你要的是“友善”（以上述方式）还是有用？两个里面挑一个。&lt;/p&gt;
+&lt;p&gt;记着：当黑客说你搞砸了，并且（无论多么刺耳）告诉你别再这样做时，他正在为关心&lt;strong&gt;你&lt;/strong&gt;和&lt;strong&gt;他的社区&lt;/strong&gt;而行动。对他而言，不理你并将你从他的生活中滤掉更简单。如果你无法做到感谢，至少要表现得有点尊严，别大声哀嚎，也别因为自己是个有戏剧性超级敏感的灵魂和自以为有资格的新来者，就指望别人像对待脆弱的洋娃娃那样对你。&lt;/p&gt;
+&lt;p&gt;有时候，即使你没有搞砸（或者只是在他的想像中你搞砸了），有些人也会无缘无故地攻击你本人。在这种情况下，抱怨倒是&lt;strong&gt;真的&lt;/strong&gt;会把问题搞砸。&lt;/p&gt;
+&lt;p&gt;这些来找麻烦的人要么是毫无办法但自以为是专家的不中用家伙，要么就是测试你是否真会搞砸的心理专家。其它读者要么不理睬，要么用自己的方式对付他们。这些来找麻烦的人在给他们自己找麻烦，这点你不用操心。&lt;/p&gt;
+&lt;p&gt;也别让自己卷入口水战，最好不要理睬大多数的口水战 &amp;ndash; 当然，这是在你检验它们只是口水战，并且未指出你有搞砸的地方，同时也没有巧妙地将问题真正的答案藏于其后（这也是有可能的）。&lt;/p&gt;
+&lt;h2 id=&#34;不该问的问题&#34;&gt;不该问的问题&lt;/h2&gt;
+&lt;p&gt;以下是几个经典蠢问题，以及黑客没回答时心中所想的：&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q1&#34;&gt;我能在哪找到 X 程序或 X 资源？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q2&#34;&gt;我怎样用 X 做 Y？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q3&#34;&gt;如何设定我的 shell 提示？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q4&#34;&gt;我可以用 Bass-o-matic 文件转换工具将 AcmeCorp 档案转换为 TeX 格式吗？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q5&#34;&gt;我的程序/设定/SQL 语句没有用&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q6&#34;&gt;我的 Windows 电脑有问题，你能帮我吗？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q7&#34;&gt;我的程序不会动了，我认为系统工具 X 有问题&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q8&#34;&gt;我在安装 Linux（或者 X ）时有问题，你能帮我吗？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q9&#34;&gt;我怎么才能破解 root 帐号/窃取 OP 特权/读别人的邮件呢？&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问题：我能在哪找到 X 程序或 X 资源？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;回答：就在我找到它的地方啊，白痴 —— 搜索引擎的那一头。天哪！难道还有人不会用 &lt;a href=&#34;http://www.google.com&#34;&gt;Google&lt;/a&gt; 吗？&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问题：我怎样用 X 做 Y？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;回答：如果你想解决的是 Y ，提问时别给出可能并不恰当的方法。这种问题说明提问者不但对 X 完全无知，也对 Y 要解决的问题糊涂，还被特定形势禁锢了思维。最好忽略这种人，等他们把问题搞清楚了再说。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问题：如何设定我的 shell 提示？？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;回答：如果你有足够的智慧提这个问题，你也该有足够的智慧去 &lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#RTFM&#34;&gt;RTFM&lt;/a&gt;，然后自己去找出来。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问题：我可以用 Bass-o-matic 文件转换工具将 AcmeCorp 档案转换为 TeX 格式吗？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;回答：试试看就知道了。如果你试过，你既知道了答案，就不用浪费我的时间了。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问题：我的{程序/设定/SQL 语句}不工作&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;回答：这不算是问题吧，我对要我问你二十个问题才找得出你真正问题的问题没兴趣 —— 我有更有意思的事要做呢。在看到这类问题的时候，我的反应通常不外如下三种&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;你还有什么要补充的吗？&lt;/li&gt;
+&lt;li&gt;真糟糕，希望你能搞定。&lt;/li&gt;
+&lt;li&gt;这关我有什么屁事？&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问题：我的 Windows 电脑有问题，你能帮我吗？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;回答：能啊，扔掉微软的垃圾，换个像 Linux 或 BSD 的开源操作系统吧。&lt;/p&gt;
+&lt;p&gt;注意：如果程序有官方版 Windows 或者与 Windows 有互动（如 Samba），你&lt;strong&gt;可以&lt;/strong&gt;问与 Windows 相关的问题， 只是别对问题是由 Windows 操作系统而不是程序本身造成的回复感到惊讶， 因为 Windows 一般来说实在太烂，这种说法通常都是对的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问题：我的程序不会动了，我认为系统工具 X 有问题&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;回答：你完全有可能是第一个注意到被成千上万用户反复使用的系统调用与函数库档案有明显缺陷的人，更有可能的是你完全没有根据。不同凡响的说法需要不同凡响的证据，当你这样声称时，你必须有清楚而详尽的缺陷说明文件作后盾。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问题：我在安装 Linux（或者 X ）时有问题，你能帮我吗？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;回答：不能，我只有亲自在你的电脑上动手才能找到毛病。还是去找你当地的 Linux 使用群组者寻求实际的指导吧（你能在&lt;a href=&#34;http://www.linux.org/groups/index.html&#34;&gt;这儿&lt;/a&gt;找到使用者群组的清单）。&lt;/p&gt;
+&lt;p&gt;注意：如果安装问题与某 Linux 的发行版有关，在它的邮件列表、论坛或本地使用者群组中提问也许是恰当的。此时，应描述问题的准确细节。在此之前，先用 &lt;code&gt;Linux&lt;/code&gt; 和&lt;strong&gt;所有&lt;/strong&gt;被怀疑的硬件作关键词仔细搜索。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;问题：我怎么才能破解 root 帐号/窃取 OP 特权/读别人的邮件呢？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;回答：想要这样做，说明了你是个卑鄙小人；想找个黑客帮你，说明你是个白痴！&lt;/p&gt;
+&lt;h2 id=&#34;好问题与蠢问题&#34;&gt;好问题与蠢问题&lt;/h2&gt;
+&lt;p&gt;最后，我将透过举一些例子，来说明怎样聪明的提问；同一个问题的两种问法被放在一起，一种是愚蠢的，另一种才是明智的。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;蠢问题&lt;/strong&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我可以在哪儿找到关于 Foonly Flurbamatic 的资料？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;这种问法无非想得到 &lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#RTFM&#34;&gt;STFW&lt;/a&gt; 这样的回答。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;聪明问题&lt;/strong&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我用 Google 搜索过 &amp;ldquo;Foonly Flurbamatic 2600&amp;rdquo;，但是没找到有用的结果。谁知道上哪儿去找对这种设备编程的资料？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;这个问题已经 STFW 过了，看起来他真的遇到了麻烦。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;蠢问题&lt;/strong&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我从 foo 项目找来的源码没法编译。它怎么这么烂？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;他觉得都是别人的错，这个傲慢自大的提问者。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;聪明问题&lt;/strong&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;foo 项目代码在 Nulix 6.2 版下无法编译通过。我读过了 FAQ，但里面没有提到跟 Nulix 有关的问题。这是我编译过程的记录，我有什么做的不对的地方吗？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;提问者已经指明了环境，也读过了 FAQ，还列出了错误，并且他没有把问题的责任推到别人头上，他的问题值得被关注。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;蠢问题&lt;/strong&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我的主机板有问题了，谁来帮我？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;某黑客对这类问题的回答通常是：&lt;code&gt;好的，还要帮你拍拍背和换尿布吗？&lt;/code&gt;，然后按下删除键。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;聪明问题&lt;/strong&gt;：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;我在 S2464 主机板上试过了 X 、 Y 和 Z ，但没什么作用，我又试了 A 、 B 和 C 。请注意当我尝试 C 时的奇怪现象。显然 florbish 正在 grommicking，但结果出人意料。通常在 Athlon MP 主机板上引起 grommicking 的原因是什么？有谁知道接下来我该做些什么测试才能找出问题？&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;这个家伙，从另一个角度来看，值得去回答他。他表现出了解决问题的能力，而不是坐等天上掉答案。&lt;/p&gt;
+&lt;p&gt;在最后一个问题中，注意&lt;code&gt;告诉我答案&lt;/code&gt;和&lt;code&gt;给我启示，指出我还应该做什么诊断工作&lt;/code&gt;之间微妙而又重要的区别。&lt;/p&gt;
+&lt;p&gt;事实上，后一个问题源自于 2001 年 8 月在 Linux 内核邮件列表（lkml）上的一个真实的提问。我（Eric）就是那个提出问题的人。我在 Tyan S2464 主板上观察到了这种无法解释的锁定现象，列表成员们提供了解决这一问题的重要信息。&lt;/p&gt;
+&lt;p&gt;通过我的提问方法，我给了别人可以咀嚼玩味的东西；我设法让人们很容易参与并且被吸引进来。我显示了自己具备和他们同等的能力，并邀请他们与我共同探讨。通过告诉他们我所走过的弯路，以避免他们再浪费时间，我也表明了对他们宝贵时间的尊重。&lt;/p&gt;
+&lt;p&gt;事后，当我向每个人表示感谢，并且赞赏这次良好的讨论经历的时候， 一个 Linux 内核邮件列表的成员表示，他觉得我的问题得到解决并非由于我是这个列表中的&lt;strong&gt;名&lt;/strong&gt;人，而是因为我用了正确的方式来提问。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;黑客从某种角度来说是拥有丰富知识但缺乏人情味的家伙；我相信他是对的，如果我像个乞讨者那样提问，不论我是谁，一定会惹恼某些人或者被他们忽视。他建议我记下这件事，这直接导致了本指南的出现。&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;如果得不到回答&#34;&gt;如果得不到回答&lt;/h2&gt;
+&lt;p&gt;如果仍得不到回答，请不要以为我们觉得无法帮助你。有时只是看到你问题的人不知道答案罢了。没有回应不代表你被忽视，虽然不可否认这种差别很难区分。&lt;/p&gt;
+&lt;p&gt;总的来说，简单的重复张贴问题是个很糟的点子。这将被视为无意义的喧闹。有点耐心，知道你问题答案的人可能生活在不同的时区，可能正在睡觉，也有可能你的问题一开始就没有组织好。&lt;/p&gt;
+&lt;p&gt;你可以通过其他渠道获得帮助，这些渠道通常更适合初学者的需要。&lt;/p&gt;
+&lt;p&gt;有许多网上的以及本地的使用者群组，由热情的软件爱好者（即使他们可能从没亲自写过任何软件）组成。通常人们组建这样的团体来互相帮助并帮助新手。&lt;/p&gt;
+&lt;p&gt;另外，你可以向很多商业公司寻求帮助，不论公司大还是小。别为要付费才能获得帮助而感到沮丧！毕竟，假使你的汽车发动机汽缸密封圈爆掉了 —— 完全可能如此 —— 你还得把它送到修车铺，并且为维修付费。就算软件没花费你一分钱，你也不能强求技术支持总是免费的。&lt;/p&gt;
+&lt;p&gt;对像是 Linux 这种大众化的软件，每个开发者至少会对应到上万名使用者。根本不可能由一个人来处理来自上万名使用者的求助电话。要知道，即使你要为这些协助付费，和你所购买的同类软件相比，你所付出的也是微不足道的（通常封闭源代码软件的技术支持费用比开源软件的要高得多，且内容也没那么丰富）。&lt;/p&gt;
+&lt;h2 id=&#34;如何更好地回答问题&#34;&gt;如何更好地回答问题&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;态度和善一点&lt;/strong&gt;。问题带来的压力常使人显得无礼或愚蠢，其实并不是这样。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;对初犯者私下回复&lt;/strong&gt;。对那些坦诚犯错之人没有必要当众羞辱，一个真正的新手也许连怎么搜索或在哪找常见问题都不知道。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果你不确定，一定要说出来&lt;/strong&gt;！一个听起来权威的错误回复比没有还要糟，别因为听起来像个专家很好玩，就给别人乱指路。要谦虚和诚实，给提问者与同行都树个好榜样。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果帮不了忙，也别妨碍他&lt;/strong&gt;。不要在实际步骤上开玩笑，那样也许会毁了使用者的设置 —— 有些可怜的呆瓜会把它当成真的指令。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;试探性的反问以引出更多的细节&lt;/strong&gt;。如果你做得好，提问者可以学到点东西 —— 你也可以。试试将蠢问题转变成好问题，别忘了我们都曾是新手。&lt;/p&gt;
+&lt;p&gt;尽管对那些懒虫抱怨一声 RTFM 是正当的，能指出文件的位置（即使只是建议个 Google 搜索关键词）会更好。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;如果你决定回答，就请给出好的答案&lt;/strong&gt;。当别人正在用错误的工具或方法时别建议笨拙的权宜之计（wordaround），应推荐更好的工具，重新界定问题。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;正面的回答问题&lt;/strong&gt;！如果这个提问者已经很深入的研究而且也表明已经试过 X 、 Y 、 Z 、 A 、 B 、 C 但没得到结果，回答 &lt;code&gt;试试看 A 或是 B&lt;/code&gt; 或者 &lt;code&gt;试试 X 、 Y 、 Z 、 A 、 B 、 C&lt;/code&gt; 并附上一个链接一点用都没有。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;帮助你的社区从问题中学习&lt;/strong&gt;。当回复一个好问题时，问问自己&lt;code&gt;如何修改相关文件或常见问题文件以免再次解答同样的问题？&lt;/code&gt;，接着再向文件维护者发一份补丁。&lt;/p&gt;
+&lt;p&gt;如果你是在研究一番后才做出的回答，&lt;strong&gt;展现你的技巧而不是直接端出结果&lt;/strong&gt;。毕竟&lt;code&gt;授人以鱼不如授人以渔&lt;/code&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;相关资源&#34;&gt;相关资源&lt;/h2&gt;
+&lt;p&gt;如果你需要个人电脑、Unix 系统和网络如何运作的基础知识，参阅 &lt;a href=&#34;http://en.tldp.org/HOWTO/Unix-and-Internet-Fundamentals-HOWTO/&#34;&gt;Unix 系统和网络基本原理&lt;/a&gt;。&lt;/p&gt;
+&lt;p&gt;当你发布软件或补丁时，试着按&lt;a href=&#34;http://en.tldp.org/HOWTO/Software-Release-Practice-HOWTO/index.html&#34;&gt;软件发布实践&lt;/a&gt;操作。&lt;/p&gt;
+&lt;h2 id=&#34;鸣谢&#34;&gt;鸣谢&lt;/h2&gt;
+&lt;p&gt;Evelyn Mitchel 贡献了一些愚蠢问题例子并启发了编写&lt;code&gt;如何更好地回答问题&lt;/code&gt;这一节， Mikhail Ramendik 贡献了一些特别有价值的建议和改进。&lt;strong&gt;How To Ask Questions The Smart Way&lt;/strong&gt; &lt;a href=&#34;https://github.com/ryanhanwu/How-To-Ask-Questions-The-Smart-Way&#34;&gt;GitHub 源文件&lt;/a&gt;&lt;/p&gt;
+</description>
+      
+    </item>
+    
+    <item>
       <title>威联通 QNAP 通过 Docker 部署 Aria2 下载神器</title>
-      <link>https://ttti.cc/post/qnap-docker-aria/</link>
+      <link>https://nav.ttti.cc/post/qnap-docker-aria/</link>
       <pubDate>Wed, 22 Dec 2021 01:01:34 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/qnap-docker-aria/</guid>
+      <guid>https://nav.ttti.cc/post/qnap-docker-aria/</guid>
       
         <description>&lt;p&gt;这是我的威联通 NAS 第一次使用 Docker 容器并安装镜像。我选择了一个我最常用的，也是所有达人都会使用的下载神器：Aria2。说它是神器，是因为它极为小巧并且强大。&lt;/p&gt;
 &lt;p&gt;威联通的 Docker 镜像也是走 DockerHub，所以一切都是通用的（ Linux Windows MacOS ）。因此你在 DockerHub 上只要在 Tag 中确认了它是支持 X86 架构（amd64）的便是都可以使用。&lt;/p&gt;
@@ -195,10 +1173,10 @@ bash install-tr-control-cn.sh
     
     <item>
       <title>威联通 QNAP 挂载阿里云盘简单明快教程</title>
-      <link>https://ttti.cc/post/qnap-aliyunpan/</link>
+      <link>https://nav.ttti.cc/post/qnap-aliyunpan/</link>
       <pubDate>Mon, 13 Dec 2021 17:46:13 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/qnap-aliyunpan/</guid>
+      <guid>https://nav.ttti.cc/post/qnap-aliyunpan/</guid>
       
         <description>&lt;p&gt;双11期间购入了威联通的NAS，而在今天挂载上了阿里云盘，以便进行HBS3同步作业的云备份，借此也顺便写个简单明快的教程，废话不多说，让我们开始。&lt;/p&gt;
 &lt;h3 id=&#34;开启-nas-的-web-服务&#34;&gt;开启 NAS 的 Web 服务&lt;/h3&gt;
@@ -230,10 +1208,10 @@ bash install-tr-control-cn.sh
     
     <item>
       <title>《哥斯拉大战金刚》完全展现出观众对巨兽对决的期望-值8.5分</title>
-      <link>https://ttti.cc/post/godzilla-vs-kong/</link>
+      <link>https://nav.ttti.cc/post/godzilla-vs-kong/</link>
       <pubDate>Tue, 25 May 2021 20:57:30 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/godzilla-vs-kong/</guid>
+      <guid>https://nav.ttti.cc/post/godzilla-vs-kong/</guid>
       
         <description>&lt;p&gt;《哥斯拉大战金刚》连贯的节奏，简单的阴谋，剧情毫无拖沓，这反而恰恰是这部电影最需要的。导演完全展现出&amp;quot;观众对怪兽大战的期望（巨兽对决的壮观）&amp;quot;，同时这次特效也相当到位。先看一段影片视频：&lt;/p&gt;
 &lt;p&gt;于是我好奇，去看了下烂番茄。在烂番茄上 &lt;strong&gt;「新鲜度=75% ；爆米花=91%」&lt;/strong&gt;（新鲜度在这个类型的电影中评分并不低，是高的） —— &lt;strong&gt;而这就是我说的为什么不同类型电影，要放一起评分呢？&lt;/strong&gt;&lt;/p&gt;
@@ -249,10 +1227,10 @@ bash install-tr-control-cn.sh
     
     <item>
       <title>新一代多系统启动U盘 Ventoy 使用指南</title>
-      <link>https://ttti.cc/post/ventoy/</link>
+      <link>https://nav.ttti.cc/post/ventoy/</link>
       <pubDate>Fri, 02 Apr 2021 21:49:08 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/ventoy/</guid>
+      <guid>https://nav.ttti.cc/post/ventoy/</guid>
       
         <description>&lt;p&gt;如果你还在用过去的，制作安装系统U盘的方式，那你需要准备N个U盘，并且每次更新镜像都要解压或者用写盘软件重新写盘。同时在今天，可能需要多个系统的安装盘。&lt;/p&gt;
 &lt;p&gt;今天我介绍的 &lt;strong&gt;Ventoy&lt;/strong&gt; 就是为了制作多系统安装U盘的一个非常方便的开源工具。使用它便可以在一个U盘上承载多个系统镜像，并且更新起来非常方便。&lt;/p&gt;
@@ -336,10 +1314,10 @@ sudo sh VentoyWeb.sh # 执行脚本&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>更换到更现代的双向链笔记软件 Obsidian</title>
-      <link>https://ttti.cc/post/obsidianforfirst/</link>
+      <link>https://nav.ttti.cc/post/obsidianforfirst/</link>
       <pubDate>Sun, 21 Mar 2021 15:21:50 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/obsidianforfirst/</guid>
+      <guid>https://nav.ttti.cc/post/obsidianforfirst/</guid>
       
         <description>&lt;p&gt;先说一下个人使用笔记本软件的经过：从 OneNote →  Joplin → Obsidian（现在开始），我一直认为，笔记软件是组织和管理知识的最好方式，尤其对于现代人来说，电子笔记是必不可少的（纸张笔记不够效率）。因为现代是一个知识内容的工作时代。人脑是绝对不够用的。&lt;/p&gt;
 &lt;p&gt;尽管在今天笔记软件有很多，但是对更高效率的追求和渴望依然存在。说到新一代的笔记软件，那就要提到 Roam Research 了，其订阅价格高达165美元/年。当时官方在推特上表示：&lt;/p&gt;
@@ -392,10 +1370,10 @@ sudo sh VentoyWeb.sh # 执行脚本&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>解锁家庭局域网内手机和电视观看电脑里的影片</title>
-      <link>https://ttti.cc/post/lanvideoplay/</link>
+      <link>https://nav.ttti.cc/post/lanvideoplay/</link>
       <pubDate>Sun, 21 Mar 2021 15:15:36 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/lanvideoplay/</guid>
+      <guid>https://nav.ttti.cc/post/lanvideoplay/</guid>
       
         <description>&lt;p&gt;我发现很多新手小伙伴，甚至有些用电脑很长一段时间的老手，仍然不会将电脑里的影片共享给家里的安卓电视/盒子或者手机上播放，于是就有了这篇内容的极简教程。&lt;/p&gt;
 &lt;p&gt;如果你和我一样，电脑常开，那么电脑本身就相当于一台承载媒体及文件内容的小型服务器。因此，家庭里的任何设备都可以轻松地访问这台电脑上的文件。跟我来操作：&lt;/p&gt;
@@ -431,10 +1409,10 @@ sudo sh VentoyWeb.sh # 执行脚本&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>5款极致小巧的扩展让你的浏览器更高效</title>
-      <link>https://ttti.cc/post/ji-xiao-kuozan-xiaolv/</link>
+      <link>https://nav.ttti.cc/post/ji-xiao-kuozan-xiaolv/</link>
       <pubDate>Thu, 18 Mar 2021 23:19:54 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/ji-xiao-kuozan-xiaolv/</guid>
+      <guid>https://nav.ttti.cc/post/ji-xiao-kuozan-xiaolv/</guid>
       
         <description>&lt;p&gt;作为极限玩家，对软件的轻巧也有着极致追求，因为轻量化是高效率的原因之一。很多时候，我们只想要完成我们要完成的事情，或者说让某件事更便捷的做到。这个时候也并不需要什么庞大的软件。所以，浏览器的扩展就是很好的存在。&lt;/p&gt;
 &lt;p&gt;很多浏览器扩展只有几 MB，甚至是几 KB，占用资源很低的同时，又方便调用，已经成为了我们日常中不可或缺的东东了，所以今天推荐5款极致轻巧的浏览器扩展。&lt;/p&gt;
@@ -465,10 +1443,10 @@ sudo sh VentoyWeb.sh # 执行脚本&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>给Win10右键菜单加上校验文件功能</title>
-      <link>https://ttti.cc/post/jiao-yan-wen-jian/</link>
+      <link>https://nav.ttti.cc/post/jiao-yan-wen-jian/</link>
       <pubDate>Sun, 14 Mar 2021 16:50:37 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/jiao-yan-wen-jian/</guid>
+      <guid>https://nav.ttti.cc/post/jiao-yan-wen-jian/</guid>
       
         <description>&lt;p&gt;有时候，我们需要校验文件的哈希值，以确保该文件是否有损坏，或者被篡改。比如 Win10 或 Ubuntu 系统的安装镜像。若哈希值错误，则表示不适合重装系统，否则重装失败的话，原来的系统也进不去了。&lt;/p&gt;
 &lt;p&gt;哈希值就好像是文件的身份证号码，基本是无法伪造的。日常中主要使用两种哈希值校验码：&lt;strong&gt;MD5&lt;/strong&gt;和&lt;strong&gt;SHA1&lt;/strong&gt;。&lt;/p&gt;
@@ -541,10 +1519,10 @@ sudo sh VentoyWeb.sh # 执行脚本&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>图片防盗链解决方案</title>
-      <link>https://ttti.cc/post/pic-mirror-img/</link>
+      <link>https://nav.ttti.cc/post/pic-mirror-img/</link>
       <pubDate>Fri, 12 Mar 2021 20:50:06 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/pic-mirror-img/</guid>
+      <guid>https://nav.ttti.cc/post/pic-mirror-img/</guid>
       
         <description>&lt;p&gt;很多时候，图片镜像缓存服务有不错的用途：&lt;/p&gt;
 &lt;ul&gt;
@@ -600,10 +1578,10 @@ https://pic1.xuehuaimg.com/proxy/i.imgur.com/hWghm6oh.jpg&lt;/code&gt;&lt;/pre&g
     
     <item>
       <title>Youtube 详细统计信息测速指南</title>
-      <link>https://ttti.cc/post/youtubecouts/</link>
+      <link>https://nav.ttti.cc/post/youtubecouts/</link>
       <pubDate>Thu, 04 Mar 2021 14:45:18 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/youtubecouts/</guid>
+      <guid>https://nav.ttti.cc/post/youtubecouts/</guid>
       
         <description>&lt;p&gt;对于出海上网来说，无论是自架梯子还是购买机场，都需要测试网速，虽然可以使用 Speedtest 这样的标准测速网站，但实际不如直接观看 YouTube 视频“详细统计信息”来的实用高效。&lt;/p&gt;
 &lt;p&gt;因为，需求上来说，只要能满足视频流的播放，其他的也都满足了，在观看 YouTube 时，随时都可以&lt;strong&gt;右键视频 - 详细统计信息，查看“Connection Speed”项来确认当前速度。&lt;/strong&gt;&lt;/p&gt;
@@ -632,10 +1610,10 @@ https://pic1.xuehuaimg.com/proxy/i.imgur.com/hWghm6oh.jpg&lt;/code&gt;&lt;/pre&g
     
     <item>
       <title>开源免费音视频处理神器 FFmpeg</title>
-      <link>https://ttti.cc/post/ffmpeg/</link>
+      <link>https://nav.ttti.cc/post/ffmpeg/</link>
       <pubDate>Sat, 26 Sep 2020 16:04:00 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/ffmpeg/</guid>
+      <guid>https://nav.ttti.cc/post/ffmpeg/</guid>
       
         <description>&lt;p&gt;&lt;strong&gt;FFmpeg 是一款免费开源（LGPL、GPL 许可证），且领先的全能型多媒体处理软件&lt;/strong&gt;，可以处理视频、音乐及图片，它采用了非常先进的音频/视频编解码库 libavcodec，能够进行采集、编码、解码、转码、压缩、合并、流化、音视频分离等操作。&lt;/p&gt;
 &lt;p&gt;不过呢，对于一般电脑用户来说很少会用，因为它是基于命令行的，但是很多软件都使用了它的开源框架，比如：QQ 影音、KMPlayer、暴风影音，以及早期的 Potplayer。&lt;/p&gt;
@@ -748,7 +1726,13 @@ https://pic1.xuehuaimg.com/proxy/i.imgur.com/hWghm6oh.jpg&lt;/code&gt;&lt;/pre&g
 
   
   &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -h encoder&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;libaom-av1 &lt;span style=&#34;color:#75715e&#34;&gt;# 检查 libaom 模块是否存在于 ffmpeg 安装中 &lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mp4 -c:v libaom-av1 -crf &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt; av1_test.mkv&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mp4 -c:v libaom-av1 -crf &lt;span style=&#34;color:#ae81ff&#34;&gt;30&lt;/span&gt; av1_test.mkv
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 用 av1 编码压缩视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -noautorotate -y -vsync &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt; -hwaccel cuda -hwaccel_output_format cuda -i &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;input.mp4&amp;#34;&lt;/span&gt; -c:a copy -c:v av1_nvenc -aq-strength &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt; -temporal_aq &lt;span style=&#34;color:#ae81ff&#34;&gt;15&lt;/span&gt; -preset p6 -cq:v &lt;span style=&#34;color:#ae81ff&#34;&gt;39&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;T:/output.mp4
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;# 如果要保留视频元数据，可以用 exiftool 处理
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;exiftool -tagsFromFile &amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34; -overwrite_original &amp;#34;&lt;/span&gt;/data/record/DJI_001_av1/&lt;span style=&#34;color:#f92672&#34;&gt;{}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;h3 id=&#34;压缩视频&#34;&gt;压缩视频&lt;/h3&gt;
 &lt;div class=&#34;highlight-container&#34;&gt;
@@ -1047,6 +2031,22 @@ https://pic1.xuehuaimg.com/proxy/i.imgur.com/hWghm6oh.jpg&lt;/code&gt;&lt;/pre&g
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i filename.flv -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;drawtext=fontfile=simhei.ttf: text=&amp;#39;文本&amp;#39;:x=100:y=10:fontsize=24:fontcolor=yellow:shadowy=2&amp;#34;&lt;/span&gt; filename.mp4&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;&lt;strong&gt;FFmpeg&lt;/strong&gt; 这个神器非常值得学习，因为视频在今天来说是很主流的内容载体，虽然对小白来来说，看起来很复杂，但其实只要掌握几个基本命令就足够了，同时它在 Windows 和 Linux 上都可以使用。&lt;/p&gt;
+&lt;h3 id=&#34;字幕处理&#34;&gt;字幕处理&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 提取软字幕（srt）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mkv &lt;span style=&#34;color:#75715e&#34;&gt;# 先查看视频信息，例如，可以看到 Stream #0:2(chi): Subtitle: subrip (srt)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mkv -map 0:s:0 subtitle.srt &lt;span style=&#34;color:#75715e&#34;&gt;# 提取字幕到 .srt 文件，其中 -map 0:s:0 选择第一个字幕流（索引从0开始，第二个字幕即 0:s:1 ）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 提取所有字幕（如下将 N 替换为字幕流总数减 1）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i in &lt;span style=&#34;color:#f92672&#34;&gt;{&lt;/span&gt;0..N&lt;span style=&#34;color:#f92672&#34;&gt;}&lt;/span&gt;; &lt;span style=&#34;color:#66d9ef&#34;&gt;do&lt;/span&gt; ffmpeg -i input.mkv -map 0:s:$i subtitle_$i.srt; &lt;span style=&#34;color:#66d9ef&#34;&gt;done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 如果字幕是 .ass 等文本格式格式字幕，可以提取并转换为 .srt 格式（不支持非文本格式字幕）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i input.mkv -map 0:s:0 -c:s srt subtitle.srt&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
 &lt;h2 id=&#34;更多参考&#34;&gt;更多参考&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&#34;https://www.linuxmi.com/linux-ffmpeg.html&#34;&gt;在 Linux 上用 FFmpeg 命令进行音频和视频处理&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
@@ -1056,10 +2056,10 @@ https://pic1.xuehuaimg.com/proxy/i.imgur.com/hWghm6oh.jpg&lt;/code&gt;&lt;/pre&g
     
     <item>
       <title>youtube-dl 下载视频使用指南</title>
-      <link>https://ttti.cc/post/youtubedl/</link>
+      <link>https://nav.ttti.cc/post/youtubedl/</link>
       <pubDate>Wed, 05 Aug 2020 20:56:03 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/youtubedl/</guid>
+      <guid>https://nav.ttti.cc/post/youtubedl/</guid>
       
         <description>&lt;p&gt;youtube-dl 需要安装 Python 环境，并需配置好系统变量（安装时勾选 Add Python to PATH）&lt;/p&gt;
 &lt;h3 id=&#34;安装-youtube-dl&#34;&gt;安装 youtube-dl&lt;/h3&gt;
@@ -1183,10 +2183,10 @@ youtube-dl -f 136 https://www.youtube.com/watch?v=xxxxxxxx&lt;/code&gt;&lt;/pre&
     
     <item>
       <title>微软推出文件恢复工具：Windows File Recovery</title>
-      <link>https://ttti.cc/post/wfr/</link>
+      <link>https://nav.ttti.cc/post/wfr/</link>
       <pubDate>Tue, 30 Jun 2020 10:11:07 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/wfr/</guid>
+      <guid>https://nav.ttti.cc/post/wfr/</guid>
       
         <description>&lt;p&gt;微软推出了免费的文件恢复工具：Windows File Recovery。你可以在 Microsoft Store 中下载（即 Win10 商店中下载）。&lt;/p&gt;
 &lt;p&gt;同时，&lt;strong&gt;该工具仅支持 Win10 version 19041.0 及以上版本&lt;/strong&gt;，也就是你要升级到最新版本 Win10 2004，才能使用它！&lt;/p&gt;
@@ -1293,96 +2293,6 @@ youtube-dl -f 136 https://www.youtube.com/watch?v=xxxxxxxx&lt;/code&gt;&lt;/pre&
 &lt;p&gt;微软推出的自家的恢复文件工具目前是命令行工具，不知道日后会不会推出图形化工具，不过我个人认为，命令行也不错，只是对小白不太友好。最后附上官方帮助文档：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;&lt;a href=&#34;https://support.microsoft.com/zh-cn/help/4538642/windows-10-restore-lost-files&#34;&gt;https://support.microsoft.com/zh-cn/help/4538642/windows-10-restore-lost-files&lt;/a&gt;&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>关于</title>
-      <link>https://ttti.cc/about/</link>
-      <pubDate>Fri, 26 Jun 2020 16:43:36 +0800</pubDate>
-      <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/about/</guid>
-      
-        <description>&lt;h3 id=&#34;联系方式&#34;&gt;联系方式：&lt;/h3&gt;
-&lt;ul&gt;
-&lt;li&gt;Email：njs.xyz@gmail.com&lt;/li&gt;
-&lt;li&gt;QQ：81489060&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://t.me/q8886&#34;&gt;Telegram&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&#34;https://ttti.cc/about.html&#34;&gt;More &amp;hellip;&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>JSDelivr CDN 加速 GitHub</title>
-      <link>https://ttti.cc/post/jsdelivrtogithub/</link>
-      <pubDate>Fri, 19 Jun 2020 16:49:13 +0800</pubDate>
-      <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/jsdelivrtogithub/</guid>
-      
-        <description>&lt;p&gt;jsDelivr 提供了 Web 上常用静态资源的服务，不但有全球 CDN 加速，也采用了国内的 CDN 进行加速（有备案）&lt;/p&gt;
-&lt;p&gt;jsDelivr 确保每个地区的使用者都能获得最好的连接速度，它还可以可将不同的 JavaScript 或 CSS 集合在一起使用。&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.jsdelivr.com&#34;&gt;官方网站&lt;/a&gt; | 加速地址：https://testingcf.jsdelivr.net&lt;/p&gt;
-&lt;h3 id=&#34;github-使用镜像加速服务&#34;&gt;GitHub 使用镜像加速服务&lt;/h3&gt;
-&lt;p&gt;很简单，比如，将仓库中的 DPlayer.min.js 文件利用 jsDelivr 加速，以下示例：&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;原始链接：&lt;/strong&gt;
-&lt;code&gt;https://github.com/sunpma/goIndex/tree/master/js/DPlayer.min.js&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;jsDelivr 加速链接：&lt;/strong&gt;
-&lt;code&gt;https://testingcf.jsdelivr.net/gh/sunpma/goIndex/js/DPlayer.min.js&lt;/code&gt;&lt;/p&gt;
-&lt;h3 id=&#34;如果按版本分类releases-一个-v10-版本&#34;&gt;如果按版本分类，Releases 一个 v1.0 版本，&lt;/h3&gt;
-&lt;p&gt;&lt;strong&gt;原始链接：&lt;/strong&gt;
-&lt;code&gt;https://github.com/sunpma/goIndex/blob/v1.0/js/DPlayer.min.js&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;jsDelivr 加速链接：&lt;/strong&gt;
-&lt;code&gt;https://testingcf.jsdelivr.net/gh/sunpma/goIndex@v1.0/js/DPlayer.min.js&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;如果要直接加载最新版本，可以使用 latest 标签：
-&lt;code&gt;https://testingcf.jsdelivr.net/gh/sunpma/goIndex@latest/js/DPlayer.min.js&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;加载镜像连接的规则：&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;GitHub 镜像，为 gh&lt;/li&gt;
-&lt;li&gt;WordPress 镜像，为 wp&lt;/li&gt;
-&lt;li&gt;npm 镜像，为 npm&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>读-写-问</title>
-      <link>https://ttti.cc/post/search-read-ask/</link>
-      <pubDate>Wed, 10 Jun 2020 18:25:57 +0800</pubDate>
-      <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/search-read-ask/</guid>
-      
-        <description>&lt;p&gt;很多问题的解决都可以通过三连：&lt;strong&gt;Search - Read - Ask&lt;/strong&gt; ，这套连招很管用，然而大部分人都&lt;strong&gt;不习惯搜索、没耐心阅读、不会提问&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;检索在今天已经非常重要了，当你要提问题时，都应该先尝试检索问题，不能使用好检索，你就不能相对精确的定位问题，还会造成时间上的浪费（海里信息的关键就是检索）。&lt;/p&gt;
-&lt;p&gt;还有一个重要的是搜索引擎的算法，比如有些时候，使用百度可能获得信息比较旧，而谷歌对中文环境可能逐渐放弃（搜索引擎是非常重要的，它是互联网中绝不能缺少的）。&lt;/p&gt;
-&lt;p&gt;一般来说几乎所有问题都能通过“搜索和阅读”来解决，但不同的人需要的时间不一样（主要受制于逻辑和习惯），而同时你可能会碰到更多问题，解决不了时才使用 Ask（询问）。&lt;/p&gt;
-&lt;p&gt;当我们探索一个未知领域的时候，应该在过程中同时编写文档，这会直接让你内化，而不是“照猫画虎”，同时会留存一份回顾文档，毕竟昨天的知识你可能带不到明天。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
-</description>
-      
-    </item>
-    
-    <item>
-      <title>动图演示从官方下载并制作Win10启动U盘</title>
-      <link>https://ttti.cc/post/win10-setup/</link>
-      <pubDate>Thu, 28 May 2020 10:21:57 +0800</pubDate>
-      <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/win10-setup/</guid>
-      
-        <description>&lt;p&gt;微软今天发布 Win10 2004 正式版了，然而还是很多小白依赖第三方下载，事实上微软官方是提供镜像下载的，同时还具备U盘制作功能，就是说，根本不需要依赖第三方网站。&lt;/p&gt;
-&lt;p&gt;为了帮助新人能更直观的了解，所以特意制作了动图。了解之后，你会发现原来制作一个Win10原版系统竟是如此简单的事情。&lt;/p&gt;
-&lt;p&gt;前置准备：U盘一个，8G以及以上，同时注意U盘里面的内容会清空（我个人是会用一个单独8G专门用来做启动盘，U盘都是白菜价格，U盘2.0就够）&lt;/p&gt;
-&lt;p&gt;第一步：访问&lt;a href=&#34;https://www.microsoft.com/zh-cn/software-download/windows10&#34;&gt;微软官方下载&lt;/a&gt;，然后点击“立即下载工具”，随后就会弹出保存页面，这里保存到桌面即可（它只是个向导工具，只有18M）&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://imgkr.cn-bj.ufileos.com/9fc181c7-bd85-4565-86d1-c613266068ce.gif&#34; alt=&#34;下载并安装&#34;&gt;&lt;/p&gt;
-&lt;p&gt;第二步：双击我们刚刚保存到桌面的 MediaCreationTool2004.exe ，然后根据想到完成即可，你可以看到如下的动图演示。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://imgkr.cn-bj.ufileos.com/4006be09-7b6a-48f0-a770-0744ef441730.gif&#34; alt=&#34;向导制作U盘&#34;&gt;&lt;/p&gt;
-&lt;p&gt;当向导完成后，U盘也制作好了，之后你就可以使用这个U盘进行全新安装 Win10 系统。是的就是如此简单，并没有那么繁琐。&lt;/p&gt;
-&lt;p&gt;使用动图演示，往往更简练说明问题，如今很多科普文章喜欢长文啰嗦。我更相信李小龙说的：“文明的进度总是向着简单方向运行”，就是说应该把科普的内容做的简单，毕竟我们都没有耐心看长文不是吗？&lt;/p&gt;
 &lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
 </description>
       

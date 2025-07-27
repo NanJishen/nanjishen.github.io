@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Logseq on 极限玩家</title>
+    <link>https://nav.ttti.cc/tags/logseq/</link>
+    <description>Recent content in Logseq on 极限玩家</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
+    <webMaster>nanji_shen@qq.com (南极神)</webMaster>
+    <copyright>极限玩家</copyright>
+    <lastBuildDate>Sat, 08 Jan 2022 00:50:20 +0800</lastBuildDate>
+    
+        <atom:link href="https://nav.ttti.cc/tags/logseq/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Logseq 使用方法简单总结</title>
+      <link>https://nav.ttti.cc/post/logseq/</link>
+      <pubDate>Sat, 08 Jan 2022 00:50:20 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/logseq/</guid>
+      
+        <description>&lt;h2 id=&#34;journals&#34;&gt;Journals&lt;/h2&gt;
+&lt;p&gt;左侧面板的  Journals 为日记分类。如果你不需要可以在设置中关闭。它会每天自动生成对应日期的页面。你可以将每天所想所遇随手记录，聚沙成塔。&lt;/p&gt;
+&lt;h2 id=&#34;all-pages&#34;&gt;All pages&lt;/h2&gt;
+&lt;p&gt;左侧面板的 All pages 点击后可以看到所有页面：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Contents ：目录页，编辑该页就是编辑右侧面板的目录&lt;/li&gt;
+&lt;li&gt;favorites ：喜欢页，该页（待补充）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;关于页面的使用：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以先建立块 &lt;code&gt;[[新页面名]]&lt;/code&gt;，然后单击该块就会新建对应的新页面&lt;/li&gt;
+&lt;li&gt;在页面中点右上角的 &lt;code&gt;···&lt;/code&gt; ，接着点击删除即可删除该页&lt;/li&gt;
+&lt;li&gt;页面名尽量不要使用特殊符号，因为页面名也是文件名，不支持一些特殊符号，例如 &lt;code&gt;.&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;块概念&#34;&gt;块概念&lt;/h2&gt;
+&lt;p&gt;这是双链笔记的主要用法。将重要的“关键字”用双方括号括起来 &lt;code&gt;[[关键字]]&lt;/code&gt; 。日后点击该块即可跳转到对应页面。添加块的方法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;无论中英文下按连按两次 &lt;code&gt;[[ 或 【【 &lt;/code&gt; 即可添加块&lt;/li&gt;
+&lt;li&gt;框选你要设置块的关键字，按 &lt;code&gt;Alt + [[ 或 【【&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;块引用：可用 &lt;code&gt;(( ))&lt;/code&gt; 将要被引用的内容括起来。在被引用的块的右上角，会显示当前块被引用了几次。单击数字，会打开右侧边栏。&lt;/p&gt;
+&lt;p&gt;块内换行可以用 &lt;code&gt;Shift+Enter&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;右键左侧小点可以弹出右键菜单：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;可以设置条目的颜色&lt;/li&gt;
+&lt;li&gt;可以拷贝引用，然后用 Ctrl+V 粘贴即可&lt;/li&gt;
+&lt;li&gt;可以右键块在右侧边栏打开&lt;/li&gt;
+&lt;li&gt;右键点击条目左侧的点可以将当前保存为模板，方便日后直接调用。因此你应该先设置好作为模板的样式和内容在去转为模板。其它页面调用模板只需 &lt;code&gt;/Template&lt;/code&gt; 即可。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;命令语法&#34;&gt;命令语法&lt;/h2&gt;
+&lt;p&gt;输入左斜杠 &lt;code&gt;/&lt;/code&gt; 可以调用命令，其中包含了很多，例如插入图片，日期等：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;/PAG&lt;/code&gt; 会筛选出页面链接语法，有“页面内容引用”和“页面链接引用”可选&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;/BL&lt;/code&gt; 会筛选出块的链接语法，有“块内容引用”和“块链接引用”可选&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;输入 &lt;code&gt;&amp;lt;&lt;/code&gt; 尖括号可以调用出另一类命令，能够插入例如 小 Note，Tips 等小注释引用。&lt;/p&gt;
+&lt;p&gt;以上只是简单的列举，你可以自行看看。有很多的命令，这样调用起来会非常方便。&lt;/p&gt;
+&lt;h2 id=&#34;设置-todo&#34;&gt;设置 TODO&lt;/h2&gt;
+&lt;p&gt;先输入内容，然后 &lt;code&gt;/todo&lt;/code&gt; 即可将该内容设置为 TODO 条目。当然，也可以先输入 &lt;code&gt;/todo&lt;/code&gt; 再输入内容。还可以设置 &lt;code&gt;/later&lt;/code&gt; &lt;code&gt;/now&lt;/code&gt; &lt;code&gt;/done&lt;/code&gt; 等（更多状态可以在 / 命令菜单中查到）。然后可以通过点击标记完成。&lt;/p&gt;
+&lt;p&gt;设置优先级的：光标在 TODO 条目结尾处，输入 &lt;code&gt;/C&lt;/code&gt; （有 A、B、C 三个级别，可以通过鼠标悬停上方，点选切换。&lt;/p&gt;
+&lt;p&gt;设置截止日期：光标在 TODO 条目结尾处，输入 &lt;code&gt;/DEADLINE&lt;/code&gt; 。&lt;/p&gt;
+&lt;p&gt;TODO 条目可能分散于各处。可以通过 Ctrl+K 键打开全局搜索 todo 关键字。接着你会看到结果中最上面的一条左面带一个 P 符号（表示页面），点击进入该页后可以看到所有 TODO 都会汇总在这里。&lt;/p&gt;
+&lt;h2 id=&#34;查询内容&#34;&gt;查询内容&lt;/h2&gt;
+&lt;p&gt;输入 &lt;code&gt;/query&lt;/code&gt; 可以查询内容，并插入到页面中。例如 &lt;code&gt;{{query todo}}&lt;/code&gt;，就可以查询 todo 条目。你可以在其它页面插入该查询，将鼠标指向查询可以看到更多用法：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#75715e&#34;&gt;#tag}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#f92672&#34;&gt;[[&lt;/span&gt;page&lt;span style=&#34;color:#f92672&#34;&gt;]]}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;full-text search&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;and &lt;span style=&#34;color:#f92672&#34;&gt;[[&lt;/span&gt;project&lt;span style=&#34;color:#f92672&#34;&gt;]]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;task NOW LATER&lt;span style=&#34;color:#f92672&#34;&gt;))}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;or &lt;span style=&#34;color:#f92672&#34;&gt;[[&lt;/span&gt;page 1&lt;span style=&#34;color:#f92672&#34;&gt;]]&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[[&lt;/span&gt;page 2&lt;span style=&#34;color:#f92672&#34;&gt;]])}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;and &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;between -7d +7d&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;task DONE&lt;span style=&#34;color:#f92672&#34;&gt;))}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;property key value&lt;span style=&#34;color:#f92672&#34;&gt;)}}&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;query &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;page-tags &lt;span style=&#34;color:#75715e&#34;&gt;#tag)}}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;收藏页面&#34;&gt;收藏页面&lt;/h2&gt;
+&lt;p&gt;右上角点击 &amp;hellip; ，然后点“添加收藏”，可以将当前页面添加到左侧面板中的“收藏页面”。例如建立一个页面叫做 Dashboard 做为仪表盘。然后在上面添加一些查询内容，比如 &lt;code&gt;{{query todo}}&lt;/code&gt; 。&lt;/p&gt;
+&lt;h2 id=&#34;标签与分类&#34;&gt;标签与分类&lt;/h2&gt;
+&lt;p&gt;打标签：先输入一个 &lt;code&gt;#&lt;/code&gt; 号，然后紧挨着输入标签内容，例如 &lt;code&gt;#标签&lt;/code&gt; 。你也可以将标签页添加到收藏页面，方便快速点击跳转&lt;/p&gt;
+&lt;p&gt;分类：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;type:: 心理学, 幸福课 &lt;span style=&#34;color:#75715e&#34;&gt;# 可以英文逗号分割多个类似&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;author:: 泰勒·本·沙哈尔
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;publish:: 中信出版社
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mark:: 书籍&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;那么如何查询呢？可以参考[[#查询内容]]段落。&lt;/p&gt;
+&lt;h2 id=&#34;设置卡片&#34;&gt;设置卡片&lt;/h2&gt;
+&lt;p&gt;首先输入一个问题，例如：&lt;code&gt;hello 是什么意思？&lt;/code&gt; ，然后在后面输入 &lt;code&gt;#card&lt;/code&gt;，即可将该问题设置为卡片。接着回车换行，再按&lt;code&gt;TAB&lt;/code&gt;键缩进，然后输入答案，最终格式：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hello 是什么意思？ &lt;span style=&#34;color:#75715e&#34;&gt;#card&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	它的英文是：您好&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;不仅如此，还可以给答案增加一个填空，先按照上述方法建立卡片，在答案中可以输入&lt;code&gt;/cloze&lt;/code&gt;然后输入填空中的答案最终格式格式为：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;一些问题 &lt;span style=&#34;color:#75715e&#34;&gt;#card &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	&lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;cloze 填空中的答案&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt; 以及 &lt;span style=&#34;color:#f92672&#34;&gt;{{&lt;/span&gt;cloze 填空中的答案&lt;span style=&#34;color:#f92672&#34;&gt;}}&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;有的卡片和答案后，点击左侧导航面板中的 Flashcards 即可看到这些设置的卡片。&lt;/p&gt;
+&lt;h2 id=&#34;基本编辑&#34;&gt;基本编辑&lt;/h2&gt;
+&lt;p&gt;编辑器是支持 Emoji 表情的，所以你可以尽情使用。&lt;/p&gt;
+&lt;p&gt;插入图片：先复制图片，然后使用 Ctrl+V 直接粘贴到编辑器中。图片也会被同时复制到所在库的根目录中的 assets 目录中。&lt;/p&gt;
+&lt;p&gt;插入表格：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|*标题*|*标题*|*标题*|
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|内容|内容|内容|
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|内容|内容|内容|
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;|内容|内容|内容|&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;插入文件：可以直接将文件拖入到编辑器中，同样会被复制到所在库的根目录中的 assets 目录中。&lt;/p&gt;
+&lt;h2 id=&#34;引用-pdf-文件&#34;&gt;引用 pdf 文件&lt;/h2&gt;
+&lt;p&gt;直接将 PDF 文件拖入编辑器中，之后鼠标悬停即可直接查看文件。点击该文件可以进入阅读模式。不仅如此，你还可以框选文字标注颜色，然后回到编辑器里 &lt;code&gt;Ctrl + V&lt;/code&gt;，引用这个文件的段落，那么当点击段落后，即可跳转到该段落。&lt;/p&gt;
+&lt;p&gt;你也可以输入以插入文件：&lt;code&gt;file:: [xxx.pdf](../assets/xxx.pdf)&lt;/code&gt;，以这样的形式插入，点击后会用浏览器直接打开 PDF 文件。&lt;/p&gt;
+&lt;h2 id=&#34;快捷键&#34;&gt;快捷键&lt;/h2&gt;
+&lt;p&gt;在设置 - 常规 - 快捷键设置，可以查看和自定义快捷键&lt;/p&gt;
+&lt;table&gt;
+  &lt;thead&gt;
+      &lt;tr&gt;
+          &lt;th&gt;按键&lt;/th&gt;
+          &lt;th&gt;说明&lt;/th&gt;
+      &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+,&lt;/td&gt;
+          &lt;td&gt;打开设置&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+C，Ctrl+B&lt;/td&gt;
+          &lt;td&gt;切换编辑器是否显示 &lt;code&gt;[[ ]]&lt;/code&gt; 块括号&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+F&lt;/td&gt;
+          &lt;td&gt;搜索当前页面并高亮关键字&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+K&lt;/td&gt;
+          &lt;td&gt;打开全局搜索/创建页面&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+Shift+K&lt;/td&gt;
+          &lt;td&gt;搜索当前页面搜索&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+Shift+P&lt;/td&gt;
+          &lt;td&gt;命令面板&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Shift+鼠标左键点击&lt;code&gt;[[ ]]&lt;/code&gt;块&lt;/td&gt;
+          &lt;td&gt;右侧新窗口打开该块页面&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+↑ 和 Ctrl+↓&lt;/td&gt;
+          &lt;td&gt;折叠 和 展开&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+Shift+= 或 Ctrl+-&lt;/td&gt;
+          &lt;td&gt;放大或缩小界面，Ctrl+0 恢复默认大小&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+          &lt;td&gt;Ctrl+N&lt;/td&gt;
+          &lt;td&gt;打开一个新的 Logseq 实例&lt;/td&gt;
+      &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;插件与主题&#34;&gt;插件与主题&lt;/h2&gt;
+&lt;p&gt;右上角 &amp;hellip;. - 插件，可以查看到已安装的插件和主题，及访问插件和主题市场。
+右上角 &amp;hellip;. - 主题，可以切换已安装的主题。&lt;/p&gt;
+&lt;p&gt;插件推荐：
+&lt;a href=&#34;https://github.com/haydenull/logseq-plugin-markdown-table&#34;&gt;Markdown Table Editor&lt;/a&gt;：编辑表格更直观
+&lt;a href=&#34;https://github.com/pengx17/logseq-plugin-bullet-threading&#34;&gt;Bullet Threading&lt;/a&gt; ：列表添加指向线&lt;/p&gt;
+&lt;p&gt;主题推荐：
+&lt;a href=&#34;https://github.com/sansui233/logseq-bonofix-theme&#34;&gt;Bonofix theme&lt;/a&gt;：简洁专注，适用于子弹笔记和写作
+&lt;a href=&#34;https://github.com/pengx17/logseq-dev-theme&#34;&gt;Dev theme&lt;/a&gt;：简洁专注，在 MAC 上有更好的体验
+&lt;a href=&#34;https://github.com/haydenull/logseq-woz-theme&#34;&gt;Woz theme&lt;/a&gt;：基于 Dev Theme 的简洁，但阅读更舒适
+&lt;a href=&#34;https://github.com/santiyounger/Cobra&#34;&gt;Cobra&lt;/a&gt;：基于 Obsidian 的 &lt;a href=&#34;https://github.com/santiyounger/Wasp-Obsidian-Theme&#34;&gt;Wasp&lt;/a&gt; 主题
+&lt;a href=&#34;https://github.com/tzcl/logseq-monokai&#34;&gt;Monokai&lt;/a&gt;：暗黑主题，受到 Monokai 和 Dracula 的启发&lt;/p&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

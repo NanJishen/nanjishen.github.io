@@ -2,21 +2,94 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>知识 on 极限玩家</title>
-    <link>https://ttti.cc/categories/%E7%9F%A5%E8%AF%86/</link>
+    <link>https://nav.ttti.cc/categories/%E7%9F%A5%E8%AF%86/</link>
     <description>Recent content in 知识 on 极限玩家</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
     <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Thu, 19 Oct 2023 15:17:11 +0800</lastBuildDate>
-    <atom:link href="https://ttti.cc/categories/%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://nav.ttti.cc/categories/%E7%9F%A5%E8%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>你并非缺乏创造力而是不知所措</title>
-      <link>https://ttti.cc/post/infoverload/</link>
-      <pubDate>Thu, 19 Oct 2023 15:17:11 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/infoverload/</guid>
-      <description>&lt;h2 id=&#34;应对内容过载&#34;&gt;应对内容过载&lt;/h2&gt;&#xA;&lt;p&gt;数字囤积已成为当今互联网社会的一种普遍体验：&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;抖音上的视频观看量达了 1 亿&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;贴吧上分享了 100 万帖子&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;小红书上视频观看次数达 200 万&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h3 id=&#34;我们在付出代价因为注意力是最有价值的稀缺货币&#34;&gt;我们在付出代价，因为注意力是最有价值的稀缺货币&lt;/h3&gt;&#xA;&lt;p&gt;内容之庞大令人难以抗拒，正如选择悖论所述 —— 当可供选择的范围太大时，人们会感到压力+焦虑，并最终感到不满或决策瘫痪，而不是解放或幸福。&lt;/p&gt;</description>
+      <link>https://nav.ttti.cc/post/infoverload/</link>
+      <pubDate>Thu, 19 Oct 2023 15:17:11 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/infoverload/</guid>
+      
+        <description>&lt;h2 id=&#34;应对内容过载&#34;&gt;应对内容过载&lt;/h2&gt;
+&lt;p&gt;数字囤积已成为当今互联网社会的一种普遍体验：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;p&gt;抖音上的视频观看量达了 1 亿&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;贴吧上分享了 100 万帖子&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;小红书上视频观看次数达 200 万&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;我们在付出代价因为注意力是最有价值的稀缺货币&#34;&gt;我们在付出代价，因为注意力是最有价值的稀缺货币&lt;/h3&gt;
+&lt;p&gt;内容之庞大令人难以抗拒，正如选择悖论所述 —— 当可供选择的范围太大时，人们会感到压力+焦虑，并最终感到不满或决策瘫痪，而不是解放或幸福。&lt;/p&gt;
+&lt;p&gt;我去过那儿，你去过那里，我们都去过那里。疲惫的你下班回家，想摆脱一些娱乐。但你面临着选择：我该使用哪种流媒体服务？&lt;/p&gt;
+&lt;p&gt;主屏幕上欢迎你选择精选的游戏/剧集。缩略图和标题都经过高度优化，让你有观看的欲望。所以你最终漫不经心地浏览了 30 分钟，直到你决定第 300 次观看《老友记》。这就是所谓的决策疲劳；在许多选项之间进行评估和选择所需的脑力劳动可能会让人筋疲力尽，这很累，这是一种流行病。&lt;/p&gt;
+&lt;h3 id=&#34;我们变成了数字囤积者&#34;&gt;我们变成了数字囤积者&lt;/h3&gt;
+&lt;p&gt;我们不由自主地保存一些内容，希望不错过文化/娱乐/知识。但我们最终会被卷入遗忘之中，它们很可能会被永远遗忘，再也不会被看到。我们因机会成本而陷入困境。因未选择的选择而可能错失机会或利益而感到悲叹。最终，我们根本没有选择。不满、内疚、优柔寡断而瘫痪。这对我们的创造力有直接影响。&lt;/p&gt;
+&lt;h3 id=&#34;策展在创作过程中的重要性&#34;&gt;策展在创作过程中的重要性&lt;/h3&gt;
+&lt;p&gt;创造力是人类与生俱来的。内容消费对于我们获得启发至关重要。我们应该通过我们的感官吸收世界，理解它，并与他人分享我们自己的观点。这是创意飞轮永无休止的循环的第一步。&lt;/p&gt;
+&lt;p&gt;策展、构思、创作和发行。策展是选择的艺术。这是对我们接触到的海量信息进行过滤，选择值得我们关注的信息。&lt;/p&gt;
+&lt;p&gt;在很大程度上，这是一个下意识地进行的过程。但注意力经济已经使得我们必须积极主动地参与这一策划过程。否则，我们对什么进入我们的大脑无能为力。是什么滋养了我们的梦想并孕育着我们的希望。结果是灾难性的。平淡的生活体验，没有深度，没有目的，没有创造力。&lt;/p&gt;
+&lt;h2 id=&#34;所以对此能做些什么&#34;&gt;所以对此能做些什么？&lt;/h2&gt;
+&lt;p&gt;如何才能夺回控制权并掌握策展艺术？答案是建立一个&lt;strong&gt;策展系统&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;我们不断受到内容的轰炸。没有时间消耗掉这一切。但不可否认的是，互联网是一种多么神奇的资源。以及如果使用得当，它如何能够增强您的生活和创造力。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;第二大脑是最受欢迎的管理系统之一&lt;/strong&gt;。生产力作家蒂亚戈·福特（Tiago Forte）在他的著作《构建第二个大脑》中普及了这一点。书的核心概念围绕着代码框架，它代表：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;捕捉 —— 保留引起共鸣的内容&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;组织 —— 保存以提高可操作性&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;提纯 —— 寻找本质&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;分享 —— 展示你的作品&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;创建一个数字化的外部大脑，帮你管理超载的信息并培养创造力，进而提高生产力。通过一个有组织的系统，可以毫不费力地捕捉、回顾和连接想法，使他们能够产生新的见解和创造。&lt;/p&gt;
+&lt;h3 id=&#34;建立自己的策展系统的实际步骤&#34;&gt;建立自己的策展系统的实际步骤&lt;/h3&gt;
+&lt;p&gt;&lt;strong&gt;捕捉可操作性&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;使用 PARA ，它代表项目、领域、资源和档案。他在他的书《The PARA Method》中详细解释了这一点；但关键在于意向性。你应该经常问自己某些东西的用途是什么，并相应地保存它。&lt;/p&gt;
+&lt;p&gt;如果你在选择保存的东西时没有开始更有意识，确保它们对您当前或未来的项目和领域有所贡献，那么任何系统都不会阻止您进行数字囤积。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;养成管理的习惯，并学会放手&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;这些系统有着令人难以置信的用途。但它们需要与管理习惯相结合。如果不定期检查您保存的内容，您的数字保管库将不断增长，并再次变得不堪重负。&lt;/p&gt;
+&lt;p&gt;所以学会选择性之后，你需要学会放手。您应该定期检查您的内容库，再次确保您只保留对您有用的内容。你的大脑仍然会受到 FOMO（害怕错过）的影响，因此你需要定期采取应对措施，并归档不需要的内容。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;让社交媒体算法为你服务&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我们可能会陷入这样一个简单的论点：社交媒体是我们社会的病毒，将一切问题都是归源于它，以及它如何使我们成为外部验证和多巴胺成瘾者的奴隶。然而，社交媒体可以而且确实可以被用来做善事。你只是做错了。而不是让算法无差别地推荐+定制它。&lt;/p&gt;
+&lt;p&gt;通过点赞和分享表明你感兴趣的内容很重要。但是，为了确保提要的价值，你可以做的最有效的事情就是开始阻止您不符合的内容。不要只是滚动过去。阻止它。这无疑是一项额外的努力，但结果将是非常值得的。&lt;/p&gt;
+&lt;h3 id=&#34;构建你第二大脑的工具&#34;&gt;构建你第二大脑的工具&lt;/h3&gt;
+&lt;p&gt;如果你确信第二大脑的力量，那么有选择的来构建你的系统：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;使用任何简单的笔记应用程序，先用它做为随手记录的收集箱&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;使用强大的笔记软件做为最终的整理归档的知识库，例如 Obsidian ，可以随时调用&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;策划创造没有其他方法&#34;&gt;策划创造没有其他方法&lt;/h3&gt;
+&lt;p&gt;没有灵感就没有创作：每一位创造者都通过选择的媒介改变了他对世界的解释。无论是绘画、写作、音乐还是摄影都无关紧要。首先，创作者是策展人。他们接受这一切，并以自己的方式重新诠释。&lt;/p&gt;
+&lt;p&gt;没有策展就没有创作：习惯于不断进行数字囤积，只会导致决策疲劳并扼杀我们固有的创造力。通过采用 CODE 或 PARA 方法等框架，你可以利用丰富的数字来推动而不是阻碍您的创意引擎。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;意图是策展的关键。从被动消费者到主动策展人的旅程正是你的创意天才在等待的地方。所以，策划创造。&lt;/strong&gt;&lt;/p&gt;
+</description>
+      
     </item>
+    
   </channel>
 </rss>

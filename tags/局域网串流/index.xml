@@ -2,21 +2,56 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>局域网串流 on 极限玩家</title>
-    <link>https://ttti.cc/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%B2%E6%B5%81/</link>
+    <link>https://nav.ttti.cc/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%B2%E6%B5%81/</link>
     <description>Recent content in 局域网串流 on 极限玩家</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
     <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Sun, 21 Mar 2021 15:15:36 +0800</lastBuildDate>
-    <atom:link href="https://ttti.cc/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%B2%E6%B5%81/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://nav.ttti.cc/tags/%E5%B1%80%E5%9F%9F%E7%BD%91%E4%B8%B2%E6%B5%81/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>解锁家庭局域网内手机和电视观看电脑里的影片</title>
-      <link>https://ttti.cc/post/lanvideoplay/</link>
-      <pubDate>Sun, 21 Mar 2021 15:15:36 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/lanvideoplay/</guid>
-      <description>&lt;p&gt;我发现很多新手小伙伴，甚至有些用电脑很长一段时间的老手，仍然不会将电脑里的影片共享给家里的安卓电视/盒子或者手机上播放，于是就有了这篇内容的极简教程。&lt;/p&gt;</description>
+      <link>https://nav.ttti.cc/post/lanvideoplay/</link>
+      <pubDate>Sun, 21 Mar 2021 15:15:36 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/lanvideoplay/</guid>
+      
+        <description>&lt;p&gt;我发现很多新手小伙伴，甚至有些用电脑很长一段时间的老手，仍然不会将电脑里的影片共享给家里的安卓电视/盒子或者手机上播放，于是就有了这篇内容的极简教程。&lt;/p&gt;
+&lt;p&gt;如果你和我一样，电脑常开，那么电脑本身就相当于一台承载媒体及文件内容的小型服务器。因此，家庭里的任何设备都可以轻松地访问这台电脑上的文件。跟我来操作：&lt;/p&gt;
+&lt;h2 id=&#34;1-开启-smb-服务&#34;&gt;1. 开启 SMB 服务&lt;/h2&gt;
+&lt;p&gt;SMB 英文全称是 Server Message Block，它是一种作为局域网内文件共享传输的协议。Windows 系统默认采用该协议作为文件共享的协议。在设置共享文件夹之前，先开启网络发现以便其他设备能在网络上找到我们这台电脑。&lt;/p&gt;
+&lt;p&gt;如图，点击&lt;em&gt;系统托盘中的网络图标&lt;/em&gt; - &lt;em&gt;更改高级共享设置&lt;/em&gt; - 在&lt;em&gt;网络发现&lt;/em&gt;中勾选&lt;em&gt;启用网络发现&lt;/em&gt; ↓&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/03/21/65ppc9.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;由于我们是家庭局域网内的共享，因此我们对内网设备是绝对信任的，所以在这里的&lt;em&gt;所有网络&lt;/em&gt;中勾选&lt;em&gt;无密码保护的共享&lt;/em&gt;。这样做的话，其他设备访问时将无需密码，能极大的方便其他设备的访问。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;注意：如果你某些特别的视频不希望让其他人看到，那么你应该启用带密码保护的共享！（你懂的）&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/03/21/65SvhF.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;2-设置共享文件夹&#34;&gt;2. 设置共享文件夹&lt;/h2&gt;
+&lt;p&gt;现在我们来设置电脑中哪个文件夹作为共享目录，这里假设我要将&lt;em&gt;下载&lt;/em&gt;文件夹设置为共享目录。右键该文件夹 - 属性 - 在弹出的对话框中选&lt;em&gt;共享&lt;/em&gt; ↓
+&lt;img src=&#34;https://z3.ax1x.com/2021/03/21/65Szp4.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在弹出的对话框中，先点&lt;em&gt;下拉箭头&lt;/em&gt; - &lt;em&gt;选择 Everyone&lt;/em&gt;（所有人的意思）- 点&lt;em&gt;添加&lt;/em&gt;，这样即表示所有人都可以访问了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/03/21/65SjtU.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;好了，现在 Windows 电脑上的共享服务已经设置完毕了，接下来可以愉快的用安卓设备进行访问播放了。但在用安卓设备播放之前，我们还需要先获得电脑的IP地址，方法如下：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/03/21/65pS1J.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;记住上面的 IP 地址（可以鼠标框选复制的），一会其他设备访问的时候需要用到。&lt;/p&gt;
+&lt;h2 id=&#34;3-用安卓手机播放&#34;&gt;3. 用安卓手机播放&lt;/h2&gt;
+&lt;p&gt;无论是安卓手机、平板还是电视和盒子，都可以用其自带的播放器来播放，下面我来演示下安卓手机播放。你可以使用 VLC 或 OPlayer 这样优秀的视频播放器来播放，我这里用 VLC 来演示一下 ↓&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/03/21/65p9XR.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如上图所示：VLC 播放器的&lt;em&gt;浏览&lt;/em&gt;中点击 &lt;em&gt;+&lt;/em&gt; 号 - 选择&lt;em&gt;SMB&lt;/em&gt;服务协议，然后输入你电脑的IP地址，再填个方便识别的名字，比如“我书房的电脑”，点击确定即可。这个设置是一直生效的，以后都不用再设置了。&lt;/p&gt;
+&lt;p&gt;之后你在 VLC 视频播放器里可以看到刚才设置的共享文件夹，点击进去就可以看到电脑下载文件夹里面的内容了。如果有视频文件的话，点击即可直接播放了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://pic.baixiongz.com/uploads/2021/03/21/5ae8d9b856cc2.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;最后&#34;&gt;最后&lt;/h2&gt;
+&lt;p&gt;你们肯定会问：“怎么最后了呢？说好的电视呢？”。安卓设备是大同小异的，都是使用视频播放器，选择其网络，然后添加共享目录即可。这里以小米盒子举例：小米盒子 - 打开高清播放器 - 添加设备 - 输入你的IP地址 - 完成。&lt;/p&gt;
+&lt;p&gt;就是这么简单，这样以后你就可以用家里的手机电视或平板来直接播放电脑里的视频了，并不需要什么投屏软件。投屏软件通常是为了手机投票演示手机操作用的，而播放电脑里的视频，我们称之为流媒体播放。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+      
     </item>
+    
   </channel>
 </rss>

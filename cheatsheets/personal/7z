@@ -3,5 +3,22 @@ tags: [ compression ]
 ---
 7-zip 用于压缩/解压缩文档
 
-# 将指定路径的目录压缩为指定路径的名为 dokuwiki.zip 的压缩包
-7z a T:\Downloads\dokuwiki.zip W:\dokuwiki\data\pages
+# 将指定目录打包
+7z a T:\Downloads\1.zip C:\data
+
+# 解压指定包到指定目录（注意：o 后面没有空格）
+7z x 1.zip -odir
+
+# 删除压缩包中指定扩展名的所有文件
+7z d 1.zip*.bak-r
+
+# 添加当前目录下所有文件到压缩包（没有则创建）
+7z a 1.7z
+
+# 添加当前目录下 dir 目录里的所有到压缩包里
+7z a 1.7z dir/
+ 
+# 选项
+l # 列出压缩档案的内容
+h # 计算文件的哈希值
+rn # 重命名压缩档案中的文件

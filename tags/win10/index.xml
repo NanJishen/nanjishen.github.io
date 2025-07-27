@@ -2,21 +2,38 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Win10 on 极限玩家</title>
-    <link>https://ttti.cc/tags/win10/</link>
+    <link>https://nav.ttti.cc/tags/win10/</link>
     <description>Recent content in Win10 on 极限玩家</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
     <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Thu, 28 May 2020 10:21:57 +0800</lastBuildDate>
-    <atom:link href="https://ttti.cc/tags/win10/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://nav.ttti.cc/tags/win10/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>动图演示从官方下载并制作Win10启动U盘</title>
-      <link>https://ttti.cc/post/win10-setup/</link>
-      <pubDate>Thu, 28 May 2020 10:21:57 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/win10-setup/</guid>
-      <description>&lt;p&gt;微软今天发布 Win10 2004 正式版了，然而还是很多小白依赖第三方下载，事实上微软官方是提供镜像下载的，同时还具备U盘制作功能，就是说，根本不需要依赖第三方网站。&lt;/p&gt;</description>
+      <link>https://nav.ttti.cc/post/win10-setup/</link>
+      <pubDate>Thu, 28 May 2020 10:21:57 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/win10-setup/</guid>
+      
+        <description>&lt;p&gt;微软今天发布 Win10 2004 正式版了，然而还是很多小白依赖第三方下载，事实上微软官方是提供镜像下载的，同时还具备U盘制作功能，就是说，根本不需要依赖第三方网站。&lt;/p&gt;
+&lt;p&gt;为了帮助新人能更直观的了解，所以特意制作了动图。了解之后，你会发现原来制作一个Win10原版系统竟是如此简单的事情。&lt;/p&gt;
+&lt;p&gt;前置准备：U盘一个，8G以及以上，同时注意U盘里面的内容会清空（我个人是会用一个单独8G专门用来做启动盘，U盘都是白菜价格，U盘2.0就够）&lt;/p&gt;
+&lt;p&gt;第一步：访问&lt;a href=&#34;https://www.microsoft.com/zh-cn/software-download/windows10&#34;&gt;微软官方下载&lt;/a&gt;，然后点击“立即下载工具”，随后就会弹出保存页面，这里保存到桌面即可（它只是个向导工具，只有18M）&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgkr.cn-bj.ufileos.com/9fc181c7-bd85-4565-86d1-c613266068ce.gif&#34; alt=&#34;下载并安装&#34;&gt;&lt;/p&gt;
+&lt;p&gt;第二步：双击我们刚刚保存到桌面的 MediaCreationTool2004.exe ，然后根据想到完成即可，你可以看到如下的动图演示。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://imgkr.cn-bj.ufileos.com/4006be09-7b6a-48f0-a770-0744ef441730.gif&#34; alt=&#34;向导制作U盘&#34;&gt;&lt;/p&gt;
+&lt;p&gt;当向导完成后，U盘也制作好了，之后你就可以使用这个U盘进行全新安装 Win10 系统。是的就是如此简单，并没有那么繁琐。&lt;/p&gt;
+&lt;p&gt;使用动图演示，往往更简练说明问题，如今很多科普文章喜欢长文啰嗦。我更相信李小龙说的：“文明的进度总是向着简单方向运行”，就是说应该把科普的内容做的简单，毕竟我们都没有耐心看长文不是吗？&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+      
     </item>
+    
   </channel>
 </rss>

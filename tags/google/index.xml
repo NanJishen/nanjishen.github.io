@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Google on 极限玩家</title>
+    <link>https://nav.ttti.cc/tags/google/</link>
+    <description>Recent content in Google on 极限玩家</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
+    <webMaster>nanji_shen@qq.com (南极神)</webMaster>
+    <copyright>极限玩家</copyright>
+    <lastBuildDate>Wed, 05 Oct 2022 00:37:56 +0800</lastBuildDate>
+    
+        <atom:link href="https://nav.ttti.cc/tags/google/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Google谷歌搜索方法和技巧</title>
+      <link>https://nav.ttti.cc/post/googlesearch/</link>
+      <pubDate>Wed, 05 Oct 2022 00:37:56 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/googlesearch/</guid>
+      
+        <description>&lt;h2 id=&#34;基础搜索&#34;&gt;基础搜索&lt;/h2&gt;
+&lt;p&gt;不管你要搜索什么，都应先用简单的字与词进行搜索，例如 &lt;code&gt;最近的停车场在哪里&lt;/code&gt; 。你随时可以根据需要添加一些描述性字词。如果你要查找特定地点的某个场所或商品，可添加该地点名称。例如：&lt;code&gt;广州早茶&lt;/code&gt;。不想打字？可以查看&lt;a href=&#34;https://support.google.com/websearch/answer/2940021&#34;&gt;如何使用语音搜索功能&lt;/a&gt;。&lt;/p&gt;
+&lt;h3 id=&#34;仔细选择措辞&#34;&gt;仔细选择措辞&lt;/h3&gt;
+&lt;p&gt;在确定输入搜索框中的字词时，尽量选择要查找的网站上可能会出现的字词。 例如：不要使用&lt;code&gt;我的头很痛&lt;/code&gt;，而要使用&lt;code&gt;头痛&lt;/code&gt;这样的精确的关键词，因为医学网站上往往会使用后者。&lt;/p&gt;
+&lt;h3 id=&#34;快速查询&#34;&gt;快速查询&lt;/h3&gt;
+&lt;p&gt;在你输入搜索字词后直接在搜索结果页上给出相关解答。当然并非所有功能在所有地区都提供。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;天气：&lt;/strong&gt; 例如 &lt;code&gt;weather:本溪&lt;/code&gt;、&lt;code&gt;广州天气&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;股票：&lt;/strong&gt; 例如 &lt;code&gt;stocks:工商银行&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;地图：&lt;/strong&gt; 例如 &lt;code&gt;map:本溪&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;字典：&lt;/strong&gt; 例如 &lt;code&gt;define:apple&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;计算：&lt;/strong&gt; 例如 &lt;code&gt;3\*9123&lt;/code&gt; ，数学公式或求解复杂的图形公式。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;电影：&lt;/strong&gt; 例如 &lt;code&gt;movie:CODA&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;体育：&lt;/strong&gt; 搜索球队的名称，即可查看相关赛程和比赛得分等信息。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;基本信息：&lt;/strong&gt; 搜索名人、地点、电影或歌曲的名称即可看到相关信息。&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;指定源：&lt;/strong&gt; 例如 &lt;code&gt;apple source:the_verge&lt;/code&gt;，然后切换到新闻标签&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;单位换算&#34;&gt;单位换算&lt;/h3&gt;
+&lt;p&gt;各种单位的换算可以使用 &lt;code&gt;in&lt;/code&gt; 关键字，例如：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;货币换算：&lt;/strong&gt; 例如 &lt;code&gt;$100 in CNY&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;单位换算：&lt;/strong&gt; 例如 &lt;code&gt;毫米 in 厘米&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;重量换算：&lt;/strong&gt; 例如 &lt;code&gt;500克 in 斤&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;速度换算：&lt;/strong&gt; 例如 &lt;code&gt;10公里 in 英里&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;时间换算：&lt;/strong&gt; 例如 &lt;code&gt;3小时 in 分钟&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;各种操作符&#34;&gt;各种操作符&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;&amp;quot; &amp;ldquo;&lt;/strong&gt;：引号括起能完整的搜索内容，例如 &lt;code&gt;&amp;quot;william gates&amp;quot;&lt;/code&gt; 能排除 bill gates&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OR，/，|&lt;/strong&gt;：逻辑“或”，例如 &lt;code&gt;jobs OR gates / jobs | gates&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AND&lt;/strong&gt;： 逻辑“和”，例如 &lt;code&gt;jobs AND gates&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;-&lt;/strong&gt;： 逻辑“排除”，例如 &lt;code&gt;jobs -apple&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;*&lt;/strong&gt;：“通配符”将匹配任何单词或短语，例如 &lt;code&gt;steve * apple &lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;()&lt;/strong&gt;：说个术语或操作符分组，例如  &lt;code&gt;(ipad OR iphone) apple&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;$&lt;/strong&gt;：搜索价格，适用于欧元，但不适用于英镑，例如 &lt;code&gt;ipad $329&lt;/code&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;+：&lt;/strong&gt; 强制对单个单词或短语进行精确匹配搜索，例如 &lt;code&gt;jobs +apple&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;专家搜索提示&#34;&gt;专家搜索提示&lt;/h3&gt;
+&lt;p&gt;想了解更多有助于你成为搜索达人的提示和技巧？请点击以下链接，了解更多高级搜索技巧。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/2466433&#34;&gt;搜索运算符&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/1325808&#34;&gt;逆向图片搜索&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/112511&#34;&gt;在 Google 上搜索图片&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://support.google.com/websearch/answer/142143&#34;&gt;过滤搜索结果&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;指定标题和链接搜索&#34;&gt;指定标题和链接搜索&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;intitle&lt;/code&gt; 用来搜索标题中包含某个词(或词)的页面。例如 &lt;code&gt;intitle:apple&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;allintitle:&lt;/code&gt; 与 intitle 类似，但只返回包含 title 标记中所有指定单词的结果。例如，allintitle:apple iphone&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;inurl:&lt;/code&gt; 查找 URL 中包含某个单词(或单词)的页面。例如 &lt;code&gt;inurl:apple&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;allinurl:&lt;/code&gt; 与 inurl 类似，但只返回包含 URL 中所有指定单词的结果。例如 &lt;code&gt;allinurl:apple iphone&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;inanchor: 查找链接到特定锚文本的页面，例如 &lt;code&gt;inanchor:apple iphone&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;allinanchor:&lt;/code&gt; 与 inanchor 类似，但只返回包含入站锚文本中所有指定单词的结果。例如 &lt;code&gt;allinanchor:apple iphone&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;指定日期搜索&#34;&gt;指定日期搜索&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;日期..日期&lt;/code&gt; ，例如 &lt;code&gt;wwdc video 2010..2014&lt;/code&gt;，这将搜索 2010年到2014年之间的 wwdc 视频。&lt;/p&gt;
+&lt;h2 id=&#34;指定网站进行搜索&#34;&gt;指定网站进行搜索&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;site:&lt;/code&gt; 用来指定站点进行搜索，例如，&lt;code&gt;site:quchao.net&lt;/code&gt;（注意：不能在其中加入空格，这是错误的：&lt;code&gt;site: quchao.net&lt;/code&gt;），下面是一些实例：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;site:yourblog.com/category&lt;/code&gt; 搜索 WordPress 博客分类页面&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;site:yourblog.com inurl:tag&lt;/code&gt; 搜索 WordPress“ tag”页面&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;site:asos.com -inurl:https&lt;/code&gt; 搜索不安全的页面（即链接不包含 https 的页面）&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;-site:asos.com &amp;quot;搜索内容 &amp;amp; 搜索内容&amp;quot;&lt;/code&gt; 搜索指定内容，但是不包括指定网站&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;intitle:&amp;quot;文章标题包含的内容&amp;quot; -ttti.cc -pinterest&lt;/code&gt; 搜索我们的文章标题内容，但不包括我们的网站，用来看看有没有其它网站盗用了我们的文章&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;related: 用来查询相关网站，例如 &lt;code&gt;related:apple.com&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;提高搜索的精确性&#34;&gt;提高搜索的精确性&lt;/h2&gt;
+&lt;p&gt;优化图片高级搜索（总体而言）&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;转到&lt;a href=&#34;https://google.com/advanced_image_search&#34;&gt;高级图片搜索&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;使用地区或文件类型等过滤条件来缩小搜索结果范围。&lt;/li&gt;
+&lt;li&gt;点击底部的&lt;strong&gt;高级搜索&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;搜索精确尺寸的图片&lt;/strong&gt;，在关键字后加上 &lt;code&gt;imagesize:&amp;lt;宽度&amp;gt;x&amp;lt;高度&amp;gt;&lt;/code&gt; 来指定尺寸（以像素为单）：imagesize:500x400&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;搜索社交媒体&lt;/strong&gt;，在关键字前加上 &lt;code&gt;@&lt;/code&gt; 可用于搜索社交媒体：&lt;code&gt;@twitter&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;搜索特定价格&lt;/strong&gt;，在表示价格的数字前加上 &lt;code&gt;$&lt;/code&gt; ，例如：&lt;code&gt;相机 $400&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;从搜索结果中排除特定字词&lt;/strong&gt;，在要排除的关键字前加上 &lt;code&gt;-&lt;/code&gt;，例如：&lt;code&gt;中国美食 -麻辣&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;搜索完全匹配的结果&lt;/strong&gt;
+为字词或短语加上引号。例如：&lt;code&gt;&amp;quot;最高的建筑&amp;quot;&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;在某个数字范围内执行搜索&lt;/strong&gt;
+在两个数字之间加上 &lt;code&gt;..&lt;/code&gt;。例如：&lt;code&gt;相机 $50..$100&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;组合搜索&lt;/strong&gt;
+在各个搜索查询字词之间加上“&lt;code&gt;OR&lt;/code&gt;”。例如：&lt;code&gt;马拉松 OR 比赛&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;搜索特定网站&lt;/strong&gt;
+在网站或网域前加上“&lt;code&gt;site:&lt;/code&gt;”。例如：&lt;code&gt;site:youtube.com&lt;/code&gt; 或 &lt;code&gt;site:.gov&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;查看网站的 Google 缓存版本&lt;/strong&gt;
+在网址前加上“&lt;code&gt;cache:&lt;/code&gt;”。前提是已被索引过。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;重要提示：&lt;/strong&gt; 并非所有搜索运算符都能返回一个不漏的搜索结果。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;邻近搜索：&lt;/strong&gt; &lt;code&gt;AROUND(X)&lt;/code&gt; 可以查找包含两个单词或短语的页面，例如 &lt;code&gt;apple AROUND(4) iphone&lt;/code&gt;。表示，单词“ apple”和“ iphone”必须出现在内容中，而且不能超过4个单词的距离。&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;按文件的类型搜索&#34;&gt;按文件的类型搜索&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;filetype:&lt;/code&gt; 用来搜索指定的文件类型的文件。例如：&lt;code&gt;apple filetype:pdf&lt;/code&gt; 或者 &lt;code&gt;apple ext:pdf&lt;/code&gt; ，这将搜索其中包含 “apple” 一词的 PDF 文件。下面是一些例子：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;site:ahrefs.com filetype:pdf&lt;/code&gt; 在指定网站搜索 pdf 文件&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;site:ahrefs.com (ext:PDF OR ext:docx OR ext:xls )&lt;/code&gt; 在指定网站搜索多个类型的文件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Google 可将大多数类型的网页和文件内容编入索引。最常编入索引的文件类型包括：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Adobe Flash (.swf)&lt;/li&gt;
+&lt;li&gt;Adobe 便携式文档格式 (.pdf)&lt;/li&gt;
+&lt;li&gt;Google 地球（.kml、.kmz）&lt;/li&gt;
+&lt;li&gt;GPS 交换格式 (.gpx)&lt;/li&gt;
+&lt;li&gt;Hancom Hanword (.hwp)&lt;/li&gt;
+&lt;li&gt;HTML（.htm、.html）&lt;/li&gt;
+&lt;li&gt;Microsoft Excel（.xls、.xlsx）&lt;/li&gt;
+&lt;li&gt;Microsoft Word（.doc、.docx）&lt;/li&gt;
+&lt;li&gt;OpenOffice 电子表格 (.ods)&lt;/li&gt;
+&lt;li&gt;富文本格式 (.rtf)&lt;/li&gt;
+&lt;li&gt;可缩放矢量图形 (.svg)&lt;/li&gt;
+&lt;li&gt;TeX/LaTeX (.tex)&lt;/li&gt;
+&lt;li&gt;文本文件（.txt、.text、其他文件扩展名），包括采用常用编程语言的源代码：
+&lt;ul&gt;
+&lt;li&gt;Basic 源代码 (.bas)&lt;/li&gt;
+&lt;li&gt;C/C++ 源代码（.c、.cc、.cpp、.cxx、.h、.hpp）&lt;/li&gt;
+&lt;li&gt;C# 源代码 (.cs)&lt;/li&gt;
+&lt;li&gt;Java 源代码 (.java)&lt;/li&gt;
+&lt;li&gt;Perl 源代码 (.pl)&lt;/li&gt;
+&lt;li&gt;Python 源代码 (.py)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;无线标记语言（.wml、.wap）&lt;/li&gt;
+&lt;li&gt;XML (.xml)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;a href=&#34;https://support.google.com/webmasters/answer/35287?hl=zh-Hans&#34;&gt;Google 编入索引的文件类型参考&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;搜索影片种子&#34;&gt;搜索影片种子&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;奇异博士2:torrent&lt;/code&gt; 搜索电影
+&lt;code&gt;&amp;quot;IPZ-919&amp;quot;&lt;/code&gt;搜索车牌&lt;/p&gt;
+&lt;h2 id=&#34;指定内容进行搜索&#34;&gt;指定内容进行搜索&lt;/h2&gt;
+&lt;p&gt;&lt;code&gt;intext:&lt;/code&gt; 搜索内容中某处包含某个单词(或词)的页面。例如 &lt;code&gt;intext:apple&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;allintext:&lt;/code&gt; 与 intext”类似，但只返回包含页面上某处所有指定单词的结果。例如 &lt;code&gt;allintext:apple iphone&lt;/code&gt;&lt;/p&gt;
+&lt;h2 id=&#34;索引搜索&#34;&gt;索引搜索&lt;/h2&gt;
+&lt;p&gt;索引搜索可以呈现一个网站的文件目录，将网站的资源以数据列表的形式呈现出来，用这个方法甚至可以突破一些网站的限制，用法：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;index of/&amp;rdquo; 进击的巨人 filetype:mp4 -inurl:xxx，组合搜索&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;index of/&amp;rdquo; mp3 inurl:lib，配合 inurl: 搜索指定&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;index of/&amp;rdquo; 软件名，可以突破网站入口下载软件&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;以图搜图搜相关图片&#34;&gt;以图搜图搜相关图片&lt;/h2&gt;
+&lt;p&gt;你可以依据图片查找网上的相关图片。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;类似图片&lt;/li&gt;
+&lt;li&gt;包含这些图片的网站&lt;/li&gt;
+&lt;li&gt;用作搜索依据的图片的其他尺寸版本&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;参考：&lt;a href=&#34;https://support.google.com/websearch/answer/1325808&#34;&gt;https://support.google.com/websearch/answer/1325808&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;上传图片 / 拖放图片&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;转到 &lt;a href=&#34;https://images.google.com/&#34;&gt;Google 图片&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;点击“按图搜索”图标，上传一张图片&lt;/li&gt;
+&lt;li&gt;或将文件管理器图片拖放到搜索窗口&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;&lt;strong&gt;依据网址进行搜索&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;转到您想要用作搜索依据的图片所在的网站。&lt;/li&gt;
+&lt;li&gt;要复制网址，请右键点击相应图片。&lt;/li&gt;
+&lt;li&gt;点击&lt;strong&gt;复制图片地址&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;转到 &lt;a href=&#34;https://images.google.com/&#34;&gt;Google 图片&lt;/a&gt;。&lt;/li&gt;
+&lt;li&gt;点击“按图搜索”图标。&lt;/li&gt;
+&lt;li&gt;点击&lt;strong&gt;粘贴图片网址&lt;/strong&gt;。&lt;/li&gt;
+&lt;li&gt;将网址粘贴到文本框中。&lt;/li&gt;
+&lt;li&gt;点击&lt;strong&gt;按图搜索&lt;/strong&gt;。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;用作搜索依据的网址不会保存在您的浏览记录中。不过，Google 可能会存储这些网址，以便改善产品和服务。&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;依据网站中的图片进行搜索&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;转到您想要用作搜索依据的图片所在的网站。&lt;/li&gt;
+&lt;li&gt;右键点击相应图片。&lt;/li&gt;
+&lt;li&gt;点击&lt;strong&gt;在 Google 上搜索这张图片&lt;/strong&gt;。系统随即会在新的标签页中显示搜索结果。&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;参考：&lt;a href=&#34;https://support.google.com/websearch/answer/1325808&#34;&gt;https://support.google.com/websearch/answer/1325808&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Google 会如何使用您用作搜索依据的图片
+Google 会将您在搜索时上传的图片存储 7 天。这些图片不会被纳入搜索记录中，仅会用以改善产品和服务。&lt;/p&gt;
+&lt;h2 id=&#34;一些复杂的实例&#34;&gt;一些复杂的实例&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;site:youtube.com &amp;quot;chicken soup&amp;quot;&lt;/code&gt; 搜索到鸡汤，在结果页面点击“工具”，可以选择类型“素描画”&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fitness intitle:&amp;quot;write for us&amp;quot; inurl:&amp;quot;write-for-us&amp;quot;&lt;/code&gt; 搜索文章&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;fitness (&amp;quot;write for us&amp;quot; | inurl:&amp;quot;guest post guidelines&amp;quot; | inurl:&amp;quot;inurl:guest-post&amp;quot;)&lt;/code&gt; 搜索文章（加入博客）&lt;/li&gt;
+&lt;li&gt;inurl:author/tim-soulo 搜索蒂姆做为作者发布的网站和帖子&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;(fitness | health) AND (&amp;quot;write for us&amp;quot; inurl:&amp;quot;guest-post&amp;quot;) AND site:.co.uk&lt;/code&gt; 更复杂的实例&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;seo intext:&amp;quot;ryan stewart&amp;quot; inurl:author -site:webris.org&lt;/code&gt; 搜索每一个人写的网站&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;author:”tim soulo” -site:ahrefs.com -site:bloggerjet.com&lt;/code&gt; 搜索 Tim Soulo 的帖子，但排除来自 ahrefs.com 和 bloggerjet.com (Tim 的个人博客)&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;allintitle:review (semrush OR moz OR majestic)&lt;/code&gt; 查找竞争对手的评论&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;site:quora.com intitle:(SEO | &amp;quot;link building&amp;quot; | &amp;quot;keyword research&amp;quot;)&lt;/code&gt; 在提问网站搜索答案&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;site:ttti.cc/blog&lt;/code&gt; 搜索指定网站页面的博客&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;googlebot&#34;&gt;GoogleBot&lt;/h2&gt;
+&lt;p&gt;Googlebot 是 Google 的网页抓取工具的通用名称。具体而言，Googlebot 是两种不同类型的抓取工具的通用名称：用于在桌面设备上模拟用户操作的桌面版抓取工具，以及用于在移动设备上模拟用户操作的移动版抓取工具。
+&lt;a href=&#34;https://support.google.com/webmasters/answer/182072?hl=zh-Hans&#34;&gt;https://support.google.com/webmasters/answer/182072?hl=zh-Hans&lt;/a&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;参考资料&#34;&gt;参考资料&lt;/h2&gt;
+&lt;p&gt;如果你想了解更多关于谷歌搜索的相关知识，也可以访问谷歌官方帮助文档进行加强学习。
+&lt;a href=&#34;https://support.google.com/websearch?hl=zh-Hans&#34;&gt;谷歌搜索中文帮助页面&lt;/a&gt;、&lt;a href=&#34;https://sites.google.com/site/resourcesandsearchstrategies&#34;&gt;运算符&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.youtube.com/watch?v=yWLD9139Ipc&#34;&gt;如何使用高级搜索操作员使用 Google（9个可操作的提示）&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://ahrefs.com/blog/google-advanced-search-operators/#find-resource-pages&#34;&gt;Google搜索操作员：完整列表（42个高级操作员）&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&#34;duckduckgo&#34;&gt;DuckDuckGo&lt;/h1&gt;
+&lt;p&gt;&lt;strong&gt;将文本转换为 ASCII 码&lt;/strong&gt;，搜索 &lt;code&gt;figlet 要转换的英文&lt;/code&gt; ，例如 &lt;code&gt;figlet nanji&lt;/code&gt;
+&lt;strong&gt;查看社交没额题状态&lt;/strong&gt;，搜索 &lt;code&gt;@用户名&lt;/code&gt; ，例如 &lt;code&gt;@nanjishen&lt;/code&gt;
+&lt;strong&gt;密码生成器&lt;/strong&gt;，搜索 &lt;code&gt;password 数量&lt;/code&gt; ，例如 &lt;code&gt;password 18&lt;/code&gt;
+&lt;strong&gt;搜索备忘单&lt;/strong&gt;，搜索 &lt;code&gt;关键字+cheatsheet&lt;/code&gt; ，例如 &lt;code&gt;vim cheatsheet&lt;/code&gt;
+&lt;strong&gt;搜索颜色代码&lt;/strong&gt;，搜索 &lt;code&gt;color HEX&lt;/code&gt;，例如 &lt;code&gt;color #99e3c9&lt;/code&gt;
+&lt;strong&gt;获取适合用于html的颜色&lt;/strong&gt;，搜索 &lt;code&gt;color codes&lt;/code&gt;
+&lt;strong&gt;生成随机数&lt;/strong&gt;，搜索 &lt;code&gt;random number&lt;/code&gt; ，默认从 1-0 之间随机取值&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;code&gt;random number 50&lt;/code&gt; 从50以内随机生成&lt;/li&gt;
+&lt;li&gt;&lt;code&gt;random number 20 and 30&lt;/code&gt; 从 20 和 30之间随机生成
+&lt;strong&gt;生成二维码&lt;/strong&gt;，搜索 &lt;code&gt;qr 任何文本&lt;/code&gt; ，例如 &lt;code&gt;qr https://ttti.cc&lt;/code&gt;
+&lt;strong&gt;获取特殊字符的 HTML 代码&lt;/strong&gt;，搜索 &lt;code&gt;html chars&lt;/code&gt;
+&lt;strong&gt;获取一些CSS动画&lt;/strong&gt;，搜索 &lt;code&gt;css animations&lt;/code&gt;
+&lt;strong&gt;查看短链接的实际网址&lt;/strong&gt;，搜索 &lt;code&gt;expand 短链接&lt;/code&gt;
+&lt;strong&gt;大小写字母转换&lt;/strong&gt;，转换成小写搜索 &lt;code&gt;lowercase HELLO&lt;/code&gt; ，转换成大写搜索 &lt;code&gt;uppercase hello&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
+  </channel>
+</rss>

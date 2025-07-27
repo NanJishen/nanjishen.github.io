@@ -2,21 +2,93 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>校验哈希值 on 极限玩家</title>
-    <link>https://ttti.cc/tags/%E6%A0%A1%E9%AA%8C%E5%93%88%E5%B8%8C%E5%80%BC/</link>
+    <link>https://nav.ttti.cc/tags/%E6%A0%A1%E9%AA%8C%E5%93%88%E5%B8%8C%E5%80%BC/</link>
     <description>Recent content in 校验哈希值 on 极限玩家</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
     <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Sun, 14 Mar 2021 16:50:37 +0800</lastBuildDate>
-    <atom:link href="https://ttti.cc/tags/%E6%A0%A1%E9%AA%8C%E5%93%88%E5%B8%8C%E5%80%BC/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://nav.ttti.cc/tags/%E6%A0%A1%E9%AA%8C%E5%93%88%E5%B8%8C%E5%80%BC/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>给Win10右键菜单加上校验文件功能</title>
-      <link>https://ttti.cc/post/jiao-yan-wen-jian/</link>
-      <pubDate>Sun, 14 Mar 2021 16:50:37 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/jiao-yan-wen-jian/</guid>
-      <description>&lt;p&gt;有时候，我们需要校验文件的哈希值，以确保该文件是否有损坏，或者被篡改。比如 Win10 或 Ubuntu 系统的安装镜像。若哈希值错误，则表示不适合重装系统，否则重装失败的话，原来的系统也进不去了。&lt;/p&gt;</description>
+      <link>https://nav.ttti.cc/post/jiao-yan-wen-jian/</link>
+      <pubDate>Sun, 14 Mar 2021 16:50:37 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/jiao-yan-wen-jian/</guid>
+      
+        <description>&lt;p&gt;有时候，我们需要校验文件的哈希值，以确保该文件是否有损坏，或者被篡改。比如 Win10 或 Ubuntu 系统的安装镜像。若哈希值错误，则表示不适合重装系统，否则重装失败的话，原来的系统也进不去了。&lt;/p&gt;
+&lt;p&gt;哈希值就好像是文件的身份证号码，基本是无法伪造的。日常中主要使用两种哈希值校验码：&lt;strong&gt;MD5&lt;/strong&gt;和&lt;strong&gt;SHA1&lt;/strong&gt;。&lt;/p&gt;
+&lt;p&gt;很多人会选择安装第三方软件来校验下载回来的文件的哈希值是否和站长提供的匹配。不过我今天要说的是，不用任何软件，给 Win10 右键添加“文件校验”（哈希值）的功能。这样以后校验某个文件的时候，直接右键该文件即可。&lt;/p&gt;
+&lt;h2 id=&#34;第一步&#34;&gt;第一步&lt;/h2&gt;
+&lt;p&gt;首先，右键&lt;strong&gt;桌面&lt;/strong&gt; - &lt;strong&gt;新建&lt;/strong&gt; - &lt;strong&gt;文本文件&lt;/strong&gt;，接着重命名该文件名为“校验Hash.reg”（这里要注意，必须包括扩展名，因为我们需要建立的是一个注册表文件）。&lt;/p&gt;
+&lt;h2 id=&#34;第二步&#34;&gt;第二步&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;右键刚刚建立好的“校验Hash.reg”文件&lt;/strong&gt; - 点&lt;strong&gt;编辑&lt;/strong&gt;，这时候便会用记事本打开该文件，然后将如下内容复制并粘贴到该文件里，保存退出：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\*\shell\hash]
+&amp;#34;MUIVerb&amp;#34;=&amp;#34;校验 Hash&amp;#34;
+&amp;#34;SubCommands&amp;#34;=&amp;#34;&amp;#34;
+&amp;#34;Icon&amp;#34;=&amp;#34;PowerShell.exe&amp;#34;
+
+; SHA1
+[HKEY_CLASSES_ROOT\*\shell\hash\shell\01menu]
+&amp;#34;MUIVerb&amp;#34;=&amp;#34;SHA1&amp;#34;
+
+[HKEY_CLASSES_ROOT\*\shell\hash\shell\01menu\command]
+@=&amp;#34;powershell -noexit get-filehash -literalpath &amp;#39;%1&amp;#39; -algorithm SHA1 | format-list&amp;#34;
+
+; SHA256
+[HKEY_CLASSES_ROOT\*\shell\hash\shell\02menu]
+&amp;#34;MUIVerb&amp;#34;=&amp;#34;SHA256&amp;#34;
+
+[HKEY_CLASSES_ROOT\*\shell\hash\shell\02menu\command]
+@=&amp;#34;powershell -noexit get-filehash -literalpath &amp;#39;%1&amp;#39; -algorithm SHA256 | format-list&amp;#34;
+
+; MD5
+[HKEY_CLASSES_ROOT\*\shell\hash\shell\03menu]
+&amp;#34;MUIVerb&amp;#34;=&amp;#34;MD5&amp;#34;
+
+[HKEY_CLASSES_ROOT\*\shell\hash\shell\03menu\command]
+@=&amp;#34;powershell -noexit get-filehash -literalpath &amp;#39;%1&amp;#39; -algorithm MD5 | format-list&amp;#34;
+
+; Allget-filehash -literalpath &amp;#39;%1&amp;#39; -algorithm RIPEMD160 | format-list
+[HKEY_CLASSES_ROOT\*\shell\hash\shell\04menu]
+&amp;#34;CommandFlags&amp;#34;=dword:00000020
+&amp;#34;MUIVerb&amp;#34;=&amp;#34;ALL&amp;#34;
+
+[HKEY_CLASSES_ROOT\*\shell\hash\shell\04menu\command]
+@=&amp;#34;powershell -noexit get-filehash -literalpath &amp;#39;%1&amp;#39; -algorithm SHA1 | format-list;get-filehash -literalpath &amp;#39;%1&amp;#39; -algorithm SHA256 | format-list;get-filehash -literalpath &amp;#39;%1&amp;#39; -algorithm MD5 | format-list&amp;#34;&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;只是这样还不行，我们还需要将该文件保存为 UTF-16LE 编码：点击左上角的&lt;strong&gt;文件&lt;/strong&gt; - &lt;strong&gt;另存为&lt;/strong&gt; - &lt;strong&gt;编码选 UTF-16LE&lt;/strong&gt; - &lt;strong&gt;保存&lt;/strong&gt;。&lt;/p&gt;
+&lt;h2 id=&#34;最后&#34;&gt;最后&lt;/h2&gt;
+&lt;p&gt;最后一步了，你只要&lt;strong&gt;双击校验 Hash.reg 文件&lt;/strong&gt; 即可，这时就会将文件的内容导入到你系统的注册表相应的键值。那么也就生成了右键菜单条目。接着你只要右键你需要校验的文件就能看到“校验 Hash ”的选项了。&lt;/p&gt;
+&lt;p&gt;原理实际上很简单，通过调用系统自带的 Powershell 命令，来对选中的文件进行校验，因此该方法也不适合 Win7 系统。&lt;/p&gt;
+&lt;h2 id=&#34;还有一件事&#34;&gt;还有一件事&lt;/h2&gt;
+&lt;p&gt;没错，这个时候你或许会问，要如何取消这个菜单呢？很简单了，只要和刚才一样，再建立一个“删除校验.reg”的文件，然后将内容如下写入：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Windows Registry Editor Version 5.00
+
+[-HKEY_CLASSES_ROOT\*\shell\hash]&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;保存退出并双击执行，系统就会删除掉对应的注册表键值，那么“校验 Hash”条目就不复存在了。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+      
     </item>
+    
   </channel>
 </rss>

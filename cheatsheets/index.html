@@ -1,20 +1,133 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/png" href="../favicon.ico"><title>Cheat-sheets</title><style>:root{--primary-color:#ffa500;--secondary-color:#00ff00;--bg-color:#000000;--text-color:#ffffff;--border-radius:8px;--transition:all 0.2s ease}body{font-family:monospace;line-height:1.6;color:var(--text-color);background-color:var(--bg-color);padding:2rem;max-width:800px;margin:0 auto}h3{color:var(--primary-color);margin:2rem 0 1rem;padding-bottom:.5rem;border-bottom:2px solid var(--primary-color)}nav{display:block}nav li{list-style:none;display:inline-block;margin-right:1rem}nav a{display:block;padding:.75rem 1rem;color:var(--secondary-color);text-decoration:none;transition:var(--transition)}nav a:hover{color:var(--primary-color);background-color:rgba(255,255,255,.1)}@media (max-width:600px){body{padding:1rem}h3{font-size:1.25rem}}</style></head><body><nav>
-<section>
-<h3>应用程序</h3>
-<li><a href="personal/7z">7-Zip</a></li>
-<li><a href="personal/qrcp">qrcp</a></li>
-<li><a href="personal/scp">scp</a></li>
-<li><a href="personal/tar">tar</a></li>
-</section>
-<section>
-<h3>编程开发</h3>
-<li><a href="personal/git">Git</a></li>
-<li><a href="personal/hugo">Hugo</a></li>
-<li><a href="personal/ps">Ps</a></li>
-</section>
-<section>
-<h3>图像处理</h3>
-<li><a href="personal/magick">ImageMagick</a></li>
-<li><a href="personal/squoosh">squoosh</a></li>
-</section>
-</nav></body></html>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/png" href="../favicon.ico"><title>Cheat-sheets</title>
+    <style>
+        :root {
+            --primary-color: #ffa500;
+            --secondary-color: #00ff00;
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --border-radius: 8px;
+            --transition: all 0.2s ease;
+        }
+
+        body {
+            font-family: monospace;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        h3 {
+            color: var(--primary-color);
+            margin: 2rem 0 1rem;
+            padding-bottom: .5rem;
+            border-bottom: 2px solid var(--primary-color);
+        }
+
+        nav {
+            display: block;
+        }
+
+        nav li {
+            list-style: none;
+            display: inline-block;
+            margin-right: 1rem;
+        }
+
+        nav a {
+            display: block;
+            padding: .75rem 1rem;
+            color: var(--secondary-color);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+            background-color: rgba(255, 255, 255, .1);
+        }
+
+        #content-display {
+            background-color: rgba(255, 255, 255, 0.05);
+            border-left: 3px solid var(--primary-color);
+            padding: 1.5rem;
+            margin-top: 2rem;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+            font-size: 0.9rem;
+            line-height: 1.8;
+            border-radius: var(--border-radius);
+            overflow-x: auto;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
+            }
+
+            h3 {
+                font-size: 1.25rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <section>
+            <h3>应用程序</h3>
+            <li><a href="personal/7z" onclick="fetchAndDisplay(event)">7-Zip</a></li>
+            <li><a href="personal/qrcp" onclick="fetchAndDisplay(event)">qrcp</a></li>
+            <li><a href="personal/scp" onclick="fetchAndDisplay(event)">scp</a></li>
+            <li><a href="personal/tar" onclick="fetchAndDisplay(event)">tar</a></li>
+        </section>
+        <section>
+            <h3>编程开发</h3>
+            <li><a href="personal/git" onclick="fetchAndDisplay(event)">Git</a></li>
+            <li><a href="personal/hugo" onclick="fetchAndDisplay(event)">Hugo</a></li>
+            <li><a href="personal/ps" onclick="fetchAndDisplay(event)">Ps</a></li>
+        </section>
+        <section>
+            <h3>图像处理</h3>
+            <li><a href="personal/magick" onclick="fetchAndDisplay(event)">ImageMagick</a></li>
+            <li><a href="personal/squoosh" onclick="fetchAndDisplay(event)">squoosh</a></li>
+        </section>
+    </nav>
+
+    <div id="content-display">
+        <p>>...</p>
+    </div>
+
+    <script>
+        async function fetchAndDisplay(event) {
+            event.preventDefault();
+            const contentDisplayArea = document.getElementById('content-display');
+            contentDisplayArea.textContent = '载入中...';
+
+            try {
+                const response = await fetch(event.target.href);
+                if (!response.ok) {
+                    throw new Error(`请求失败，状态码: ${response.status}`);
+                }
+                const buffer = await response.arrayBuffer();
+                let text;
+                try {
+                    const decoderGbk = new TextDecoder('gbk');
+                    text = decoderGbk.decode(buffer);
+                } catch (gbkError) {
+                    console.warn("GBK decoding failed, trying UTF-8:", gbkError);
+                    const decoderUtf8 = new TextDecoder('utf-8');
+                    text = decoderUtf8.decode(buffer);
+                }
+                contentDisplayArea.textContent = text;
+                contentDisplayArea.scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+            } catch (error) {
+                contentDisplayArea.textContent = `错误: ${error.message}`;
+                console.error("文件载入错误:", error);
+            }
+        }
+    </script>
+</body>
+</html>

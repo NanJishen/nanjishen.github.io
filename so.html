@@ -1,50 +1,60 @@
-<!DOCTYPE html>
-<html lang="zh">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
-  <meta name="Author" content="南极神">
-  <meta name="Keywords" content="极限搜索,极限玩家,极限导航,网址导航">
-  <meta name="Description" content="极限搜索,极限玩家,极限玩家导航,南极神,网址导航">
-  <title>极限搜索</title>
-  <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="shortcut icon" href="favicon.ico">
-  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="./assets/so.css">
+<!DOCTYPE html><html lang="zh"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"><meta name="Author" content="南极神"><meta name="Keywords" content="极限搜索,极限玩家"><meta name="Description" content="极限搜索,极限玩家"><title>极限搜索</title>
+<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="shortcut icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
+<link rel="stylesheet" href="./assets/so.css">
 </head>
-<body ontouchstart>
-  <header>
-    <h1><a href="so.html">极限搜索</a></h1>
-  </header>
-
+<body ontouchstart><header><h1><a href="so.html">极限搜索</a></h1></header>
   <main>
     <div class="search-container">
       <input type="text" id="searchInput" placeholder="Search" 
              onblur="executeCommand()" 
              onkeydown="if(event.keyCode === 13) document.getElementById('defaultSearch').click()">
-      
       <div class="search-options">
-        <button id="defaultSearch" onclick="search('AI')">AI</button>
+        <div class="dropdown">
+          <button onclick="toggleDropdown(this)">AI</button>
+          <div class="dropdown-content">
+            <button id="defaultSearch" onclick="search('GPT')">ChatGPT</button>
+            <button onclick="search('Copilot')">Copilot</button>
+          </div>
+        </div>
+
         <button onclick="search('百度')">百度</button>
         <button onclick="search('谷歌')">谷歌</button>
         <button onclick="search('必应')">必应</button>
+        <button onclick="search('维基')">维基</button>
         <button onclick="search('知乎')">知乎</button>
-        <button onclick="search('翻译')">翻译</button>
+        
+        <div class="dropdown">
+          <button onclick="toggleDropdown(this)">翻译</button>
+          <div class="dropdown-content">
+            <button onclick="search('Bingfy')">Bing</button>
+            <button onclick="search('欧路')">欧路</button>
+          </div>
+        </div>
+
         <button onclick="search('图片')">图片</button>
         <button onclick="search('油管')">油管</button>
         <button onclick="search('哔哩')">哔哩</button>
-        <button onclick="search('淘宝')">淘宝</button>
-        <button onclick="search('京东')">京东</button>
         <button onclick="search('微博')">微博</button>
         
+        <div class="dropdown">
+          <button onclick="toggleDropdown(this)">购物</button>
+          <div class="dropdown-content">
+            <button onclick="search('值得买')">值买</button>
+            <button onclick="search('淘宝')">淘宝</button>
+            <button onclick="search('京东')">京东</button>
+          </div>
+        </div>
+
         <div class="dropdown">
           <button onclick="toggleDropdown(this)">影视</button>
           <div class="dropdown-content">
             <button onclick="search('豆瓣')">豆瓣</button>
-            <button onclick="search('字幕')">字幕</button>
             <button onclick="search('番茄')">番茄</button>
+            <button onclick="search('字幕')">字幕</button>
           </div>
         </div>
 
@@ -59,13 +69,22 @@
         </div>
 
         <div class="dropdown">
+          <button onclick="toggleDropdown(this)">网络</button>
+          <div class="dropdown-content">
+            <button onclick="search('CheckIP')">Check</button>
+            <button onclick="search('Whios')">Whios</button>
+            <button onclick="search('ping0')">Ping0</button>
+            <button onclick="search('Ping')">Ping</button>
+          </div>
+        </div>
+
+        <div class="dropdown">
           <button onclick="toggleDropdown(this)">更多</button>
           <div class="dropdown-content">
             <button onclick="search('股票')">股票</button>
             <button onclick="search('QR')">QR</button>
             <button onclick="search('Cheat')">Cheat</button>
-            <button onclick="search('IP')">IP</button>
-            <button onclick="search('Ping')">Ping</button>
+            <button onclick="search('Linuxcmd')">LinuxCMD</button>
           </div>
         </div>
       </div>
@@ -76,7 +95,7 @@
   
   <aside id="sidebar">
     <ul>
-      <li><a href="https://ttti.cc/nav/index.html">网站导航</a></li>
+      <li><a href="https://nav.ttti.cc">极限导航</a></li>
       <li><a href="https://ttti.cc">极限博客</a></li>
       <li><a href="app.html">软件推荐</a></li>
       <li><a href="win.html">操作系统</a></li>
@@ -117,30 +136,37 @@
 
     // 搜索功能
     const searchEngines = {
-      'AI': 'https://chatgpt.com/?q=',
+      'GPT': 'https://chatgpt.com/?q=',
+      'Copilot': 'https://www.bing.com/search?showconv=1&sendquery=1&q=',
       '百度': 'https://www.baidu.com/s?wd=',
       '谷歌': 'https://www.google.com/search?q=',
       '必应': 'https://cn.bing.com/search?q=',
+      '维基': 'https://zh.wikipedia.org/wiki/',
       '知乎': 'https://www.zhihu.com/search?type=content&q=',
-      '翻译': 'https://cn.bing.com/dict/search?q=',
+      'Bingfy': 'https://cn.bing.com/dict/search?q=',
+      '欧路': 'https://dict.eudic.net/dicts/en/',
       '图片': 'https://yandex.com/images/search?text=',
       '油管': 'https://www.youtube.com/results?search_query=',
       '哔哩': 'https://search.bilibili.com/all?keyword=',
+      '值得买': 'https://search.smzdm.com/?s=',
       '淘宝': 'https://s.taobao.com/search?q=',
       '京东': 'https://search.jd.com/Search?keyword=',
       '微博': 'https://s.weibo.com/weibo/',
       '豆瓣': 'https://www.douban.com/search?q=',
-      '字幕': 'https://subhd.tv/search/',
       '番茄': 'https://www.rottentomatoes.com/search?search=',
+      '字幕': 'https://subhd.tv/search/',
       '容器': 'https://hub.docker.com/search?q=',
+      'CheckIP': 'https://check-host.net/ip-info?host=',
+      'Whios': 'https://w.is/',
+      'ping0': 'https://ping0.cc/ip/',
+      'Ping': 'https://ping.pe/',
       '应用': 'https://play.google.com/store/search?q=',
       '扩展': 'https://chrome.google.com/webstore/search/',
       '油猴': 'https://greasyfork.org/zh-CN/scripts?q=',
       '股票': 'https://xueqiu.com/k?q=',
       'QR': 'https://my.tv.sohu.com/user/a/wvideo/getQRCode.do?text=',
-      'Cheat': 'https://cheat.sh/',
-      'IP': 'https://check-host.net/ip-info?host=',
-      'Ping': 'https://ping.pe/'
+      'Linuxcmd': 'https://www.linuxcool.com/',
+      'Cheat': 'https://cheat.sh/'
     };
 
     function search(engine) {
@@ -173,7 +199,7 @@
       'tm': () => window.location.href = "https://time.is",
       'tq': () => window.location.href = "http://www.weather.com.cn/weather1dn/101070501.shtml",
       'tr': () => window.location.href = "https://cn.bing.com/translator",
-      'xyz': () => window.location.href = "https://xyz.nanjis.top/xyz/"
+      'xyz': () => window.location.href = "https://a.aaxyz.de/"
     };
 
     function executeCommand() {
@@ -242,9 +268,7 @@
     // 帮助信息
     function showHelp() {
       const helpContent = `
-        <h3>快捷命令</h3><br>
-<table style="width:300px"><tr><th></th><th></th></tr><tr><td>a</td><td>导航页</td></tr><tr><td>oml</td><td>Outlook</td></tr><tr><td>gml</td><td>Gmail</td></tr><tr><td>gh</td><td>GitHub</td></tr><tr><td>gm</td><td>GitMind</td></tr><tr><td>ip</td><td>本机IP</td></tr><tr><td>mp</td><td>公众号</td></tr><tr><td>tm</td><td>时间</td></tr><tr><td>tq</td><td>天气</td></tr><tr><td>tr</td><td>翻译</td></tr><tr><td>cheat</td><td>命令备忘单</td></tr></table>
-      `;
+        <h3>快捷命令</h3><br><table style="width:300px"><tr><th></th><th></th></tr><tr><td>a</td><td>导航页</td></tr><tr><td>oml</td><td>Outlook</td></tr><tr><td>gml</td><td>Gmail</td></tr><tr><td>gh</td><td>GitHub</td></tr><tr><td>gm</td><td>GitMind</td></tr><tr><td>ip</td><td>本机IP</td></tr><tr><td>mp</td><td>公众号</td></tr><tr><td>tm</td><td>时间</td></tr><tr><td>tq</td><td>天气</td></tr><tr><td>tr</td><td>翻译</td></tr><tr><td>cheat</td><td>命令备忘单</td></tr></table>`;
       document.getElementById('helpContent').innerHTML = helpContent;
       document.getElementById('helpModal').style.display = 'flex';
       document.getElementById('searchInput').value = '';

@@ -2,21 +2,73 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Obsidian on 极限玩家</title>
-    <link>https://ttti.cc/tags/obsidian/</link>
+    <link>https://nav.ttti.cc/tags/obsidian/</link>
     <description>Recent content in Obsidian on 极限玩家</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
     <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Sun, 21 Mar 2021 15:21:50 +0800</lastBuildDate>
-    <atom:link href="https://ttti.cc/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://nav.ttti.cc/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>更换到更现代的双向链笔记软件 Obsidian</title>
-      <link>https://ttti.cc/post/obsidianforfirst/</link>
-      <pubDate>Sun, 21 Mar 2021 15:21:50 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/obsidianforfirst/</guid>
-      <description>&lt;p&gt;先说一下个人使用笔记本软件的经过：从 OneNote →  Joplin → Obsidian（现在开始），我一直认为，笔记软件是组织和管理知识的最好方式，尤其对于现代人来说，电子笔记是必不可少的（纸张笔记不够效率）。因为现代是一个知识内容的工作时代。人脑是绝对不够用的。&lt;/p&gt;</description>
+      <link>https://nav.ttti.cc/post/obsidianforfirst/</link>
+      <pubDate>Sun, 21 Mar 2021 15:21:50 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/obsidianforfirst/</guid>
+      
+        <description>&lt;p&gt;先说一下个人使用笔记本软件的经过：从 OneNote →  Joplin → Obsidian（现在开始），我一直认为，笔记软件是组织和管理知识的最好方式，尤其对于现代人来说，电子笔记是必不可少的（纸张笔记不够效率）。因为现代是一个知识内容的工作时代。人脑是绝对不够用的。&lt;/p&gt;
+&lt;p&gt;尽管在今天笔记软件有很多，但是对更高效率的追求和渴望依然存在。说到新一代的笔记软件，那就要提到 Roam Research 了，其订阅价格高达165美元/年。当时官方在推特上表示：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;如果你觉得这个价格太贵了，请你立刻导出你的数据换另一个工具&amp;hellip; ”&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;你也可以理解为：“如果你是穷鬼，那请走得远一点，Roam 不稀罕你，如果你愿意向我们证明你很穷，我们会考虑给你半价”&lt;/p&gt;
+&lt;p&gt;而我今天说的 &lt;em&gt;Obsidian&lt;/em&gt; 正是 Roam Research 的免费代替品。它是一个基于卡片盒笔记法（Zettelkasten）的笔记本软件。据说，德国社会学者卢曼，用卡片盒笔记法写了70多本书和400多篇学术文章。&lt;/p&gt;
+&lt;p&gt;传统的用文件夹来管理和组织笔记的结构非常僵硬，而双向链笔记软件则赋予了其灵活性，它可以实现双向的跳转。这不仅仅提高了灵活性，还提高了效率。（你想啊，切换分类，再搜索，或找到文件再打开，一步又一步，哪有点一下跳转来的快呢？）&lt;/p&gt;
+&lt;h2 id=&#34;初始安装&#34;&gt;初始安装&lt;/h2&gt;
+&lt;p&gt;打开浏览器访问 &lt;code&gt;obsidian.md&lt;/code&gt;，然后点击中间的“Get Obsidian for Windows”，即可下载安装包，接着和安装其他软件一样安装即可。如果你使用包管理工具 Scoop ，那么可以直接用命令行来安装，执行命令 &lt;code&gt;scoop install obsidian&lt;/code&gt; 即可。&lt;/p&gt;
+&lt;p&gt;安装完成后就是启动软件了，首次启动会看到如下画面：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/03/21/659M24.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;它会提示你，是打开现有的目录作为库，还是说创建一个新的目录作为库。我们这篇文章主要讲的是初始安装，那么当然是选择&lt;em&gt;创建新库&lt;/em&gt;了。下方可以选择你要用的语言。接着就是创建页面，如下图：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/03/21/659QxJ.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;在库的名字中输入你要定义的名字，例如 MyNotes 。然后浏览你电脑上的一个文件夹，那么之后 Obsidian 就会在该文件夹下创建，以你上面库的名字为命名的文件夹。&lt;/p&gt;
+&lt;p&gt;可以看到我这里选择了 OneDrive 的 Docs 目录。这个目录会跟随 OneDrive 同步的，也就是说即便我重装了系统，格式化了C盘，重新登录 OneDrive 后它也会同步回来，这样便实现了数据云同步。&lt;/p&gt;
+&lt;p&gt;现在，我们的第一个文档库便创建完成了，接着便可以看到软件的主界面窗口了：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/03/21/659KGF.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;如你所见，Obsidian 会创建名为 Notes 的文件夹作为库的根目录，之后你创建的文件都会在这个目录中。让我们来创建自己的笔记吧：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/03/21/6598q1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;先随便创建了3个文档，因为是 md 格式的文档，所以我便轻松将我原来的 Joplin 中的文档放进去。&lt;/p&gt;
+&lt;p&gt;Obsidian 默认的是深色主题，如果你喜欢亮色，只需点击左下角的设置图标 - 外观 - 更改配色方案为亮色即可。再看看文件夹中生成的对应的文件：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://z3.ax1x.com/2021/03/21/659uPU.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;可以看到生成的对应的文档，这便是我喜欢的笔记数据保存形式。这些数据本地化，以文件形式存在，且每个文档都可以单独迁移和保存，为日后提供了极大的方便。&lt;/p&gt;
+&lt;h2 id=&#34;初始体验&#34;&gt;初始体验&lt;/h2&gt;
+&lt;p&gt;我也是刚刚换到并开始使用 Obsidian 。不过我之前用的是 Joplin，文档也是 Markdown 语法的，所以对编辑来说很顺手了。随着社区和开发者的不断努力，我相信它会成为非常好的笔记软件。&lt;/p&gt;
+&lt;p&gt;初步体验几点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;在笔记中，使用 &lt;code&gt;![[filename]]&lt;/code&gt; 语法格式来链接到其他页面&lt;/li&gt;
+&lt;li&gt;在 设置 - 快捷键 中，可以方便的查看所有快捷键，并可以自定义&lt;/li&gt;
+&lt;li&gt;按住 ctrl + 点预览按钮，则可以开启分栏模式&lt;/li&gt;
+&lt;li&gt;Obsidian 原生支持了半透明效果，可以在设置 - 外观中开启&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;我认为 Obsidian 的优点：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;双向链接，这样的跳转能极大的提高知识调用和查阅的效率；&lt;/li&gt;
+&lt;li&gt;本地化文档，数据安全可靠，易于管理，也可以放到网盘中同步；&lt;/li&gt;
+&lt;li&gt;Markdown 语法笔记，这个语法不用介绍了吧，非常通用；&lt;/li&gt;
+&lt;li&gt;有插件可选，对于有更多需求的用户，提供更多可能。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;最后&#34;&gt;最后&lt;/h2&gt;
+&lt;p&gt;比起管理知识，更重要的是掌握一个领域的知识体系的能力。很多人将知识管理与效率工具混在一起，这是一种偏误。世界知识管理运动之父野中郁次郎表示：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;人类的知识分为两部分，一部分是形式知识，它可以用正式的语言表述，包括语法陈述、数学表达式、技术规范、手册等。因此，这类知识可以在个体之间正式地且方便地进行传播。然而，除此之外，还有另外一类难以用正式语言表述的知识——暗默知识——更为重要。它属于植根于个体经验的个人知识，涉及像个人信念、视角及价值体系之类的无形要素。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;效率工具是为了我们节省管理的时间而存在的。但是知识的组合，再创造，甄别等，确是要你通过不断的摸索去了解并掌握的。幸运的是，今天我们有非常效率的记录工具，不幸的是，没有任何一款工具能够代替你自己去发挥创造/创意的。但效率工具仍然是重要的，因为它能帮助我们解决痛点 —— 高效的记录和管理以及检索（这里是提醒你不要沉迷于工具的使用，而是要思考记录后的知识如何重组后使用，让其发挥创造性）。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+      
     </item>
+    
   </channel>
 </rss>

@@ -2,21 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>浏览器扩展 on 极限玩家</title>
-    <link>https://ttti.cc/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/</link>
+    <link>https://nav.ttti.cc/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/</link>
     <description>Recent content in 浏览器扩展 on 极限玩家</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
     <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
     <lastBuildDate>Thu, 18 Mar 2021 23:19:54 +0800</lastBuildDate>
-    <atom:link href="https://ttti.cc/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/index.xml" rel="self" type="application/rss+xml" />
+    
+        <atom:link href="https://nav.ttti.cc/tags/%E6%B5%8F%E8%A7%88%E5%99%A8%E6%89%A9%E5%B1%95/index.xml" rel="self" type="application/rss+xml" />
+    
+    
     <item>
       <title>5款极致小巧的扩展让你的浏览器更高效</title>
-      <link>https://ttti.cc/post/ji-xiao-kuozan-xiaolv/</link>
-      <pubDate>Thu, 18 Mar 2021 23:19:54 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/ji-xiao-kuozan-xiaolv/</guid>
-      <description>&lt;p&gt;作为极限玩家，对软件的轻巧也有着极致追求，因为轻量化是高效率的原因之一。很多时候，我们只想要完成我们要完成的事情，或者说让某件事更便捷的做到。这个时候也并不需要什么庞大的软件。所以，浏览器的扩展就是很好的存在。&lt;/p&gt;</description>
+      <link>https://nav.ttti.cc/post/ji-xiao-kuozan-xiaolv/</link>
+      <pubDate>Thu, 18 Mar 2021 23:19:54 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/ji-xiao-kuozan-xiaolv/</guid>
+      
+        <description>&lt;p&gt;作为极限玩家，对软件的轻巧也有着极致追求，因为轻量化是高效率的原因之一。很多时候，我们只想要完成我们要完成的事情，或者说让某件事更便捷的做到。这个时候也并不需要什么庞大的软件。所以，浏览器的扩展就是很好的存在。&lt;/p&gt;
+&lt;p&gt;很多浏览器扩展只有几 MB，甚至是几 KB，占用资源很低的同时，又方便调用，已经成为了我们日常中不可或缺的东东了，所以今天推荐5款极致轻巧的浏览器扩展。&lt;/p&gt;
+&lt;h2 id=&#34;quick书签菜单大小32kb&#34;&gt;Quick书签菜单（大小32kb）&lt;/h2&gt;
+&lt;p&gt;Chrome / Edge 浏览器自带的书签管理虽然可以在顶部开启书签栏，但是非常碍眼。今天我们更喜欢专注，并且，当你的网页收藏了很多以后，选择起来也很麻烦。而这个扩展能在右上角让你方便的点选收藏夹，进行选择。你还可以固定哪个文件夹作为弹出的第一个页面，下面动图演示看看：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.ax1x.com/2021/03/18/6RKaJx.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;下载管理器大小380kb&#34;&gt;下载管理器（大小380kb）&lt;/h2&gt;
+&lt;p&gt;对于经常使用电脑的人来说，必然也会经常使用浏览器去下载文件，然而 Chrome / Edge 的下载虽然简洁，但并不好用。这个扩展可以帮助你快速又直观的管理浏览器的下载内容，继续来动图演示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.ax1x.com/2021/03/18/6RMFt1.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;快捷扩展管理&#34;&gt;快捷扩展管理&lt;/h2&gt;
+&lt;p&gt;随着时间推移，你发现的极致扩展越来越多，这个时候你就需要方便又高效的去管理扩展。这款扩展就是为此而生。因为有时候某些扩展我们并不经常使用，只有在需要的时候才会开启，所以希望可以随手开关它们。这款扩展使用后给我带来了极大的方便，继续动图演示：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.ax1x.com/2021/03/18/6RKtoR.gif&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;circle-阅读模式大小70kb&#34;&gt;Circle 阅读模式（大小70kb）&lt;/h2&gt;
+&lt;p&gt;这款扩展不用动图演示了。操作非常简单，只要点击一下右上角的按钮即可，它的作用是将你正在看的文章变成简洁的阅读模式 —— 去掉页面的多余花哨的元素，让文字内容更醒目。我很喜欢这款扩展，它让我在阅读文章时非常专注：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.ax1x.com/2021/03/18/6RK1QU.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;上面这个页面原来是我的公众号文章页面，在开启阅读模式后，便会变得如此简洁。当然，本身公众号页面就很简洁了。如果你去一些论坛或者某些媒体得网站上，可能会看到文章页面很混乱，用了这个扩展就可以解决这个通电。&lt;/p&gt;
+&lt;h2 id=&#34;tabfloater215kb&#34;&gt;TabFloater（215kb）&lt;/h2&gt;
+&lt;p&gt;这款扩展同样无需动图演示，它也简单到只要点一下，就将你得浏览器标签独立成一个窗口，并且不带任何浏览器其他元素只把页面独立到窗口中，例如下图前后的样子：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.ax1x.com/2021/03/18/6RK3yF.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.ax1x.com/2021/03/18/6RKUF1.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;最后&#34;&gt;最后&lt;/h2&gt;
+&lt;p&gt;正所谓“纤毫毕现，极致轻巧”，这些小巧的扩展可以让你在日常中保持专注和方便，并且他们的占用很低。我们也感谢开发者能带来这么好的扩展，来改善 Chrome / Edge。哦对了，这些扩展你可以在 Chrome / Edge 他们各自的商店中下载到。如果有什么疑问，欢迎在下方留言。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://s3.ax1x.com/2021/03/18/6RKYw9.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+      
     </item>
+    
   </channel>
 </rss>

@@ -2,28 +2,332 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>YouTube on 极限玩家</title>
-    <link>https://ttti.cc/tags/youtube/</link>
+    <link>https://nav.ttti.cc/tags/youtube/</link>
     <description>Recent content in YouTube on 极限玩家</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
     <managingEditor>nanji_shen@qq.com (南极神)</managingEditor>
     <webMaster>nanji_shen@qq.com (南极神)</webMaster>
     <copyright>极限玩家</copyright>
-    <lastBuildDate>Thu, 04 Mar 2021 14:45:18 +0800</lastBuildDate>
-    <atom:link href="https://ttti.cc/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 25 Apr 2025 13:56:03 +0800</lastBuildDate>
+    
+        <atom:link href="https://nav.ttti.cc/tags/youtube/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>yt-dlp 下载视频使用指南</title>
+      <link>https://nav.ttti.cc/post/ytdlp/</link>
+      <pubDate>Fri, 25 Apr 2025 13:56:03 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/ytdlp/</guid>
+      
+        <description>&lt;p&gt;&lt;a href=&#34;https://github.com/yt-dlp/yt-dlp&#34;&gt;yt-dlp&lt;/a&gt; 是一个强大的命令行视频下载工具，支持数千个网站的音视频及字幕下载。&lt;/p&gt;
+&lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
+&lt;p&gt;视频地址可以使用 &lt;code&gt;url&lt;/code&gt; 或 &lt;code&gt;vid&lt;/code&gt; 在视频页点分享后可以直接复制 url 链接，也可用复制 &lt;code&gt;youtu.be/&lt;/code&gt; 后面的 &lt;code&gt;vid&lt;/code&gt; 号&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -U &lt;span style=&#34;color:#75715e&#34;&gt;# 升级版本&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -F url 或 vid &lt;span style=&#34;color:#75715e&#34;&gt;# 列出音频和视频，可用查看详细信息及编号&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp url &lt;span style=&#34;color:#75715e&#34;&gt;# 默认直接下载最高画质视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --yes-playlist &lt;span style=&#34;color:#75715e&#34;&gt;# 下载播放列表&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f &lt;span style=&#34;color:#ae81ff&#34;&gt;22&lt;/span&gt; url 或 vid &lt;span style=&#34;color:#75715e&#34;&gt;# 下载编号 22 的视频（可用看到是 720p 还包含了音轨）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f 137+140 url --merge-output-format mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 将音视频合并下载为 MP4 文件（需要 ffmpeg）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bestvideo[height&amp;lt;=1080]+bestaudio&amp;#34;&lt;/span&gt; url &lt;span style=&#34;color:#75715e&#34;&gt;# 指定下载格式（即 1080p+高品质音频）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f &lt;span style=&#34;color:#ae81ff&#34;&gt;22&lt;/span&gt; url --proxy socks5://127.0.0.1:10808 &lt;span style=&#34;color:#75715e&#34;&gt;# 使用代理&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;常用实例&#34;&gt;常用实例&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 通过指定代理下载音视频及字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -F url &lt;span style=&#34;color:#75715e&#34;&gt;# 先列出所有音视频，以确定要下载哪个&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f 136+140 url --write-auto-subs --sub-langs zh-Hans --proxy socks5://192.168.10.1:18111 &lt;span style=&#34;color:#75715e&#34;&gt;# 指定视频音频字幕（自动翻译）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 下载播放列表，最佳视频+最佳音频，并输出为 mp4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ytdl -f &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bestvideo+bestaudio&amp;#34;&lt;/span&gt; --merge-output-format mp4 &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;https://youtube.com/playlist?list=XXX&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 同时下载写入英文字幕+略缩图+影片介绍（适合转存）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --write-subs --write-auto-subs --sub-format SRT --sub-langs en --write-thumbnail --write-description url&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;音频&#34;&gt;音频&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -x --audio-format mp3 url &lt;span style=&#34;color:#75715e&#34;&gt;# 仅下载音频为 mp3 格式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f &lt;span style=&#34;color:#ae81ff&#34;&gt;140&lt;/span&gt; url &lt;span style=&#34;color:#75715e&#34;&gt;# 下载编号为 140 的音频&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;字幕&#34;&gt;字幕&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --list-subs url &lt;span style=&#34;color:#75715e&#34;&gt;# 列出字幕，查看所需语言字幕是否存在&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --write-subs --sub-langs zh-Hans,en --skip-download --convert-subs srt url &lt;span style=&#34;color:#75715e&#34;&gt;# 下载中文和英文字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --write-auto-subs --sub-langs zh-Hans --skip-download url &lt;span style=&#34;color:#75715e&#34;&gt;# 下载自动翻译字幕到中文&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f 137+140 url --write-subs --sub-langs zh-Hans &lt;span style=&#34;color:#75715e&#34;&gt;# 下载视频+音频+字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f 137+140 url --embed-subs --sub-langs &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;zh-Hans&amp;#34;&lt;/span&gt; --merge-output-format mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 下载视频+音频+字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i 1.mp4 -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;subtitles=1.srt&amp;#39;&lt;/span&gt; -c:a copy output.mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 如果要写入硬字幕&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;下载需要登录的视频&#34;&gt;下载需要登录的视频&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Firefox&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --cookies-from-browser firefox:/Users/appinn/Library/Application&lt;span style=&#34;color:#ae81ff&#34;&gt;\ &lt;/span&gt;Support/Firefox/Profiles/12345.default-release-12345/ https://www.bilibili.com/video/xxx
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Edge，&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp.exe --cookies-from-browser edge:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C:\Users\appinn\AppData\Local\Microsoft\Edge\User Data\Profile 1&amp;#34;&lt;/span&gt; -F https://www.bilibili.com/video/xxxx
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Chrome&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp.exe --cookies-from-browser chrome:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;C:\Users\scavi\AppData\Local\Google\Chrome\User Data\Default&amp;#34;&lt;/span&gt; -F https://www.bilibili.com/video/xxxx&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;参数与配置文件&#34;&gt;参数与配置文件&lt;/h3&gt;
+&lt;p&gt;可将参数写在同目录中名为 &lt;code&gt;yt-dlp.conf&lt;/code&gt; 的配置文件中，这样只需执行下载命令，便会根据配置文件中的参数进行下载&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 可以随时编辑配置文件调整，将不要的选项前加上 # 号注释掉&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 格式：yt-dlp -f [编号] [代理配置] [视频链接] [合并语句] [外部下载器选择] [下载器参数]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f 137+140 --proxy socks5://127.0.0.1:8080 url --merge-output-format mp4 --external-downloader aria2c --downloader-args aria2c:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;-x 16 -k 1M&amp;#34;&lt;/span&gt; url
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 说明&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-f 137+140 &lt;span style=&#34;color:#75715e&#34;&gt;# 指定下载的编号为 137 和 140（视频+音频） &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--output T:/%&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;title&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;s-%&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;resolution&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;s.%&lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;ext&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;s &lt;span style=&#34;color:#75715e&#34;&gt;# 指定输出路径&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--proxy socks5://192.168.1.1:0000 &lt;span style=&#34;color:#75715e&#34;&gt;# socks5 代理配置&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--merge-output-format mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 合并后输出格式&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-x --audio-format mp3 &lt;span style=&#34;color:#75715e&#34;&gt;# 如果只要音频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--external-downloader aria2c &lt;span style=&#34;color:#75715e&#34;&gt;# 下载器选择&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--downloader-args &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;下载器名&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[下载器配置]&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 如上 -x 16 为16线程 -k 1M 代表块大小为1M（youtube 不支持分块，此句可忽略）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 字幕处理&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--write-subs &lt;span style=&#34;color:#75715e&#34;&gt;# 下载字幕文件，如 .srt &lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--embed-subs &lt;span style=&#34;color:#75715e&#34;&gt;# 或将字幕嵌入视频&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--sub-langs zh-Hans,en &lt;span style=&#34;color:#75715e&#34;&gt;# 指定字幕语言&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--convert-subs srt &lt;span style=&#34;color:#75715e&#34;&gt;# 转换成 srt&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--skip-download &lt;span style=&#34;color:#75715e&#34;&gt;# 只下载字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 是否保存元数据&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--embed-thumbnail &lt;span style=&#34;color:#75715e&#34;&gt;# 缩略图&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--embed-metadata &lt;span style=&#34;color:#75715e&#34;&gt;# 元数据&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Cookies 引入&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--cookies-from-browser chrome:&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;T:\PortableApps\ungoogled-chromium\userdata\Default&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--cookies T:/www.youtube.com_cookies.txt
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 指定 ffmpeg 路径&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--ffmpeg-location D:/Qsync/Apps/MPV/ffmpeg.exe&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;调用不同的配置文件&#34;&gt;调用不同的配置文件&lt;/h3&gt;
+&lt;p&gt;使用不同的配置文件来管理不同的下载设置能够提高效率&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --config-location /path/to/config/file.conf &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;URL&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 直接指定配置文件&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --ignore-config --config-location /path/to/config/file.conf &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;URL&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 忽略默认配置文件并指定配置文件&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;创建多个配置文件，按需使用&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# D:/MPV/default.conf (默认)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# D:/MPV/hd.conf (高清视频)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-f &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bestvideo[height&amp;lt;=1080]+bestaudio/best[height&amp;lt;=1080]&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-o &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%(title)s.%(ext)s&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--merge-output-format mp4
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# D:/MPV/audio.conf (仅音频)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-x
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--audio-format mp3
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--audio-quality &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;-o &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%(title)s.%(ext)s&amp;#34;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;使用-cookie-文件&#34;&gt;使用 Cookie 文件&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;浏览器登录油管，点击 &lt;a href=&#34;https://chromewebstore.google.com/detail/cclelndahbckbenkjhflpdbgdldlbecc&#34;&gt;Get cookies.txt LOCALLY&lt;/a&gt; 扩展 - Export ，下载 &lt;code&gt;cookies.txt&lt;/code&gt; 文件&lt;/li&gt;
+&lt;li&gt;使用命令引入 &lt;code&gt;yt-dlp -F url --cookies T:\cookies.txt&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+      
+    </item>
+    
     <item>
       <title>Youtube 详细统计信息测速指南</title>
-      <link>https://ttti.cc/post/youtubecouts/</link>
-      <pubDate>Thu, 04 Mar 2021 14:45:18 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/youtubecouts/</guid>
-      <description>&lt;p&gt;对于出海上网来说，无论是自架梯子还是购买机场，都需要测试网速，虽然可以使用 Speedtest 这样的标准测速网站，但实际不如直接观看 YouTube 视频“详细统计信息”来的实用高效。&lt;/p&gt;</description>
+      <link>https://nav.ttti.cc/post/youtubecouts/</link>
+      <pubDate>Thu, 04 Mar 2021 14:45:18 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/youtubecouts/</guid>
+      
+        <description>&lt;p&gt;对于出海上网来说，无论是自架梯子还是购买机场，都需要测试网速，虽然可以使用 Speedtest 这样的标准测速网站，但实际不如直接观看 YouTube 视频“详细统计信息”来的实用高效。&lt;/p&gt;
+&lt;p&gt;因为，需求上来说，只要能满足视频流的播放，其他的也都满足了，在观看 YouTube 时，随时都可以&lt;strong&gt;右键视频 - 详细统计信息，查看“Connection Speed”项来确认当前速度。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;公式：&lt;strong&gt;Connection Speed÷(1024*8)=实际速度 MB/s&lt;/strong&gt;，当然，实际上不用去计算它，一般来说 15000-30000 的速度即可用方向键连续快进的观看1080P的视频了。&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Video ID / sCPNY：&lt;/strong&gt; 每个视频都有的唯一 ID 号码&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Viewport / Frames：&lt;/strong&gt; 当前播放视窗的大小 / 丢帧数据&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Current / Optimal Res：&lt;/strong&gt; 当前视频 / 推荐分辨率大小&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Volume / Normalized：&lt;/strong&gt; 当前播放音量大小 / 标准音量的差异值&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Codecs：&lt;/strong&gt; 视频采用的编码器&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Connection Speed：&lt;/strong&gt; 当前客户端到服务器的实时链接速率（1024×8）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Network Activity：&lt;/strong&gt; 实时的网络活动&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Buffer Health：&lt;/strong&gt; 缓冲时间（断网后视频可以继续播放的时间）&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Mystery Text：&lt;/strong&gt; 神秘代码
+&lt;ul&gt;
+&lt;li&gt;S：播放状态（4暂停、8播放、19快进或快退、14加载视频中 &amp;hellip;）&lt;/li&gt;
+&lt;li&gt;T：视频的时间轨道线&lt;/li&gt;
+&lt;li&gt;B：缓冲区间和缓冲区大小（缓冲区的第二数字 - T（时间轨道线）= 缓冲的时间）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+      
     </item>
+    
     <item>
       <title>youtube-dl 下载视频使用指南</title>
-      <link>https://ttti.cc/post/youtubedl/</link>
-      <pubDate>Wed, 05 Aug 2020 20:56:03 +0800</pubDate><author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://ttti.cc/post/youtubedl/</guid>
-      <description>&lt;p&gt;youtube-dl 需要安装 Python 环境，并需配置好系统变量（安装时勾选 Add Python to PATH）&lt;/p&gt;&#xA;&lt;h3 id=&#34;安装-youtube-dl&#34;&gt;安装 youtube-dl&lt;/h3&gt;&#xA;&lt;p&gt;从&lt;a href=&#34;https://yt-dl.org&#34;&gt;官网&lt;/a&gt;下载 youtube-dl.exe，然后放到任意目录下即可使用，同时视频默认会下载到它的同目录。&lt;/p&gt;</description>
+      <link>https://nav.ttti.cc/post/youtubedl/</link>
+      <pubDate>Wed, 05 Aug 2020 20:56:03 +0800</pubDate>
+      <author>nanji_shen@qq.com (南极神)</author>
+      <guid>https://nav.ttti.cc/post/youtubedl/</guid>
+      
+        <description>&lt;p&gt;youtube-dl 需要安装 Python 环境，并需配置好系统变量（安装时勾选 Add Python to PATH）&lt;/p&gt;
+&lt;h3 id=&#34;安装-youtube-dl&#34;&gt;安装 youtube-dl&lt;/h3&gt;
+&lt;p&gt;从&lt;a href=&#34;https://yt-dl.org&#34;&gt;官网&lt;/a&gt;下载 youtube-dl.exe，然后放到任意目录下即可使用，同时视频默认会下载到它的同目录。&lt;/p&gt;
+&lt;p&gt;一个视频文件，包含视频和音频两样，不同质量的可以有多种组合。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;假设要下载：https://www.youtube.com/watch?v=xxxxxxxx&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;下载最优视频默认&#34;&gt;下载最优视频（默认）&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube-dl https://www.youtube.com/watch?v&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;xxxxxxxx&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;不带任何参数，则默认下载画质、音质最好的视频。&lt;/p&gt;
+&lt;h3 id=&#34;查看可选的音视频格式&#34;&gt;查看可选的音视频格式&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube-dl -F https://www.youtube.com/watch?v&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;xxxxxxxx&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;呈现信息：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;249&lt;/span&gt;          webm       audio only tiny   53k , opus @ 50k &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;48000Hz&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, 1.09MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;251&lt;/span&gt;          webm       audio only tiny  127k , opus @160k &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;48000Hz&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, 2.48MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;140&lt;/span&gt;          m4a        audio only tiny  130k , m4a_dash container, mp4a.40.2@128k &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;44100Hz&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, 2.99MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;278&lt;/span&gt;          webm       256x144    144p   97k , webm container, vp9, 30fps, video only, 2.17MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;160&lt;/span&gt;          mp4        256x144    144p  110k , avc1.4d400c, 30fps, video only, 1.58MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;133&lt;/span&gt;          mp4        426x240    240p  205k , avc1.4d4015, 30fps, video only, 2.56MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;243&lt;/span&gt;          webm       640x360    360p  409k , vp9, 30fps, video only, 5.54MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;134&lt;/span&gt;          mp4        640x360    360p  427k , avc1.4d401e, 30fps, video only, 4.69MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;244&lt;/span&gt;          webm       854x480    480p  757k , vp9, 30fps, video only, 8.39MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;136&lt;/span&gt;          mp4        1280x720   720p 1142k , avc1.4d401f, 30fps, video only, 12.33MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;247&lt;/span&gt;          webm       1280x720   720p 1417k , vp9, 30fps, video only, 14.22MiB
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;18&lt;/span&gt;           mp4        640x360    360p  529k , avc1.42001E, mp4a.40.2@ 96k &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;44100Hz&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;, 12.22MiB &lt;span style=&#34;color:#f92672&#34;&gt;(&lt;/span&gt;best&lt;span style=&#34;color:#f92672&#34;&gt;)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;自行组合方案&#34;&gt;自行组合方案&lt;/h3&gt;
+&lt;p&gt;从返回的列出的信息中，挑选你想要视频，以及音频组合方案，填写对应序号即可，例如：&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;youtube-dl -f 136+140 https://www.youtube.com/watch?v=xxxxxxxx
+youtube-dl -f 136 https://www.youtube.com/watch?v=xxxxxxxx&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;命令格式&#34;&gt;命令格式&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;youtube-dl [url]（直接下载，最优视频）&lt;/li&gt;
+&lt;li&gt;youtube-dl -F [url]（列出所有音频和视频）&lt;/li&gt;
+&lt;li&gt;youtube-dl [playlist_url]（下载视频列表）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;下载并合并音视频&#34;&gt;下载并合并音视频&lt;/h2&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube-dl -f 序号+bestaudio --merge-output-format mp4 &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;url&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 注意：合并为 mp4 时，音频如果是 webm 格式则会出现错误，因此可以指定格式：&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube-dl -f &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;bestvideo+bestaudio[ext=m4a]&amp;#39;&lt;/span&gt; --merge-output-format mp4 &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;url&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;下载音乐&#34;&gt;下载音乐&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube-dl -x --audio-format mp3 &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;url&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 指定下载 mp3 格式的音频（-x 为提取音频；--audio-format 指定格式：best（预设），aac，flac，mp3，m4a，opus（最高音质）等）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube-dl -x --audio-format mp3 --embed-thumbnail --add-metadata &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;url&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 嵌入缩略图并写入说明（--embed-thumbnail：嵌入影片缩图（仅限 mp3 和 m4a/mp4）；--add-metadata：加入影片资讯到 ID3 标签里）&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube-dl --extract-audio --audio-format mp3 -o &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;%(title)s.%(ext)s&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;playlist_url&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 下载播放列表，并指定用视频标题题和扩展名&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube-dl -x --audio-format mp3 --embed-thumbnail --add-metadata --playlist-items 1-3 &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;playlist_url&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 下载该播放列表的 1~3 首歌，并存成 MP3&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h3 id=&#34;设定代理&#34;&gt;设定代理&lt;/h3&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube-dl --proxy 127.0.0.1:1080 &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;url&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 指定 HTTP 代理下载，IP 开头用 socks5:// 可以指定 Socks5 代理&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;h2 id=&#34;字幕相关&#34;&gt;字幕相关&lt;/h2&gt;
+&lt;p&gt;以下命令能够实现，将视频带有的字幕一起下载下来&lt;/p&gt;
+&lt;div class=&#34;highlight-container&#34;&gt;
+
+  &lt;button class=&#34;copy-code-btn outline&#34;&gt;Copy&lt;/button&gt;
+
+  
+  &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube-dl --list-subs &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;url&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 列出所有字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube-dl --write-sub --sub-format &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ass/srt/best&amp;#34;&lt;/span&gt; --convert-subs &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;srt&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;url&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 选项&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;—write-sub &lt;span style=&#34;color:#75715e&#34;&gt;# 写入字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--sub-format &lt;span style=&#34;color:#75715e&#34;&gt;# 指定字幕格式，按顺序选，不存在则选下一个&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--convert-subs &lt;span style=&#34;color:#75715e&#34;&gt;# 转换字幕，格式有限制，通用为 srt ，若不转，某些字幕可能是 .vtt 的，如果有 ass 字幕可下载，则无须加此项&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--list-subs &lt;span style=&#34;color:#75715e&#34;&gt;# 列出所有字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--embed-sub &lt;span style=&#34;color:#75715e&#34;&gt;# 将字幕合并至影片中，需搭配 --write-sub 使用&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--all-subs &lt;span style=&#34;color:#75715e&#34;&gt;# 下载所有字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;--sub-lang &lt;span style=&#34;color:#75715e&#34;&gt;# 指定字幕语言，多个语言用逗号分隔&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# 实例&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube-dl --sub-lang zh-CN,en --write-sub --embed-subs &lt;span style=&#34;color:#f92672&#34;&gt;[&lt;/span&gt;url&lt;span style=&#34;color:#f92672&#34;&gt;]&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# 下载中英字幕并写入到影片&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube-dl --write-sub --sub-format &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;ass/srt/best&amp;#34;&lt;/span&gt; --convert-subs &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;srt&amp;#34;&lt;/span&gt; url &lt;span style=&#34;color:#75715e&#34;&gt;# 一并下载字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;youtube-dl --skip-download --all-subs url &lt;span style=&#34;color:#75715e&#34;&gt;# 下载所有字幕&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;img src=&#34;https://testingcf.jsdelivr.net/gh/nanjishen/nanjishen/img/gzh-end.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;
+</description>
+      
     </item>
+    
   </channel>
 </rss>
