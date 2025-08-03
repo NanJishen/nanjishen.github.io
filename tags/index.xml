@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 极限玩家</title>
-    <link>https://nav.ttti.cc/tags/</link>
+    <link>https://ttti.cc/tags/</link>
     <description>Recent content in Tags on 极限玩家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -11,7 +11,7 @@
     <copyright>极限玩家</copyright>
     <lastBuildDate>Fri, 25 Apr 2025 13:56:03 +0800</lastBuildDate>
     
-        <atom:link href="https://nav.ttti.cc/tags/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://ttti.cc/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

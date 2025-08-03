@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>图床方法 on 极限玩家</title>
-    <link>https://nav.ttti.cc/tags/%E5%9B%BE%E5%BA%8A%E6%96%B9%E6%B3%95/</link>
+    <link>https://ttti.cc/tags/%E5%9B%BE%E5%BA%8A%E6%96%B9%E6%B3%95/</link>
     <description>Recent content in 图床方法 on 极限玩家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -11,15 +11,15 @@
     <copyright>极限玩家</copyright>
     <lastBuildDate>Fri, 12 Mar 2021 20:50:06 +0800</lastBuildDate>
     
-        <atom:link href="https://nav.ttti.cc/tags/%E5%9B%BE%E5%BA%8A%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://ttti.cc/tags/%E5%9B%BE%E5%BA%8A%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>图片防盗链解决方案</title>
-      <link>https://nav.ttti.cc/post/pic-mirror-img/</link>
+      <link>https://ttti.cc/post/pic-mirror-img/</link>
       <pubDate>Fri, 12 Mar 2021 20:50:06 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/pic-mirror-img/</guid>
+      <guid>https://ttti.cc/post/pic-mirror-img/</guid>
       
         <description>&lt;p&gt;很多时候，图片镜像缓存服务有不错的用途：&lt;/p&gt;
 &lt;ul&gt;

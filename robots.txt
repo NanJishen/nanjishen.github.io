@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://nav.ttti.cc/sitemap.xml
+Sitemap: https://ttti.cc/sitemap.xml

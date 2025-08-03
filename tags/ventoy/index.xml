@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ventoy on 极限玩家</title>
-    <link>https://nav.ttti.cc/tags/ventoy/</link>
+    <link>https://ttti.cc/tags/ventoy/</link>
     <description>Recent content in Ventoy on 极限玩家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -11,15 +11,15 @@
     <copyright>极限玩家</copyright>
     <lastBuildDate>Fri, 02 Apr 2021 21:49:08 +0800</lastBuildDate>
     
-        <atom:link href="https://nav.ttti.cc/tags/ventoy/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://ttti.cc/tags/ventoy/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>新一代多系统启动U盘 Ventoy 使用指南</title>
-      <link>https://nav.ttti.cc/post/ventoy/</link>
+      <link>https://ttti.cc/post/ventoy/</link>
       <pubDate>Fri, 02 Apr 2021 21:49:08 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/ventoy/</guid>
+      <guid>https://ttti.cc/post/ventoy/</guid>
       
         <description>&lt;p&gt;如果你还在用过去的，制作安装系统U盘的方式，那你需要准备N个U盘，并且每次更新镜像都要解压或者用写盘软件重新写盘。同时在今天，可能需要多个系统的安装盘。&lt;/p&gt;
 &lt;p&gt;今天我介绍的 &lt;strong&gt;Ventoy&lt;/strong&gt; 就是为了制作多系统安装U盘的一个非常方便的开源工具。使用它便可以在一个U盘上承载多个系统镜像，并且更新起来非常方便。&lt;/p&gt;

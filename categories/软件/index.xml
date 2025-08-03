@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>软件 on 极限玩家</title>
-    <link>https://nav.ttti.cc/categories/%E8%BD%AF%E4%BB%B6/</link>
+    <link>https://ttti.cc/categories/%E8%BD%AF%E4%BB%B6/</link>
     <description>Recent content in 软件 on 极限玩家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -11,15 +11,15 @@
     <copyright>极限玩家</copyright>
     <lastBuildDate>Fri, 25 Apr 2025 13:56:03 +0800</lastBuildDate>
     
-        <atom:link href="https://nav.ttti.cc/categories/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://ttti.cc/categories/%E8%BD%AF%E4%BB%B6/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>yt-dlp 下载视频使用指南</title>
-      <link>https://nav.ttti.cc/post/ytdlp/</link>
+      <link>https://ttti.cc/post/ytdlp/</link>
       <pubDate>Fri, 25 Apr 2025 13:56:03 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/ytdlp/</guid>
+      <guid>https://ttti.cc/post/ytdlp/</guid>
       
         <description>&lt;p&gt;&lt;a href=&#34;https://github.com/yt-dlp/yt-dlp&#34;&gt;yt-dlp&lt;/a&gt; 是一个强大的命令行视频下载工具，支持数千个网站的音视频及字幕下载。&lt;/p&gt;
 &lt;h2 id=&#34;使用&#34;&gt;使用&lt;/h2&gt;
@@ -171,10 +171,10 @@
     
     <item>
       <title>威联通通过 Docker 安装 Jellyfin</title>
-      <link>https://nav.ttti.cc/post/qnap-jellyfin-nyanmisaka/</link>
+      <link>https://ttti.cc/post/qnap-jellyfin-nyanmisaka/</link>
       <pubDate>Sat, 08 Jan 2022 00:54:10 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/qnap-jellyfin-nyanmisaka/</guid>
+      <guid>https://ttti.cc/post/qnap-jellyfin-nyanmisaka/</guid>
       
         <description>&lt;p&gt;威联通通过 Docker 安装 Jellyfin 是很简单的。但是支持硬件解码对小白来说略难。不过其实采用  nyanmisaka 大神的 Docker 镜像，是默认支持硬件转码的。有效的减少了折腾。下面就来说说如何安装。&lt;/p&gt;
 &lt;p&gt;登陆威联通后，启动 ContainerStation（如果你没有安装可以先去 APP Center 中安装它），然后，点击创建 - 搜索 Jellyfin - 选择结果中的 nyanmisaka/Jellyfin 如图所示：&lt;/p&gt;
@@ -199,10 +199,10 @@
     
     <item>
       <title>Logseq 使用方法简单总结</title>
-      <link>https://nav.ttti.cc/post/logseq/</link>
+      <link>https://ttti.cc/post/logseq/</link>
       <pubDate>Sat, 08 Jan 2022 00:50:20 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/logseq/</guid>
+      <guid>https://ttti.cc/post/logseq/</guid>
       
         <description>&lt;h2 id=&#34;journals&#34;&gt;Journals&lt;/h2&gt;
 &lt;p&gt;左侧面板的  Journals 为日记分类。如果你不需要可以在设置中关闭。它会每天自动生成对应日期的页面。你可以将每天所想所遇随手记录，聚沙成塔。&lt;/p&gt;
@@ -386,10 +386,10 @@
     
     <item>
       <title>威联通通过 Docker 安装 Transmission</title>
-      <link>https://nav.ttti.cc/post/qnap-docker-transmission/</link>
+      <link>https://ttti.cc/post/qnap-docker-transmission/</link>
       <pubDate>Fri, 07 Jan 2022 17:17:13 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/qnap-docker-transmission/</guid>
+      <guid>https://ttti.cc/post/qnap-docker-transmission/</guid>
       
         <description>&lt;p&gt;Transmission 是著名又老牌的 PT/BT 下载软件。这里将说明使用威联通的 Docker 安装 Transmission（ Docker 真的香 ）。&lt;/p&gt;
 &lt;p&gt;首先，登陆威联通后启动 ContainerStation - 创建 - 搜索 Transmission - 选择结果中的第二进行安装，如图所示：&lt;/p&gt;
@@ -430,10 +430,10 @@ bash install-tr-control-cn.sh
     
     <item>
       <title>威联通 QNAP 通过 Docker 部署 Aria2 下载神器</title>
-      <link>https://nav.ttti.cc/post/qnap-docker-aria/</link>
+      <link>https://ttti.cc/post/qnap-docker-aria/</link>
       <pubDate>Wed, 22 Dec 2021 01:01:34 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/qnap-docker-aria/</guid>
+      <guid>https://ttti.cc/post/qnap-docker-aria/</guid>
       
         <description>&lt;p&gt;这是我的威联通 NAS 第一次使用 Docker 容器并安装镜像。我选择了一个我最常用的，也是所有达人都会使用的下载神器：Aria2。说它是神器，是因为它极为小巧并且强大。&lt;/p&gt;
 &lt;p&gt;威联通的 Docker 镜像也是走 DockerHub，所以一切都是通用的（ Linux Windows MacOS ）。因此你在 DockerHub 上只要在 Tag 中确认了它是支持 X86 架构（amd64）的便是都可以使用。&lt;/p&gt;
@@ -460,10 +460,10 @@ bash install-tr-control-cn.sh
     
     <item>
       <title>威联通 QNAP 挂载阿里云盘简单明快教程</title>
-      <link>https://nav.ttti.cc/post/qnap-aliyunpan/</link>
+      <link>https://ttti.cc/post/qnap-aliyunpan/</link>
       <pubDate>Mon, 13 Dec 2021 17:46:13 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/qnap-aliyunpan/</guid>
+      <guid>https://ttti.cc/post/qnap-aliyunpan/</guid>
       
         <description>&lt;p&gt;双11期间购入了威联通的NAS，而在今天挂载上了阿里云盘，以便进行HBS3同步作业的云备份，借此也顺便写个简单明快的教程，废话不多说，让我们开始。&lt;/p&gt;
 &lt;h3 id=&#34;开启-nas-的-web-服务&#34;&gt;开启 NAS 的 Web 服务&lt;/h3&gt;
@@ -495,10 +495,10 @@ bash install-tr-control-cn.sh
     
     <item>
       <title>新一代多系统启动U盘 Ventoy 使用指南</title>
-      <link>https://nav.ttti.cc/post/ventoy/</link>
+      <link>https://ttti.cc/post/ventoy/</link>
       <pubDate>Fri, 02 Apr 2021 21:49:08 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/ventoy/</guid>
+      <guid>https://ttti.cc/post/ventoy/</guid>
       
         <description>&lt;p&gt;如果你还在用过去的，制作安装系统U盘的方式，那你需要准备N个U盘，并且每次更新镜像都要解压或者用写盘软件重新写盘。同时在今天，可能需要多个系统的安装盘。&lt;/p&gt;
 &lt;p&gt;今天我介绍的 &lt;strong&gt;Ventoy&lt;/strong&gt; 就是为了制作多系统安装U盘的一个非常方便的开源工具。使用它便可以在一个U盘上承载多个系统镜像，并且更新起来非常方便。&lt;/p&gt;
@@ -582,10 +582,10 @@ sudo sh VentoyWeb.sh # 执行脚本&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>更换到更现代的双向链笔记软件 Obsidian</title>
-      <link>https://nav.ttti.cc/post/obsidianforfirst/</link>
+      <link>https://ttti.cc/post/obsidianforfirst/</link>
       <pubDate>Sun, 21 Mar 2021 15:21:50 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/obsidianforfirst/</guid>
+      <guid>https://ttti.cc/post/obsidianforfirst/</guid>
       
         <description>&lt;p&gt;先说一下个人使用笔记本软件的经过：从 OneNote →  Joplin → Obsidian（现在开始），我一直认为，笔记软件是组织和管理知识的最好方式，尤其对于现代人来说，电子笔记是必不可少的（纸张笔记不够效率）。因为现代是一个知识内容的工作时代。人脑是绝对不够用的。&lt;/p&gt;
 &lt;p&gt;尽管在今天笔记软件有很多，但是对更高效率的追求和渴望依然存在。说到新一代的笔记软件，那就要提到 Roam Research 了，其订阅价格高达165美元/年。当时官方在推特上表示：&lt;/p&gt;
@@ -638,10 +638,10 @@ sudo sh VentoyWeb.sh # 执行脚本&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>解锁家庭局域网内手机和电视观看电脑里的影片</title>
-      <link>https://nav.ttti.cc/post/lanvideoplay/</link>
+      <link>https://ttti.cc/post/lanvideoplay/</link>
       <pubDate>Sun, 21 Mar 2021 15:15:36 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/lanvideoplay/</guid>
+      <guid>https://ttti.cc/post/lanvideoplay/</guid>
       
         <description>&lt;p&gt;我发现很多新手小伙伴，甚至有些用电脑很长一段时间的老手，仍然不会将电脑里的影片共享给家里的安卓电视/盒子或者手机上播放，于是就有了这篇内容的极简教程。&lt;/p&gt;
 &lt;p&gt;如果你和我一样，电脑常开，那么电脑本身就相当于一台承载媒体及文件内容的小型服务器。因此，家庭里的任何设备都可以轻松地访问这台电脑上的文件。跟我来操作：&lt;/p&gt;
@@ -677,10 +677,10 @@ sudo sh VentoyWeb.sh # 执行脚本&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>5款极致小巧的扩展让你的浏览器更高效</title>
-      <link>https://nav.ttti.cc/post/ji-xiao-kuozan-xiaolv/</link>
+      <link>https://ttti.cc/post/ji-xiao-kuozan-xiaolv/</link>
       <pubDate>Thu, 18 Mar 2021 23:19:54 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/ji-xiao-kuozan-xiaolv/</guid>
+      <guid>https://ttti.cc/post/ji-xiao-kuozan-xiaolv/</guid>
       
         <description>&lt;p&gt;作为极限玩家，对软件的轻巧也有着极致追求，因为轻量化是高效率的原因之一。很多时候，我们只想要完成我们要完成的事情，或者说让某件事更便捷的做到。这个时候也并不需要什么庞大的软件。所以，浏览器的扩展就是很好的存在。&lt;/p&gt;
 &lt;p&gt;很多浏览器扩展只有几 MB，甚至是几 KB，占用资源很低的同时，又方便调用，已经成为了我们日常中不可或缺的东东了，所以今天推荐5款极致轻巧的浏览器扩展。&lt;/p&gt;
@@ -711,10 +711,10 @@ sudo sh VentoyWeb.sh # 执行脚本&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>开源免费音视频处理神器 FFmpeg</title>
-      <link>https://nav.ttti.cc/post/ffmpeg/</link>
+      <link>https://ttti.cc/post/ffmpeg/</link>
       <pubDate>Sat, 26 Sep 2020 16:04:00 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/ffmpeg/</guid>
+      <guid>https://ttti.cc/post/ffmpeg/</guid>
       
         <description>&lt;p&gt;&lt;strong&gt;FFmpeg 是一款免费开源（LGPL、GPL 许可证），且领先的全能型多媒体处理软件&lt;/strong&gt;，可以处理视频、音乐及图片，它采用了非常先进的音频/视频编解码库 libavcodec，能够进行采集、编码、解码、转码、压缩、合并、流化、音视频分离等操作。&lt;/p&gt;
 &lt;p&gt;不过呢，对于一般电脑用户来说很少会用，因为它是基于命令行的，但是很多软件都使用了它的开源框架，比如：QQ 影音、KMPlayer、暴风影音，以及早期的 Potplayer。&lt;/p&gt;
@@ -1157,10 +1157,10 @@ sudo sh VentoyWeb.sh # 执行脚本&lt;/code&gt;&lt;/pre&gt;
     
     <item>
       <title>youtube-dl 下载视频使用指南</title>
-      <link>https://nav.ttti.cc/post/youtubedl/</link>
+      <link>https://ttti.cc/post/youtubedl/</link>
       <pubDate>Wed, 05 Aug 2020 20:56:03 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/youtubedl/</guid>
+      <guid>https://ttti.cc/post/youtubedl/</guid>
       
         <description>&lt;p&gt;youtube-dl 需要安装 Python 环境，并需配置好系统变量（安装时勾选 Add Python to PATH）&lt;/p&gt;
 &lt;h3 id=&#34;安装-youtube-dl&#34;&gt;安装 youtube-dl&lt;/h3&gt;
@@ -1284,10 +1284,10 @@ youtube-dl -f 136 https://www.youtube.com/watch?v=xxxxxxxx&lt;/code&gt;&lt;/pre&
     
     <item>
       <title>微软推出文件恢复工具：Windows File Recovery</title>
-      <link>https://nav.ttti.cc/post/wfr/</link>
+      <link>https://ttti.cc/post/wfr/</link>
       <pubDate>Tue, 30 Jun 2020 10:11:07 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/wfr/</guid>
+      <guid>https://ttti.cc/post/wfr/</guid>
       
         <description>&lt;p&gt;微软推出了免费的文件恢复工具：Windows File Recovery。你可以在 Microsoft Store 中下载（即 Win10 商店中下载）。&lt;/p&gt;
 &lt;p&gt;同时，&lt;strong&gt;该工具仅支持 Win10 version 19041.0 及以上版本&lt;/strong&gt;，也就是你要升级到最新版本 Win10 2004，才能使用它！&lt;/p&gt;

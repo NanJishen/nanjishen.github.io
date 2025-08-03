@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Logseq on 极限玩家</title>
-    <link>https://nav.ttti.cc/tags/logseq/</link>
+    <link>https://ttti.cc/tags/logseq/</link>
     <description>Recent content in Logseq on 极限玩家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -11,15 +11,15 @@
     <copyright>极限玩家</copyright>
     <lastBuildDate>Sat, 08 Jan 2022 00:50:20 +0800</lastBuildDate>
     
-        <atom:link href="https://nav.ttti.cc/tags/logseq/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://ttti.cc/tags/logseq/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Logseq 使用方法简单总结</title>
-      <link>https://nav.ttti.cc/post/logseq/</link>
+      <link>https://ttti.cc/post/logseq/</link>
       <pubDate>Sat, 08 Jan 2022 00:50:20 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/logseq/</guid>
+      <guid>https://ttti.cc/post/logseq/</guid>
       
         <description>&lt;h2 id=&#34;journals&#34;&gt;Journals&lt;/h2&gt;
 &lt;p&gt;左侧面板的  Journals 为日记分类。如果你不需要可以在设置中关闭。它会每天自动生成对应日期的页面。你可以将每天所想所遇随手记录，聚沙成塔。&lt;/p&gt;

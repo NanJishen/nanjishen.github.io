@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Google on 极限玩家</title>
-    <link>https://nav.ttti.cc/tags/google/</link>
+    <link>https://ttti.cc/tags/google/</link>
     <description>Recent content in Google on 极限玩家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -11,15 +11,15 @@
     <copyright>极限玩家</copyright>
     <lastBuildDate>Wed, 05 Oct 2022 00:37:56 +0800</lastBuildDate>
     
-        <atom:link href="https://nav.ttti.cc/tags/google/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://ttti.cc/tags/google/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Google谷歌搜索方法和技巧</title>
-      <link>https://nav.ttti.cc/post/googlesearch/</link>
+      <link>https://ttti.cc/post/googlesearch/</link>
       <pubDate>Wed, 05 Oct 2022 00:37:56 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/googlesearch/</guid>
+      <guid>https://ttti.cc/post/googlesearch/</guid>
       
         <description>&lt;h2 id=&#34;基础搜索&#34;&gt;基础搜索&lt;/h2&gt;
 &lt;p&gt;不管你要搜索什么，都应先用简单的字与词进行搜索，例如 &lt;code&gt;最近的停车场在哪里&lt;/code&gt; 。你随时可以根据需要添加一些描述性字词。如果你要查找特定地点的某个场所或商品，可添加该地点名称。例如：&lt;code&gt;广州早茶&lt;/code&gt;。不想打字？可以查看&lt;a href=&#34;https://support.google.com/websearch/answer/2940021&#34;&gt;如何使用语音搜索功能&lt;/a&gt;。&lt;/p&gt;

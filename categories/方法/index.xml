@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>方法 on 极限玩家</title>
-    <link>https://nav.ttti.cc/categories/%E6%96%B9%E6%B3%95/</link>
+    <link>https://ttti.cc/categories/%E6%96%B9%E6%B3%95/</link>
     <description>Recent content in 方法 on 极限玩家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -11,15 +11,15 @@
     <copyright>极限玩家</copyright>
     <lastBuildDate>Wed, 05 Oct 2022 00:37:56 +0800</lastBuildDate>
     
-        <atom:link href="https://nav.ttti.cc/categories/%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://ttti.cc/categories/%E6%96%B9%E6%B3%95/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Google谷歌搜索方法和技巧</title>
-      <link>https://nav.ttti.cc/post/googlesearch/</link>
+      <link>https://ttti.cc/post/googlesearch/</link>
       <pubDate>Wed, 05 Oct 2022 00:37:56 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/googlesearch/</guid>
+      <guid>https://ttti.cc/post/googlesearch/</guid>
       
         <description>&lt;h2 id=&#34;基础搜索&#34;&gt;基础搜索&lt;/h2&gt;
 &lt;p&gt;不管你要搜索什么，都应先用简单的字与词进行搜索，例如 &lt;code&gt;最近的停车场在哪里&lt;/code&gt; 。你随时可以根据需要添加一些描述性字词。如果你要查找特定地点的某个场所或商品，可添加该地点名称。例如：&lt;code&gt;广州早茶&lt;/code&gt;。不想打字？可以查看&lt;a href=&#34;https://support.google.com/websearch/answer/2940021&#34;&gt;如何使用语音搜索功能&lt;/a&gt;。&lt;/p&gt;
@@ -238,10 +238,10 @@ Google 会将您在搜索时上传的图片存储 7 天。这些图片不会被�
     
     <item>
       <title>如何更好的提问</title>
-      <link>https://nav.ttti.cc/post/askquestion-/</link>
+      <link>https://ttti.cc/post/askquestion-/</link>
       <pubDate>Wed, 05 Jan 2022 00:37:56 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/askquestion-/</guid>
+      <guid>https://ttti.cc/post/askquestion-/</guid>
       
         <description>&lt;h2 id=&#34;个人总结&#34;&gt;个人总结&lt;/h2&gt;
 &lt;ul&gt;
@@ -437,7 +437,7 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 第三，在精炼你的 bug 报告的过程中，你很可能就自己找到了解决方法或权宜之计。&lt;/p&gt;
 &lt;h3 id=&#34;别动辄声称找到-bug&#34;&gt;别动辄声称找到 Bug&lt;/h3&gt;
 &lt;p&gt;当你在使用软件中遇到问题，除非你非常、&lt;strong&gt;非常&lt;/strong&gt;的有根据，不要动辄声称找到了 Bug。提示：除非你能提供解决问题的源代码补丁，或者提供回归测试来表明前一版本中行为不正确，否则你都多半不够完全确信。这同样适用在网页和文件，如果你（声称）发现了文件的&lt;code&gt;Bug&lt;/code&gt;，你应该能提供相应位置的修正或替代文件。&lt;/p&gt;
-&lt;p&gt;请记得，还有许多其它使用者没遇到你发现的问题，否则你在阅读文件或搜索网页时就应该发现了（你在抱怨前&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#%e5%9c%a8%e6%8f%90%e9%97%ae%e4%b9%8b%e5%89%8d&#34;&gt;已经做了这些，是吧&lt;/a&gt;？）。这也意味着很有可能是你弄错了而不是软件本身有问题。&lt;/p&gt;
+&lt;p&gt;请记得，还有许多其它使用者没遇到你发现的问题，否则你在阅读文件或搜索网页时就应该发现了（你在抱怨前&lt;a href=&#34;https://ttti.cc/post/askquestion-/#%e5%9c%a8%e6%8f%90%e9%97%ae%e4%b9%8b%e5%89%8d&#34;&gt;已经做了这些，是吧&lt;/a&gt;？）。这也意味着很有可能是你弄错了而不是软件本身有问题。&lt;/p&gt;
 &lt;p&gt;编写软件的人总是非常辛苦地使它尽可能完美。如果你声称找到了 Bug，也就是在质疑他们的能力，即使你是对的，也有可能会冒犯到其中某部分人。当你在标题中嚷嚷着有&lt;code&gt;Bug&lt;/code&gt;时，这尤其严重。&lt;/p&gt;
 &lt;p&gt;提问时，即使你私下非常确信已经发现一个真正的 Bug，最好写得像是&lt;strong&gt;你&lt;/strong&gt;做错了什么。如果真的有 Bug，你会在回复中看到这点。这样做的话，如果真有 Bug，维护者就会向你道歉，这总比你惹恼别人然后欠别人一个道歉要好一点。&lt;/p&gt;
 &lt;h3 id=&#34;低声下气不能代替你的功课&#34;&gt;低声下气不能代替你的功课&lt;/h3&gt;
@@ -483,7 +483,7 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p&gt;所以，界定一下你的问题，使专家花在辨识你的问题和回答所需要付出的时间减到最少，这技巧对你有用答案相当有帮助 —— 但这技巧通常和简化问题有所区别。因此，问&lt;code&gt;我想更好的理解 X，可否指点一下哪有好一点说明？&lt;/code&gt;通常比问&lt;code&gt;你能解释一下 X 吗？&lt;/code&gt;更好。如果你的代码不能运作，通常请别人看看哪里有问题，比要求别人替你改正要明智得多。&lt;/p&gt;
 &lt;h3 id=&#34;询问有关代码的问题时&#34;&gt;询问有关代码的问题时&lt;/h3&gt;
 &lt;p&gt;别要求他人帮你调试有问题的代码，不提示一下应该从何入手。张贴几百行的代码，然后说一声：&lt;code&gt;它不能工作&lt;/code&gt;会让你完全被忽略。只贴几十行代码，然后说一句：&lt;code&gt;在第七行以后，我期待它显示 &amp;lt;x&amp;gt;，但实际出现的是 &amp;lt;y&amp;gt;&lt;/code&gt;比较有可能让你得到回应。&lt;/p&gt;
-&lt;p&gt;最有效描述程序问题的方法是提供最精简的 Bug 展示测试用例（bug-demonstrating test case）。什么是最精简的测试用例？那是问题的缩影；一小个程序片段能&lt;strong&gt;刚好&lt;/strong&gt;展示出程序的异常行为，而不包含其他令人分散注意力的内容。怎么制作最精简的测试用例？如果你知道哪一行或哪一段代码会造成异常的行为，复制下来并加入足够重现这个状况的代码（例如，足以让这段代码能被编译/直译/被应用程序处理）。如果你无法将问题缩减到一个特定区块，就复制一份代码并移除不影响产生问题行为的部分。总之，测试用例越小越好（查看&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#%e8%af%9d%e4%b8%8d%e5%9c%a8%e5%a4%9a%e8%80%8c%e5%9c%a8%e7%b2%be&#34;&gt;话不在多而在精&lt;/a&gt;一节）。&lt;/p&gt;
+&lt;p&gt;最有效描述程序问题的方法是提供最精简的 Bug 展示测试用例（bug-demonstrating test case）。什么是最精简的测试用例？那是问题的缩影；一小个程序片段能&lt;strong&gt;刚好&lt;/strong&gt;展示出程序的异常行为，而不包含其他令人分散注意力的内容。怎么制作最精简的测试用例？如果你知道哪一行或哪一段代码会造成异常的行为，复制下来并加入足够重现这个状况的代码（例如，足以让这段代码能被编译/直译/被应用程序处理）。如果你无法将问题缩减到一个特定区块，就复制一份代码并移除不影响产生问题行为的部分。总之，测试用例越小越好（查看&lt;a href=&#34;https://ttti.cc/post/askquestion-/#%e8%af%9d%e4%b8%8d%e5%9c%a8%e5%a4%9a%e8%80%8c%e5%9c%a8%e7%b2%be&#34;&gt;话不在多而在精&lt;/a&gt;一节）。&lt;/p&gt;
 &lt;p&gt;一般而言，要得到一段相当精简的测试用例并不太容易，但永远先尝试这样做的是种好习惯。这种方式可以帮助你了解如何自行解决这个问题 —— 而且即使你的尝试不成功，黑客们也会看到你在尝试取得答案的过程中付出了努力，这可以让他们更愿意与你合作。&lt;/p&gt;
 &lt;p&gt;如果你只是想让别人帮忙审查（Review）一下代码，在信的开头就要说出来，并且一定要提到你认为哪一部分特别需要关注以及为什么。&lt;/p&gt;
 &lt;h3 id=&#34;别把自己家庭作业的问题贴上来&#34;&gt;别把自己家庭作业的问题贴上来&lt;/h3&gt;
@@ -547,15 +547,15 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p&gt;也别让自己卷入口水战，最好不要理睬大多数的口水战 &amp;ndash; 当然，这是在你检验它们只是口水战，并且未指出你有搞砸的地方，同时也没有巧妙地将问题真正的答案藏于其后（这也是有可能的）。&lt;/p&gt;
 &lt;h2 id=&#34;不该问的问题&#34;&gt;不该问的问题&lt;/h2&gt;
 &lt;p&gt;以下是几个经典蠢问题，以及黑客没回答时心中所想的：&lt;/p&gt;
-&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q1&#34;&gt;我能在哪找到 X 程序或 X 资源？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q2&#34;&gt;我怎样用 X 做 Y？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q3&#34;&gt;如何设定我的 shell 提示？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q4&#34;&gt;我可以用 Bass-o-matic 文件转换工具将 AcmeCorp 档案转换为 TeX 格式吗？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q5&#34;&gt;我的程序/设定/SQL 语句没有用&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q6&#34;&gt;我的 Windows 电脑有问题，你能帮我吗？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q7&#34;&gt;我的程序不会动了，我认为系统工具 X 有问题&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q8&#34;&gt;我在安装 Linux（或者 X ）时有问题，你能帮我吗？&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;问题：&lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#q9&#34;&gt;我怎么才能破解 root 帐号/窃取 OP 特权/读别人的邮件呢？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://ttti.cc/post/askquestion-/#q1&#34;&gt;我能在哪找到 X 程序或 X 资源？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://ttti.cc/post/askquestion-/#q2&#34;&gt;我怎样用 X 做 Y？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://ttti.cc/post/askquestion-/#q3&#34;&gt;如何设定我的 shell 提示？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://ttti.cc/post/askquestion-/#q4&#34;&gt;我可以用 Bass-o-matic 文件转换工具将 AcmeCorp 档案转换为 TeX 格式吗？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://ttti.cc/post/askquestion-/#q5&#34;&gt;我的程序/设定/SQL 语句没有用&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://ttti.cc/post/askquestion-/#q6&#34;&gt;我的 Windows 电脑有问题，你能帮我吗？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://ttti.cc/post/askquestion-/#q7&#34;&gt;我的程序不会动了，我认为系统工具 X 有问题&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://ttti.cc/post/askquestion-/#q8&#34;&gt;我在安装 Linux（或者 X ）时有问题，你能帮我吗？&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;问题：&lt;a href=&#34;https://ttti.cc/post/askquestion-/#q9&#34;&gt;我怎么才能破解 root 帐号/窃取 OP 特权/读别人的邮件呢？&lt;/a&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;blockquote&gt;
 &lt;p&gt;问题：我能在哪找到 X 程序或 X 资源？&lt;/p&gt;&lt;/blockquote&gt;
@@ -565,7 +565,7 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p&gt;回答：如果你想解决的是 Y ，提问时别给出可能并不恰当的方法。这种问题说明提问者不但对 X 完全无知，也对 Y 要解决的问题糊涂，还被特定形势禁锢了思维。最好忽略这种人，等他们把问题搞清楚了再说。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;问题：如何设定我的 shell 提示？？&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;回答：如果你有足够的智慧提这个问题，你也该有足够的智慧去 &lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#RTFM&#34;&gt;RTFM&lt;/a&gt;，然后自己去找出来。&lt;/p&gt;
+&lt;p&gt;回答：如果你有足够的智慧提这个问题，你也该有足够的智慧去 &lt;a href=&#34;https://ttti.cc/post/askquestion-/#RTFM&#34;&gt;RTFM&lt;/a&gt;，然后自己去找出来。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;问题：我可以用 Bass-o-matic 文件转换工具将 AcmeCorp 档案转换为 TeX 格式吗？&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;回答：试试看就知道了。如果你试过，你既知道了答案，就不用浪费我的时间了。&lt;/p&gt;
@@ -596,7 +596,7 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
 &lt;p&gt;&lt;strong&gt;蠢问题&lt;/strong&gt;：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我可以在哪儿找到关于 Foonly Flurbamatic 的资料？&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;这种问法无非想得到 &lt;a href=&#34;https://nav.ttti.cc/post/askquestion-/#RTFM&#34;&gt;STFW&lt;/a&gt; 这样的回答。&lt;/p&gt;
+&lt;p&gt;这种问法无非想得到 &lt;a href=&#34;https://ttti.cc/post/askquestion-/#RTFM&#34;&gt;STFW&lt;/a&gt; 这样的回答。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;聪明问题&lt;/strong&gt;：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;我用 Google 搜索过 &amp;ldquo;Foonly Flurbamatic 2600&amp;rdquo;，但是没找到有用的结果。谁知道上哪儿去找对这种设备编程的资料？&lt;/p&gt;&lt;/blockquote&gt;
@@ -651,10 +651,10 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
     
     <item>
       <title>给Win10右键菜单加上校验文件功能</title>
-      <link>https://nav.ttti.cc/post/jiao-yan-wen-jian/</link>
+      <link>https://ttti.cc/post/jiao-yan-wen-jian/</link>
       <pubDate>Sun, 14 Mar 2021 16:50:37 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/jiao-yan-wen-jian/</guid>
+      <guid>https://ttti.cc/post/jiao-yan-wen-jian/</guid>
       
         <description>&lt;p&gt;有时候，我们需要校验文件的哈希值，以确保该文件是否有损坏，或者被篡改。比如 Win10 或 Ubuntu 系统的安装镜像。若哈希值错误，则表示不适合重装系统，否则重装失败的话，原来的系统也进不去了。&lt;/p&gt;
 &lt;p&gt;哈希值就好像是文件的身份证号码，基本是无法伪造的。日常中主要使用两种哈希值校验码：&lt;strong&gt;MD5&lt;/strong&gt;和&lt;strong&gt;SHA1&lt;/strong&gt;。&lt;/p&gt;
@@ -727,10 +727,10 @@ I&amp;rsquo;ll be glad to translate responses, if you only use one or the other.
     
     <item>
       <title>图片防盗链解决方案</title>
-      <link>https://nav.ttti.cc/post/pic-mirror-img/</link>
+      <link>https://ttti.cc/post/pic-mirror-img/</link>
       <pubDate>Fri, 12 Mar 2021 20:50:06 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/pic-mirror-img/</guid>
+      <guid>https://ttti.cc/post/pic-mirror-img/</guid>
       
         <description>&lt;p&gt;很多时候，图片镜像缓存服务有不错的用途：&lt;/p&gt;
 &lt;ul&gt;
@@ -786,10 +786,10 @@ https://pic1.xuehuaimg.com/proxy/i.imgur.com/hWghm6oh.jpg&lt;/code&gt;&lt;/pre&g
     
     <item>
       <title>Youtube 详细统计信息测速指南</title>
-      <link>https://nav.ttti.cc/post/youtubecouts/</link>
+      <link>https://ttti.cc/post/youtubecouts/</link>
       <pubDate>Thu, 04 Mar 2021 14:45:18 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/youtubecouts/</guid>
+      <guid>https://ttti.cc/post/youtubecouts/</guid>
       
         <description>&lt;p&gt;对于出海上网来说，无论是自架梯子还是购买机场，都需要测试网速，虽然可以使用 Speedtest 这样的标准测速网站，但实际不如直接观看 YouTube 视频“详细统计信息”来的实用高效。&lt;/p&gt;
 &lt;p&gt;因为，需求上来说，只要能满足视频流的播放，其他的也都满足了，在观看 YouTube 时，随时都可以&lt;strong&gt;右键视频 - 详细统计信息，查看“Connection Speed”项来确认当前速度。&lt;/strong&gt;&lt;/p&gt;
@@ -818,10 +818,10 @@ https://pic1.xuehuaimg.com/proxy/i.imgur.com/hWghm6oh.jpg&lt;/code&gt;&lt;/pre&g
     
     <item>
       <title>JSDelivr CDN 加速 GitHub</title>
-      <link>https://nav.ttti.cc/post/jsdelivrtogithub/</link>
+      <link>https://ttti.cc/post/jsdelivrtogithub/</link>
       <pubDate>Fri, 19 Jun 2020 16:49:13 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/jsdelivrtogithub/</guid>
+      <guid>https://ttti.cc/post/jsdelivrtogithub/</guid>
       
         <description>&lt;p&gt;jsDelivr 提供了 Web 上常用静态资源的服务，不但有全球 CDN 加速，也采用了国内的 CDN 进行加速（有备案）&lt;/p&gt;
 &lt;p&gt;jsDelivr 确保每个地区的使用者都能获得最好的连接速度，它还可以可将不同的 JavaScript 或 CSS 集合在一起使用。&lt;/p&gt;
@@ -852,10 +852,10 @@ https://pic1.xuehuaimg.com/proxy/i.imgur.com/hWghm6oh.jpg&lt;/code&gt;&lt;/pre&g
     
     <item>
       <title>读-写-问</title>
-      <link>https://nav.ttti.cc/post/search-read-ask/</link>
+      <link>https://ttti.cc/post/search-read-ask/</link>
       <pubDate>Wed, 10 Jun 2020 18:25:57 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/search-read-ask/</guid>
+      <guid>https://ttti.cc/post/search-read-ask/</guid>
       
         <description>&lt;p&gt;很多问题的解决都可以通过三连：&lt;strong&gt;Search - Read - Ask&lt;/strong&gt; ，这套连招很管用，然而大部分人都&lt;strong&gt;不习惯搜索、没耐心阅读、不会提问&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;检索在今天已经非常重要了，当你要提问题时，都应该先尝试检索问题，不能使用好检索，你就不能相对精确的定位问题，还会造成时间上的浪费（海里信息的关键就是检索）。&lt;/p&gt;
@@ -869,10 +869,10 @@ https://pic1.xuehuaimg.com/proxy/i.imgur.com/hWghm6oh.jpg&lt;/code&gt;&lt;/pre&g
     
     <item>
       <title>动图演示从官方下载并制作Win10启动U盘</title>
-      <link>https://nav.ttti.cc/post/win10-setup/</link>
+      <link>https://ttti.cc/post/win10-setup/</link>
       <pubDate>Thu, 28 May 2020 10:21:57 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/win10-setup/</guid>
+      <guid>https://ttti.cc/post/win10-setup/</guid>
       
         <description>&lt;p&gt;微软今天发布 Win10 2004 正式版了，然而还是很多小白依赖第三方下载，事实上微软官方是提供镜像下载的，同时还具备U盘制作功能，就是说，根本不需要依赖第三方网站。&lt;/p&gt;
 &lt;p&gt;为了帮助新人能更直观的了解，所以特意制作了动图。了解之后，你会发现原来制作一个Win10原版系统竟是如此简单的事情。&lt;/p&gt;

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>感悟 on 极限玩家</title>
-    <link>https://nav.ttti.cc/tags/%E6%84%9F%E6%82%9F/</link>
+    <link>https://ttti.cc/tags/%E6%84%9F%E6%82%9F/</link>
     <description>Recent content in 感悟 on 极限玩家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -11,15 +11,15 @@
     <copyright>极限玩家</copyright>
     <lastBuildDate>Wed, 10 Jun 2020 18:25:57 +0800</lastBuildDate>
     
-        <atom:link href="https://nav.ttti.cc/tags/%E6%84%9F%E6%82%9F/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://ttti.cc/tags/%E6%84%9F%E6%82%9F/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>读-写-问</title>
-      <link>https://nav.ttti.cc/post/search-read-ask/</link>
+      <link>https://ttti.cc/post/search-read-ask/</link>
       <pubDate>Wed, 10 Jun 2020 18:25:57 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/search-read-ask/</guid>
+      <guid>https://ttti.cc/post/search-read-ask/</guid>
       
         <description>&lt;p&gt;很多问题的解决都可以通过三连：&lt;strong&gt;Search - Read - Ask&lt;/strong&gt; ，这套连招很管用，然而大部分人都&lt;strong&gt;不习惯搜索、没耐心阅读、不会提问&lt;/strong&gt;。&lt;/p&gt;
 &lt;p&gt;检索在今天已经非常重要了，当你要提问题时，都应该先尝试检索问题，不能使用好检索，你就不能相对精确的定位问题，还会造成时间上的浪费（海里信息的关键就是检索）。&lt;/p&gt;

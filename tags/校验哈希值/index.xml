@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>校验哈希值 on 极限玩家</title>
-    <link>https://nav.ttti.cc/tags/%E6%A0%A1%E9%AA%8C%E5%93%88%E5%B8%8C%E5%80%BC/</link>
+    <link>https://ttti.cc/tags/%E6%A0%A1%E9%AA%8C%E5%93%88%E5%B8%8C%E5%80%BC/</link>
     <description>Recent content in 校验哈希值 on 极限玩家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -11,15 +11,15 @@
     <copyright>极限玩家</copyright>
     <lastBuildDate>Sun, 14 Mar 2021 16:50:37 +0800</lastBuildDate>
     
-        <atom:link href="https://nav.ttti.cc/tags/%E6%A0%A1%E9%AA%8C%E5%93%88%E5%B8%8C%E5%80%BC/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://ttti.cc/tags/%E6%A0%A1%E9%AA%8C%E5%93%88%E5%B8%8C%E5%80%BC/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>给Win10右键菜单加上校验文件功能</title>
-      <link>https://nav.ttti.cc/post/jiao-yan-wen-jian/</link>
+      <link>https://ttti.cc/post/jiao-yan-wen-jian/</link>
       <pubDate>Sun, 14 Mar 2021 16:50:37 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/jiao-yan-wen-jian/</guid>
+      <guid>https://ttti.cc/post/jiao-yan-wen-jian/</guid>
       
         <description>&lt;p&gt;有时候，我们需要校验文件的哈希值，以确保该文件是否有损坏，或者被篡改。比如 Win10 或 Ubuntu 系统的安装镜像。若哈希值错误，则表示不适合重装系统，否则重装失败的话，原来的系统也进不去了。&lt;/p&gt;
 &lt;p&gt;哈希值就好像是文件的身份证号码，基本是无法伪造的。日常中主要使用两种哈希值校验码：&lt;strong&gt;MD5&lt;/strong&gt;和&lt;strong&gt;SHA1&lt;/strong&gt;。&lt;/p&gt;

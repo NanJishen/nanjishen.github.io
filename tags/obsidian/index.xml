@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Obsidian on 极限玩家</title>
-    <link>https://nav.ttti.cc/tags/obsidian/</link>
+    <link>https://ttti.cc/tags/obsidian/</link>
     <description>Recent content in Obsidian on 极限玩家</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
@@ -11,15 +11,15 @@
     <copyright>极限玩家</copyright>
     <lastBuildDate>Sun, 21 Mar 2021 15:21:50 +0800</lastBuildDate>
     
-        <atom:link href="https://nav.ttti.cc/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
+        <atom:link href="https://ttti.cc/tags/obsidian/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>更换到更现代的双向链笔记软件 Obsidian</title>
-      <link>https://nav.ttti.cc/post/obsidianforfirst/</link>
+      <link>https://ttti.cc/post/obsidianforfirst/</link>
       <pubDate>Sun, 21 Mar 2021 15:21:50 +0800</pubDate>
       <author>nanji_shen@qq.com (南极神)</author>
-      <guid>https://nav.ttti.cc/post/obsidianforfirst/</guid>
+      <guid>https://ttti.cc/post/obsidianforfirst/</guid>
       
         <description>&lt;p&gt;先说一下个人使用笔记本软件的经过：从 OneNote →  Joplin → Obsidian（现在开始），我一直认为，笔记软件是组织和管理知识的最好方式，尤其对于现代人来说，电子笔记是必不可少的（纸张笔记不够效率）。因为现代是一个知识内容的工作时代。人脑是绝对不够用的。&lt;/p&gt;
 &lt;p&gt;尽管在今天笔记软件有很多，但是对更高效率的追求和渴望依然存在。说到新一代的笔记软件，那就要提到 Roam Research 了，其订阅价格高达165美元/年。当时官方在推特上表示：&lt;/p&gt;
