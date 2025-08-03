@@ -77,8 +77,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp --write-auto-subs --sub-langs zh-Hans --skip-download url &lt;span style=&#34;color:#75715e&#34;&gt;# 下载自动翻译字幕到中文&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f 137+140 url --write-subs --sub-langs zh-Hans &lt;span style=&#34;color:#75715e&#34;&gt;# 下载视频+音频+字幕&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f 137+140 url --embed-subs --sub-langs &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;zh-Hans&amp;#34;&lt;/span&gt; --merge-output-format mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 下载视频+音频+字幕&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;yt-dlp -f 137+140 url --embed-subs --sub-langs zh-Hans --merge-output-format mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 下载视频+音频+字幕&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ffmpeg -i 1.mp4 -vf &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;subtitles=1.srt&amp;#39;&lt;/span&gt; -c:a copy output.mp4 &lt;span style=&#34;color:#75715e&#34;&gt;# 如果要写入硬字幕&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
 &lt;/div&gt;

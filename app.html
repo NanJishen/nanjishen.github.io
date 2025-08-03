@@ -49,29 +49,7 @@
 </li>
 </ul>
 <ul class="cat">
-<li data-content="<h2>命令的使用</h2><pre>aria2c -h # 获取帮助
-# 下载
-D:/aria2c.exe -s 8 -x 8 -d T:/dir/ URL # 最常用
-aria2c -s 8 -x 8 URL # 多线程下载
-aria2c -i file # 从文件中读取 URL 并下载
-aria2c http://用户名:密码@ip或url # 从加密目录中下载
-aria2c T:/Downloads/x.torrent 或 http://x.torrent # bt 文件下载
-aria2c -S x.torrent  # 显示种子文件信息
-
-# 控制
-aria2c --pause  # 暂停所有下载
-aria2c --resume  # 恢复暂停的下载
-aria2c --stop  # 停止所有下载
-
-# 参数
--x n # 几个线程下载
--s n # 分成几份下载
--c # 断点续传
--m n # 最大下载连接数
--all-proxy='http://127.0.0.1:10809' # 指定代理
---http-proxy=url # 指定http代理
---max-download-limit=1024K # 限速</pre>
-<h2>Tracker</h2><a href='https://trackerslist.com/#/zh'>Trackerslist</a>、<a href='https://newtrackon.com/list'>Newtrackon</a>、<a href='http://github.itzmx.com/1265578519/OpenTracker/master/tracker.txt'>itzmx.txt</a>、<a href='https://edam.top/tk/'>Aria2-tk</a><p>设置开机启动后台运行，新建 startup.vbs 并将快捷方式放到启动目录</p><pre>CreateObject('WScript.Shell').Run 'aria2c.exe --conf-path=aria2.conf',0</pre>">
+<li data-content="Tracker：<a href='https://trackerslist.com/#/zh'>①</a>，<a href='https://newtrackon.com/list'>②</a>，<a href='http://github.itzmx.com/1265578519/OpenTracker/master/tracker.txt'>③</a>">
 <div><a href="">Aria2</a><p>下载工具</p></div>
 <div class="dls">
 <a href="https://github.com/aria2/aria2">🖥️🐧</a>
@@ -80,7 +58,17 @@ aria2c --stop  # 停止所有下载
 <a href="https://hub.docker.com/r/p3terx/aria2-pro">🐬</a>
 </div>
 </li>
-<li data-content="<h3>使用</h3><p>BBDown --version # 版本号</p><p>BBDown login # 扫码登录账号</p><p>BBDown logintv # 扫码登录云视听小电视账号</p><p>BBDown url -info # 仅解析而不下载</p><p>BBDown url 或 BV号 # 下载标清视频</p><p>BBDown url 或 BV号 -tv # 使用TV接口下载高清视频</p><p>分 P 下载</p><p>BBDown --show-all url # 显示所有分P标题</p><p>BBDown -p 1,5,10 url # 指定分P 1，5，10</p><p>BBDown -p ALL url # 下载全集</p>">
+<li data-content="<pre>BBDown login # 扫码登录账号
+BBDown logintv # 扫码登录云视听小电视账号
+
+BBDown url -info # 仅解析而不下载
+BBDown url 或 BV 号 # 下载标清视频
+BBDown url 或 BV 号 -tv # 使用TV接口下载高清视频
+
+# 分 P 下载
+BBDown --show-all url # 显示所有分P标题
+BBDown -p 1,5,10 url # 指定分P 1，5，10
+BBDown -p ALL url # 下载全集</pre>">
 <div><a href="">BBDown</a><p>哔哩哔哩视频下载</p></div>
 <div class="dls">
 <a href="https://github.com/nilaoda/BBDown">🖥️🐧</a>
@@ -144,7 +132,7 @@ tab_bar_tab_selected_css=padding: border: 0em solid
 tab_bar_tab_unselected_css=padding: border: 0em solid</pre><h3>主题备份</h3>One-Dark，字体：等距更纱黑体 SC SemiBold 12px<br>——：背景 -- 前景 --<br>正常：#1e2227，#a8afbc<br>选中：#161616，#d0852e<br>发现：#ffff7f，#ff5500<br>编辑器：#ffffff，#000000<br>交替：#23272e<br>勾选：系统图标、消除锯齿、主题色用于标签页">
 <div><a href="CopyQ">CopyQ</a><p>剪贴板管理</p></div>
 <div class="dls">
-<a href="https://hluk.github.io/CopyQ">🖥️🐧</a>
+<a href="https://github.com/hluk/CopyQ">🖥️</a>
 <a href="https://github.com/hluk/copyq-commands">⚓</a>
 <a href="https://github.com/Slackadays/Clipboard">💽</a>
 </div>
@@ -795,6 +783,11 @@ glow -s mystyle.json # 指定主题</pre>隐藏文章：在 TUI 中按 Tab 键�
 <a href="https://github.com/1357310795/QrCodeScanner">🖥️</a>
 </div>
 </li>
+<li data-content=""><div><a>PakePlus</a><p>将网页变成应用程序</p></div>
+<div class="dls">
+<a href="https://github.com/Sjj1024/PakePlus">🖥️</a>
+</div>
+</li>
 <li data-content=""><div><a>Pastel</a><p>调色板取色生成</p></div>
 <div class="dls">
 <a href="https://github.com/sharkdp/pastel">🐧</a>
@@ -927,6 +920,11 @@ fusermount -qzu /root/googledrive # 卸载挂载</pre><a href='https://shimo.im/
 <li data-content=""><div><a>Spectacle</a><p>截图工具</p></div>
 <div class="dls">
 <a href="https://apps.kde.org/zh-cn/spectacle">🐧</a>
+</div>
+</li>
+<li data-content=""><div><a>tealdeer</a><p>Linux命令手册</p></div>
+<div class="dls">
+<a href="https://github.com/tealdeer-rs/tealdeer">✨</a>
 </div>
 </li>
 <li data-content=""><div><a>TextSnatcher</a><p>OCR识别</p></div>
@@ -1900,9 +1898,8 @@ f2 -r '{x.cdt.YYYY}/{x.cdt.MM}/{x.cdt.YYYY}-{x.cdt.MM}-{x.cdt.DD}_{n}{ext}' -R -
 <a href="https://play.google.com/store/apps/details?id=org.videolan.vlc">📱</a>
 </div>
 </li>
-<li data-content=""><div><a>Xray</a><p>上网代理</p></div>
+<li data-content=""><div><a>v2rayN</a><p>上网代理客户端</p></div>
 <div class="dls">
-<a href="https://github.com/XTLS/Xray-core">🖥️</a>
 <a href="https://github.com/2dust/v2rayN">💻</a>
 <a href="https://github.com/2dust/v2rayNG">📱</a>
 <a href="https://apps.apple.com/us/app/wings-x/id6446119727">🍎</a>
@@ -2382,7 +2379,7 @@ annie -i ep12345 av12345 # B站可以用 av 和 ep 加数字下载
 <a href="">📋</a>
 </div>
 </li>
-<li data-content=""><div><a>ziplist.py</a><p>批量压缩包打包</p></div>
+<li data-content=""><div><a>ziplist.py</a><p>批量压缩包打包备份</p></div>
 <div class="dls">
 <a href="https://github.com/ddcatgg/ziplist">🖥️</a>
 </div>
@@ -4304,7 +4301,7 @@ notepad C:\Users\nanji\AppData\Roaming\cheat\conf.yml # 编辑配置文件
 </li>
 <li data-content=""><div><a>Winget</a><p>软件包管理</p></div>
 <div class="dls">
-<a href="https://github.com/microsoft/winget">🖥️</a>
+<a href="https://github.com/microsoft/winget-cli">🖥️</a>
 <a href="https://github.com/marticliment/UniGetUI">💻</a>
 <a href="https://github.com/microsoft/winget-pkgs">⚓</a>
 <a href="https://docs.microsoft.com/zh-cn/windows/package-manager/">📝</a>
@@ -5644,9 +5641,10 @@ http://域名/p/api/greader.php</pre>手机用 FeedME，登录用户名是 Fresh
 <a href="https://github.com/jianchang512/ott">💽</a>
 </div>
 </li>
-<li data-content="饭团影视：https://www.fantuan.tv/api.php/provide/vod/<br>影视工厂：https://cj.lziapi.com/api.php/provide/vod/<br>七七资源：https://www.qiqidys.com/api.php/provide/vod/"><div><a>LibreTV</a><p>在线视频资源平台</p></div>
+<li data-content="饭团影视：https://www.fantuan.tv/api.php/provide/vod/<br>影视工厂：https://cj.lziapi.com/api.php/provide/vod/<br>七七资源：https://www.qiqidys.com/api.php/provide/vod/"><div><a>LibreTV</a><p>影视资源播放平台</p></div>
 <div class="dls">
 <a href="https://github.com/LibreSpark/LibreTV">🐬</a>
+<a href="https://github.com/senshinya/MoonTV">💽</a>
 </div>
 </li>
 <li data-content=""><div><a>Linkding</a><p>网络书签</p></div>
@@ -5682,6 +5680,12 @@ http://域名/p/api/greader.php</pre>手机用 FeedME，登录用户名是 Fresh
 <a href="https://github.com/civilblur/mazanoke">🐬</a>
 </div>
 </li>
+<li data-content=""><div><a>MDCN</a><p>AV刮削</p></div>
+<div class="dls">
+<a href="https://hub.docker.com/r/mdcng/mdc">🐬</a>
+<a href="https://catcat.blog/docker-install-av-mdcng.html">📑</a>
+</div>
+</li>
 <li data-content=""><div><a>Mealie</a><p>食谱管理与计划</p></div>
 <div class="dls">
 <a href="https://mealie.io">🖥️</a>
@@ -5701,11 +5705,6 @@ http://域名/p/api/greader.php</pre>手机用 FeedME，登录用户名是 Fresh
 <li data-content=""><div><a>Miniboard</a><p>服务监控面板</p></div>
 <div class="dls">
 <a href="https://github.com/aceberg/miniboard">🖥️</a>
-</div>
-</li>
-<li data-content=""><div><a>MoonTV</a><p>影视聚合在线播放</p></div>
-<div class="dls">
-<a href="https://github.com/senshinya/MoonTV">🐬</a>
 </div>
 </li>
 <li data-content=""><div><a>Movie-robot</a><p>影视库自动化</p></div>
@@ -5903,12 +5902,13 @@ http://域名/p/api/greader.php</pre>手机用 FeedME，登录用户名是 Fresh
 <a href="https://rocket.chat">🖥️</a>
 </div>
 </li>
-<li data-content="<h3>常用</h3><p>https://www.youtube.com/feeds/videos.xml?channel_id= # YouTube 频道<br>（找原ID？进入该用户频道，Ctrl+U 查看源代码，搜索 https://www.youtube.com/channel/这里是ID）</p><p>https://rsshub.app/smzdm/keyword/关键字 # 什么值得买</p><p>https://rsshub.app/telegram/channel/用户名 # TG 频道</p><p>https://rsshub.app/twitter/user/ID # Twitter 用户</p><p>https://www.reddit.com/r/关键字.rss # Reddit 关键字</p><p>https://rsshub.app/bilibili/user/video/用户ID # 哔哩哔哩UP主</p><p>https://www.v2ex.com/feed/节点名.xml # V2EX 的节点</p><p>https://rsshub.app/zhihu/people/answers/用户ID # 知乎回答</p><p>https://github.com/xxx/xxx/releases.atom # GitHub releases 更新</p><p>https://rsshub.app/xueqiu/stock_info/号/news # 雪球股票</p><h3>更多</h3><a href='https://linuxdorss.longpink.com'>Linux Do</a> 第三方源<p><a href='https://github.com/weekend-project-space/top-rss-list'>top-rss-list</a> 中文优质源</p><p><a href='https://www.rsslookup.com'>RSS Lookup</a> 查看指定网址的RSS源</p><p><a href='https://www.rsstranslator.com'>RSS Translator</a> 翻译源</p><p><a href='https://www.buzzing.cc'>Buzzing</a> 很不错的英文翻译成中文的订阅</p><p><a href='https://politepol.com'>PolitePol</a> 抓取不支持RSS的网站并生成RSS</p><p><a href='https://github.com/zhaoolee/garss'>嘎!RSS</a> 收集了很多订阅源的合集</p><p><a href='https://www.ohmyrss.com'>Ohmyrss</a> 很多源可以参考</p><p><a href='https://webfollow.cc'>Webfollow</a> 是阅读器，也可以用于发现源</p><p><a href='https://github.com/timqian/chinese-independent-blogs'>中文独立博客合集</a></p><p>搜索与生成：<a href='https://feedsearch.dev'>Feedsearch</a>（搜索）；<a href='https://rss.diffbot.com'>Diffbot</a>、<a href='https://fetchrss.com'>FetchRSS</a>（生成）</p><p>订阅源合集：<a href='https://morerss.com/zh.php'>MoreRSS</a>、<a href='https://feedx.net'>FeedX</a>、<a href='https://rss-source.com'>RSS Source</a>、<a href='https://wheremylife.cn/home'>WhereMyLife</a></p><p>StreamSphere 的 APP 内置的 <a href='https://github.com/Martinviv/rss-sources'>700+订阅源</a></p><p><a href='https://rss.blogbomb.com'>发现博客的源分享</a></p><h3>微信公众号</h3>在<a href='https://feeddd.org'>Feeddd</a>可以搜索公众号，以及<a href='https://cdn.jsdelivr.net/gh/feeddd/feeds/feeds_all_rss.txt'>文字版</a><h3>软件更新</h3><a href='https://verssion.one'>Verssion</a> 以追踪 wiki 的方式<p><a href='https://versionfeeds.com'>Versionfeeds</a> 订阅 GitHub Release</p><h3>参数</h3>?filter_title=要包含的关键字<br>?filterout_title=不要包含的关键字<h3>其它</h3>/dsndsht23<br>/dsndsht23/yzwmyc<br>/dsndsht23/omwm<br>bakufu.jp/feed<h3>值得买关键字</h3>日耗品：咖啡豆、纸巾、牙膏洗衣液/粉、香皂、硅油纸<br>家居：床笠、餐具<br>内装：T恤、七分裤、保暖内衣、秋裤、衬裤<br>外装：软壳冲锋衣、冲锋衣、抓绒外套/马甲<br>">
+<li data-content="<h3>常用</h3><p>https://www.youtube.com/feeds/videos.xml?channel_id= # YouTube 频道<br>（找原ID？进入该用户频道，Ctrl+U 查看源代码，搜索 https://www.youtube.com/channel/这里是ID）</p><p>https://rsshub.app/smzdm/keyword/关键字 # 什么值得买</p><p>https://rsshub.app/telegram/channel/用户名 # TG 频道</p><p>https://rsshub.app/twitter/user/ID # Twitter 用户</p><p>https://www.reddit.com/r/关键字.rss # Reddit 关键字</p><p>https://rsshub.app/bilibili/user/video/用户ID # 哔哩哔哩UP主</p><p>https://www.v2ex.com/feed/节点名.xml # V2EX 的节点</p><p>https://rsshub.app/zhihu/people/answers/用户ID # 知乎回答</p><p>https://github.com/xxx/xxx/releases.atom # GitHub releases 更新</p><p>https://rsshub.app/xueqiu/stock_info/号/news # 雪球股票</p><h3>更多</h3><a href='https://linuxdorss.longpink.com'>Linux Do</a> 第三方源<p><a href='https://github.com/weekend-project-space/top-rss-list'>top-rss-list</a> 中文优质源</p><p><a href='https://www.rsslookup.com'>RSS Lookup</a> 查看指定网址的RSS源</p><p><a href='https://www.rsstranslator.com'>RSS Translator</a> 翻译源</p><p><a href='https://www.buzzing.cc'>Buzzing</a> 很不错的英文翻译成中文的订阅</p><p><a href='https://politepol.com'>PolitePol</a> 抓取不支持RSS的网站并生成RSS</p><p><a href='https://github.com/zhaoolee/garss'>嘎!RSS</a> 收集了很多订阅源的合集</p><p><a href='https://www.ohmyrss.com'>Ohmyrss</a> 很多源可以参考</p><p><a href='https://webfollow.cc'>Webfollow</a> 是阅读器，也可以用于发现源</p><p><a href='https://github.com/timqian/chinese-independent-blogs'>中文独立博客合集</a></p><p>搜索与生成：<a href='https://feedsearch.dev'>Feedsearch</a>（搜索）；<a href='https://rss.diffbot.com'>Diffbot</a>、<a href='https://fetchrss.com'>FetchRSS</a>（生成）</p><p>订阅源合集：<a href='https://morerss.com/zh.php'>MoreRSS</a>、<a href='https://feedx.net'>FeedX</a>、<a href='https://rss-source.com'>RSS Source</a>、<a href='https://wheremylife.cn/home'>WhereMyLife</a></p><p>StreamSphere 的 APP 内置的 <a href='https://github.com/Martinviv/rss-sources'>700+订阅源</a></p><p><a href='https://rss.blogbomb.com'>发现博客的源分享</a></p><h3>软件更新</h3><a href='https://verssion.one'>Verssion</a> 以追踪 wiki 的方式<p><a href='https://versionfeeds.com'>Versionfeeds</a> 订阅 GitHub Release</p><h3>参数</h3>?filter_title=要包含的关键字<br>?filterout_title=不要包含的关键字">
 <div><a href="">RSSHub</a><p>RSS订阅生成</p></div>
 <div class="dls">
 <a href="https://docs.rsshub.app/zh">🖥️</a>
 <a href="https://chromewebstore.google.com/detail/kefjpfngnndepjbopdmoebkipbgkggaa">🌐</a>
 <a href="https://discovery.thirdplace.no">🔍</a>
+<a href="https://github.com/RSS-Bridge/rss-bridge">💽</a>
 <a href="https://github.com/soulteary/RSS-Can">💽</a>
 </div>
 </li>

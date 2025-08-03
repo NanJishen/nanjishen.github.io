@@ -1,0 +1,24 @@
+---
+tags: [ Aria2c ]
+---
+# 下载
+D:/aria2c.exe -s 8 -x 8 -d T:/dir/ URL # 最常用
+aria2c -s 8 -x 8 URL # 多线程下载
+aria2c -i file # 从文件中读取 URL 并下载
+aria2c http://用户名:密码@ip或url # 从加密目录中下载
+aria2c T:/Downloads/x.torrent 或 http://x.torrent # bt 文件下载
+aria2c -S x.torrent # 显示种子文件信息
+
+# 控制
+aria2c --pause # 暂停所有下载
+aria2c --resume # 恢复暂停的下载
+aria2c --stop # 停止所有下载
+
+# 参数
+-x n # 几个线程下载
+-s n # 分成几份下载
+-c # 断点续传
+-m n # 最大下载连接数
+-all-proxy='http://127.0.0.1:10809' # 指定代理
+--http-proxy=url # 指定http代理
+--max-download-limit=1024K # 限速

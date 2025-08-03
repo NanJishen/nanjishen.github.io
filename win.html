@@ -69,21 +69,23 @@ winget install Microsoft.DotNet.DesktopRuntime.x</pre>
 </section>
 <section id="section3">
 <h2>初始设置</h2>
-<h3>重装系统前</h3>下载驱动：芯片组、显卡、声卡、键鼠<p>Git 现有项目<br>- Qsync\Documents\KNotes<br>- Qsync\Webs\home</p><p>备份<br>- Rime + OBS + .ssh <br>- 主目录中 .config 和 Epic<br>- Qsync 到 U盘</p><p>shutdown /r /fw # 重启并进入 UEFI BIOS</p><h3>初始设置</h3><p>关闭系统还原：右键开始 - 系统 - 系统保护 - 配置 - 删除并禁用</p><p>更新系统：右键开始 - 设置 - Windows 更新 - 检查更新</p><p>关闭 UAC：开始 - UAC - 更改用户账户控制设置 - 拉到最底“从不通知”</p><p>关闭索引：运行 - services.msc - 找到并双击 Windows Search - 停止并禁用</p><p>设置免密登陆：运行 - netplwiz - 去勾“要使用本计算机，用户必须输入密码”（无勾选框？regedit - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device ，修改右侧的 DevicePasswordLessBuildVersion 值为 0 </p><p>关闭网卡和蓝牙节约电源：右键开始 - 设备管理器 - 右键网络适配器中的网卡和蓝牙属性 - 电源管理 - 去掉节约电源</p><p>设置睡眠：右键开始 - 电源选项 -屏幕和睡眠 - 都改成从不</p><p>取消快速启动：开始 - 控制面板 - 系统和安全 - 电源选项 - 选择电源按钮功能 - 更改不可用设置</p><p>关闭通信时降低音量：右键托盘声音 - 声音设置 - 更多声音设置 - 通信 - 不执行任何操作</p><p>麦克风增强：右键托盘声音 - 声音设置 - 麦克风 - 增强音频“高级” - 级别</p><p>关闭休眠与快速启动：powercfg -h off</p><p>登录 OneDrive ；更改下载/文档/图片/视频的默认位置</p><p>避免系统更新厂商驱动：systempropertiesadvanced.exe（系统属性-高级）- 硬件 - 设备安装设置 - 选否</p><p>添加 ICC 配置文件：右键桌面 - 显示设置 - 高级显示器设置 - 颜色管理 - 添加并浏览文件</p><p>隐私和安全性 - 常规+搜索权限 - 不用都关闭</p><p>个性化 - 锁屏桌面 - 在锁屏上获取花絮去勾</p><p>系统 - 多任务处理 - 贴靠窗口 - 将窗口拖动到屏幕顶部时显示贴靠布局去勾</p>
-<h3>新系统安装软件</h3><p>基础软件：Scoop、QQ+微信、Snipaste、CopyQ</p>
-<pre>winget install 7zip.7zip
-winget install hluk.CopyQ
-winget install Tencent.WeChat Tencent.QQ.NT</pre>
-<p>开发环境：Terminal、VS Code</p>
-<pre>winget install Microsoft.WindowsTerminal
-winget install fastfetch
-winget install Microsoft.VisualStudioCode</pre>
+<h4>重装系统前</h4>下载驱动：芯片组、显卡、声卡、键鼠<p>Git 现有项目<br>- Qsync\Documents\KNotes<br>- Qsync\Webs\home</p><p>备份<br>- Scoop ，Rime<br>- 主目录中 .ssh ，.config ，Epic<br>- Qsync 到 U盘</p><p>shutdown /r /fw # 重启并进入 UEFI BIOS</p><h4>新装系统后</h4><p>关闭系统还原：右键开始 - 系统 - 系统保护 - 配置 - 删除并禁用</p><p>更新系统：右键开始 - 设置 - Windows 更新 - 检查更新</p><p>关闭 UAC：开始 - UAC - 更改用户账户控制设置 - 拉到最底“从不通知”</p><p>关闭索引：运行 - services.msc - 找到并双击 Windows Search - 停止并禁用</p><p>设置免密登陆：运行 - netplwiz - 去勾“要使用本计算机，用户必须输入密码”（无勾选框？regedit - HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\PasswordLess\Device ，修改右侧的 DevicePasswordLessBuildVersion 值为 0 </p><p>关闭网卡和蓝牙节约电源：右键开始 - 设备管理器 - 右键网络适配器中的网卡和蓝牙属性 - 电源管理 - 去掉节约电源</p><p>设置睡眠：右键开始 - 电源选项 -屏幕和睡眠 - 都改成从不</p><p>取消快速启动：开始 - 控制面板 - 系统和安全 - 电源选项 - 选择电源按钮功能 - 更改不可用设置</p><p>关闭通信时降低音量：右键托盘声音 - 声音设置 - 更多声音设置 - 通信 - 不执行任何操作</p><p>麦克风增强：右键托盘声音 - 声音设置 - 麦克风 - 增强音频“高级” - 级别</p><p>关闭休眠与快速启动：powercfg -h off</p><p>登录 OneDrive ；更改下载/文档/图片/视频的默认位置</p><p>避免系统更新厂商驱动：systempropertiesadvanced.exe（系统属性-高级）- 硬件 - 设备安装设置 - 选否</p><p>添加 ICC 配置文件：右键桌面 - 显示设置 - 高级显示器设置 - 颜色管理 - 添加并浏览文件</p><p>隐私和安全性 - 常规+搜索权限 - 不用都关闭</p><p>个性化 - 锁屏桌面 - 在锁屏上获取花絮去勾</p><p>系统 - 多任务处理 - 贴靠窗口 - 将窗口拖动到屏幕顶部时显示贴靠布局去勾</p><h3>新系统初装软件</h3>应用商店：Snipaste
+<p>WinGet</p><pre>winget install 7zip.7zip hluk.CopyQ
+winget install Tencent.WeChat Tencent.QQ.NT
+
+# 必备环境
+winget install Microsoft.WindowsTerminal Microsoft.PowerShell
+winget install Microsoft.VisualStudioCode Fastfetch-cli.Fastfetch
+winget install OpenJS.NodeJS Python.Python.x.x
+winget install Gyan.FFmpeg yt-dlp.yt-dlp
+</pre>
+<p>Scoop</p><pre>
+scoop install flow-launcher mpv-git
+</pre>
 <p><a href="#" class="popup-link" data-content="<h4>C:\Users\nanji\scoop</h4><pre>ls | select Name > ~\Desktop\list.txt # 列出以便保存
 
-7zip
 bottom
 cheat
-ffmpeg
 flow-launcher
 git
 glow
@@ -653,6 +655,7 @@ tls://1dot1dot1dot1.cloudflare-dns.com
 223.6.6.6</pre>点应用，点测试上游 DNS，在下面的速度限制 - 每个客户端查询次数改为 0（不限制）
 <p>过滤器 - DNS 黑名单 - 添加黑名单 - 从列表选择 - 勾选“区域：CHN:AdRules DNS List 和 anti-AD”</p>
 继续添加自定义列表：添加黑名单 - 添加自定义列表：
+<p><a href="https://github.com/TG-Twilight/AWAvenue-Ads-Rule">秋风广告规则</a>，目前较好的规则集合</p>
 <p><a href="https://raw.githubusercontent.com/o0HalfLife0o/list/master/ad.txt">HalfLife 合并规则</a>（EasylistChina、EasylistLite、CJX’sAnnoyance）（主用）</p>
 <p><a href='https://raw.githubusercontent.com/cjx82630/cjxlist/master/cjx-annoyance.txt'>CJX&#39;s Annoyance</a> | <a href="https://raw.githubusercontent.com/neodevpro/neodevhost/master/lite_adblocker">强而友善</a> | <a href='https://easylist-downloads.adblockplus.org/easylistchina.txt'>EasyList China</a> | <a href='https://fanboy.co.nz/r/fanboy-ultimate.txt'>Fanboy+Easylist</a> | <a href="https://raw.githubusercontent.com/gijsdev/ublock-hide-yt-shorts/master/list.txt">油管去短视频</a></p>
 <p>检测过滤是否开启：<a href="https://blockads.fivefilters.org">①</a> <a href="https://www.detectadblock.com">②</a></p>
